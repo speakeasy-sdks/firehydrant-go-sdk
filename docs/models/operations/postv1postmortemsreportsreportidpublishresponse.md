@@ -1,0 +1,9 @@
+# PostV1PostMortemsReportsReportIDPublishResponse
+
+
+## Fields
+
+| Field                                                                                                         | Type                                                                                                          | Required                                                                                                      | Description                                                                                                   |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                    | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                            | :heavy_check_mark:                                                                                            | N/A                                                                                                           |
+| `PostMortemsPostMortemReportEntity`                                                                           | [*components.PostMortemsPostMortemReportEntity](../../models/components/postmortemspostmortemreportentity.md) | :heavy_minus_sign:                                                                                            | Marks an incident retrospective as published and emails all of the participants in the report the summary     |

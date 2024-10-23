@@ -1,0 +1,9 @@
+# PatchV1CustomFieldsDefinitionsFieldIDRequest
+
+
+## Fields
+
+| Field                                                                                                                | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `FieldID`                                                                                                            | *string*                                                                                                             | :heavy_check_mark:                                                                                                   | N/A                                                                                                                  |
+| `PatchV1CustomFieldsDefinitionsFieldID`                                                                              | [components.PatchV1CustomFieldsDefinitionsFieldID](../../models/components/patchv1customfieldsdefinitionsfieldid.md) | :heavy_check_mark:                                                                                                   | N/A                                                                                                                  |

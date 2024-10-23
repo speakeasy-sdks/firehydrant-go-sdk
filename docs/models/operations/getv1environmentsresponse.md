@@ -1,0 +1,9 @@
+# GetV1EnvironmentsResponse
+
+
+## Fields
+
+| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                        | :heavy_check_mark:                                                                                        | N/A                                                                                                       |
+| `EnvironmentEntryEntityPaginated`                                                                         | [*components.EnvironmentEntryEntityPaginated](../../models/components/environmententryentitypaginated.md) | :heavy_minus_sign:                                                                                        | List all of the environments that have been added to the organiation                                      |

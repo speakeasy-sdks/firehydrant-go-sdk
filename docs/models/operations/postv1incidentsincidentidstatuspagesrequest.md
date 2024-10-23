@@ -1,0 +1,9 @@
+# PostV1IncidentsIncidentIDStatusPagesRequest
+
+
+## Fields
+
+| Field                                                                                                              | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `IncidentID`                                                                                                       | *string*                                                                                                           | :heavy_check_mark:                                                                                                 | N/A                                                                                                                |
+| `PostV1IncidentsIncidentIDStatusPages`                                                                             | [components.PostV1IncidentsIncidentIDStatusPages](../../models/components/postv1incidentsincidentidstatuspages.md) | :heavy_check_mark:                                                                                                 | N/A                                                                                                                |

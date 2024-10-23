@@ -1,0 +1,10 @@
+# IntegrationsStatuspageConditionEntity
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `ConditionID`                                                                         | **string*                                                                             | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `ConditionName`                                                                       | **string*                                                                             | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `StatuspageioCondition`                                                               | [*components.StatuspageioCondition](../../models/components/statuspageiocondition.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |

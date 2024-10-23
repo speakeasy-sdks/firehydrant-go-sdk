@@ -1,0 +1,9 @@
+# PostV1TicketingProjectsTicketingProjectIDFieldMapsResponse
+
+
+## Fields
+
+| Field                                                                                                   | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                              | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                      | :heavy_check_mark:                                                                                      | N/A                                                                                                     |
+| `TicketingProjectFieldMapEntity`                                                                        | [*components.TicketingProjectFieldMapEntity](../../models/components/ticketingprojectfieldmapentity.md) | :heavy_minus_sign:                                                                                      | Creates field map for a ticketing project                                                               |

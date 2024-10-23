@@ -1,0 +1,9 @@
+# GetV1MetricsRetrospectivesResponse
+
+
+## Fields
+
+| Field                                                                                           | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                      | [components.HTTPMetadata](../../models/components/httpmetadata.md)                              | :heavy_check_mark:                                                                              | N/A                                                                                             |
+| `MetricsRetrospectiveEntity`                                                                    | [*components.MetricsRetrospectiveEntity](../../models/components/metricsretrospectiveentity.md) | :heavy_minus_sign:                                                                              | Returns a report with retrospective analytics data                                              |

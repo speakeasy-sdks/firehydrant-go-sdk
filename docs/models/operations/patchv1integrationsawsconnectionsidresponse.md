@@ -1,0 +1,9 @@
+# PatchV1IntegrationsAwsConnectionsIDResponse
+
+
+## Fields
+
+| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                        | :heavy_check_mark:                                                                                        | N/A                                                                                                       |
+| `IntegrationsAwsConnectionEntity`                                                                         | [*components.IntegrationsAwsConnectionEntity](../../models/components/integrationsawsconnectionentity.md) | :heavy_minus_sign:                                                                                        | Update the AWS connection with the provided data.                                                         |

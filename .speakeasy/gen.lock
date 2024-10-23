@@ -1,0 +1,3892 @@
+lockVersion: 2.0.0
+id: 39357612-0c85-4a96-a549-e2d920c4a065
+management:
+  docChecksum: 7d564476c3b9e4ebf9d7dd3132a45d51
+  docVersion: 0.0.1
+  speakeasyVersion: 1.419.0
+  generationVersion: 2.438.3
+  releaseVersion: 0.0.1
+  configChecksum: e78b720f8c05dc2f5dddefb31c1cb6cd
+features:
+  go:
+    additionalDependencies: 0.1.0
+    constsAndDefaults: 0.1.6
+    core: 3.5.13
+    defaultEnabledRetries: 0.2.0
+    envVarSecurityUsage: 0.3.1
+    flattening: 2.81.1
+    getRequestBodies: 2.81.1
+    globalSecurity: 2.82.10
+    globalSecurityCallbacks: 0.1.0
+    globalSecurityFlattening: 0.1.0
+    globalServerURLs: 2.82.2
+    groups: 2.81.2
+    intellisenseMarkdownSupport: 0.1.0
+    nameOverrides: 2.81.2
+    nullables: 0.1.0
+    responseFormat: 0.1.2
+    retries: 2.83.0
+    sdkHooks: 0.1.0
+    uploadStreams: 0.1.0
+generatedFiles:
+  - .gitattributes
+  - /models/components/actorentity.go
+  - /models/components/aientitiespreferencesentity.go
+  - /models/components/alertsalertentity.go
+  - /models/components/alertsalertentitypaginated.go
+  - /models/components/alertsprocessinglogentryentity.go
+  - /models/components/alertsprocessinglogentryentitypaginated.go
+  - /models/components/alertssirenevententity.go
+  - /models/components/attachmentslinkentity.go
+  - /models/components/attachmentslinkentitypaginated.go
+  - /models/components/authorentity.go
+  - /models/components/calendarsevententity.go
+  - /models/components/changeentity.go
+  - /models/components/changeevententity.go
+  - /models/components/changeeventslimentity.go
+  - /models/components/changeeventslimentitypaginated.go
+  - /models/components/changeidentityentity.go
+  - /models/components/changeidentityentitypaginated.go
+  - /models/components/changetypeentity.go
+  - /models/components/changetypeentitypaginated.go
+  - /models/components/checklistcheckentity.go
+  - /models/components/checklisttemplateentity.go
+  - /models/components/checklisttemplateentitypaginated.go
+  - /models/components/conversationsapientitieschannel.go
+  - /models/components/conversationsapientitiesreference.go
+  - /models/components/currentuserentity.go
+  - /models/components/customfieldsfieldvalue.go
+  - /models/components/entitlemententity.go
+  - /models/components/entitlemententitypaginated.go
+  - /models/components/environmententryentity.go
+  - /models/components/environmententryentitypaginated.go
+  - /models/components/eventgenericchatmessageentity.go
+  - /models/components/eventnoteentity.go
+  - /models/components/externalresourceentity.go
+  - /models/components/fhtypesgenericentity.go
+  - /models/components/fieldmappingfieldmapentity.go
+  - /models/components/fieldmappingmappablefieldentity.go
+  - /models/components/functionalityentity.go
+  - /models/components/functionalityentitypaginated.go
+  - /models/components/getv1metricsticketfunnel.go
+  - /models/components/httpmetadata.go
+  - /models/components/importsimportableresourceentity.go
+  - /models/components/importsimportentity.go
+  - /models/components/importsimporterrorentity.go
+  - /models/components/importsimporterrorentityresourceentity.go
+  - /models/components/incidentattachmententity.go
+  - /models/components/incidententity.go
+  - /models/components/incidententityfieldrequiremententity.go
+  - /models/components/incidententitypaginated.go
+  - /models/components/incidentevententity.go
+  - /models/components/incidentevententitypaginated.go
+  - /models/components/incidentimpactentity.go
+  - /models/components/incidentimpactentitypaginated.go
+  - /models/components/incidentroleentity.go
+  - /models/components/incidentroleentitypaginated.go
+  - /models/components/incidentsalertentity.go
+  - /models/components/incidentsalertentitypaginated.go
+  - /models/components/incidentschannelentity.go
+  - /models/components/incidentsconferencebridgeentity.go
+  - /models/components/incidentscontextobjectentity.go
+  - /models/components/incidentsimpactentity.go
+  - /models/components/incidentslifecyclemeasuremententity.go
+  - /models/components/incidentslifecyclemilestoneentity.go
+  - /models/components/incidentslifecyclephaseentity.go
+  - /models/components/incidentsmilestoneentity.go
+  - /models/components/incidentsmilestoneentitypaginated.go
+  - /models/components/incidentsrelatedchangeevententity.go
+  - /models/components/incidentsrelatedchangeevententitypaginated.go
+  - /models/components/incidentsrelationshipsentity.go
+  - /models/components/incidentsroleassignmententity.go
+  - /models/components/incidentsroleassignmententitypaginated.go
+  - /models/components/incidentsstatuspageentity.go
+  - /models/components/incidentsstatuspageentitypaginated.go
+  - /models/components/incidentsteamassignmententity.go
+  - /models/components/incidenttypeentity.go
+  - /models/components/incidenttypeentitypaginated.go
+  - /models/components/incidenttypeentitytemplateentity.go
+  - /models/components/incidenttypeentitytemplateimpactentity.go
+  - /models/components/incidenttypeentitytemplatevaluesentity.go
+  - /models/components/infrastructuresearchentity.go
+  - /models/components/integrationentity.go
+  - /models/components/integrationsawscloudtrailbatchentity.go
+  - /models/components/integrationsawscloudtrailbatchentitypaginated.go
+  - /models/components/integrationsawsconnectionentity.go
+  - /models/components/integrationsawsconnectionentitypaginated.go
+  - /models/components/integrationsconfluencecloudspacekeyentity.go
+  - /models/components/integrationsconnectionentity.go
+  - /models/components/integrationsintegrationentity.go
+  - /models/components/integrationsintegrationentitylogoentity.go
+  - /models/components/integrationsmicrosoftteamsv2channelentity.go
+  - /models/components/integrationsslackslackchannelentity.go
+  - /models/components/integrationsstatuspageconditionentity.go
+  - /models/components/integrationsstatuspageconnectionentity.go
+  - /models/components/integrationsstatuspageconnectionentitypaginated.go
+  - /models/components/integrationsstatuspagemilestonemappingentity.go
+  - /models/components/integrationsstatuspageseverityentity.go
+  - /models/components/lifecyclesmilestoneentity.go
+  - /models/components/lifecyclesphaseentity.go
+  - /models/components/lifecyclesphaseentitylist.go
+  - /models/components/linksentity.go
+  - /models/components/mediaimageentity.go
+  - /models/components/membershipentity.go
+  - /models/components/metricsinfrastructurelistentity.go
+  - /models/components/metricsinfrastructuremetricsentity.go
+  - /models/components/metricsmetricsentity.go
+  - /models/components/metricsmetricsentitysortentity.go
+  - /models/components/metricsmilestonesfunnelentity.go
+  - /models/components/metricsmilestonesfunnelentitycolumnentity.go
+  - /models/components/metricsmilestonesfunnelentitydatabucketentity.go
+  - /models/components/metricsmilestonesfunnelentitydatabucketfilterparamsentity.go
+  - /models/components/metricsmilestonesfunnelentitydatabucketmilestonecountentity.go
+  - /models/components/metricsmilestonesfunnelentitygroupingsentity.go
+  - /models/components/metricsmilestonesfunnelentitymetaentity.go
+  - /models/components/metricsmttxdataentity.go
+  - /models/components/metricsmttxdataentitygroupingentity.go
+  - /models/components/metricsmttxgroupentity.go
+  - /models/components/metricsretrospectiveentity.go
+  - /models/components/metricsretrospectiveentitydataentity.go
+  - /models/components/metricsretrospectiveentitysummaryentity.go
+  - /models/components/metricsticketfunnelmetricsentity.go
+  - /models/components/metricsticketfunnelmetricsentitydatabucketentity.go
+  - /models/components/metricsticketfunnelmetricsentitydatabucketfilterparamsentity.go
+  - /models/components/metricsticketfunnelmetricsentitygroupingsentity.go
+  - /models/components/nunccomponententity.go
+  - /models/components/nunccomponentgroupentity.go
+  - /models/components/nuncconditionentity.go
+  - /models/components/nuncconnectionentity.go
+  - /models/components/nuncconnectionentitypaginated.go
+  - /models/components/nuncemailsubscribersentity.go
+  - /models/components/nuncnuncsubscription.go
+  - /models/components/organizationentity.go
+  - /models/components/organizationscustomfielddefinitionentity.go
+  - /models/components/paginationentity.go
+  - /models/components/patchv1changeschangeid.go
+  - /models/components/patchv1changeschangeididentitiesidentityid.go
+  - /models/components/patchv1changeseventschangeeventid.go
+  - /models/components/patchv1checklisttemplatesid.go
+  - /models/components/patchv1conversationsconversationidcommentscommentid.go
+  - /models/components/patchv1customfieldsdefinitionsfieldid.go
+  - /models/components/patchv1environmentsenvironmentid.go
+  - /models/components/patchv1functionalitiesfunctionalityid.go
+  - /models/components/patchv1incidentrolesincidentroleid.go
+  - /models/components/patchv1incidentsincidentid.go
+  - /models/components/patchv1incidentsincidentidalertsincidentalertidprimary.go
+  - /models/components/patchv1incidentsincidentideventseventidvotes.go
+  - /models/components/patchv1incidentsincidentidgenericchatmessagesmessageid.go
+  - /models/components/patchv1incidentsincidentidimpact.go
+  - /models/components/patchv1incidentsincidentidnotesnoteid.go
+  - /models/components/patchv1incidentsincidentidrelatedchangeeventsrelatedchangeeventid.go
+  - /models/components/patchv1incidentsincidentidtaskstaskid.go
+  - /models/components/patchv1incidenttypesid.go
+  - /models/components/patchv1integrationsawscloudtrailbatchesid.go
+  - /models/components/patchv1integrationsawsconnectionsid.go
+  - /models/components/patchv1integrationsstatuspageconnectionsconnectionid.go
+  - /models/components/patchv1nuncconnectionsnuncconnectionidlinkslinkid.go
+  - /models/components/patchv1postmortemsreportsreportid.go
+  - /models/components/patchv1postmortemsreportsreportidfieldsfieldid.go
+  - /models/components/patchv1postmortemsreportsreportidreasonsreasonid.go
+  - /models/components/patchv1prioritiespriorityslug.go
+  - /models/components/patchv1runbooksexecutionsexecutionidstepsstepidvotes.go
+  - /models/components/patchv1runbooksexecutionsexecutionidvotes.go
+  - /models/components/patchv1savedsearchesresourcetypesavedsearchid.go
+  - /models/components/patchv1scheduledmaintenancesscheduledmaintenanceid.go
+  - /models/components/patchv1servicedependenciesservicedependencyid.go
+  - /models/components/patchv1servicesserviceid.go
+  - /models/components/patchv1severitiesseverityslug.go
+  - /models/components/patchv1severitymatrix.go
+  - /models/components/patchv1severitymatrixconditionsconditionid.go
+  - /models/components/patchv1severitymatriximpactsimpactid.go
+  - /models/components/patchv1signalsemailtargetsid.go
+  - /models/components/patchv1signalswebhooktargetsid.go
+  - /models/components/patchv1statusupdatetemplatesstatusupdatetemplateid.go
+  - /models/components/patchv1taskliststasklistid.go
+  - /models/components/patchv1teamsteamid.go
+  - /models/components/patchv1teamsteamidescalationpoliciesid.go
+  - /models/components/patchv1teamsteamidoncallschedulesscheduleid.go
+  - /models/components/patchv1teamsteamidoncallschedulesscheduleidshiftsid.go
+  - /models/components/patchv1teamsteamidsignalrulesid.go
+  - /models/components/patchv1ticketingprioritiesid.go
+  - /models/components/patchv1ticketingticketsticketid.go
+  - /models/components/patchv1webhookswebhookid.go
+  - /models/components/pongentity.go
+  - /models/components/postmortemspostmortemreportentity.go
+  - /models/components/postmortemspostmortemreportentitypaginated.go
+  - /models/components/postmortemsquestionentity.go
+  - /models/components/postmortemsquestiontypeentity.go
+  - /models/components/postmortemsquestiontypeentitypaginated.go
+  - /models/components/postmortemsreasonentity.go
+  - /models/components/postmortemsreasonentitypaginated.go
+  - /models/components/postmortemssectionfieldentity.go
+  - /models/components/postv1catalogscatalogidingest.go
+  - /models/components/postv1changes.go
+  - /models/components/postv1changeschangeididentities.go
+  - /models/components/postv1changesevents.go
+  - /models/components/postv1checklisttemplates.go
+  - /models/components/postv1conversationsconversationidcomments.go
+  - /models/components/postv1conversationsconversationidcommentscommentidreactions.go
+  - /models/components/postv1customfieldsdefinitions.go
+  - /models/components/postv1environments.go
+  - /models/components/postv1functionalities.go
+  - /models/components/postv1incidentroles.go
+  - /models/components/postv1incidents.go
+  - /models/components/postv1incidentsincidentidgenericchatmessages.go
+  - /models/components/postv1incidentsincidentidimpacttype.go
+  - /models/components/postv1incidentsincidentidlinks.go
+  - /models/components/postv1incidentsincidentidnotes.go
+  - /models/components/postv1incidentsincidentidrelatedchangeevents.go
+  - /models/components/postv1incidentsincidentidroleassignments.go
+  - /models/components/postv1incidentsincidentidstatuspages.go
+  - /models/components/postv1incidentsincidentidtasklists.go
+  - /models/components/postv1incidentsincidentidtasks.go
+  - /models/components/postv1incidentsincidentidtaskstaskidconvert.go
+  - /models/components/postv1incidentsincidentidteamassignments.go
+  - /models/components/postv1incidenttypes.go
+  - /models/components/postv1nuncsubscriptions.go
+  - /models/components/postv1postmortemsreports.go
+  - /models/components/postv1postmortemsreportsreportidpublish.go
+  - /models/components/postv1postmortemsreportsreportidreasons.go
+  - /models/components/postv1priorities.go
+  - /models/components/postv1runbooks.go
+  - /models/components/postv1runbooksexecutions.go
+  - /models/components/postv1savedsearchesresourcetype.go
+  - /models/components/postv1scheduledmaintenances.go
+  - /models/components/postv1scimv2groups.go
+  - /models/components/postv1scimv2users.go
+  - /models/components/postv1servicedependencies.go
+  - /models/components/postv1services.go
+  - /models/components/postv1servicesserviceidchecklistresponsechecklistid.go
+  - /models/components/postv1servicesservicelinks.go
+  - /models/components/postv1severities.go
+  - /models/components/postv1severitymatrixconditions.go
+  - /models/components/postv1severitymatriximpacts.go
+  - /models/components/postv1signalsdebugger.go
+  - /models/components/postv1signalsemailtargets.go
+  - /models/components/postv1signalswebhooktargets.go
+  - /models/components/postv1statusupdatetemplates.go
+  - /models/components/postv1tasklists.go
+  - /models/components/postv1teams.go
+  - /models/components/postv1teamsteamidescalationpolicies.go
+  - /models/components/postv1teamsteamidoncallschedules.go
+  - /models/components/postv1teamsteamidoncallschedulesscheduleidshifts.go
+  - /models/components/postv1teamsteamidsignalrules.go
+  - /models/components/postv1ticketingpriorities.go
+  - /models/components/postv1ticketingtickets.go
+  - /models/components/postv1webhooks.go
+  - /models/components/priorityentity.go
+  - /models/components/publicapiv1incidentssuccinctentity.go
+  - /models/components/publicapiv1incidentstranscriptentity.go
+  - /models/components/putv1incidentsincidentidimpact.go
+  - /models/components/putv1incidentsincidentidlinkslinkid.go
+  - /models/components/putv1incidentsincidentidmilestonesbulkupdate.go
+  - /models/components/putv1postmortemsquestions.go
+  - /models/components/putv1postmortemsreportsreportidreasonsorder.go
+  - /models/components/putv1runbooksexecutionsexecutionidstepsstepid.go
+  - /models/components/putv1runbooksrunbookid.go
+  - /models/components/putv1scimv2groupsid.go
+  - /models/components/putv1scimv2usersid.go
+  - /models/components/reportentity.go
+  - /models/components/reportsbucketentity.go
+  - /models/components/reportsdatapointentity.go
+  - /models/components/rulesruleentity.go
+  - /models/components/runbookentity.go
+  - /models/components/runbooksactionconfigentity.go
+  - /models/components/runbooksactionsentity.go
+  - /models/components/runbooksactionsentitypaginated.go
+  - /models/components/runbookselementdynamicselectentity.go
+  - /models/components/runbookselementdynamicselectentityselectoptionentity.go
+  - /models/components/runbookselemententity.go
+  - /models/components/runbookselementinputentity.go
+  - /models/components/runbookselementmarkdownentity.go
+  - /models/components/runbookselementtextareaentity.go
+  - /models/components/runbooksexecutionentity.go
+  - /models/components/runbooksexecutionentityexecutedforentity.go
+  - /models/components/runbooksexecutionentitypaginated.go
+  - /models/components/runbooksexecutionstepentity.go
+  - /models/components/runbooksexecutionstepexecutionentity.go
+  - /models/components/runbookstepentity.go
+  - /models/components/runbookswebhookdeliveryentity.go
+  - /models/components/savedsearchentity.go
+  - /models/components/scheduledmaintenanceentity.go
+  - /models/components/scheduledmaintenancesimpactentity.go
+  - /models/components/scheduledmaintenancesstatuspageentity.go
+  - /models/components/scheduleentity.go
+  - /models/components/scheduleentitypaginated.go
+  - /models/components/security.go
+  - /models/components/servicechilddependencyentity.go
+  - /models/components/servicedependencyentity.go
+  - /models/components/serviceentity.go
+  - /models/components/serviceentitypaginated.go
+  - /models/components/servicelinkentity.go
+  - /models/components/serviceparentdependencyentity.go
+  - /models/components/servicewithalldependenciesentity.go
+  - /models/components/severityentity.go
+  - /models/components/severityentitypaginated.go
+  - /models/components/severitymatrixconditionentity.go
+  - /models/components/severitymatriximpactentity.go
+  - /models/components/severitymatrixitementity.go
+  - /models/components/severitymatrixseveritymatrixentity.go
+  - /models/components/signalsapiingestkeyentity.go
+  - /models/components/signalsapiruleentity.go
+  - /models/components/signalsapitargetentity.go
+  - /models/components/slimrunbookentity.go
+  - /models/components/statusupdatetemplateentity.go
+  - /models/components/succinctentity.go
+  - /models/components/tagentity.go
+  - /models/components/tagentitypaginated.go
+  - /models/components/taskentity.go
+  - /models/components/taskentitypaginated.go
+  - /models/components/tasklistentity.go
+  - /models/components/tasklistitementity.go
+  - /models/components/teamentity.go
+  - /models/components/teamentitypaginated.go
+  - /models/components/ticketingfieldmapsmappablefieldentity.go
+  - /models/components/ticketingpriorityentity.go
+  - /models/components/ticketingprojectconfigentity.go
+  - /models/components/ticketingprojectfieldmapbodyentity.go
+  - /models/components/ticketingprojectfieldmapcaseselseentity.go
+  - /models/components/ticketingprojectfieldmapcasesentity.go
+  - /models/components/ticketingprojectfieldmapentity.go
+  - /models/components/ticketingprojectfieldmapexternalvalueentity.go
+  - /models/components/ticketingprojectsprojectlistitementity.go
+  - /models/components/ticketingticketentity.go
+  - /models/components/userentity.go
+  - /models/components/userentitypaginated.go
+  - /models/components/votesentity.go
+  - /models/components/webhooksentitieswebhookentity.go
+  - /models/operations/deletev1changeschangeid.go
+  - /models/operations/deletev1changeschangeididentitiesidentityid.go
+  - /models/operations/deletev1changeseventschangeeventid.go
+  - /models/operations/deletev1checklisttemplatesid.go
+  - /models/operations/deletev1conversationsconversationidcommentscommentid.go
+  - /models/operations/deletev1conversationsconversationidcommentscommentidreactionsreactionid.go
+  - /models/operations/deletev1customfieldsdefinitionsfieldid.go
+  - /models/operations/deletev1environmentsenvironmentid.go
+  - /models/operations/deletev1functionalitiesfunctionalityid.go
+  - /models/operations/deletev1incidentrolesincidentroleid.go
+  - /models/operations/deletev1incidentsincidentid.go
+  - /models/operations/deletev1incidentsincidentidalertsincidentalertid.go
+  - /models/operations/deletev1incidentsincidentideventseventid.go
+  - /models/operations/deletev1incidentsincidentidgenericchatmessagesmessageid.go
+  - /models/operations/deletev1incidentsincidentidimpacttypeid.go
+  - /models/operations/deletev1incidentsincidentidlinkslinkid.go
+  - /models/operations/deletev1incidentsincidentidroleassignmentsroleassignmentid.go
+  - /models/operations/deletev1incidentsincidentidstatuspagesstatuspageid.go
+  - /models/operations/deletev1incidentsincidentidtaskstaskid.go
+  - /models/operations/deletev1incidentsincidentidteamassignmentsteamassignmentid.go
+  - /models/operations/deletev1incidentsincidentidtranscripttranscriptid.go
+  - /models/operations/deletev1incidenttypesid.go
+  - /models/operations/deletev1integrationsslackconnectionsconnectionidemojiactionsemojiactionid.go
+  - /models/operations/deletev1integrationsstatuspageconnectionsconnectionid.go
+  - /models/operations/deletev1lifecyclesmeasurementdefinitionsmeasurementdefinitionid.go
+  - /models/operations/deletev1lifecyclesmilestonesmilestoneid.go
+  - /models/operations/deletev1nuncconnectionsnuncconnectionid.go
+  - /models/operations/deletev1nuncconnectionsnuncconnectionidcomponentgroupsgroupid.go
+  - /models/operations/deletev1nuncconnectionsnuncconnectionidimagestype.go
+  - /models/operations/deletev1nuncconnectionsnuncconnectionidlinkslinkid.go
+  - /models/operations/deletev1nuncconnectionsnuncconnectionidsubscribers.go
+  - /models/operations/deletev1nuncsubscriptionsunsubscribetoken.go
+  - /models/operations/deletev1postmortemsreportsreportidreasonsreasonid.go
+  - /models/operations/deletev1prioritiespriorityslug.go
+  - /models/operations/deletev1runbooksexecutionsexecutionid.go
+  - /models/operations/deletev1runbooksrunbookid.go
+  - /models/operations/deletev1savedsearchesresourcetypesavedsearchid.go
+  - /models/operations/deletev1scheduledmaintenancesscheduledmaintenanceid.go
+  - /models/operations/deletev1scimv2groupsid.go
+  - /models/operations/deletev1scimv2usersid.go
+  - /models/operations/deletev1servicedependenciesservicedependencyid.go
+  - /models/operations/deletev1servicesserviceid.go
+  - /models/operations/deletev1servicesserviceidservicelinksremoteid.go
+  - /models/operations/deletev1severitiesseverityslug.go
+  - /models/operations/deletev1severitymatrixconditionsconditionid.go
+  - /models/operations/deletev1severitymatriximpactsimpactid.go
+  - /models/operations/deletev1signalsemailtargetsid.go
+  - /models/operations/deletev1signalswebhooktargetsid.go
+  - /models/operations/deletev1statusupdatetemplatesstatusupdatetemplateid.go
+  - /models/operations/deletev1taskliststasklistid.go
+  - /models/operations/deletev1teamsteamid.go
+  - /models/operations/deletev1teamsteamidescalationpoliciesid.go
+  - /models/operations/deletev1teamsteamidoncallschedulesscheduleid.go
+  - /models/operations/deletev1teamsteamidoncallschedulesscheduleidshiftsid.go
+  - /models/operations/deletev1teamsteamidsignalrulesid.go
+  - /models/operations/deletev1ticketingprioritiesid.go
+  - /models/operations/deletev1ticketingprojectsticketingprojectidfieldmapsmapid.go
+  - /models/operations/deletev1ticketingprojectsticketingprojectidproviderprojectconfigurationsconfigid.go
+  - /models/operations/deletev1ticketingticketsticketid.go
+  - /models/operations/deletev1webhookswebhookid.go
+  - /models/operations/getv1aipreferences.go
+  - /models/operations/getv1aisummarizeincidentincidentidgeneratedsummaryidvoted.go
+  - /models/operations/getv1alerts.go
+  - /models/operations/getv1alertsalertid.go
+  - /models/operations/getv1bootstrap.go
+  - /models/operations/getv1catalogscatalogidrefresh.go
+  - /models/operations/getv1changes.go
+  - /models/operations/getv1changeschangeididentities.go
+  - /models/operations/getv1changesevents.go
+  - /models/operations/getv1changeseventschangeeventid.go
+  - /models/operations/getv1changetypes.go
+  - /models/operations/getv1checklisttemplates.go
+  - /models/operations/getv1checklisttemplatesid.go
+  - /models/operations/getv1conversationsconversationidcomments.go
+  - /models/operations/getv1conversationsconversationidcommentscommentid.go
+  - /models/operations/getv1conversationsconversationidcommentscommentidreactions.go
+  - /models/operations/getv1currentuser.go
+  - /models/operations/getv1customfieldsdefinitions.go
+  - /models/operations/getv1customfieldsdefinitionsfieldidselectoptions.go
+  - /models/operations/getv1entitlements.go
+  - /models/operations/getv1environments.go
+  - /models/operations/getv1environmentsenvironmentid.go
+  - /models/operations/getv1formconfigurationsslug.go
+  - /models/operations/getv1functionalities.go
+  - /models/operations/getv1functionalitiesfunctionalityid.go
+  - /models/operations/getv1functionalitiesfunctionalityidservices.go
+  - /models/operations/getv1incidentroles.go
+  - /models/operations/getv1incidentrolesincidentroleid.go
+  - /models/operations/getv1incidents.go
+  - /models/operations/getv1incidentsincidentid.go
+  - /models/operations/getv1incidentsincidentidalerts.go
+  - /models/operations/getv1incidentsincidentidattachments.go
+  - /models/operations/getv1incidentsincidentidchannel.go
+  - /models/operations/getv1incidentsincidentidevents.go
+  - /models/operations/getv1incidentsincidentideventseventid.go
+  - /models/operations/getv1incidentsincidentideventseventidvotesstatus.go
+  - /models/operations/getv1incidentsincidentidimpacttype.go
+  - /models/operations/getv1incidentsincidentidlinks.go
+  - /models/operations/getv1incidentsincidentidmilestones.go
+  - /models/operations/getv1incidentsincidentidrelatedchangeevents.go
+  - /models/operations/getv1incidentsincidentidrelationships.go
+  - /models/operations/getv1incidentsincidentidroleassignments.go
+  - /models/operations/getv1incidentsincidentidsimilar.go
+  - /models/operations/getv1incidentsincidentidstatuspages.go
+  - /models/operations/getv1incidentsincidentidtasks.go
+  - /models/operations/getv1incidentsincidentidtaskstaskid.go
+  - /models/operations/getv1incidentsincidentidtranscript.go
+  - /models/operations/getv1incidentsincidentidusersuserid.go
+  - /models/operations/getv1incidenttags.go
+  - /models/operations/getv1incidenttypes.go
+  - /models/operations/getv1incidenttypesid.go
+  - /models/operations/getv1infrastructures.go
+  - /models/operations/getv1integrations.go
+  - /models/operations/getv1integrationsawscloudtrailbatches.go
+  - /models/operations/getv1integrationsawscloudtrailbatchesid.go
+  - /models/operations/getv1integrationsawscloudtrailbatchesidevents.go
+  - /models/operations/getv1integrationsawsconnections.go
+  - /models/operations/getv1integrationsawsconnectionsid.go
+  - /models/operations/getv1integrationsconfluencecloudconnectionsidspacesearch.go
+  - /models/operations/getv1integrationsconnections.go
+  - /models/operations/getv1integrationsfieldmapsfieldmapidavailablefields.go
+  - /models/operations/getv1integrationsintegrationid.go
+  - /models/operations/getv1integrationsslackconnectionsconnectionidemojiactions.go
+  - /models/operations/getv1integrationsslackconnectionsconnectionidemojiactionsemojiactionid.go
+  - /models/operations/getv1integrationsslackconnectionsconnectionidworkspaces.go
+  - /models/operations/getv1integrationsslackusergroups.go
+  - /models/operations/getv1integrationsstatusesslug.go
+  - /models/operations/getv1integrationsstatuspageconnections.go
+  - /models/operations/getv1integrationsstatuspageconnectionsconnectionid.go
+  - /models/operations/getv1integrationsstatuspageconnectionsconnectionidpages.go
+  - /models/operations/getv1integrationszendesksearch.go
+  - /models/operations/getv1lifecyclesmeasurementdefinitions.go
+  - /models/operations/getv1lifecyclesmeasurementdefinitionsmeasurementdefinitionid.go
+  - /models/operations/getv1lifecyclesphases.go
+  - /models/operations/getv1metricsincidents.go
+  - /models/operations/getv1metricsinfratype.go
+  - /models/operations/getv1metricsinfratypeinfraid.go
+  - /models/operations/getv1metricsmilestonefunnel.go
+  - /models/operations/getv1metricsmttx.go
+  - /models/operations/getv1metricsretrospectives.go
+  - /models/operations/getv1metricsticketfunnel.go
+  - /models/operations/getv1metricsuserinvolvements.go
+  - /models/operations/getv1noauthping.go
+  - /models/operations/getv1nuncconnections.go
+  - /models/operations/getv1nuncconnectionsnuncconnectionid.go
+  - /models/operations/getv1nuncconnectionsnuncconnectionidsubscribers.go
+  - /models/operations/getv1ping.go
+  - /models/operations/getv1postmortemsquestions.go
+  - /models/operations/getv1postmortemsquestionsquestionid.go
+  - /models/operations/getv1postmortemsreports.go
+  - /models/operations/getv1postmortemsreportsreportid.go
+  - /models/operations/getv1postmortemsreportsreportidreasons.go
+  - /models/operations/getv1priorities.go
+  - /models/operations/getv1prioritiespriorityslug.go
+  - /models/operations/getv1processinglogentries.go
+  - /models/operations/getv1reportsmeantime.go
+  - /models/operations/getv1runbookaudits.go
+  - /models/operations/getv1runbooks.go
+  - /models/operations/getv1runbooksactions.go
+  - /models/operations/getv1runbooksexecutions.go
+  - /models/operations/getv1runbooksexecutionsexecutionid.go
+  - /models/operations/getv1runbooksexecutionsexecutionidstepsstepidscript.go
+  - /models/operations/getv1runbooksexecutionsexecutionidstepsstepidvotesstatus.go
+  - /models/operations/getv1runbooksexecutionsexecutionidvotesstatus.go
+  - /models/operations/getv1runbooksrunbookid.go
+  - /models/operations/getv1runbooksselectoptionsintegrationslugactionslugfield.go
+  - /models/operations/getv1savedsearchesresourcetype.go
+  - /models/operations/getv1savedsearchesresourcetypesavedsearchid.go
+  - /models/operations/getv1scheduledmaintenances.go
+  - /models/operations/getv1scheduledmaintenancesscheduledmaintenanceid.go
+  - /models/operations/getv1schedules.go
+  - /models/operations/getv1scimv2groups.go
+  - /models/operations/getv1scimv2groupsid.go
+  - /models/operations/getv1scimv2users.go
+  - /models/operations/getv1scimv2usersid.go
+  - /models/operations/getv1servicedependenciesservicedependencyid.go
+  - /models/operations/getv1services.go
+  - /models/operations/getv1servicesserviceid.go
+  - /models/operations/getv1servicesserviceidavailabledownstreamdependencies.go
+  - /models/operations/getv1servicesserviceidavailableupstreamdependencies.go
+  - /models/operations/getv1servicesserviceiddependencies.go
+  - /models/operations/getv1severities.go
+  - /models/operations/getv1severitiesseverityslug.go
+  - /models/operations/getv1severitymatrix.go
+  - /models/operations/getv1severitymatrixconditions.go
+  - /models/operations/getv1severitymatrixconditionsconditionid.go
+  - /models/operations/getv1severitymatriximpacts.go
+  - /models/operations/getv1signalsanalyticsgroupedmetrics.go
+  - /models/operations/getv1signalsanalyticsmttx.go
+  - /models/operations/getv1signalsanalyticstimeseries.go
+  - /models/operations/getv1signalsemailtargets.go
+  - /models/operations/getv1signalsemailtargetsid.go
+  - /models/operations/getv1signalseventsources.go
+  - /models/operations/getv1signalsingesturl.go
+  - /models/operations/getv1signalsoncall.go
+  - /models/operations/getv1signalstransposers.go
+  - /models/operations/getv1signalswebhooktargets.go
+  - /models/operations/getv1signalswebhooktargetsid.go
+  - /models/operations/getv1statusupdatetemplates.go
+  - /models/operations/getv1statusupdatetemplatesstatusupdatetemplateid.go
+  - /models/operations/getv1tasklists.go
+  - /models/operations/getv1taskliststasklistid.go
+  - /models/operations/getv1teams.go
+  - /models/operations/getv1teamsteamid.go
+  - /models/operations/getv1teamsteamidescalationpolicies.go
+  - /models/operations/getv1teamsteamidescalationpoliciesid.go
+  - /models/operations/getv1teamsteamidoncallschedules.go
+  - /models/operations/getv1teamsteamidoncallschedulesscheduleid.go
+  - /models/operations/getv1teamsteamidoncallschedulesscheduleidshiftsid.go
+  - /models/operations/getv1teamsteamidsignalrules.go
+  - /models/operations/getv1teamsteamidsignalrulesid.go
+  - /models/operations/getv1ticketingpriorities.go
+  - /models/operations/getv1ticketingprioritiesid.go
+  - /models/operations/getv1ticketingprojects.go
+  - /models/operations/getv1ticketingprojectsticketingprojectid.go
+  - /models/operations/getv1ticketingprojectsticketingprojectidconfigurationoptions.go
+  - /models/operations/getv1ticketingprojectsticketingprojectidconfigurationoptionsoptionsforfieldid.go
+  - /models/operations/getv1ticketingprojectsticketingprojectidfieldmapsavailablefields.go
+  - /models/operations/getv1ticketingprojectsticketingprojectidfieldmapsmapid.go
+  - /models/operations/getv1ticketingprojectsticketingprojectidproviderprojectconfigurationsconfigid.go
+  - /models/operations/getv1ticketingtickets.go
+  - /models/operations/getv1ticketingticketsticketid.go
+  - /models/operations/getv1ticketingtickettags.go
+  - /models/operations/getv1users.go
+  - /models/operations/getv1usersidservices.go
+  - /models/operations/getv1webhooks.go
+  - /models/operations/getv1webhookswebhookid.go
+  - /models/operations/getv1webhookswebhookiddeliveries.go
+  - /models/operations/patchv1aipreferences.go
+  - /models/operations/patchv1changeschangeid.go
+  - /models/operations/patchv1changeschangeididentitiesidentityid.go
+  - /models/operations/patchv1changeseventschangeeventid.go
+  - /models/operations/patchv1checklisttemplatesid.go
+  - /models/operations/patchv1conversationsconversationidcommentscommentid.go
+  - /models/operations/patchv1customfieldsdefinitionsfieldid.go
+  - /models/operations/patchv1environmentsenvironmentid.go
+  - /models/operations/patchv1functionalitiesfunctionalityid.go
+  - /models/operations/patchv1incidentrolesincidentroleid.go
+  - /models/operations/patchv1incidentsincidentid.go
+  - /models/operations/patchv1incidentsincidentidalertsincidentalertidprimary.go
+  - /models/operations/patchv1incidentsincidentideventseventid.go
+  - /models/operations/patchv1incidentsincidentideventseventidvotes.go
+  - /models/operations/patchv1incidentsincidentidgenericchatmessagesmessageid.go
+  - /models/operations/patchv1incidentsincidentidimpact.go
+  - /models/operations/patchv1incidentsincidentidnotesnoteid.go
+  - /models/operations/patchv1incidentsincidentidrelatedchangeeventsrelatedchangeeventid.go
+  - /models/operations/patchv1incidentsincidentidtaskstaskid.go
+  - /models/operations/patchv1incidenttypesid.go
+  - /models/operations/patchv1integrationsawscloudtrailbatchesid.go
+  - /models/operations/patchv1integrationsawsconnectionsid.go
+  - /models/operations/patchv1integrationsconnectionsslugconnectionid.go
+  - /models/operations/patchv1integrationsconnectionsslugconnectionidrefresh.go
+  - /models/operations/patchv1integrationsfieldmapsfieldmapid.go
+  - /models/operations/patchv1integrationsslackconnectionsconnectionidemojiactionsemojiactionid.go
+  - /models/operations/patchv1integrationsstatuspageconnectionsconnectionid.go
+  - /models/operations/patchv1lifecyclesmeasurementdefinitionsmeasurementdefinitionid.go
+  - /models/operations/patchv1lifecyclesmilestonesmilestoneid.go
+  - /models/operations/patchv1nuncconnectionsnuncconnectionidcomponentgroupsgroupid.go
+  - /models/operations/patchv1nuncconnectionsnuncconnectionidlinkslinkid.go
+  - /models/operations/patchv1postmortemsreportsreportid.go
+  - /models/operations/patchv1postmortemsreportsreportidfieldsfieldid.go
+  - /models/operations/patchv1postmortemsreportsreportidreasonsreasonid.go
+  - /models/operations/patchv1prioritiespriorityslug.go
+  - /models/operations/patchv1runbooksexecutionsexecutionidstepsstepidvotes.go
+  - /models/operations/patchv1runbooksexecutionsexecutionidvotes.go
+  - /models/operations/patchv1savedsearchesresourcetypesavedsearchid.go
+  - /models/operations/patchv1scheduledmaintenancesscheduledmaintenanceid.go
+  - /models/operations/patchv1servicedependenciesservicedependencyid.go
+  - /models/operations/patchv1servicesserviceid.go
+  - /models/operations/patchv1severitiesseverityslug.go
+  - /models/operations/patchv1severitymatrix.go
+  - /models/operations/patchv1severitymatrixconditionsconditionid.go
+  - /models/operations/patchv1severitymatriximpactsimpactid.go
+  - /models/operations/patchv1signalsemailtargetsid.go
+  - /models/operations/patchv1signalswebhooktargetsid.go
+  - /models/operations/patchv1statusupdatetemplatesstatusupdatetemplateid.go
+  - /models/operations/patchv1taskliststasklistid.go
+  - /models/operations/patchv1teamsteamid.go
+  - /models/operations/patchv1teamsteamidescalationpoliciesid.go
+  - /models/operations/patchv1teamsteamidoncallschedulesscheduleid.go
+  - /models/operations/patchv1teamsteamidoncallschedulesscheduleidshiftsid.go
+  - /models/operations/patchv1teamsteamidsignalrulesid.go
+  - /models/operations/patchv1ticketingprioritiesid.go
+  - /models/operations/patchv1ticketingprojectsticketingprojectidfieldmapsmapid.go
+  - /models/operations/patchv1ticketingprojectsticketingprojectidproviderprojectconfigurationsconfigid.go
+  - /models/operations/patchv1ticketingticketsticketid.go
+  - /models/operations/patchv1webhookswebhookid.go
+  - /models/operations/postv1catalogscatalogidingest.go
+  - /models/operations/postv1changes.go
+  - /models/operations/postv1changeschangeididentities.go
+  - /models/operations/postv1changesevents.go
+  - /models/operations/postv1checklisttemplates.go
+  - /models/operations/postv1conversationsconversationidcomments.go
+  - /models/operations/postv1conversationsconversationidcommentscommentidreactions.go
+  - /models/operations/postv1customfieldsdefinitions.go
+  - /models/operations/postv1environments.go
+  - /models/operations/postv1functionalities.go
+  - /models/operations/postv1incidentroles.go
+  - /models/operations/postv1incidents.go
+  - /models/operations/postv1incidentsincidentidalerts.go
+  - /models/operations/postv1incidentsincidentidattachments.go
+  - /models/operations/postv1incidentsincidentidgenericchatmessages.go
+  - /models/operations/postv1incidentsincidentidimpacttype.go
+  - /models/operations/postv1incidentsincidentidlinks.go
+  - /models/operations/postv1incidentsincidentidnotes.go
+  - /models/operations/postv1incidentsincidentidrelatedchangeevents.go
+  - /models/operations/postv1incidentsincidentidroleassignments.go
+  - /models/operations/postv1incidentsincidentidstatuspages.go
+  - /models/operations/postv1incidentsincidentidtasklists.go
+  - /models/operations/postv1incidentsincidentidtasks.go
+  - /models/operations/postv1incidentsincidentidtaskstaskidconvert.go
+  - /models/operations/postv1incidentsincidentidteamassignments.go
+  - /models/operations/postv1incidentsincidentidunarchive.go
+  - /models/operations/postv1incidenttagsvalidate.go
+  - /models/operations/postv1incidenttypes.go
+  - /models/operations/postv1integrationsconnectionsslug.go
+  - /models/operations/postv1integrationsslackconnectionsconnectionidemojiactions.go
+  - /models/operations/postv1lifecyclesmeasurementdefinitions.go
+  - /models/operations/postv1lifecyclesmilestones.go
+  - /models/operations/postv1nuncconnections.go
+  - /models/operations/postv1nuncconnectionsnuncconnectionidcomponentgroups.go
+  - /models/operations/postv1nuncconnectionsnuncconnectionidlinks.go
+  - /models/operations/postv1nuncconnectionsnuncconnectionidsubscribers.go
+  - /models/operations/postv1nuncsubscriptions.go
+  - /models/operations/postv1postmortemsreports.go
+  - /models/operations/postv1postmortemsreportsreportidpublish.go
+  - /models/operations/postv1postmortemsreportsreportidreasons.go
+  - /models/operations/postv1priorities.go
+  - /models/operations/postv1runbooks.go
+  - /models/operations/postv1runbooksexecutions.go
+  - /models/operations/postv1savedsearchesresourcetype.go
+  - /models/operations/postv1scheduledmaintenances.go
+  - /models/operations/postv1scimv2groups.go
+  - /models/operations/postv1scimv2users.go
+  - /models/operations/postv1servicedependencies.go
+  - /models/operations/postv1services.go
+  - /models/operations/postv1servicesserviceidchecklistresponsechecklistid.go
+  - /models/operations/postv1servicesservicelinks.go
+  - /models/operations/postv1severities.go
+  - /models/operations/postv1severitymatrixconditions.go
+  - /models/operations/postv1severitymatriximpacts.go
+  - /models/operations/postv1signalsdebugger.go
+  - /models/operations/postv1signalsemailtargets.go
+  - /models/operations/postv1signalswebhooktargets.go
+  - /models/operations/postv1statusupdatetemplates.go
+  - /models/operations/postv1tasklists.go
+  - /models/operations/postv1teams.go
+  - /models/operations/postv1teamsteamidescalationpolicies.go
+  - /models/operations/postv1teamsteamidoncallschedules.go
+  - /models/operations/postv1teamsteamidoncallschedulesscheduleidshifts.go
+  - /models/operations/postv1teamsteamidsignalrules.go
+  - /models/operations/postv1ticketingpriorities.go
+  - /models/operations/postv1ticketingprojectsticketingprojectidfieldmaps.go
+  - /models/operations/postv1ticketingprojectsticketingprojectidproviderprojectconfigurations.go
+  - /models/operations/postv1ticketingtickets.go
+  - /models/operations/postv1webhooks.go
+  - /models/operations/putv1aisummarizeincidentincidentidgeneratedsummaryidvote.go
+  - /models/operations/putv1incidentsincidentidclose.go
+  - /models/operations/putv1incidentsincidentidimpact.go
+  - /models/operations/putv1incidentsincidentidlinkslinkid.go
+  - /models/operations/putv1incidentsincidentidmilestonesbulkupdate.go
+  - /models/operations/putv1incidentsincidentidresolve.go
+  - /models/operations/putv1nuncconnectionsnuncconnectionid.go
+  - /models/operations/putv1nuncconnectionsnuncconnectionidimagestype.go
+  - /models/operations/putv1postmortemsquestions.go
+  - /models/operations/putv1postmortemsreportsreportidreasonsorder.go
+  - /models/operations/putv1runbooksexecutionsexecutionidstepsstepid.go
+  - /models/operations/putv1runbooksexecutionsexecutionidstepsstepidscriptstate.go
+  - /models/operations/putv1runbooksrunbookid.go
+  - /models/operations/putv1scimv2groupsid.go
+  - /models/operations/putv1scimv2usersid.go
+  - /models/sdkerrors/errorentity.go
+  - CONTRIBUTING.md
+  - USAGE.md
+  - ai.go
+  - alerts.go
+  - aws.go
+  - bootstrap.go
+  - catalogs.go
+  - changes.go
+  - changetypes.go
+  - checklisttemplates.go
+  - connections.go
+  - conversations.go
+  - currentuser.go
+  - customfields.go
+  - docs/models/components/actionelements.md
+  - docs/models/components/actorentity.md
+  - docs/models/components/aientitiespreferencesentity.md
+  - docs/models/components/alertsalertentity.md
+  - docs/models/components/alertsalertentitylabels.md
+  - docs/models/components/alertsalertentitypaginated.md
+  - docs/models/components/alertsprocessinglogentryentity.md
+  - docs/models/components/alertsprocessinglogentryentitypaginated.md
+  - docs/models/components/alertssirenevententity.md
+  - docs/models/components/alertssirenevententitydata.md
+  - docs/models/components/attachmentrule.md
+  - docs/models/components/attachments.md
+  - docs/models/components/attachmentslinkentity.md
+  - docs/models/components/attachmentslinkentitypaginated.md
+  - docs/models/components/authorentity.md
+  - docs/models/components/authors.md
+  - docs/models/components/body.md
+  - docs/models/components/buckets.md
+  - docs/models/components/bulk.md
+  - docs/models/components/calendarsevententity.md
+  - docs/models/components/changeentity.md
+  - docs/models/components/changeentitylabels.md
+  - docs/models/components/changeevententity.md
+  - docs/models/components/changeevententityattachments.md
+  - docs/models/components/changeevententitylabels.md
+  - docs/models/components/changeeventslimentity.md
+  - docs/models/components/changeeventslimentitylabels.md
+  - docs/models/components/changeeventslimentitypaginated.md
+  - docs/models/components/changeidentities.md
+  - docs/models/components/changeidentityentity.md
+  - docs/models/components/changeidentityentitypaginated.md
+  - docs/models/components/changetypeentity.md
+  - docs/models/components/changetypeentitypaginated.md
+  - docs/models/components/checklistcheckentity.md
+  - docs/models/components/checklists.md
+  - docs/models/components/checklisttemplateentity.md
+  - docs/models/components/checklisttemplateentitypaginated.md
+  - docs/models/components/checks.md
+  - docs/models/components/color.md
+  - docs/models/components/conditions.md
+  - docs/models/components/config.md
+  - docs/models/components/connectedservices.md
+  - docs/models/components/connectionstatus.md
+  - docs/models/components/context.md
+  - docs/models/components/conversationsapientitieschannel.md
+  - docs/models/components/conversationsapientitiesreference.md
+  - docs/models/components/currentuserentity.md
+  - docs/models/components/customfields.md
+  - docs/models/components/customfieldsfieldvalue.md
+  - docs/models/components/data.md
+  - docs/models/components/defaultlogic.md
+  - docs/models/components/defaultruledata.md
+  - docs/models/components/details.md
+  - docs/models/components/direction.md
+  - docs/models/components/displayinformation.md
+  - docs/models/components/emails.md
+  - docs/models/components/encoding.md
+  - docs/models/components/endday.md
+  - docs/models/components/entitlemententity.md
+  - docs/models/components/entitlemententitypaginated.md
+  - docs/models/components/environmententryentity.md
+  - docs/models/components/environmententryentitypaginated.md
+  - docs/models/components/environments.md
+  - docs/models/components/eventgenericchatmessageentity.md
+  - docs/models/components/eventnoteentity.md
+  - docs/models/components/externalresourceentity.md
+  - docs/models/components/externalresources.md
+  - docs/models/components/fhtypesgenericentity.md
+  - docs/models/components/fieldmappingfieldmapentity.md
+  - docs/models/components/fieldmappingmappablefieldentity.md
+  - docs/models/components/filterparams.md
+  - docs/models/components/filtervalues.md
+  - docs/models/components/functionalities.md
+  - docs/models/components/functionalityentity.md
+  - docs/models/components/functionalityentitylabels.md
+  - docs/models/components/functionalityentitypaginated.md
+  - docs/models/components/getv1metricsticketfunnel.md
+  - docs/models/components/groupby.md
+  - docs/models/components/handoffday.md
+  - docs/models/components/handoffstep.md
+  - docs/models/components/httpmetadata.md
+  - docs/models/components/images.md
+  - docs/models/components/impact.md
+  - docs/models/components/impacts.md
+  - docs/models/components/importsimportableresourceentity.md
+  - docs/models/components/importsimportableresourceentitystate.md
+  - docs/models/components/importsimportentity.md
+  - docs/models/components/importsimportentitystate.md
+  - docs/models/components/importsimporterrorentity.md
+  - docs/models/components/importsimporterrorentityresourceentity.md
+  - docs/models/components/incidentattachmententity.md
+  - docs/models/components/incidentattachmententitystatus.md
+  - docs/models/components/incidententity.md
+  - docs/models/components/incidententityfieldrequiremententity.md
+  - docs/models/components/incidententitylabels.md
+  - docs/models/components/incidententitypaginated.md
+  - docs/models/components/incidentevententity.md
+  - docs/models/components/incidentevententitydata.md
+  - docs/models/components/incidentevententitypaginated.md
+  - docs/models/components/incidentimpactentity.md
+  - docs/models/components/incidentimpactentitypaginated.md
+  - docs/models/components/incidentroleentity.md
+  - docs/models/components/incidentroleentitypaginated.md
+  - docs/models/components/incidentsalertentity.md
+  - docs/models/components/incidentsalertentitypaginated.md
+  - docs/models/components/incidentschannelentity.md
+  - docs/models/components/incidentsconferencebridgeentity.md
+  - docs/models/components/incidentsconferencebridgeentityattachments.md
+  - docs/models/components/incidentscontextobjectentity.md
+  - docs/models/components/incidentsimpactentity.md
+  - docs/models/components/incidentsimpactentitytype.md
+  - docs/models/components/incidentslifecyclemeasuremententity.md
+  - docs/models/components/incidentslifecyclemilestoneentity.md
+  - docs/models/components/incidentslifecyclephaseentity.md
+  - docs/models/components/incidentsmilestoneentity.md
+  - docs/models/components/incidentsmilestoneentitypaginated.md
+  - docs/models/components/incidentsrelatedchangeevententity.md
+  - docs/models/components/incidentsrelatedchangeevententitypaginated.md
+  - docs/models/components/incidentsrelatedchangeevententitytype.md
+  - docs/models/components/incidentsrelationshipsentity.md
+  - docs/models/components/incidentsroleassignmententity.md
+  - docs/models/components/incidentsroleassignmententitypaginated.md
+  - docs/models/components/incidentsstatuspageentity.md
+  - docs/models/components/incidentsstatuspageentitypaginated.md
+  - docs/models/components/incidentsteamassignmententity.md
+  - docs/models/components/incidenttypeentity.md
+  - docs/models/components/incidenttypeentitypaginated.md
+  - docs/models/components/incidenttypeentitytemplateentity.md
+  - docs/models/components/incidenttypeentitytemplateentitylabels.md
+  - docs/models/components/incidenttypeentitytemplateimpactentity.md
+  - docs/models/components/incidenttypeentitytemplateimpactentitytype.md
+  - docs/models/components/incidenttypeentitytemplatevaluesentity.md
+  - docs/models/components/infrastructuresearchentity.md
+  - docs/models/components/integration.md
+  - docs/models/components/integrationentity.md
+  - docs/models/components/integrationsawscloudtrailbatchentity.md
+  - docs/models/components/integrationsawscloudtrailbatchentitypaginated.md
+  - docs/models/components/integrationsawscloudtrailbatchentitystatus.md
+  - docs/models/components/integrationsawsconnectionentity.md
+  - docs/models/components/integrationsawsconnectionentitypaginated.md
+  - docs/models/components/integrationsconfluencecloudspacekeyentity.md
+  - docs/models/components/integrationsconnectionentity.md
+  - docs/models/components/integrationsintegrationentity.md
+  - docs/models/components/integrationsintegrationentitylogoentity.md
+  - docs/models/components/integrationsmicrosoftteamsv2channelentity.md
+  - docs/models/components/integrationsslackslackchannelentity.md
+  - docs/models/components/integrationsstatuspageconditionentity.md
+  - docs/models/components/integrationsstatuspageconnectionentity.md
+  - docs/models/components/integrationsstatuspageconnectionentitypaginated.md
+  - docs/models/components/integrationsstatuspagemilestonemappingentity.md
+  - docs/models/components/integrationsstatuspageseverityentity.md
+  - docs/models/components/labels.md
+  - docs/models/components/level.md
+  - docs/models/components/lifecyclesmilestoneentity.md
+  - docs/models/components/lifecyclesphaseentity.md
+  - docs/models/components/lifecyclesphaseentitylist.md
+  - docs/models/components/links.md
+  - docs/models/components/linksentity.md
+  - docs/models/components/logic.md
+  - docs/models/components/managedbysettings.md
+  - docs/models/components/mediaimageentity.md
+  - docs/models/components/members.md
+  - docs/models/components/membershipentity.md
+  - docs/models/components/memberships.md
+  - docs/models/components/messagetype.md
+  - docs/models/components/metricsinfrastructurelistentity.md
+  - docs/models/components/metricsinfrastructuremetricsentity.md
+  - docs/models/components/metricsmetricsentity.md
+  - docs/models/components/metricsmetricsentitysortentity.md
+  - docs/models/components/metricsmilestonesfunnelentity.md
+  - docs/models/components/metricsmilestonesfunnelentitycolumnentity.md
+  - docs/models/components/metricsmilestonesfunnelentitydatabucketentity.md
+  - docs/models/components/metricsmilestonesfunnelentitydatabucketfilterparamsentity.md
+  - docs/models/components/metricsmilestonesfunnelentitydatabucketmilestonecountentity.md
+  - docs/models/components/metricsmilestonesfunnelentitygroupingsentity.md
+  - docs/models/components/metricsmilestonesfunnelentitymetaentity.md
+  - docs/models/components/metricsmttxdataentity.md
+  - docs/models/components/metricsmttxdataentitygroupingentity.md
+  - docs/models/components/metricsmttxgroupentity.md
+  - docs/models/components/metricsretrospectiveentity.md
+  - docs/models/components/metricsretrospectiveentitydataentity.md
+  - docs/models/components/metricsretrospectiveentitysummaryentity.md
+  - docs/models/components/metricsticketfunnelmetricsentity.md
+  - docs/models/components/metricsticketfunnelmetricsentitydatabucketentity.md
+  - docs/models/components/metricsticketfunnelmetricsentitydatabucketfilterparamsentity.md
+  - docs/models/components/metricsticketfunnelmetricsentitygroupingsentity.md
+  - docs/models/components/milestonemappings.md
+  - docs/models/components/milestones.md
+  - docs/models/components/msteamschannel.md
+  - docs/models/components/name.md
+  - docs/models/components/notificationpriorityoverride.md
+  - docs/models/components/nunccomponententity.md
+  - docs/models/components/nunccomponentgroupentity.md
+  - docs/models/components/nuncconditionentity.md
+  - docs/models/components/nuncconnectionentity.md
+  - docs/models/components/nuncconnectionentitypaginated.md
+  - docs/models/components/nuncemailsubscribersentity.md
+  - docs/models/components/nuncnuncsubscription.md
+  - docs/models/components/organizationentity.md
+  - docs/models/components/organizationscustomfielddefinitionentity.md
+  - docs/models/components/owner.md
+  - docs/models/components/paginationentity.md
+  - docs/models/components/patchv1changeschangeid.md
+  - docs/models/components/patchv1changeschangeididentitiesidentityid.md
+  - docs/models/components/patchv1changeseventschangeeventid.md
+  - docs/models/components/patchv1changeseventschangeeventidattachments.md
+  - docs/models/components/patchv1changeseventschangeeventidtype.md
+  - docs/models/components/patchv1checklisttemplatesid.md
+  - docs/models/components/patchv1checklisttemplatesidchecks.md
+  - docs/models/components/patchv1checklisttemplatesidconnectedservices.md
+  - docs/models/components/patchv1conversationsconversationidcommentscommentid.md
+  - docs/models/components/patchv1customfieldsdefinitionsfieldid.md
+  - docs/models/components/patchv1environmentsenvironmentid.md
+  - docs/models/components/patchv1functionalitiesfunctionalityid.md
+  - docs/models/components/patchv1functionalitiesfunctionalityidexternalresources.md
+  - docs/models/components/patchv1functionalitiesfunctionalityidlinks.md
+  - docs/models/components/patchv1functionalitiesfunctionalityidowner.md
+  - docs/models/components/patchv1functionalitiesfunctionalityidservices.md
+  - docs/models/components/patchv1functionalitiesfunctionalityidteams.md
+  - docs/models/components/patchv1incidentrolesincidentroleid.md
+  - docs/models/components/patchv1incidentsincidentid.md
+  - docs/models/components/patchv1incidentsincidentidalertsincidentalertidprimary.md
+  - docs/models/components/patchv1incidentsincidentideventseventidvotes.md
+  - docs/models/components/patchv1incidentsincidentidgenericchatmessagesmessageid.md
+  - docs/models/components/patchv1incidentsincidentidimpact.md
+  - docs/models/components/patchv1incidentsincidentidlabels.md
+  - docs/models/components/patchv1incidentsincidentidnotesnoteid.md
+  - docs/models/components/patchv1incidentsincidentidrelatedchangeeventsrelatedchangeeventid.md
+  - docs/models/components/patchv1incidentsincidentidrelatedchangeeventsrelatedchangeeventidtype.md
+  - docs/models/components/patchv1incidentsincidentidtaskstaskid.md
+  - docs/models/components/patchv1incidenttypesid.md
+  - docs/models/components/patchv1incidenttypesidimpacts.md
+  - docs/models/components/patchv1incidenttypesidtemplate.md
+  - docs/models/components/patchv1integrationsawscloudtrailbatchesid.md
+  - docs/models/components/patchv1integrationsawsconnectionsid.md
+  - docs/models/components/patchv1integrationsstatuspageconnectionsconnectionid.md
+  - docs/models/components/patchv1integrationsstatuspageconnectionsconnectionidstatus.md
+  - docs/models/components/patchv1nuncconnectionsnuncconnectionidlinkslinkid.md
+  - docs/models/components/patchv1postmortemsreportsreportid.md
+  - docs/models/components/patchv1postmortemsreportsreportidfieldsfieldid.md
+  - docs/models/components/patchv1postmortemsreportsreportidreasonsreasonid.md
+  - docs/models/components/patchv1prioritiespriorityslug.md
+  - docs/models/components/patchv1runbooksexecutionsexecutionidstepsstepidvotes.md
+  - docs/models/components/patchv1runbooksexecutionsexecutionidstepsstepidvotesdirection.md
+  - docs/models/components/patchv1runbooksexecutionsexecutionidvotes.md
+  - docs/models/components/patchv1runbooksexecutionsexecutionidvotesdirection.md
+  - docs/models/components/patchv1savedsearchesresourcetypesavedsearchid.md
+  - docs/models/components/patchv1scheduledmaintenancesscheduledmaintenanceid.md
+  - docs/models/components/patchv1scheduledmaintenancesscheduledmaintenanceidimpacts.md
+  - docs/models/components/patchv1scheduledmaintenancesscheduledmaintenanceidstatuspages.md
+  - docs/models/components/patchv1servicedependenciesservicedependencyid.md
+  - docs/models/components/patchv1servicesserviceid.md
+  - docs/models/components/patchv1servicesserviceidexternalresources.md
+  - docs/models/components/patchv1servicesserviceidfunctionalities.md
+  - docs/models/components/patchv1servicesserviceidlinks.md
+  - docs/models/components/patchv1servicesserviceidowner.md
+  - docs/models/components/patchv1servicesserviceidservicetier.md
+  - docs/models/components/patchv1servicesserviceidteams.md
+  - docs/models/components/patchv1severitiesseverityslug.md
+  - docs/models/components/patchv1severitiesseverityslugcolor.md
+  - docs/models/components/patchv1severitymatrix.md
+  - docs/models/components/patchv1severitymatrixconditionsconditionid.md
+  - docs/models/components/patchv1severitymatrixdata.md
+  - docs/models/components/patchv1severitymatriximpactsimpactid.md
+  - docs/models/components/patchv1signalsemailtargetsid.md
+  - docs/models/components/patchv1signalsemailtargetsidrulematchingstrategy.md
+  - docs/models/components/patchv1signalsemailtargetsidtarget.md
+  - docs/models/components/patchv1signalsemailtargetsidtype.md
+  - docs/models/components/patchv1signalswebhooktargetsid.md
+  - docs/models/components/patchv1statusupdatetemplatesstatusupdatetemplateid.md
+  - docs/models/components/patchv1taskliststasklistid.md
+  - docs/models/components/patchv1taskliststasklistidtasklistitems.md
+  - docs/models/components/patchv1teamsteamid.md
+  - docs/models/components/patchv1teamsteamidescalationpoliciesid.md
+  - docs/models/components/patchv1teamsteamidescalationpoliciesidhandoffstep.md
+  - docs/models/components/patchv1teamsteamidescalationpoliciesidsteps.md
+  - docs/models/components/patchv1teamsteamidescalationpoliciesidtargets.md
+  - docs/models/components/patchv1teamsteamidescalationpoliciesidtargettype.md
+  - docs/models/components/patchv1teamsteamidescalationpoliciesidtype.md
+  - docs/models/components/patchv1teamsteamidmemberships.md
+  - docs/models/components/patchv1teamsteamidmsteamschannel.md
+  - docs/models/components/patchv1teamsteamidoncallschedulesscheduleid.md
+  - docs/models/components/patchv1teamsteamidoncallschedulesscheduleidendday.md
+  - docs/models/components/patchv1teamsteamidoncallschedulesscheduleidhandoffday.md
+  - docs/models/components/patchv1teamsteamidoncallschedulesscheduleidmembers.md
+  - docs/models/components/patchv1teamsteamidoncallschedulesscheduleidrestrictions.md
+  - docs/models/components/patchv1teamsteamidoncallschedulesscheduleidshiftsid.md
+  - docs/models/components/patchv1teamsteamidoncallschedulesscheduleidstartday.md
+  - docs/models/components/patchv1teamsteamidoncallschedulesscheduleidstrategy.md
+  - docs/models/components/patchv1teamsteamidoncallschedulesscheduleidtype.md
+  - docs/models/components/patchv1teamsteamidsignalrulesid.md
+  - docs/models/components/patchv1teamsteamidsignalrulesidnotificationpriorityoverride.md
+  - docs/models/components/patchv1teamsteamidsignalrulesidtargettype.md
+  - docs/models/components/patchv1ticketingprioritiesid.md
+  - docs/models/components/patchv1ticketingticketsticketid.md
+  - docs/models/components/patchv1webhookswebhookid.md
+  - docs/models/components/patchv1webhookswebhookidstate.md
+  - docs/models/components/pongentity.md
+  - docs/models/components/postmortemspostmortemreportentity.md
+  - docs/models/components/postmortemspostmortemreportentitypaginated.md
+  - docs/models/components/postmortemsquestionentity.md
+  - docs/models/components/postmortemsquestiontypeentity.md
+  - docs/models/components/postmortemsquestiontypeentitypaginated.md
+  - docs/models/components/postmortemsreasonentity.md
+  - docs/models/components/postmortemsreasonentitypaginated.md
+  - docs/models/components/postmortemssectionfieldentity.md
+  - docs/models/components/postv1catalogscatalogidingest.md
+  - docs/models/components/postv1changes.md
+  - docs/models/components/postv1changeschangeididentities.md
+  - docs/models/components/postv1changesevents.md
+  - docs/models/components/postv1changeseventsattachments.md
+  - docs/models/components/postv1changeseventstype.md
+  - docs/models/components/postv1checklisttemplates.md
+  - docs/models/components/postv1conversationsconversationidcomments.md
+  - docs/models/components/postv1conversationsconversationidcommentscommentidreactions.md
+  - docs/models/components/postv1customfieldsdefinitions.md
+  - docs/models/components/postv1environments.md
+  - docs/models/components/postv1functionalities.md
+  - docs/models/components/postv1functionalitiesexternalresources.md
+  - docs/models/components/postv1functionalitieslinks.md
+  - docs/models/components/postv1functionalitiesowner.md
+  - docs/models/components/postv1functionalitiesteams.md
+  - docs/models/components/postv1incidentroles.md
+  - docs/models/components/postv1incidents.md
+  - docs/models/components/postv1incidentsincidentidgenericchatmessages.md
+  - docs/models/components/postv1incidentsincidentidimpacttype.md
+  - docs/models/components/postv1incidentsincidentidlinks.md
+  - docs/models/components/postv1incidentsincidentidnotes.md
+  - docs/models/components/postv1incidentsincidentidnotesstatuspages.md
+  - docs/models/components/postv1incidentsincidentidnotesvisibility.md
+  - docs/models/components/postv1incidentsincidentidrelatedchangeevents.md
+  - docs/models/components/postv1incidentsincidentidrelatedchangeeventstype.md
+  - docs/models/components/postv1incidentsincidentidroleassignments.md
+  - docs/models/components/postv1incidentsincidentidstatuspages.md
+  - docs/models/components/postv1incidentsincidentidtasklists.md
+  - docs/models/components/postv1incidentsincidentidtasks.md
+  - docs/models/components/postv1incidentsincidentidtaskstaskidconvert.md
+  - docs/models/components/postv1incidentsincidentidteamassignments.md
+  - docs/models/components/postv1incidentslabels.md
+  - docs/models/components/postv1incidenttypes.md
+  - docs/models/components/postv1incidenttypesimpacts.md
+  - docs/models/components/postv1nuncsubscriptions.md
+  - docs/models/components/postv1postmortemsreports.md
+  - docs/models/components/postv1postmortemsreportsreportidpublish.md
+  - docs/models/components/postv1postmortemsreportsreportidreasons.md
+  - docs/models/components/postv1priorities.md
+  - docs/models/components/postv1runbooks.md
+  - docs/models/components/postv1runbooksexecutions.md
+  - docs/models/components/postv1runbooksowner.md
+  - docs/models/components/postv1runbookssteps.md
+  - docs/models/components/postv1runbookstype.md
+  - docs/models/components/postv1savedsearchesresourcetype.md
+  - docs/models/components/postv1scheduledmaintenances.md
+  - docs/models/components/postv1scheduledmaintenancesimpacts.md
+  - docs/models/components/postv1scheduledmaintenancesstatuspages.md
+  - docs/models/components/postv1scimv2groups.md
+  - docs/models/components/postv1scimv2groupsmembers.md
+  - docs/models/components/postv1scimv2users.md
+  - docs/models/components/postv1scimv2usersemails.md
+  - docs/models/components/postv1scimv2usersname.md
+  - docs/models/components/postv1servicedependencies.md
+  - docs/models/components/postv1services.md
+  - docs/models/components/postv1servicesserviceidchecklistresponsechecklistid.md
+  - docs/models/components/postv1servicesservicelinks.md
+  - docs/models/components/postv1severities.md
+  - docs/models/components/postv1severitymatrixconditions.md
+  - docs/models/components/postv1severitymatriximpacts.md
+  - docs/models/components/postv1signalsdebugger.md
+  - docs/models/components/postv1signalsdebuggerlinks.md
+  - docs/models/components/postv1signalsemailtargets.md
+  - docs/models/components/postv1signalsemailtargetstype.md
+  - docs/models/components/postv1signalswebhooktargets.md
+  - docs/models/components/postv1statusupdatetemplates.md
+  - docs/models/components/postv1tasklists.md
+  - docs/models/components/postv1teams.md
+  - docs/models/components/postv1teamsteamidescalationpolicies.md
+  - docs/models/components/postv1teamsteamidescalationpoliciestargettype.md
+  - docs/models/components/postv1teamsteamidescalationpoliciestype.md
+  - docs/models/components/postv1teamsteamidoncallschedules.md
+  - docs/models/components/postv1teamsteamidoncallschedulesscheduleidshifts.md
+  - docs/models/components/postv1teamsteamidoncallschedulestype.md
+  - docs/models/components/postv1teamsteamidsignalrules.md
+  - docs/models/components/postv1ticketingpriorities.md
+  - docs/models/components/postv1ticketingtickets.md
+  - docs/models/components/postv1webhooks.md
+  - docs/models/components/prerequisites.md
+  - docs/models/components/priorityentity.md
+  - docs/models/components/publicapiv1incidentssuccinctentity.md
+  - docs/models/components/publicapiv1incidentstranscriptentity.md
+  - docs/models/components/putv1incidentsincidentidimpact.md
+  - docs/models/components/putv1incidentsincidentidimpactimpact.md
+  - docs/models/components/putv1incidentsincidentidimpactstatuspages.md
+  - docs/models/components/putv1incidentsincidentidlinkslinkid.md
+  - docs/models/components/putv1incidentsincidentidmilestonesbulkupdate.md
+  - docs/models/components/putv1incidentsincidentidmilestonesbulkupdatemilestones.md
+  - docs/models/components/putv1postmortemsquestions.md
+  - docs/models/components/putv1postmortemsquestionsquestions.md
+  - docs/models/components/putv1postmortemsreportsreportidreasonsorder.md
+  - docs/models/components/putv1runbooksexecutionsexecutionidstepsstepid.md
+  - docs/models/components/putv1runbooksrunbookid.md
+  - docs/models/components/putv1runbooksrunbookidattachmentrule.md
+  - docs/models/components/putv1runbooksrunbookidowner.md
+  - docs/models/components/putv1runbooksrunbookidrule.md
+  - docs/models/components/putv1runbooksrunbookidservices.md
+  - docs/models/components/putv1runbooksrunbookidseverities.md
+  - docs/models/components/putv1runbooksrunbookidsteps.md
+  - docs/models/components/putv1scimv2groupsid.md
+  - docs/models/components/putv1scimv2groupsidmembers.md
+  - docs/models/components/putv1scimv2usersid.md
+  - docs/models/components/questions.md
+  - docs/models/components/reportentity.md
+  - docs/models/components/reportsbucketentity.md
+  - docs/models/components/reportsdatapointentity.md
+  - docs/models/components/restrictions.md
+  - docs/models/components/retroexports.md
+  - docs/models/components/rule.md
+  - docs/models/components/rulematchingstrategy.md
+  - docs/models/components/rulesruleentity.md
+  - docs/models/components/runbookentity.md
+  - docs/models/components/runbooks.md
+  - docs/models/components/runbooksactionconfigentity.md
+  - docs/models/components/runbooksactionsentity.md
+  - docs/models/components/runbooksactionsentitypaginated.md
+  - docs/models/components/runbookselementdynamicselectentity.md
+  - docs/models/components/runbookselementdynamicselectentityselectoptionentity.md
+  - docs/models/components/runbookselemententity.md
+  - docs/models/components/runbookselementinputentity.md
+  - docs/models/components/runbookselementmarkdownentity.md
+  - docs/models/components/runbookselementtextareaentity.md
+  - docs/models/components/runbooksexecutionentity.md
+  - docs/models/components/runbooksexecutionentityexecutedforentity.md
+  - docs/models/components/runbooksexecutionentitypaginated.md
+  - docs/models/components/runbooksexecutionstepentity.md
+  - docs/models/components/runbooksexecutionstepexecutionentity.md
+  - docs/models/components/runbooksexecutionstepexecutionentitydata.md
+  - docs/models/components/runbooksexecutionstepexecutionentitystate.md
+  - docs/models/components/runbookstepentity.md
+  - docs/models/components/runbookstepentityconfig.md
+  - docs/models/components/runbookstepentitystepelements.md
+  - docs/models/components/runbookswebhookdeliveryentity.md
+  - docs/models/components/savedsearchentity.md
+  - docs/models/components/scheduledmaintenanceentity.md
+  - docs/models/components/scheduledmaintenanceentitylabels.md
+  - docs/models/components/scheduledmaintenancesimpactentity.md
+  - docs/models/components/scheduledmaintenancesstatuspageentity.md
+  - docs/models/components/scheduleentity.md
+  - docs/models/components/scheduleentitypaginated.md
+  - docs/models/components/security.md
+  - docs/models/components/servicechilddependencyentity.md
+  - docs/models/components/servicedependencies.md
+  - docs/models/components/servicedependencyentity.md
+  - docs/models/components/serviceentity.md
+  - docs/models/components/serviceentitypaginated.md
+  - docs/models/components/servicelinkentity.md
+  - docs/models/components/serviceparentdependencyentity.md
+  - docs/models/components/services.md
+  - docs/models/components/servicetier.md
+  - docs/models/components/servicewithalldependenciesentity.md
+  - docs/models/components/severities.md
+  - docs/models/components/severityentity.md
+  - docs/models/components/severityentitypaginated.md
+  - docs/models/components/severitymatrixconditionentity.md
+  - docs/models/components/severitymatriximpactentity.md
+  - docs/models/components/severitymatrixitementity.md
+  - docs/models/components/severitymatrixseveritymatrixentity.md
+  - docs/models/components/signals.md
+  - docs/models/components/signalsapiingestkeyentity.md
+  - docs/models/components/signalsapiruleentity.md
+  - docs/models/components/signalsapiruleentitynotificationpriorityoverride.md
+  - docs/models/components/signalsapitargetentity.md
+  - docs/models/components/slimrunbookentity.md
+  - docs/models/components/startday.md
+  - docs/models/components/state.md
+  - docs/models/components/status.md
+  - docs/models/components/statuspageiocondition.md
+  - docs/models/components/statuspages.md
+  - docs/models/components/statusupdatetemplateentity.md
+  - docs/models/components/stepelements.md
+  - docs/models/components/steps.md
+  - docs/models/components/strategy.md
+  - docs/models/components/succinctentity.md
+  - docs/models/components/tagentity.md
+  - docs/models/components/tagentitypaginated.md
+  - docs/models/components/target.md
+  - docs/models/components/targets.md
+  - docs/models/components/targettype.md
+  - docs/models/components/taskentity.md
+  - docs/models/components/taskentitypaginated.md
+  - docs/models/components/tasklistentity.md
+  - docs/models/components/tasklistitementity.md
+  - docs/models/components/tasklistitems.md
+  - docs/models/components/teamentity.md
+  - docs/models/components/teamentitypaginated.md
+  - docs/models/components/teams.md
+  - docs/models/components/template.md
+  - docs/models/components/ticketingfieldmapsmappablefieldentity.md
+  - docs/models/components/ticketingpriorityentity.md
+  - docs/models/components/ticketingprojectconfigentity.md
+  - docs/models/components/ticketingprojectconfigentitydetails.md
+  - docs/models/components/ticketingprojectfieldmapbodyentity.md
+  - docs/models/components/ticketingprojectfieldmapbodyentitystrategy.md
+  - docs/models/components/ticketingprojectfieldmapcaseselseentity.md
+  - docs/models/components/ticketingprojectfieldmapcasesentity.md
+  - docs/models/components/ticketingprojectfieldmapcasesentitylogic.md
+  - docs/models/components/ticketingprojectfieldmapentity.md
+  - docs/models/components/ticketingprojectfieldmapexternalvalueentity.md
+  - docs/models/components/ticketingprojectfieldmapexternalvalueentitytype.md
+  - docs/models/components/ticketingprojectsprojectlistitementity.md
+  - docs/models/components/ticketingticketentity.md
+  - docs/models/components/ticketingticketentitytype.md
+  - docs/models/components/tier.md
+  - docs/models/components/type.md
+  - docs/models/components/underscore.md
+  - docs/models/components/userdata.md
+  - docs/models/components/userentity.md
+  - docs/models/components/userentitypaginated.md
+  - docs/models/components/versions.md
+  - docs/models/components/versionsurls.md
+  - docs/models/components/visibility.md
+  - docs/models/components/votedirection.md
+  - docs/models/components/votesentity.md
+  - docs/models/components/webhooksentitieswebhookentity.md
+  - docs/models/operations/auditabletype.md
+  - docs/models/operations/bucket.md
+  - docs/models/operations/bucketsize.md
+  - docs/models/operations/by.md
+  - docs/models/operations/createdby.md
+  - docs/models/operations/deletev1changeschangeididentitiesidentityidrequest.md
+  - docs/models/operations/deletev1changeschangeididentitiesidentityidresponse.md
+  - docs/models/operations/deletev1changeschangeidrequest.md
+  - docs/models/operations/deletev1changeschangeidresponse.md
+  - docs/models/operations/deletev1changeseventschangeeventidrequest.md
+  - docs/models/operations/deletev1changeseventschangeeventidresponse.md
+  - docs/models/operations/deletev1checklisttemplatesidrequest.md
+  - docs/models/operations/deletev1checklisttemplatesidresponse.md
+  - docs/models/operations/deletev1conversationsconversationidcommentscommentidreactionsreactionidrequest.md
+  - docs/models/operations/deletev1conversationsconversationidcommentscommentidreactionsreactionidresponse.md
+  - docs/models/operations/deletev1conversationsconversationidcommentscommentidrequest.md
+  - docs/models/operations/deletev1conversationsconversationidcommentscommentidresponse.md
+  - docs/models/operations/deletev1customfieldsdefinitionsfieldidrequest.md
+  - docs/models/operations/deletev1customfieldsdefinitionsfieldidresponse.md
+  - docs/models/operations/deletev1environmentsenvironmentidrequest.md
+  - docs/models/operations/deletev1environmentsenvironmentidresponse.md
+  - docs/models/operations/deletev1functionalitiesfunctionalityidrequest.md
+  - docs/models/operations/deletev1functionalitiesfunctionalityidresponse.md
+  - docs/models/operations/deletev1incidentrolesincidentroleidrequest.md
+  - docs/models/operations/deletev1incidentrolesincidentroleidresponse.md
+  - docs/models/operations/deletev1incidentsincidentidalertsincidentalertidrequest.md
+  - docs/models/operations/deletev1incidentsincidentidalertsincidentalertidresponse.md
+  - docs/models/operations/deletev1incidentsincidentideventseventidrequest.md
+  - docs/models/operations/deletev1incidentsincidentideventseventidresponse.md
+  - docs/models/operations/deletev1incidentsincidentidgenericchatmessagesmessageidrequest.md
+  - docs/models/operations/deletev1incidentsincidentidgenericchatmessagesmessageidresponse.md
+  - docs/models/operations/deletev1incidentsincidentidimpacttypeidpathparamtype.md
+  - docs/models/operations/deletev1incidentsincidentidimpacttypeidrequest.md
+  - docs/models/operations/deletev1incidentsincidentidimpacttypeidresponse.md
+  - docs/models/operations/deletev1incidentsincidentidlinkslinkidrequest.md
+  - docs/models/operations/deletev1incidentsincidentidlinkslinkidresponse.md
+  - docs/models/operations/deletev1incidentsincidentidrequest.md
+  - docs/models/operations/deletev1incidentsincidentidresponse.md
+  - docs/models/operations/deletev1incidentsincidentidroleassignmentsroleassignmentidrequest.md
+  - docs/models/operations/deletev1incidentsincidentidroleassignmentsroleassignmentidresponse.md
+  - docs/models/operations/deletev1incidentsincidentidstatuspagesstatuspageidrequest.md
+  - docs/models/operations/deletev1incidentsincidentidstatuspagesstatuspageidresponse.md
+  - docs/models/operations/deletev1incidentsincidentidtaskstaskidrequest.md
+  - docs/models/operations/deletev1incidentsincidentidtaskstaskidresponse.md
+  - docs/models/operations/deletev1incidentsincidentidteamassignmentsteamassignmentidrequest.md
+  - docs/models/operations/deletev1incidentsincidentidteamassignmentsteamassignmentidrequestbody.md
+  - docs/models/operations/deletev1incidentsincidentidteamassignmentsteamassignmentidresponse.md
+  - docs/models/operations/deletev1incidentsincidentidtranscripttranscriptidrequest.md
+  - docs/models/operations/deletev1incidentsincidentidtranscripttranscriptidresponse.md
+  - docs/models/operations/deletev1incidenttypesidrequest.md
+  - docs/models/operations/deletev1incidenttypesidresponse.md
+  - docs/models/operations/deletev1integrationsslackconnectionsconnectionidemojiactionsemojiactionidrequest.md
+  - docs/models/operations/deletev1integrationsslackconnectionsconnectionidemojiactionsemojiactionidresponse.md
+  - docs/models/operations/deletev1integrationsstatuspageconnectionsconnectionidrequest.md
+  - docs/models/operations/deletev1integrationsstatuspageconnectionsconnectionidresponse.md
+  - docs/models/operations/deletev1lifecyclesmeasurementdefinitionsmeasurementdefinitionidrequest.md
+  - docs/models/operations/deletev1lifecyclesmeasurementdefinitionsmeasurementdefinitionidresponse.md
+  - docs/models/operations/deletev1lifecyclesmilestonesmilestoneidrequest.md
+  - docs/models/operations/deletev1lifecyclesmilestonesmilestoneidresponse.md
+  - docs/models/operations/deletev1nuncconnectionsnuncconnectionidcomponentgroupsgroupidrequest.md
+  - docs/models/operations/deletev1nuncconnectionsnuncconnectionidcomponentgroupsgroupidresponse.md
+  - docs/models/operations/deletev1nuncconnectionsnuncconnectionidimagestyperequest.md
+  - docs/models/operations/deletev1nuncconnectionsnuncconnectionidimagestyperesponse.md
+  - docs/models/operations/deletev1nuncconnectionsnuncconnectionidlinkslinkidrequest.md
+  - docs/models/operations/deletev1nuncconnectionsnuncconnectionidlinkslinkidresponse.md
+  - docs/models/operations/deletev1nuncconnectionsnuncconnectionidrequest.md
+  - docs/models/operations/deletev1nuncconnectionsnuncconnectionidresponse.md
+  - docs/models/operations/deletev1nuncconnectionsnuncconnectionidsubscribersrequest.md
+  - docs/models/operations/deletev1nuncconnectionsnuncconnectionidsubscribersresponse.md
+  - docs/models/operations/deletev1nuncsubscriptionsunsubscribetokenrequest.md
+  - docs/models/operations/deletev1nuncsubscriptionsunsubscribetokenresponse.md
+  - docs/models/operations/deletev1postmortemsreportsreportidreasonsreasonidrequest.md
+  - docs/models/operations/deletev1postmortemsreportsreportidreasonsreasonidresponse.md
+  - docs/models/operations/deletev1prioritiespriorityslugrequest.md
+  - docs/models/operations/deletev1prioritiespriorityslugresponse.md
+  - docs/models/operations/deletev1runbooksexecutionsexecutionidrequest.md
+  - docs/models/operations/deletev1runbooksexecutionsexecutionidresponse.md
+  - docs/models/operations/deletev1runbooksrunbookidrequest.md
+  - docs/models/operations/deletev1runbooksrunbookidresponse.md
+  - docs/models/operations/deletev1savedsearchesresourcetypesavedsearchidrequest.md
+  - docs/models/operations/deletev1savedsearchesresourcetypesavedsearchidresponse.md
+  - docs/models/operations/deletev1scheduledmaintenancesscheduledmaintenanceidrequest.md
+  - docs/models/operations/deletev1scheduledmaintenancesscheduledmaintenanceidresponse.md
+  - docs/models/operations/deletev1scimv2groupsidrequest.md
+  - docs/models/operations/deletev1scimv2groupsidresponse.md
+  - docs/models/operations/deletev1scimv2usersidrequest.md
+  - docs/models/operations/deletev1scimv2usersidresponse.md
+  - docs/models/operations/deletev1servicedependenciesservicedependencyidrequest.md
+  - docs/models/operations/deletev1servicedependenciesservicedependencyidresponse.md
+  - docs/models/operations/deletev1servicesserviceidrequest.md
+  - docs/models/operations/deletev1servicesserviceidresponse.md
+  - docs/models/operations/deletev1servicesserviceidservicelinksremoteidrequest.md
+  - docs/models/operations/deletev1servicesserviceidservicelinksremoteidresponse.md
+  - docs/models/operations/deletev1severitiesseverityslugrequest.md
+  - docs/models/operations/deletev1severitiesseverityslugresponse.md
+  - docs/models/operations/deletev1severitymatrixconditionsconditionidrequest.md
+  - docs/models/operations/deletev1severitymatrixconditionsconditionidresponse.md
+  - docs/models/operations/deletev1severitymatriximpactsimpactidrequest.md
+  - docs/models/operations/deletev1severitymatriximpactsimpactidresponse.md
+  - docs/models/operations/deletev1signalsemailtargetsidrequest.md
+  - docs/models/operations/deletev1signalsemailtargetsidresponse.md
+  - docs/models/operations/deletev1signalswebhooktargetsidrequest.md
+  - docs/models/operations/deletev1signalswebhooktargetsidresponse.md
+  - docs/models/operations/deletev1statusupdatetemplatesstatusupdatetemplateidrequest.md
+  - docs/models/operations/deletev1statusupdatetemplatesstatusupdatetemplateidresponse.md
+  - docs/models/operations/deletev1taskliststasklistidrequest.md
+  - docs/models/operations/deletev1taskliststasklistidresponse.md
+  - docs/models/operations/deletev1teamsteamidescalationpoliciesidrequest.md
+  - docs/models/operations/deletev1teamsteamidescalationpoliciesidresponse.md
+  - docs/models/operations/deletev1teamsteamidoncallschedulesscheduleidrequest.md
+  - docs/models/operations/deletev1teamsteamidoncallschedulesscheduleidresponse.md
+  - docs/models/operations/deletev1teamsteamidoncallschedulesscheduleidshiftsidrequest.md
+  - docs/models/operations/deletev1teamsteamidoncallschedulesscheduleidshiftsidresponse.md
+  - docs/models/operations/deletev1teamsteamidrequest.md
+  - docs/models/operations/deletev1teamsteamidresponse.md
+  - docs/models/operations/deletev1teamsteamidsignalrulesidrequest.md
+  - docs/models/operations/deletev1teamsteamidsignalrulesidresponse.md
+  - docs/models/operations/deletev1ticketingprioritiesidrequest.md
+  - docs/models/operations/deletev1ticketingprioritiesidresponse.md
+  - docs/models/operations/deletev1ticketingprojectsticketingprojectidfieldmapsmapidrequest.md
+  - docs/models/operations/deletev1ticketingprojectsticketingprojectidfieldmapsmapidresponse.md
+  - docs/models/operations/deletev1ticketingprojectsticketingprojectidproviderprojectconfigurationsconfigidrequest.md
+  - docs/models/operations/deletev1ticketingprojectsticketingprojectidproviderprojectconfigurationsconfigidresponse.md
+  - docs/models/operations/deletev1ticketingticketsticketidrequest.md
+  - docs/models/operations/deletev1ticketingticketsticketidresponse.md
+  - docs/models/operations/deletev1webhookswebhookidrequest.md
+  - docs/models/operations/deletev1webhookswebhookidresponse.md
+  - docs/models/operations/direction.md
+  - docs/models/operations/exactlevel.md
+  - docs/models/operations/file.md
+  - docs/models/operations/getv1aipreferencesresponse.md
+  - docs/models/operations/getv1aisummarizeincidentincidentidgeneratedsummaryidvotedrequest.md
+  - docs/models/operations/getv1aisummarizeincidentincidentidgeneratedsummaryidvotedresponse.md
+  - docs/models/operations/getv1alertsalertidrequest.md
+  - docs/models/operations/getv1alertsalertidresponse.md
+  - docs/models/operations/getv1alertsqueryparamtagmatchstrategy.md
+  - docs/models/operations/getv1alertsrequest.md
+  - docs/models/operations/getv1alertsresponse.md
+  - docs/models/operations/getv1bootstrapresponse.md
+  - docs/models/operations/getv1catalogscatalogidrefreshrequest.md
+  - docs/models/operations/getv1catalogscatalogidrefreshresponse.md
+  - docs/models/operations/getv1changeschangeididentitiesrequest.md
+  - docs/models/operations/getv1changeschangeididentitiesresponse.md
+  - docs/models/operations/getv1changeseventschangeeventidrequest.md
+  - docs/models/operations/getv1changeseventschangeeventidresponse.md
+  - docs/models/operations/getv1changeseventsrequest.md
+  - docs/models/operations/getv1changeseventsresponse.md
+  - docs/models/operations/getv1changesrequest.md
+  - docs/models/operations/getv1changesresponse.md
+  - docs/models/operations/getv1changetypesrequest.md
+  - docs/models/operations/getv1changetypesresponse.md
+  - docs/models/operations/getv1checklisttemplatesidrequest.md
+  - docs/models/operations/getv1checklisttemplatesidresponse.md
+  - docs/models/operations/getv1checklisttemplatesrequest.md
+  - docs/models/operations/getv1checklisttemplatesresponse.md
+  - docs/models/operations/getv1conversationsconversationidcommentscommentidreactionsrequest.md
+  - docs/models/operations/getv1conversationsconversationidcommentscommentidreactionsresponse.md
+  - docs/models/operations/getv1conversationsconversationidcommentscommentidrequest.md
+  - docs/models/operations/getv1conversationsconversationidcommentscommentidresponse.md
+  - docs/models/operations/getv1conversationsconversationidcommentsqueryparamsort.md
+  - docs/models/operations/getv1conversationsconversationidcommentsrequest.md
+  - docs/models/operations/getv1conversationsconversationidcommentsresponse.md
+  - docs/models/operations/getv1currentuserresponse.md
+  - docs/models/operations/getv1customfieldsdefinitionsfieldidselectoptionsrequest.md
+  - docs/models/operations/getv1customfieldsdefinitionsfieldidselectoptionsresponse.md
+  - docs/models/operations/getv1customfieldsdefinitionsresponse.md
+  - docs/models/operations/getv1entitlementsrequest.md
+  - docs/models/operations/getv1entitlementsresponse.md
+  - docs/models/operations/getv1environmentsenvironmentidrequest.md
+  - docs/models/operations/getv1environmentsenvironmentidresponse.md
+  - docs/models/operations/getv1environmentsrequest.md
+  - docs/models/operations/getv1environmentsresponse.md
+  - docs/models/operations/getv1formconfigurationsslugrequest.md
+  - docs/models/operations/getv1formconfigurationsslugresponse.md
+  - docs/models/operations/getv1functionalitiesfunctionalityidrequest.md
+  - docs/models/operations/getv1functionalitiesfunctionalityidresponse.md
+  - docs/models/operations/getv1functionalitiesfunctionalityidservicesrequest.md
+  - docs/models/operations/getv1functionalitiesfunctionalityidservicesresponse.md
+  - docs/models/operations/getv1functionalitiesrequest.md
+  - docs/models/operations/getv1functionalitiesresponse.md
+  - docs/models/operations/getv1incidentrolesincidentroleidrequest.md
+  - docs/models/operations/getv1incidentrolesincidentroleidresponse.md
+  - docs/models/operations/getv1incidentrolesrequest.md
+  - docs/models/operations/getv1incidentrolesresponse.md
+  - docs/models/operations/getv1incidentsincidentidalertsrequest.md
+  - docs/models/operations/getv1incidentsincidentidalertsresponse.md
+  - docs/models/operations/getv1incidentsincidentidattachmentsrequest.md
+  - docs/models/operations/getv1incidentsincidentidattachmentsresponse.md
+  - docs/models/operations/getv1incidentsincidentidchannelrequest.md
+  - docs/models/operations/getv1incidentsincidentidchannelresponse.md
+  - docs/models/operations/getv1incidentsincidentideventseventidrequest.md
+  - docs/models/operations/getv1incidentsincidentideventseventidresponse.md
+  - docs/models/operations/getv1incidentsincidentideventseventidvotesstatusrequest.md
+  - docs/models/operations/getv1incidentsincidentideventseventidvotesstatusresponse.md
+  - docs/models/operations/getv1incidentsincidentideventsrequest.md
+  - docs/models/operations/getv1incidentsincidentideventsresponse.md
+  - docs/models/operations/getv1incidentsincidentidimpacttypepathparamtype.md
+  - docs/models/operations/getv1incidentsincidentidimpacttyperequest.md
+  - docs/models/operations/getv1incidentsincidentidimpacttyperesponse.md
+  - docs/models/operations/getv1incidentsincidentidlinksrequest.md
+  - docs/models/operations/getv1incidentsincidentidlinksresponse.md
+  - docs/models/operations/getv1incidentsincidentidmilestonesrequest.md
+  - docs/models/operations/getv1incidentsincidentidmilestonesresponse.md
+  - docs/models/operations/getv1incidentsincidentidrelatedchangeeventsrequest.md
+  - docs/models/operations/getv1incidentsincidentidrelatedchangeeventsresponse.md
+  - docs/models/operations/getv1incidentsincidentidrelationshipsrequest.md
+  - docs/models/operations/getv1incidentsincidentidrelationshipsresponse.md
+  - docs/models/operations/getv1incidentsincidentidrequest.md
+  - docs/models/operations/getv1incidentsincidentidresponse.md
+  - docs/models/operations/getv1incidentsincidentidroleassignmentsrequest.md
+  - docs/models/operations/getv1incidentsincidentidroleassignmentsresponse.md
+  - docs/models/operations/getv1incidentsincidentidsimilarrequest.md
+  - docs/models/operations/getv1incidentsincidentidsimilarresponse.md
+  - docs/models/operations/getv1incidentsincidentidstatuspagesrequest.md
+  - docs/models/operations/getv1incidentsincidentidstatuspagesresponse.md
+  - docs/models/operations/getv1incidentsincidentidtasksrequest.md
+  - docs/models/operations/getv1incidentsincidentidtasksresponse.md
+  - docs/models/operations/getv1incidentsincidentidtaskstaskidrequest.md
+  - docs/models/operations/getv1incidentsincidentidtaskstaskidresponse.md
+  - docs/models/operations/getv1incidentsincidentidtranscriptrequest.md
+  - docs/models/operations/getv1incidentsincidentidtranscriptresponse.md
+  - docs/models/operations/getv1incidentsincidentidusersuseridrequest.md
+  - docs/models/operations/getv1incidentsincidentidusersuseridresponse.md
+  - docs/models/operations/getv1incidentsrequest.md
+  - docs/models/operations/getv1incidentsresponse.md
+  - docs/models/operations/getv1incidenttagsrequest.md
+  - docs/models/operations/getv1incidenttagsresponse.md
+  - docs/models/operations/getv1incidenttypesidrequest.md
+  - docs/models/operations/getv1incidenttypesidresponse.md
+  - docs/models/operations/getv1incidenttypesrequest.md
+  - docs/models/operations/getv1incidenttypesresponse.md
+  - docs/models/operations/getv1infrastructuresrequest.md
+  - docs/models/operations/getv1infrastructuresresponse.md
+  - docs/models/operations/getv1integrationsawscloudtrailbatchesideventsrequest.md
+  - docs/models/operations/getv1integrationsawscloudtrailbatchesideventsresponse.md
+  - docs/models/operations/getv1integrationsawscloudtrailbatchesidrequest.md
+  - docs/models/operations/getv1integrationsawscloudtrailbatchesidresponse.md
+  - docs/models/operations/getv1integrationsawscloudtrailbatchesrequest.md
+  - docs/models/operations/getv1integrationsawscloudtrailbatchesresponse.md
+  - docs/models/operations/getv1integrationsawsconnectionsidrequest.md
+  - docs/models/operations/getv1integrationsawsconnectionsidresponse.md
+  - docs/models/operations/getv1integrationsawsconnectionsrequest.md
+  - docs/models/operations/getv1integrationsawsconnectionsresponse.md
+  - docs/models/operations/getv1integrationsconfluencecloudconnectionsidspacesearchrequest.md
+  - docs/models/operations/getv1integrationsconfluencecloudconnectionsidspacesearchresponse.md
+  - docs/models/operations/getv1integrationsconnectionsrequest.md
+  - docs/models/operations/getv1integrationsconnectionsresponse.md
+  - docs/models/operations/getv1integrationsfieldmapsfieldmapidavailablefieldsrequest.md
+  - docs/models/operations/getv1integrationsfieldmapsfieldmapidavailablefieldsresponse.md
+  - docs/models/operations/getv1integrationsintegrationidrequest.md
+  - docs/models/operations/getv1integrationsintegrationidresponse.md
+  - docs/models/operations/getv1integrationsresponse.md
+  - docs/models/operations/getv1integrationsslackconnectionsconnectionidemojiactionsemojiactionidrequest.md
+  - docs/models/operations/getv1integrationsslackconnectionsconnectionidemojiactionsemojiactionidresponse.md
+  - docs/models/operations/getv1integrationsslackconnectionsconnectionidemojiactionsrequest.md
+  - docs/models/operations/getv1integrationsslackconnectionsconnectionidemojiactionsresponse.md
+  - docs/models/operations/getv1integrationsslackconnectionsconnectionidworkspacesrequest.md
+  - docs/models/operations/getv1integrationsslackconnectionsconnectionidworkspacesresponse.md
+  - docs/models/operations/getv1integrationsslackusergroupsresponse.md
+  - docs/models/operations/getv1integrationsstatusesslugrequest.md
+  - docs/models/operations/getv1integrationsstatusesslugresponse.md
+  - docs/models/operations/getv1integrationsstatuspageconnectionsconnectionidpagesrequest.md
+  - docs/models/operations/getv1integrationsstatuspageconnectionsconnectionidpagesresponse.md
+  - docs/models/operations/getv1integrationsstatuspageconnectionsconnectionidrequest.md
+  - docs/models/operations/getv1integrationsstatuspageconnectionsconnectionidresponse.md
+  - docs/models/operations/getv1integrationsstatuspageconnectionsrequest.md
+  - docs/models/operations/getv1integrationsstatuspageconnectionsresponse.md
+  - docs/models/operations/getv1integrationszendesksearchrequest.md
+  - docs/models/operations/getv1integrationszendesksearchresponse.md
+  - docs/models/operations/getv1lifecyclesmeasurementdefinitionsmeasurementdefinitionidrequest.md
+  - docs/models/operations/getv1lifecyclesmeasurementdefinitionsmeasurementdefinitionidresponse.md
+  - docs/models/operations/getv1lifecyclesmeasurementdefinitionsrequest.md
+  - docs/models/operations/getv1lifecyclesmeasurementdefinitionsresponse.md
+  - docs/models/operations/getv1lifecyclesphasesresponse.md
+  - docs/models/operations/getv1metricsincidentsrequest.md
+  - docs/models/operations/getv1metricsincidentsresponse.md
+  - docs/models/operations/getv1metricsinfratypeinfraidrequest.md
+  - docs/models/operations/getv1metricsinfratypeinfraidresponse.md
+  - docs/models/operations/getv1metricsinfratyperequest.md
+  - docs/models/operations/getv1metricsinfratyperesponse.md
+  - docs/models/operations/getv1metricsmilestonefunnelqueryparamtagmatchstrategy.md
+  - docs/models/operations/getv1metricsmilestonefunnelrequest.md
+  - docs/models/operations/getv1metricsmilestonefunnelresponse.md
+  - docs/models/operations/getv1metricsmttxqueryparamtagmatchstrategy.md
+  - docs/models/operations/getv1metricsmttxrequest.md
+  - docs/models/operations/getv1metricsmttxrequestbody.md
+  - docs/models/operations/getv1metricsmttxresponse.md
+  - docs/models/operations/getv1metricsretrospectivesrequest.md
+  - docs/models/operations/getv1metricsretrospectivesresponse.md
+  - docs/models/operations/getv1metricsticketfunnelrequest.md
+  - docs/models/operations/getv1metricsticketfunnelresponse.md
+  - docs/models/operations/getv1metricsuserinvolvementsrequest.md
+  - docs/models/operations/getv1metricsuserinvolvementsresponse.md
+  - docs/models/operations/getv1noauthpingresponse.md
+  - docs/models/operations/getv1nuncconnectionsnuncconnectionidrequest.md
+  - docs/models/operations/getv1nuncconnectionsnuncconnectionidresponse.md
+  - docs/models/operations/getv1nuncconnectionsnuncconnectionidsubscribersrequest.md
+  - docs/models/operations/getv1nuncconnectionsnuncconnectionidsubscribersresponse.md
+  - docs/models/operations/getv1nuncconnectionsresponse.md
+  - docs/models/operations/getv1pingresponse.md
+  - docs/models/operations/getv1postmortemsquestionsquestionidrequest.md
+  - docs/models/operations/getv1postmortemsquestionsquestionidresponse.md
+  - docs/models/operations/getv1postmortemsquestionsrequest.md
+  - docs/models/operations/getv1postmortemsquestionsresponse.md
+  - docs/models/operations/getv1postmortemsreportsreportidreasonsrequest.md
+  - docs/models/operations/getv1postmortemsreportsreportidreasonsresponse.md
+  - docs/models/operations/getv1postmortemsreportsreportidrequest.md
+  - docs/models/operations/getv1postmortemsreportsreportidresponse.md
+  - docs/models/operations/getv1postmortemsreportsrequest.md
+  - docs/models/operations/getv1postmortemsreportsresponse.md
+  - docs/models/operations/getv1prioritiespriorityslugrequest.md
+  - docs/models/operations/getv1prioritiespriorityslugresponse.md
+  - docs/models/operations/getv1prioritiesrequest.md
+  - docs/models/operations/getv1prioritiesresponse.md
+  - docs/models/operations/getv1processinglogentriesrequest.md
+  - docs/models/operations/getv1processinglogentriesresponse.md
+  - docs/models/operations/getv1reportsmeantimerequest.md
+  - docs/models/operations/getv1reportsmeantimeresponse.md
+  - docs/models/operations/getv1runbookauditsrequest.md
+  - docs/models/operations/getv1runbookauditsresponse.md
+  - docs/models/operations/getv1runbooksactionsrequest.md
+  - docs/models/operations/getv1runbooksactionsresponse.md
+  - docs/models/operations/getv1runbooksexecutionsexecutionidrequest.md
+  - docs/models/operations/getv1runbooksexecutionsexecutionidresponse.md
+  - docs/models/operations/getv1runbooksexecutionsexecutionidstepsstepidscriptrequest.md
+  - docs/models/operations/getv1runbooksexecutionsexecutionidstepsstepidscriptresponse.md
+  - docs/models/operations/getv1runbooksexecutionsexecutionidstepsstepidvotesstatusrequest.md
+  - docs/models/operations/getv1runbooksexecutionsexecutionidstepsstepidvotesstatusresponse.md
+  - docs/models/operations/getv1runbooksexecutionsexecutionidvotesstatusrequest.md
+  - docs/models/operations/getv1runbooksexecutionsexecutionidvotesstatusresponse.md
+  - docs/models/operations/getv1runbooksexecutionsrequest.md
+  - docs/models/operations/getv1runbooksexecutionsresponse.md
+  - docs/models/operations/getv1runbooksrequest.md
+  - docs/models/operations/getv1runbooksresponse.md
+  - docs/models/operations/getv1runbooksrunbookidrequest.md
+  - docs/models/operations/getv1runbooksrunbookidresponse.md
+  - docs/models/operations/getv1runbooksselectoptionsintegrationslugactionslugfieldrequest.md
+  - docs/models/operations/getv1runbooksselectoptionsintegrationslugactionslugfieldresponse.md
+  - docs/models/operations/getv1savedsearchesresourcetypepathparamresourcetype.md
+  - docs/models/operations/getv1savedsearchesresourcetyperequest.md
+  - docs/models/operations/getv1savedsearchesresourcetyperesponse.md
+  - docs/models/operations/getv1savedsearchesresourcetypesavedsearchidpathparamresourcetype.md
+  - docs/models/operations/getv1savedsearchesresourcetypesavedsearchidrequest.md
+  - docs/models/operations/getv1savedsearchesresourcetypesavedsearchidresponse.md
+  - docs/models/operations/getv1scheduledmaintenancesrequest.md
+  - docs/models/operations/getv1scheduledmaintenancesresponse.md
+  - docs/models/operations/getv1scheduledmaintenancesscheduledmaintenanceidrequest.md
+  - docs/models/operations/getv1scheduledmaintenancesscheduledmaintenanceidresponse.md
+  - docs/models/operations/getv1schedulesrequest.md
+  - docs/models/operations/getv1schedulesresponse.md
+  - docs/models/operations/getv1scimv2groupsidrequest.md
+  - docs/models/operations/getv1scimv2groupsidresponse.md
+  - docs/models/operations/getv1scimv2groupsrequest.md
+  - docs/models/operations/getv1scimv2groupsresponse.md
+  - docs/models/operations/getv1scimv2usersidrequest.md
+  - docs/models/operations/getv1scimv2usersidresponse.md
+  - docs/models/operations/getv1scimv2usersrequest.md
+  - docs/models/operations/getv1scimv2usersresponse.md
+  - docs/models/operations/getv1servicedependenciesservicedependencyidrequest.md
+  - docs/models/operations/getv1servicedependenciesservicedependencyidresponse.md
+  - docs/models/operations/getv1servicesrequest.md
+  - docs/models/operations/getv1servicesresponse.md
+  - docs/models/operations/getv1servicesserviceidavailabledownstreamdependenciesrequest.md
+  - docs/models/operations/getv1servicesserviceidavailabledownstreamdependenciesresponse.md
+  - docs/models/operations/getv1servicesserviceidavailableupstreamdependenciesrequest.md
+  - docs/models/operations/getv1servicesserviceidavailableupstreamdependenciesresponse.md
+  - docs/models/operations/getv1servicesserviceiddependenciesrequest.md
+  - docs/models/operations/getv1servicesserviceiddependenciesresponse.md
+  - docs/models/operations/getv1servicesserviceidrequest.md
+  - docs/models/operations/getv1servicesserviceidresponse.md
+  - docs/models/operations/getv1severitiesrequest.md
+  - docs/models/operations/getv1severitiesresponse.md
+  - docs/models/operations/getv1severitiesseverityslugrequest.md
+  - docs/models/operations/getv1severitiesseverityslugresponse.md
+  - docs/models/operations/getv1severitymatrixconditionsconditionidrequest.md
+  - docs/models/operations/getv1severitymatrixconditionsconditionidresponse.md
+  - docs/models/operations/getv1severitymatrixconditionsrequest.md
+  - docs/models/operations/getv1severitymatrixconditionsresponse.md
+  - docs/models/operations/getv1severitymatriximpactsrequest.md
+  - docs/models/operations/getv1severitymatriximpactsresponse.md
+  - docs/models/operations/getv1severitymatrixresponse.md
+  - docs/models/operations/getv1signalsanalyticsgroupedmetricsqueryparamgroupby.md
+  - docs/models/operations/getv1signalsanalyticsgroupedmetricsqueryparamsortby.md
+  - docs/models/operations/getv1signalsanalyticsgroupedmetricsqueryparamsortdirection.md
+  - docs/models/operations/getv1signalsanalyticsgroupedmetricsrequest.md
+  - docs/models/operations/getv1signalsanalyticsgroupedmetricsresponse.md
+  - docs/models/operations/getv1signalsanalyticsmttxqueryparamgroupby.md
+  - docs/models/operations/getv1signalsanalyticsmttxqueryparamsortby.md
+  - docs/models/operations/getv1signalsanalyticsmttxqueryparamsortdirection.md
+  - docs/models/operations/getv1signalsanalyticsmttxrequest.md
+  - docs/models/operations/getv1signalsanalyticsmttxresponse.md
+  - docs/models/operations/getv1signalsanalyticstimeseriesqueryparamsortdirection.md
+  - docs/models/operations/getv1signalsanalyticstimeseriesrequest.md
+  - docs/models/operations/getv1signalsanalyticstimeseriesresponse.md
+  - docs/models/operations/getv1signalsemailtargetsidrequest.md
+  - docs/models/operations/getv1signalsemailtargetsidresponse.md
+  - docs/models/operations/getv1signalsemailtargetsrequest.md
+  - docs/models/operations/getv1signalsemailtargetsresponse.md
+  - docs/models/operations/getv1signalseventsourcesrequest.md
+  - docs/models/operations/getv1signalseventsourcesresponse.md
+  - docs/models/operations/getv1signalsingesturlrequest.md
+  - docs/models/operations/getv1signalsingesturlresponse.md
+  - docs/models/operations/getv1signalsoncallrequest.md
+  - docs/models/operations/getv1signalsoncallresponse.md
+  - docs/models/operations/getv1signalstransposersresponse.md
+  - docs/models/operations/getv1signalswebhooktargetsidcreatedby.md
+  - docs/models/operations/getv1signalswebhooktargetsidrequest.md
+  - docs/models/operations/getv1signalswebhooktargetsidresponse.md
+  - docs/models/operations/getv1signalswebhooktargetsidresponsebody.md
+  - docs/models/operations/getv1signalswebhooktargetsrequest.md
+  - docs/models/operations/getv1signalswebhooktargetsresponse.md
+  - docs/models/operations/getv1statusupdatetemplatesrequest.md
+  - docs/models/operations/getv1statusupdatetemplatesresponse.md
+  - docs/models/operations/getv1statusupdatetemplatesstatusupdatetemplateidrequest.md
+  - docs/models/operations/getv1statusupdatetemplatesstatusupdatetemplateidresponse.md
+  - docs/models/operations/getv1tasklistsrequest.md
+  - docs/models/operations/getv1tasklistsresponse.md
+  - docs/models/operations/getv1taskliststasklistidrequest.md
+  - docs/models/operations/getv1taskliststasklistidresponse.md
+  - docs/models/operations/getv1teamsrequest.md
+  - docs/models/operations/getv1teamsresponse.md
+  - docs/models/operations/getv1teamsteamidescalationpoliciesidrequest.md
+  - docs/models/operations/getv1teamsteamidescalationpoliciesidresponse.md
+  - docs/models/operations/getv1teamsteamidescalationpoliciesrequest.md
+  - docs/models/operations/getv1teamsteamidescalationpoliciesresponse.md
+  - docs/models/operations/getv1teamsteamidoncallschedulesrequest.md
+  - docs/models/operations/getv1teamsteamidoncallschedulesresponse.md
+  - docs/models/operations/getv1teamsteamidoncallschedulesscheduleidrequest.md
+  - docs/models/operations/getv1teamsteamidoncallschedulesscheduleidresponse.md
+  - docs/models/operations/getv1teamsteamidoncallschedulesscheduleidshiftsidrequest.md
+  - docs/models/operations/getv1teamsteamidoncallschedulesscheduleidshiftsidresponse.md
+  - docs/models/operations/getv1teamsteamidrequest.md
+  - docs/models/operations/getv1teamsteamidresponse.md
+  - docs/models/operations/getv1teamsteamidsignalrulesidrequest.md
+  - docs/models/operations/getv1teamsteamidsignalrulesidresponse.md
+  - docs/models/operations/getv1teamsteamidsignalrulesrequest.md
+  - docs/models/operations/getv1teamsteamidsignalrulesresponse.md
+  - docs/models/operations/getv1ticketingprioritiesidrequest.md
+  - docs/models/operations/getv1ticketingprioritiesidresponse.md
+  - docs/models/operations/getv1ticketingprioritiesresponse.md
+  - docs/models/operations/getv1ticketingprojectsrequest.md
+  - docs/models/operations/getv1ticketingprojectsresponse.md
+  - docs/models/operations/getv1ticketingprojectsticketingprojectidconfigurationoptionsoptionsforfieldidrequest.md
+  - docs/models/operations/getv1ticketingprojectsticketingprojectidconfigurationoptionsoptionsforfieldidresponse.md
+  - docs/models/operations/getv1ticketingprojectsticketingprojectidconfigurationoptionsrequest.md
+  - docs/models/operations/getv1ticketingprojectsticketingprojectidconfigurationoptionsresponse.md
+  - docs/models/operations/getv1ticketingprojectsticketingprojectidfieldmapsavailablefieldsrequest.md
+  - docs/models/operations/getv1ticketingprojectsticketingprojectidfieldmapsavailablefieldsresponse.md
+  - docs/models/operations/getv1ticketingprojectsticketingprojectidfieldmapsmapidrequest.md
+  - docs/models/operations/getv1ticketingprojectsticketingprojectidfieldmapsmapidresponse.md
+  - docs/models/operations/getv1ticketingprojectsticketingprojectidproviderprojectconfigurationsconfigidrequest.md
+  - docs/models/operations/getv1ticketingprojectsticketingprojectidproviderprojectconfigurationsconfigidresponse.md
+  - docs/models/operations/getv1ticketingprojectsticketingprojectidrequest.md
+  - docs/models/operations/getv1ticketingprojectsticketingprojectidresponse.md
+  - docs/models/operations/getv1ticketingticketsqueryparamtagmatchstrategy.md
+  - docs/models/operations/getv1ticketingticketsrequest.md
+  - docs/models/operations/getv1ticketingticketsresponse.md
+  - docs/models/operations/getv1ticketingticketsticketidrequest.md
+  - docs/models/operations/getv1ticketingticketsticketidresponse.md
+  - docs/models/operations/getv1ticketingtickettagsrequest.md
+  - docs/models/operations/getv1ticketingtickettagsresponse.md
+  - docs/models/operations/getv1usersidservicesrequest.md
+  - docs/models/operations/getv1usersidservicesresponse.md
+  - docs/models/operations/getv1usersrequest.md
+  - docs/models/operations/getv1usersresponse.md
+  - docs/models/operations/getv1webhooksrequest.md
+  - docs/models/operations/getv1webhooksresponse.md
+  - docs/models/operations/getv1webhookswebhookiddeliveriesrequest.md
+  - docs/models/operations/getv1webhookswebhookiddeliveriesresponse.md
+  - docs/models/operations/getv1webhookswebhookidrequest.md
+  - docs/models/operations/getv1webhookswebhookidresponse.md
+  - docs/models/operations/groupby.md
+  - docs/models/operations/infratype.md
+  - docs/models/operations/oflevel.md
+  - docs/models/operations/option.md
+  - docs/models/operations/patchv1aipreferencesrequestbody.md
+  - docs/models/operations/patchv1aipreferencesresponse.md
+  - docs/models/operations/patchv1changeschangeididentitiesidentityidrequest.md
+  - docs/models/operations/patchv1changeschangeididentitiesidentityidresponse.md
+  - docs/models/operations/patchv1changeschangeidrequest.md
+  - docs/models/operations/patchv1changeschangeidresponse.md
+  - docs/models/operations/patchv1changeseventschangeeventidrequest.md
+  - docs/models/operations/patchv1changeseventschangeeventidresponse.md
+  - docs/models/operations/patchv1checklisttemplatesidrequest.md
+  - docs/models/operations/patchv1checklisttemplatesidresponse.md
+  - docs/models/operations/patchv1conversationsconversationidcommentscommentidrequest.md
+  - docs/models/operations/patchv1conversationsconversationidcommentscommentidresponse.md
+  - docs/models/operations/patchv1customfieldsdefinitionsfieldidrequest.md
+  - docs/models/operations/patchv1customfieldsdefinitionsfieldidresponse.md
+  - docs/models/operations/patchv1environmentsenvironmentidrequest.md
+  - docs/models/operations/patchv1environmentsenvironmentidresponse.md
+  - docs/models/operations/patchv1functionalitiesfunctionalityidrequest.md
+  - docs/models/operations/patchv1functionalitiesfunctionalityidresponse.md
+  - docs/models/operations/patchv1incidentrolesincidentroleidrequest.md
+  - docs/models/operations/patchv1incidentrolesincidentroleidresponse.md
+  - docs/models/operations/patchv1incidentsincidentidalertsincidentalertidprimaryrequest.md
+  - docs/models/operations/patchv1incidentsincidentidalertsincidentalertidprimaryresponse.md
+  - docs/models/operations/patchv1incidentsincidentideventseventidrequest.md
+  - docs/models/operations/patchv1incidentsincidentideventseventidresponse.md
+  - docs/models/operations/patchv1incidentsincidentideventseventidvotesrequest.md
+  - docs/models/operations/patchv1incidentsincidentideventseventidvotesresponse.md
+  - docs/models/operations/patchv1incidentsincidentidgenericchatmessagesmessageidrequest.md
+  - docs/models/operations/patchv1incidentsincidentidgenericchatmessagesmessageidresponse.md
+  - docs/models/operations/patchv1incidentsincidentidimpactrequest.md
+  - docs/models/operations/patchv1incidentsincidentidimpactresponse.md
+  - docs/models/operations/patchv1incidentsincidentidnotesnoteidrequest.md
+  - docs/models/operations/patchv1incidentsincidentidnotesnoteidresponse.md
+  - docs/models/operations/patchv1incidentsincidentidrelatedchangeeventsrelatedchangeeventidrequest.md
+  - docs/models/operations/patchv1incidentsincidentidrelatedchangeeventsrelatedchangeeventidresponse.md
+  - docs/models/operations/patchv1incidentsincidentidrequest.md
+  - docs/models/operations/patchv1incidentsincidentidresponse.md
+  - docs/models/operations/patchv1incidentsincidentidtaskstaskidrequest.md
+  - docs/models/operations/patchv1incidentsincidentidtaskstaskidresponse.md
+  - docs/models/operations/patchv1incidenttypesidrequest.md
+  - docs/models/operations/patchv1incidenttypesidresponse.md
+  - docs/models/operations/patchv1integrationsawscloudtrailbatchesidrequest.md
+  - docs/models/operations/patchv1integrationsawscloudtrailbatchesidresponse.md
+  - docs/models/operations/patchv1integrationsawsconnectionsidrequest.md
+  - docs/models/operations/patchv1integrationsawsconnectionsidresponse.md
+  - docs/models/operations/patchv1integrationsconnectionsslugconnectionidrefreshrequest.md
+  - docs/models/operations/patchv1integrationsconnectionsslugconnectionidrefreshresponse.md
+  - docs/models/operations/patchv1integrationsconnectionsslugconnectionidrequest.md
+  - docs/models/operations/patchv1integrationsconnectionsslugconnectionidresponse.md
+  - docs/models/operations/patchv1integrationsfieldmapsfieldmapidrequest.md
+  - docs/models/operations/patchv1integrationsfieldmapsfieldmapidresponse.md
+  - docs/models/operations/patchv1integrationsslackconnectionsconnectionidemojiactionsemojiactionidrequest.md
+  - docs/models/operations/patchv1integrationsslackconnectionsconnectionidemojiactionsemojiactionidrequestbody.md
+  - docs/models/operations/patchv1integrationsslackconnectionsconnectionidemojiactionsemojiactionidresponse.md
+  - docs/models/operations/patchv1integrationsstatuspageconnectionsconnectionidrequest.md
+  - docs/models/operations/patchv1integrationsstatuspageconnectionsconnectionidresponse.md
+  - docs/models/operations/patchv1lifecyclesmeasurementdefinitionsmeasurementdefinitionidrequest.md
+  - docs/models/operations/patchv1lifecyclesmeasurementdefinitionsmeasurementdefinitionidrequestbody.md
+  - docs/models/operations/patchv1lifecyclesmeasurementdefinitionsmeasurementdefinitionidresponse.md
+  - docs/models/operations/patchv1lifecyclesmilestonesmilestoneidrequest.md
+  - docs/models/operations/patchv1lifecyclesmilestonesmilestoneidrequestbody.md
+  - docs/models/operations/patchv1lifecyclesmilestonesmilestoneidresponse.md
+  - docs/models/operations/patchv1nuncconnectionsnuncconnectionidcomponentgroupsgroupidrequest.md
+  - docs/models/operations/patchv1nuncconnectionsnuncconnectionidcomponentgroupsgroupidrequestbody.md
+  - docs/models/operations/patchv1nuncconnectionsnuncconnectionidcomponentgroupsgroupidresponse.md
+  - docs/models/operations/patchv1nuncconnectionsnuncconnectionidlinkslinkidrequest.md
+  - docs/models/operations/patchv1nuncconnectionsnuncconnectionidlinkslinkidresponse.md
+  - docs/models/operations/patchv1postmortemsreportsreportidfieldsfieldidrequest.md
+  - docs/models/operations/patchv1postmortemsreportsreportidfieldsfieldidresponse.md
+  - docs/models/operations/patchv1postmortemsreportsreportidreasonsreasonidrequest.md
+  - docs/models/operations/patchv1postmortemsreportsreportidreasonsreasonidresponse.md
+  - docs/models/operations/patchv1postmortemsreportsreportidrequest.md
+  - docs/models/operations/patchv1postmortemsreportsreportidresponse.md
+  - docs/models/operations/patchv1prioritiespriorityslugrequest.md
+  - docs/models/operations/patchv1prioritiespriorityslugresponse.md
+  - docs/models/operations/patchv1runbooksexecutionsexecutionidstepsstepidvotesrequest.md
+  - docs/models/operations/patchv1runbooksexecutionsexecutionidstepsstepidvotesresponse.md
+  - docs/models/operations/patchv1runbooksexecutionsexecutionidvotesrequest.md
+  - docs/models/operations/patchv1runbooksexecutionsexecutionidvotesresponse.md
+  - docs/models/operations/patchv1savedsearchesresourcetypesavedsearchidrequest.md
+  - docs/models/operations/patchv1savedsearchesresourcetypesavedsearchidresponse.md
+  - docs/models/operations/patchv1scheduledmaintenancesscheduledmaintenanceidrequest.md
+  - docs/models/operations/patchv1scheduledmaintenancesscheduledmaintenanceidresponse.md
+  - docs/models/operations/patchv1servicedependenciesservicedependencyidrequest.md
+  - docs/models/operations/patchv1servicedependenciesservicedependencyidresponse.md
+  - docs/models/operations/patchv1servicesserviceidrequest.md
+  - docs/models/operations/patchv1servicesserviceidresponse.md
+  - docs/models/operations/patchv1severitiesseverityslugrequest.md
+  - docs/models/operations/patchv1severitiesseverityslugresponse.md
+  - docs/models/operations/patchv1severitymatrixconditionsconditionidrequest.md
+  - docs/models/operations/patchv1severitymatrixconditionsconditionidresponse.md
+  - docs/models/operations/patchv1severitymatriximpactsimpactidrequest.md
+  - docs/models/operations/patchv1severitymatriximpactsimpactidresponse.md
+  - docs/models/operations/patchv1severitymatrixresponse.md
+  - docs/models/operations/patchv1signalsemailtargetsidrequest.md
+  - docs/models/operations/patchv1signalsemailtargetsidresponse.md
+  - docs/models/operations/patchv1signalswebhooktargetsidrequest.md
+  - docs/models/operations/patchv1signalswebhooktargetsidresponse.md
+  - docs/models/operations/patchv1statusupdatetemplatesstatusupdatetemplateidrequest.md
+  - docs/models/operations/patchv1statusupdatetemplatesstatusupdatetemplateidresponse.md
+  - docs/models/operations/patchv1taskliststasklistidrequest.md
+  - docs/models/operations/patchv1taskliststasklistidresponse.md
+  - docs/models/operations/patchv1teamsteamidescalationpoliciesidrequest.md
+  - docs/models/operations/patchv1teamsteamidescalationpoliciesidresponse.md
+  - docs/models/operations/patchv1teamsteamidoncallschedulesscheduleidrequest.md
+  - docs/models/operations/patchv1teamsteamidoncallschedulesscheduleidresponse.md
+  - docs/models/operations/patchv1teamsteamidoncallschedulesscheduleidshiftsidrequest.md
+  - docs/models/operations/patchv1teamsteamidoncallschedulesscheduleidshiftsidresponse.md
+  - docs/models/operations/patchv1teamsteamidrequest.md
+  - docs/models/operations/patchv1teamsteamidresponse.md
+  - docs/models/operations/patchv1teamsteamidsignalrulesidrequest.md
+  - docs/models/operations/patchv1teamsteamidsignalrulesidresponse.md
+  - docs/models/operations/patchv1ticketingprioritiesidrequest.md
+  - docs/models/operations/patchv1ticketingprioritiesidresponse.md
+  - docs/models/operations/patchv1ticketingprojectsticketingprojectidfieldmapsmapidrequest.md
+  - docs/models/operations/patchv1ticketingprojectsticketingprojectidfieldmapsmapidresponse.md
+  - docs/models/operations/patchv1ticketingprojectsticketingprojectidproviderprojectconfigurationsconfigidrequest.md
+  - docs/models/operations/patchv1ticketingprojectsticketingprojectidproviderprojectconfigurationsconfigidresponse.md
+  - docs/models/operations/patchv1ticketingticketsticketidrequest.md
+  - docs/models/operations/patchv1ticketingticketsticketidresponse.md
+  - docs/models/operations/patchv1webhookswebhookidrequest.md
+  - docs/models/operations/patchv1webhookswebhookidresponse.md
+  - docs/models/operations/pathparaminfratype.md
+  - docs/models/operations/pathparamresourcetype.md
+  - docs/models/operations/pathparamtype.md
+  - docs/models/operations/postv1catalogscatalogidingestrequest.md
+  - docs/models/operations/postv1catalogscatalogidingestresponse.md
+  - docs/models/operations/postv1changeschangeididentitiesrequest.md
+  - docs/models/operations/postv1changeschangeididentitiesresponse.md
+  - docs/models/operations/postv1changeseventsresponse.md
+  - docs/models/operations/postv1changesresponse.md
+  - docs/models/operations/postv1checklisttemplatesresponse.md
+  - docs/models/operations/postv1conversationsconversationidcommentscommentidreactionsrequest.md
+  - docs/models/operations/postv1conversationsconversationidcommentscommentidreactionsresponse.md
+  - docs/models/operations/postv1conversationsconversationidcommentsrequest.md
+  - docs/models/operations/postv1conversationsconversationidcommentsresponse.md
+  - docs/models/operations/postv1customfieldsdefinitionsresponse.md
+  - docs/models/operations/postv1environmentsresponse.md
+  - docs/models/operations/postv1functionalitiesresponse.md
+  - docs/models/operations/postv1incidentrolesresponse.md
+  - docs/models/operations/postv1incidentsincidentidalertsrequest.md
+  - docs/models/operations/postv1incidentsincidentidalertsresponse.md
+  - docs/models/operations/postv1incidentsincidentidattachmentsrequest.md
+  - docs/models/operations/postv1incidentsincidentidattachmentsrequestbody.md
+  - docs/models/operations/postv1incidentsincidentidattachmentsresponse.md
+  - docs/models/operations/postv1incidentsincidentidgenericchatmessagesrequest.md
+  - docs/models/operations/postv1incidentsincidentidgenericchatmessagesresponse.md
+  - docs/models/operations/postv1incidentsincidentidimpacttyperequest.md
+  - docs/models/operations/postv1incidentsincidentidimpacttyperesponse.md
+  - docs/models/operations/postv1incidentsincidentidlinksrequest.md
+  - docs/models/operations/postv1incidentsincidentidlinksresponse.md
+  - docs/models/operations/postv1incidentsincidentidnotesrequest.md
+  - docs/models/operations/postv1incidentsincidentidnotesresponse.md
+  - docs/models/operations/postv1incidentsincidentidrelatedchangeeventsrequest.md
+  - docs/models/operations/postv1incidentsincidentidrelatedchangeeventsresponse.md
+  - docs/models/operations/postv1incidentsincidentidroleassignmentsrequest.md
+  - docs/models/operations/postv1incidentsincidentidroleassignmentsresponse.md
+  - docs/models/operations/postv1incidentsincidentidstatuspagesrequest.md
+  - docs/models/operations/postv1incidentsincidentidstatuspagesresponse.md
+  - docs/models/operations/postv1incidentsincidentidtasklistsrequest.md
+  - docs/models/operations/postv1incidentsincidentidtasklistsresponse.md
+  - docs/models/operations/postv1incidentsincidentidtasksrequest.md
+  - docs/models/operations/postv1incidentsincidentidtasksresponse.md
+  - docs/models/operations/postv1incidentsincidentidtaskstaskidconvertrequest.md
+  - docs/models/operations/postv1incidentsincidentidtaskstaskidconvertresponse.md
+  - docs/models/operations/postv1incidentsincidentidteamassignmentsrequest.md
+  - docs/models/operations/postv1incidentsincidentidteamassignmentsresponse.md
+  - docs/models/operations/postv1incidentsincidentidunarchiverequest.md
+  - docs/models/operations/postv1incidentsincidentidunarchiveresponse.md
+  - docs/models/operations/postv1incidentsresponse.md
+  - docs/models/operations/postv1incidenttagsvalidateresponse.md
+  - docs/models/operations/postv1incidenttypesresponse.md
+  - docs/models/operations/postv1integrationsconnectionsslugrequest.md
+  - docs/models/operations/postv1integrationsconnectionsslugresponse.md
+  - docs/models/operations/postv1integrationsslackconnectionsconnectionidemojiactionsrequest.md
+  - docs/models/operations/postv1integrationsslackconnectionsconnectionidemojiactionsrequestbody.md
+  - docs/models/operations/postv1integrationsslackconnectionsconnectionidemojiactionsresponse.md
+  - docs/models/operations/postv1lifecyclesmeasurementdefinitionsrequestbody.md
+  - docs/models/operations/postv1lifecyclesmeasurementdefinitionsresponse.md
+  - docs/models/operations/postv1lifecyclesmilestonesrequestbody.md
+  - docs/models/operations/postv1lifecyclesmilestonesresponse.md
+  - docs/models/operations/postv1nuncconnectionsnuncconnectionidcomponentgroupsrequest.md
+  - docs/models/operations/postv1nuncconnectionsnuncconnectionidcomponentgroupsrequestbody.md
+  - docs/models/operations/postv1nuncconnectionsnuncconnectionidcomponentgroupsresponse.md
+  - docs/models/operations/postv1nuncconnectionsnuncconnectionidlinksrequest.md
+  - docs/models/operations/postv1nuncconnectionsnuncconnectionidlinksresponse.md
+  - docs/models/operations/postv1nuncconnectionsnuncconnectionidsubscribersrequest.md
+  - docs/models/operations/postv1nuncconnectionsnuncconnectionidsubscribersrequestbody.md
+  - docs/models/operations/postv1nuncconnectionsnuncconnectionidsubscribersresponse.md
+  - docs/models/operations/postv1nuncconnectionsrequestbody.md
+  - docs/models/operations/postv1nuncconnectionsresponse.md
+  - docs/models/operations/postv1nuncsubscriptionsresponse.md
+  - docs/models/operations/postv1postmortemsreportsreportidpublishrequest.md
+  - docs/models/operations/postv1postmortemsreportsreportidpublishresponse.md
+  - docs/models/operations/postv1postmortemsreportsreportidreasonsrequest.md
+  - docs/models/operations/postv1postmortemsreportsreportidreasonsresponse.md
+  - docs/models/operations/postv1postmortemsreportsresponse.md
+  - docs/models/operations/postv1prioritiesresponse.md
+  - docs/models/operations/postv1runbooksexecutionsresponse.md
+  - docs/models/operations/postv1runbooksresponse.md
+  - docs/models/operations/postv1savedsearchesresourcetypepathparamresourcetype.md
+  - docs/models/operations/postv1savedsearchesresourcetyperequest.md
+  - docs/models/operations/postv1savedsearchesresourcetyperesponse.md
+  - docs/models/operations/postv1scheduledmaintenancesresponse.md
+  - docs/models/operations/postv1scimv2groupsresponse.md
+  - docs/models/operations/postv1scimv2usersresponse.md
+  - docs/models/operations/postv1servicedependenciesresponse.md
+  - docs/models/operations/postv1servicesresponse.md
+  - docs/models/operations/postv1servicesserviceidchecklistresponsechecklistidrequest.md
+  - docs/models/operations/postv1servicesserviceidchecklistresponsechecklistidresponse.md
+  - docs/models/operations/postv1servicesservicelinksresponse.md
+  - docs/models/operations/postv1severitiesresponse.md
+  - docs/models/operations/postv1severitymatrixconditionsresponse.md
+  - docs/models/operations/postv1severitymatriximpactsresponse.md
+  - docs/models/operations/postv1signalsdebuggerresponse.md
+  - docs/models/operations/postv1signalsemailtargetsresponse.md
+  - docs/models/operations/postv1signalswebhooktargetsresponse.md
+  - docs/models/operations/postv1signalswebhooktargetsresponsebody.md
+  - docs/models/operations/postv1statusupdatetemplatesresponse.md
+  - docs/models/operations/postv1tasklistsresponse.md
+  - docs/models/operations/postv1teamsresponse.md
+  - docs/models/operations/postv1teamsteamidescalationpoliciesrequest.md
+  - docs/models/operations/postv1teamsteamidescalationpoliciesresponse.md
+  - docs/models/operations/postv1teamsteamidoncallschedulesrequest.md
+  - docs/models/operations/postv1teamsteamidoncallschedulesresponse.md
+  - docs/models/operations/postv1teamsteamidoncallschedulesscheduleidshiftsrequest.md
+  - docs/models/operations/postv1teamsteamidoncallschedulesscheduleidshiftsresponse.md
+  - docs/models/operations/postv1teamsteamidsignalrulesrequest.md
+  - docs/models/operations/postv1teamsteamidsignalrulesresponse.md
+  - docs/models/operations/postv1ticketingprioritiesresponse.md
+  - docs/models/operations/postv1ticketingprojectsticketingprojectidfieldmapsrequest.md
+  - docs/models/operations/postv1ticketingprojectsticketingprojectidfieldmapsresponse.md
+  - docs/models/operations/postv1ticketingprojectsticketingprojectidproviderprojectconfigurationsrequest.md
+  - docs/models/operations/postv1ticketingprojectsticketingprojectidproviderprojectconfigurationsresponse.md
+  - docs/models/operations/postv1ticketingticketsresponse.md
+  - docs/models/operations/postv1webhooksresponse.md
+  - docs/models/operations/putv1aisummarizeincidentincidentidgeneratedsummaryidvoterequest.md
+  - docs/models/operations/putv1aisummarizeincidentincidentidgeneratedsummaryidvoterequestbody.md
+  - docs/models/operations/putv1aisummarizeincidentincidentidgeneratedsummaryidvoteresponse.md
+  - docs/models/operations/putv1incidentsincidentidcloserequest.md
+  - docs/models/operations/putv1incidentsincidentidcloseresponse.md
+  - docs/models/operations/putv1incidentsincidentidimpactrequest.md
+  - docs/models/operations/putv1incidentsincidentidimpactresponse.md
+  - docs/models/operations/putv1incidentsincidentidlinkslinkidrequest.md
+  - docs/models/operations/putv1incidentsincidentidlinkslinkidresponse.md
+  - docs/models/operations/putv1incidentsincidentidmilestonesbulkupdaterequest.md
+  - docs/models/operations/putv1incidentsincidentidmilestonesbulkupdateresponse.md
+  - docs/models/operations/putv1incidentsincidentidresolverequest.md
+  - docs/models/operations/putv1incidentsincidentidresolverequestbody.md
+  - docs/models/operations/putv1incidentsincidentidresolveresponse.md
+  - docs/models/operations/putv1nuncconnectionsnuncconnectionidimagestypefile.md
+  - docs/models/operations/putv1nuncconnectionsnuncconnectionidimagestyperequest.md
+  - docs/models/operations/putv1nuncconnectionsnuncconnectionidimagestyperequestbody.md
+  - docs/models/operations/putv1nuncconnectionsnuncconnectionidimagestyperesponse.md
+  - docs/models/operations/putv1nuncconnectionsnuncconnectionidrequest.md
+  - docs/models/operations/putv1nuncconnectionsnuncconnectionidrequestbody.md
+  - docs/models/operations/putv1nuncconnectionsnuncconnectionidresponse.md
+  - docs/models/operations/putv1postmortemsquestionsresponse.md
+  - docs/models/operations/putv1postmortemsreportsreportidreasonsorderrequest.md
+  - docs/models/operations/putv1postmortemsreportsreportidreasonsorderresponse.md
+  - docs/models/operations/putv1runbooksexecutionsexecutionidstepsstepidrequest.md
+  - docs/models/operations/putv1runbooksexecutionsexecutionidstepsstepidresponse.md
+  - docs/models/operations/putv1runbooksexecutionsexecutionidstepsstepidscriptstaterequest.md
+  - docs/models/operations/putv1runbooksexecutionsexecutionidstepsstepidscriptstateresponse.md
+  - docs/models/operations/putv1runbooksrunbookidrequest.md
+  - docs/models/operations/putv1runbooksrunbookidresponse.md
+  - docs/models/operations/putv1scimv2groupsidrequest.md
+  - docs/models/operations/putv1scimv2groupsidresponse.md
+  - docs/models/operations/putv1scimv2usersidrequest.md
+  - docs/models/operations/putv1scimv2usersidresponse.md
+  - docs/models/operations/queryparamgroupby.md
+  - docs/models/operations/queryparamsort.md
+  - docs/models/operations/queryparamsortby.md
+  - docs/models/operations/queryparamsortdirection.md
+  - docs/models/operations/queryparamsortfield.md
+  - docs/models/operations/queryparamtagmatchstrategy.md
+  - docs/models/operations/queryparamtype.md
+  - docs/models/operations/resourcetype.md
+  - docs/models/operations/sort.md
+  - docs/models/operations/sortby.md
+  - docs/models/operations/sortdirection.md
+  - docs/models/operations/sortfield.md
+  - docs/models/operations/state.md
+  - docs/models/operations/status.md
+  - docs/models/operations/tagmatchstrategy.md
+  - docs/models/operations/type.md
+  - docs/models/operations/votedirection.md
+  - docs/models/sdkerrors/errorentity.md
+  - docs/models/sdkerrors/errorentity1.md
+  - docs/models/sdkerrors/errorentity2.md
+  - docs/models/sdkerrors/errorentity3.md
+  - docs/models/sdkerrors/meta.md
+  - docs/sdks/ai/README.md
+  - docs/sdks/alerts/README.md
+  - docs/sdks/aws/README.md
+  - docs/sdks/bootstrap/README.md
+  - docs/sdks/catalogs/README.md
+  - docs/sdks/changes/README.md
+  - docs/sdks/changetypes/README.md
+  - docs/sdks/checklisttemplates/README.md
+  - docs/sdks/connections/README.md
+  - docs/sdks/conversations/README.md
+  - docs/sdks/currentuser/README.md
+  - docs/sdks/customfields/README.md
+  - docs/sdks/emailtargets/README.md
+  - docs/sdks/entitlements/README.md
+  - docs/sdks/environments/README.md
+  - docs/sdks/events/README.md
+  - docs/sdks/formconfigurations/README.md
+  - docs/sdks/functionalities/README.md
+  - docs/sdks/incidentroles/README.md
+  - docs/sdks/incidents/README.md
+  - docs/sdks/incidenttags/README.md
+  - docs/sdks/incidenttypes/README.md
+  - docs/sdks/infrastructures/README.md
+  - docs/sdks/integrations/README.md
+  - docs/sdks/lifecycles/README.md
+  - docs/sdks/links/README.md
+  - docs/sdks/metrics/README.md
+  - docs/sdks/noauth/README.md
+  - docs/sdks/nunc/README.md
+  - docs/sdks/nuncconnections/README.md
+  - docs/sdks/ping/README.md
+  - docs/sdks/postmortems/README.md
+  - docs/sdks/priorities/README.md
+  - docs/sdks/processinglogentries/README.md
+  - docs/sdks/reports/README.md
+  - docs/sdks/roleassignments/README.md
+  - docs/sdks/runbookaudits/README.md
+  - docs/sdks/runbooks/README.md
+  - docs/sdks/savedsearches/README.md
+  - docs/sdks/scheduledmaintenances/README.md
+  - docs/sdks/schedules/README.md
+  - docs/sdks/scim/README.md
+  - docs/sdks/sdk/README.md
+  - docs/sdks/sdkconnections/README.md
+  - docs/sdks/servicedependencies/README.md
+  - docs/sdks/services/README.md
+  - docs/sdks/severities/README.md
+  - docs/sdks/severitymatrix/README.md
+  - docs/sdks/signals/README.md
+  - docs/sdks/signalsoncall/README.md
+  - docs/sdks/statusupdatetemplates/README.md
+  - docs/sdks/steps/README.md
+  - docs/sdks/tasklists/README.md
+  - docs/sdks/teams/README.md
+  - docs/sdks/ticketing/README.md
+  - docs/sdks/users/README.md
+  - docs/sdks/votes/README.md
+  - docs/sdks/webhooks/README.md
+  - docs/sdks/zendesk/README.md
+  - docs/types/date.md
+  - emailtargets.go
+  - entitlements.go
+  - environments.go
+  - events.go
+  - formconfigurations.go
+  - functionalities.go
+  - go.mod
+  - incidentroles.go
+  - incidents.go
+  - incidenttags.go
+  - incidenttypes.go
+  - infrastructures.go
+  - integrations.go
+  - internal/hooks/hooks.go
+  - internal/utils/contenttype.go
+  - internal/utils/form.go
+  - internal/utils/headers.go
+  - internal/utils/json.go
+  - internal/utils/pathparams.go
+  - internal/utils/queryparams.go
+  - internal/utils/requestbody.go
+  - internal/utils/retries.go
+  - internal/utils/security.go
+  - internal/utils/utils.go
+  - lifecycles.go
+  - links.go
+  - metrics.go
+  - models/operations/options.go
+  - models/sdkerrors/sdkerror.go
+  - noauth.go
+  - nunc.go
+  - nuncconnections.go
+  - ping.go
+  - postmortems.go
+  - priorities.go
+  - processinglogentries.go
+  - reports.go
+  - retry/config.go
+  - roleassignments.go
+  - runbookaudits.go
+  - runbooks.go
+  - savedsearches.go
+  - scheduledmaintenances.go
+  - schedules.go
+  - scim.go
+  - sdk.go
+  - sdkconnections.go
+  - servicedependencies.go
+  - services.go
+  - severities.go
+  - severitymatrix.go
+  - signals.go
+  - signalsoncall.go
+  - statusupdatetemplates.go
+  - steps.go
+  - tasklists.go
+  - teams.go
+  - ticketing.go
+  - types/bigint.go
+  - types/date.go
+  - types/datetime.go
+  - types/decimal.go
+  - types/pointers.go
+  - users.go
+  - votes.go
+  - webhooks.go
+  - zendesk.go
+examples:
+  getV1Ping: {}
+  postV1Environments:
+    speakeasy-default-post-v1-environments:
+      requestBody:
+        application/json: {"name": "<value>"}
+  getV1Environments: {}
+  deleteV1EnvironmentsEnvironmentId:
+    speakeasy-default-delete-v1-environments-environment-id:
+      parameters:
+        path:
+          environment_id: "<id>"
+  patchV1EnvironmentsEnvironmentId:
+    speakeasy-default-patch-v1-environments-environment-id:
+      parameters:
+        path:
+          environment_id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>"}
+  getV1EnvironmentsEnvironmentId:
+    speakeasy-default-get-v1-environments-environment-id:
+      parameters:
+        path:
+          environment_id: "<id>"
+  postV1Services:
+    speakeasy-default-post-v1-services:
+      requestBody:
+        application/json: {"name": "<value>"}
+  getV1Services: {}
+  postV1ServicesServiceLinks:
+    speakeasy-default-post-v1-services-service-links:
+      requestBody:
+        application/json: {"external_service_ids": "<value>", "connection_id": "<id>", "integration": "victorops"}
+  deleteV1ServicesServiceId:
+    speakeasy-default-delete-v1-services-service-id:
+      parameters:
+        path:
+          service_id: "<id>"
+  patchV1ServicesServiceId:
+    speakeasy-default-patch-v1-services-service-id:
+      parameters:
+        path:
+          service_id: "<id>"
+  getV1ServicesServiceId:
+    speakeasy-default-get-v1-services-service-id:
+      parameters:
+        path:
+          service_id: "<id>"
+  getV1ServicesServiceIdDependencies:
+    speakeasy-default-get-v1-services-service-id-dependencies:
+      parameters:
+        path:
+          service_id: "<id>"
+        query: {}
+  getV1ServicesServiceIdAvailableUpstreamDependencies:
+    speakeasy-default-get-v1-services-service-id-available-upstream-dependencies:
+      parameters:
+        path:
+          service_id: "<id>"
+  getV1ServicesServiceIdAvailableDownstreamDependencies:
+    speakeasy-default-get-v1-services-service-id-available-downstream-dependencies:
+      parameters:
+        path:
+          service_id: "<id>"
+  deleteV1ServicesServiceIdServiceLinksRemoteId:
+    speakeasy-default-delete-v1-services-service-id-service-links-remote-id:
+      parameters:
+        path:
+          service_id: "<id>"
+          remote_id: "<id>"
+  postV1ServicesServiceIdChecklistResponseChecklistId:
+    speakeasy-default-post-v1-services-service-id-checklist-response-checklist-id:
+      parameters:
+        path:
+          service_id: "<id>"
+          checklist_id: "<id>"
+      requestBody:
+        application/json: {"check_id": "<id>", "status": false}
+  postV1ServiceDependencies:
+    speakeasy-default-post-v1-service-dependencies:
+      requestBody:
+        application/json: {"service_id": "<id>", "connected_service_id": "<id>"}
+  getV1ServiceDependenciesServiceDependencyId:
+    speakeasy-default-get-v1-service-dependencies-service-dependency-id:
+      parameters:
+        path:
+          service_dependency_id: "<id>"
+  deleteV1ServiceDependenciesServiceDependencyId:
+    speakeasy-default-delete-v1-service-dependencies-service-dependency-id:
+      parameters:
+        path:
+          service_dependency_id: "<id>"
+  patchV1ServiceDependenciesServiceDependencyId:
+    speakeasy-default-patch-v1-service-dependencies-service-dependency-id:
+      parameters:
+        path:
+          service_dependency_id: "<id>"
+  postV1Functionalities:
+    speakeasy-default-post-v1-functionalities:
+      requestBody:
+        application/json: {"name": "<value>"}
+  getV1Functionalities: {}
+  deleteV1FunctionalitiesFunctionalityId:
+    speakeasy-default-delete-v1-functionalities-functionality-id:
+      parameters:
+        path:
+          functionality_id: "<id>"
+  patchV1FunctionalitiesFunctionalityId:
+    speakeasy-default-patch-v1-functionalities-functionality-id:
+      parameters:
+        path:
+          functionality_id: "<id>"
+  getV1FunctionalitiesFunctionalityId:
+    speakeasy-default-get-v1-functionalities-functionality-id:
+      parameters:
+        path:
+          functionality_id: "<id>"
+  getV1FunctionalitiesFunctionalityIdServices:
+    speakeasy-default-get-v1-functionalities-functionality-id-services:
+      parameters:
+        path:
+          functionality_id: "<id>"
+  postV1Teams:
+    speakeasy-default-post-v1-teams:
+      requestBody:
+        application/json: {"name": "<value>"}
+  getV1Teams: {}
+  deleteV1TeamsTeamId:
+    speakeasy-default-delete-v1-teams-team-id:
+      parameters:
+        path:
+          team_id: "<id>"
+  patchV1TeamsTeamId:
+    speakeasy-default-patch-v1-teams-team-id:
+      parameters:
+        path:
+          team_id: "<id>"
+  getV1TeamsTeamId:
+    speakeasy-default-get-v1-teams-team-id:
+      parameters:
+        path:
+          team_id: "<id>"
+        query: {}
+  postV1TeamsTeamIdEscalationPolicies:
+    speakeasy-default-post-v1-teams-team-id-escalation-policies:
+      parameters:
+        path:
+          team_id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>", "steps": [{"targets": [{"type": "Webhook", "id": "<id>"}], "timeout": "<value>"}]}
+  getV1TeamsTeamIdEscalationPolicies:
+    speakeasy-default-get-v1-teams-team-id-escalation-policies:
+      parameters:
+        path:
+          team_id: "<id>"
+        query: {}
+  deleteV1TeamsTeamIdEscalationPoliciesId:
+    speakeasy-default-delete-v1-teams-team-id-escalation-policies-id:
+      parameters:
+        path:
+          team_id: "<id>"
+          id: "<id>"
+  patchV1TeamsTeamIdEscalationPoliciesId:
+    speakeasy-default-patch-v1-teams-team-id-escalation-policies-id:
+      parameters:
+        path:
+          team_id: "<id>"
+          id: "<id>"
+  getV1TeamsTeamIdEscalationPoliciesId:
+    speakeasy-default-get-v1-teams-team-id-escalation-policies-id:
+      parameters:
+        path:
+          team_id: "<id>"
+          id: "<id>"
+  postV1TeamsTeamIdOnCallSchedules:
+    speakeasy-default-post-v1-teams-team-id-on-call-schedules:
+      parameters:
+        path:
+          team_id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>", "time_zone": "America/Santo_Domingo", "strategy": {"type": "daily"}}
+  getV1TeamsTeamIdOnCallSchedules:
+    speakeasy-default-get-v1-teams-team-id-on-call-schedules:
+      parameters:
+        path:
+          team_id: "<id>"
+        query: {}
+  deleteV1TeamsTeamIdOnCallSchedulesScheduleId:
+    speakeasy-default-delete-v1-teams-team-id-on-call-schedules-schedule-id:
+      parameters:
+        path:
+          team_id: "<id>"
+          schedule_id: "<id>"
+  patchV1TeamsTeamIdOnCallSchedulesScheduleId:
+    speakeasy-default-patch-v1-teams-team-id-on-call-schedules-schedule-id:
+      parameters:
+        path:
+          team_id: "<id>"
+          schedule_id: "<id>"
+  getV1TeamsTeamIdOnCallSchedulesScheduleId:
+    speakeasy-default-get-v1-teams-team-id-on-call-schedules-schedule-id:
+      parameters:
+        path:
+          team_id: "<id>"
+          schedule_id: "<id>"
+  postV1TeamsTeamIdOnCallSchedulesScheduleIdShifts:
+    speakeasy-default-post-v1-teams-team-id-on-call-schedules-schedule-id-shifts:
+      parameters:
+        path:
+          team_id: "<id>"
+          schedule_id: "<id>"
+      requestBody:
+        application/json: {"start_time": "<value>", "end_time": "<value>"}
+  deleteV1TeamsTeamIdOnCallSchedulesScheduleIdShiftsId:
+    speakeasy-default-delete-v1-teams-team-id-on-call-schedules-schedule-id-shifts-id:
+      parameters:
+        path:
+          id: "<id>"
+          team_id: "<id>"
+          schedule_id: "<id>"
+  patchV1TeamsTeamIdOnCallSchedulesScheduleIdShiftsId:
+    speakeasy-default-patch-v1-teams-team-id-on-call-schedules-schedule-id-shifts-id:
+      parameters:
+        path:
+          id: "<id>"
+          team_id: "<id>"
+          schedule_id: "<id>"
+  getV1TeamsTeamIdOnCallSchedulesScheduleIdShiftsId:
+    speakeasy-default-get-v1-teams-team-id-on-call-schedules-schedule-id-shifts-id:
+      parameters:
+        path:
+          id: "<id>"
+          team_id: "<id>"
+          schedule_id: "<id>"
+  postV1TeamsTeamIdSignalRules:
+    speakeasy-default-post-v1-teams-team-id-signal-rules:
+      parameters:
+        path:
+          team_id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>", "expression": "<value>", "target_type": "EscalationPolicy", "target_id": "<id>"}
+  getV1TeamsTeamIdSignalRules:
+    speakeasy-default-get-v1-teams-team-id-signal-rules:
+      parameters:
+        path:
+          team_id: "<id>"
+        query: {}
+  deleteV1TeamsTeamIdSignalRulesId:
+    speakeasy-default-delete-v1-teams-team-id-signal-rules-id:
+      parameters:
+        path:
+          team_id: "<id>"
+          id: "<id>"
+  patchV1TeamsTeamIdSignalRulesId:
+    speakeasy-default-patch-v1-teams-team-id-signal-rules-id:
+      parameters:
+        path:
+          team_id: "<id>"
+          id: "<id>"
+  getV1TeamsTeamIdSignalRulesId:
+    speakeasy-default-get-v1-teams-team-id-signal-rules-id:
+      parameters:
+        path:
+          team_id: "<id>"
+          id: "<id>"
+  postV1Changes: {}
+  getV1Changes: {}
+  deleteV1ChangesChangeId:
+    speakeasy-default-delete-v1-changes-change-id:
+      parameters:
+        path:
+          change_id: "<id>"
+  patchV1ChangesChangeId:
+    speakeasy-default-patch-v1-changes-change-id:
+      parameters:
+        path:
+          change_id: "<id>"
+  postV1ChangesChangeIdIdentities:
+    speakeasy-default-post-v1-changes-change-id-identities:
+      parameters:
+        path:
+          change_id: "<id>"
+      requestBody:
+        application/json: {"type": "<value>", "value": "<value>"}
+  getV1ChangesChangeIdIdentities:
+    speakeasy-default-get-v1-changes-change-id-identities:
+      parameters:
+        path:
+          change_id: "<id>"
+        query: {}
+  deleteV1ChangesChangeIdIdentitiesIdentityId:
+    speakeasy-default-delete-v1-changes-change-id-identities-identity-id:
+      parameters:
+        path:
+          identity_id: "<id>"
+          change_id: "<id>"
+  patchV1ChangesChangeIdIdentitiesIdentityId:
+    speakeasy-default-patch-v1-changes-change-id-identities-identity-id:
+      parameters:
+        path:
+          identity_id: "<id>"
+          change_id: "<id>"
+      requestBody:
+        application/json: {"type": "<value>", "value": "<value>"}
+  postV1ChangesEvents:
+    speakeasy-default-post-v1-changes-events:
+      requestBody:
+        application/json: {"summary": "<value>"}
+  getV1ChangesEvents: {}
+  deleteV1ChangesEventsChangeEventId:
+    speakeasy-default-delete-v1-changes-events-change-event-id:
+      parameters:
+        path:
+          change_event_id: "<id>"
+  patchV1ChangesEventsChangeEventId:
+    speakeasy-default-patch-v1-changes-events-change-event-id:
+      parameters:
+        path:
+          change_event_id: "<id>"
+  getV1ChangesEventsChangeEventId:
+    speakeasy-default-get-v1-changes-events-change-event-id:
+      parameters:
+        path:
+          change_event_id: "<id>"
+  getV1ChangeTypes: {}
+  getV1Entitlements: {}
+  postV1Incidents:
+    speakeasy-default-post-v1-incidents:
+      requestBody:
+        application/json: {"name": "<value>"}
+  getV1Incidents: {}
+  getV1IncidentsIncidentIdChannel:
+    speakeasy-default-get-v1-incidents-incident-id-channel:
+      parameters:
+        path:
+          incident_id: "<id>"
+  putV1IncidentsIncidentIdClose:
+    speakeasy-default-put-v1-incidents-incident-id-close:
+      parameters:
+        path:
+          incident_id: "<id>"
+  putV1IncidentsIncidentIdResolve:
+    speakeasy-default-put-v1-incidents-incident-id-resolve:
+      parameters:
+        path:
+          incident_id: "<id>"
+  deleteV1IncidentsIncidentId:
+    speakeasy-default-delete-v1-incidents-incident-id:
+      parameters:
+        path:
+          incident_id: "<id>"
+  patchV1IncidentsIncidentId:
+    speakeasy-default-patch-v1-incidents-incident-id:
+      parameters:
+        path:
+          incident_id: "<id>"
+  getV1IncidentsIncidentId:
+    speakeasy-default-get-v1-incidents-incident-id:
+      parameters:
+        path:
+          incident_id: "<id>"
+  postV1IncidentsIncidentIdUnarchive:
+    speakeasy-default-post-v1-incidents-incident-id-unarchive:
+      parameters:
+        path:
+          incident_id: "<id>"
+  postV1IncidentsIncidentIdAlerts:
+    speakeasy-default-post-v1-incidents-incident-id-alerts:
+      parameters:
+        path:
+          incident_id: "<id>"
+      requestBody:
+        application/json: []
+  getV1IncidentsIncidentIdAlerts:
+    speakeasy-default-get-v1-incidents-incident-id-alerts:
+      parameters:
+        path:
+          incident_id: "<id>"
+  patchV1IncidentsIncidentIdAlertsIncidentAlertIdPrimary:
+    speakeasy-default-patch-v1-incidents-incident-id-alerts-incident-alert-id-primary:
+      parameters:
+        path:
+          incident_alert_id: "<id>"
+          incident_id: "<id>"
+      requestBody:
+        application/json: {"primary": true}
+  deleteV1IncidentsIncidentIdAlertsIncidentAlertId:
+    speakeasy-default-delete-v1-incidents-incident-id-alerts-incident-alert-id:
+      parameters:
+        path:
+          incident_alert_id: "<id>"
+          incident_id: "<id>"
+  putV1IncidentsIncidentIdMilestonesBulkUpdate:
+    speakeasy-default-put-v1-incidents-incident-id-milestones-bulk-update:
+      parameters:
+        path:
+          incident_id: "<id>"
+      requestBody:
+        application/json: {"milestones": [{"type": "<value>", "occurred_at": "2024-11-07T10:44:41.426Z"}]}
+  getV1IncidentsIncidentIdMilestones:
+    speakeasy-default-get-v1-incidents-incident-id-milestones:
+      parameters:
+        path:
+          incident_id: "<id>"
+  postV1IncidentsIncidentIdRelatedChangeEvents:
+    speakeasy-default-post-v1-incidents-incident-id-related-change-events:
+      parameters:
+        path:
+          incident_id: "<id>"
+      requestBody:
+        application/json: {"change_event_id": "<id>", "type": "caused"}
+  getV1IncidentsIncidentIdRelatedChangeEvents:
+    speakeasy-default-get-v1-incidents-incident-id-related-change-events:
+      parameters:
+        path:
+          incident_id: "<id>"
+        query: {}
+  patchV1IncidentsIncidentIdRelatedChangeEventsRelatedChangeEventId:
+    speakeasy-default-patch-v1-incidents-incident-id-related-change-events-related-change-event-id:
+      parameters:
+        path:
+          related_change_event_id: "<id>"
+          incident_id: "<id>"
+  postV1IncidentsIncidentIdStatusPages:
+    speakeasy-default-post-v1-incidents-incident-id-status-pages:
+      parameters:
+        path:
+          incident_id: "<id>"
+      requestBody:
+        application/json: {"integration_slug": "<value>", "integration_id": "<id>"}
+  getV1IncidentsIncidentIdStatusPages:
+    speakeasy-default-get-v1-incidents-incident-id-status-pages:
+      parameters:
+        path:
+          incident_id: "<id>"
+  deleteV1IncidentsIncidentIdStatusPagesStatusPageId:
+    speakeasy-default-delete-v1-incidents-incident-id-status-pages-status-page-id:
+      parameters:
+        path:
+          status_page_id: "<id>"
+          incident_id: "<id>"
+  postV1IncidentsIncidentIdTaskLists:
+    speakeasy-default-post-v1-incidents-incident-id-task-lists:
+      parameters:
+        path:
+          incident_id: "<id>"
+      requestBody:
+        application/json: {"task_list_id": "<id>"}
+  postV1IncidentsIncidentIdTasks:
+    speakeasy-default-post-v1-incidents-incident-id-tasks:
+      parameters:
+        path:
+          incident_id: "<id>"
+      requestBody:
+        application/json: {"title": "<value>"}
+  getV1IncidentsIncidentIdTasks:
+    speakeasy-default-get-v1-incidents-incident-id-tasks:
+      parameters:
+        path:
+          incident_id: "<id>"
+        query: {}
+  deleteV1IncidentsIncidentIdTasksTaskId:
+    speakeasy-default-delete-v1-incidents-incident-id-tasks-task-id:
+      parameters:
+        path:
+          task_id: "<id>"
+          incident_id: "<id>"
+  patchV1IncidentsIncidentIdTasksTaskId:
+    speakeasy-default-patch-v1-incidents-incident-id-tasks-task-id:
+      parameters:
+        path:
+          task_id: "<id>"
+          incident_id: "<id>"
+  getV1IncidentsIncidentIdTasksTaskId:
+    speakeasy-default-get-v1-incidents-incident-id-tasks-task-id:
+      parameters:
+        path:
+          task_id: "<id>"
+          incident_id: "<id>"
+  postV1IncidentsIncidentIdTasksTaskIdConvert:
+    speakeasy-default-post-v1-incidents-incident-id-tasks-task-id-convert:
+      parameters:
+        path:
+          task_id: "<id>"
+          incident_id: "<id>"
+  postV1IncidentsIncidentIdLinks:
+    speakeasy-default-post-v1-incidents-incident-id-links:
+      parameters:
+        path:
+          incident_id: "<id>"
+      requestBody:
+        application/json: {"href": "<value>"}
+  deleteV1IncidentsIncidentIdLinksLinkId:
+    speakeasy-default-delete-v1-incidents-incident-id-links-link-id:
+      parameters:
+        path:
+          link_id: "<id>"
+          incident_id: "<id>"
+  putV1IncidentsIncidentIdLinksLinkId:
+    speakeasy-default-put-v1-incidents-incident-id-links-link-id:
+      parameters:
+        path:
+          link_id: "<id>"
+          incident_id: "<id>"
+  getV1IncidentsIncidentIdTranscript:
+    speakeasy-default-get-v1-incidents-incident-id-transcript:
+      parameters:
+        path:
+          incident_id: "<id>"
+        query: {}
+  deleteV1IncidentsIncidentIdTranscriptTranscriptId:
+    speakeasy-default-delete-v1-incidents-incident-id-transcript-transcript-id:
+      parameters:
+        path:
+          transcript_id: "<id>"
+          incident_id: "<id>"
+  getV1IncidentsIncidentIdSimilar:
+    speakeasy-default-get-v1-incidents-incident-id-similar:
+      parameters:
+        path:
+          incident_id: "<id>"
+        query: {}
+  getV1IncidentsIncidentIdAttachments:
+    speakeasy-default-get-v1-incidents-incident-id-attachments:
+      parameters:
+        path:
+          incident_id: "<id>"
+        query: {}
+  postV1IncidentsIncidentIdAttachments:
+    speakeasy-default-post-v1-incidents-incident-id-attachments:
+      parameters:
+        path:
+          incident_id: "<id>"
+      requestBody:
+        multipart/form-data: {"file": {}}
+  getV1IncidentsIncidentIdEvents:
+    speakeasy-default-get-v1-incidents-incident-id-events:
+      parameters:
+        path:
+          incident_id: "<id>"
+        query: {}
+  patchV1IncidentsIncidentIdEventsEventId:
+    speakeasy-default-patch-v1-incidents-incident-id-events-event-id:
+      parameters:
+        path:
+          incident_id: "<id>"
+          event_id: "<id>"
+  getV1IncidentsIncidentIdEventsEventId:
+    speakeasy-default-get-v1-incidents-incident-id-events-event-id:
+      parameters:
+        path:
+          incident_id: "<id>"
+          event_id: "<id>"
+  patchV1IncidentsIncidentIdEventsEventIdVotes:
+    speakeasy-default-patch-v1-incidents-incident-id-events-event-id-votes:
+      parameters:
+        path:
+          incident_id: "<id>"
+          event_id: "<id>"
+      requestBody:
+        application/json: {"direction": "down"}
+  patchV1IncidentsIncidentIdImpact:
+    speakeasy-default-patch-v1-incidents-incident-id-impact:
+      parameters:
+        path:
+          incident_id: "<id>"
+  putV1IncidentsIncidentIdImpact:
+    speakeasy-default-put-v1-incidents-incident-id-impact:
+      parameters:
+        path:
+          incident_id: "<id>"
+  postV1IncidentsIncidentIdImpactType:
+    speakeasy-default-post-v1-incidents-incident-id-impact-type:
+      parameters:
+        path:
+          incident_id: "<id>"
+          type: "customers"
+      requestBody:
+        application/json: {"id": "<id>"}
+  getV1IncidentsIncidentIdImpactType:
+    speakeasy-default-get-v1-incidents-incident-id-impact-type:
+      parameters:
+        path:
+          incident_id: "<id>"
+          type: "environments"
+  deleteV1IncidentsIncidentIdImpactTypeId:
+    speakeasy-default-delete-v1-incidents-incident-id-impact-type-id:
+      parameters:
+        path:
+          incident_id: "<id>"
+          type: "functionalities"
+          id: "<id>"
+  postV1IncidentsIncidentIdNotes:
+    speakeasy-default-post-v1-incidents-incident-id-notes:
+      parameters:
+        path:
+          incident_id: "<id>"
+      requestBody:
+        application/json: {"body": "<value>"}
+  patchV1IncidentsIncidentIdNotesNoteId:
+    speakeasy-default-patch-v1-incidents-incident-id-notes-note-id:
+      parameters:
+        path:
+          note_id: "<id>"
+          incident_id: "<id>"
+      requestBody:
+        application/json: {"body": "<value>"}
+  postV1IncidentsIncidentIdGenericChatMessages:
+    speakeasy-default-post-v1-incidents-incident-id-generic-chat-messages:
+      parameters:
+        path:
+          incident_id: "<id>"
+      requestBody:
+        application/json: {"body": "<value>"}
+  deleteV1IncidentsIncidentIdGenericChatMessagesMessageId:
+    speakeasy-default-delete-v1-incidents-incident-id-generic-chat-messages-message-id:
+      parameters:
+        path:
+          message_id: "<id>"
+          incident_id: "<id>"
+  patchV1IncidentsIncidentIdGenericChatMessagesMessageId:
+    speakeasy-default-patch-v1-incidents-incident-id-generic-chat-messages-message-id:
+      parameters:
+        path:
+          message_id: "<id>"
+          incident_id: "<id>"
+      requestBody:
+        application/json: {"body": "<value>"}
+  getV1IncidentsIncidentIdRoleAssignments:
+    speakeasy-default-get-v1-incidents-incident-id-role-assignments:
+      parameters:
+        path:
+          incident_id: "<id>"
+        query: {}
+  deleteV1IncidentsIncidentIdRoleAssignmentsRoleAssignmentId:
+    speakeasy-default-delete-v1-incidents-incident-id-role-assignments-role-assignment-id:
+      parameters:
+        path:
+          incident_id: "<id>"
+          role_assignment_id: "<id>"
+  postV1IncidentsIncidentIdTeamAssignments:
+    speakeasy-default-post-v1-incidents-incident-id-team-assignments:
+      parameters:
+        path:
+          incident_id: "<id>"
+      requestBody:
+        application/json: {"team_id": "<id>"}
+  deleteV1IncidentsIncidentIdTeamAssignmentsTeamAssignmentId:
+    speakeasy-default-delete-v1-incidents-incident-id-team-assignments-team-assignment-id:
+      parameters:
+        path:
+          incident_id: "<id>"
+          team_assignment_id: "<id>"
+  getV1IncidentsIncidentIdUsersUserId:
+    speakeasy-default-get-v1-incidents-incident-id-users-user-id:
+      parameters:
+        path:
+          incident_id: "<id>"
+          user_id: "<id>"
+  getV1IncidentsIncidentIdRelationships:
+    speakeasy-default-get-v1-incidents-incident-id-relationships:
+      parameters:
+        path:
+          incident_id: "<id>"
+  getV1IncidentsIncidentIdLinks:
+    speakeasy-default-get-v1-incidents-incident-id-links:
+      parameters:
+        path:
+          incident_id: "<id>"
+        query: {}
+  deleteV1IncidentsIncidentIdEventsEventId:
+    speakeasy-default-delete-v1-incidents-incident-id-events-event-id:
+      parameters:
+        path:
+          incident_id: "<id>"
+          event_id: "<id>"
+  getV1IncidentsIncidentIdEventsEventIdVotesStatus:
+    speakeasy-default-get-v1-incidents-incident-id-events-event-id-votes-status:
+      parameters:
+        path:
+          incident_id: "<id>"
+          event_id: "<id>"
+  postV1IncidentsIncidentIdRoleAssignments:
+    speakeasy-default-post-v1-incidents-incident-id-role-assignments:
+      parameters:
+        path:
+          incident_id: "<id>"
+      requestBody:
+        application/json: {"user_id": "<id>", "incident_role_id": "<id>"}
+  getV1IncidentRoles: {}
+  postV1IncidentRoles:
+    speakeasy-default-post-v1-incident-roles:
+      requestBody:
+        application/json: {"name": "<value>", "summary": "<value>"}
+  deleteV1IncidentRolesIncidentRoleId:
+    speakeasy-default-delete-v1-incident-roles-incident-role-id:
+      parameters:
+        path:
+          incident_role_id: "<id>"
+  patchV1IncidentRolesIncidentRoleId:
+    speakeasy-default-patch-v1-incident-roles-incident-role-id:
+      parameters:
+        path:
+          incident_role_id: "<id>"
+  getV1IncidentRolesIncidentRoleId:
+    speakeasy-default-get-v1-incident-roles-incident-role-id:
+      parameters:
+        path:
+          incident_role_id: "<id>"
+  postV1IncidentTagsValidate:
+    speakeasy-default-post-v1-incident-tags-validate:
+      requestBody:
+        application/json: ["<value>", "<value>"]
+  getV1IncidentTags: {}
+  postV1IncidentTypes:
+    speakeasy-default-post-v1-incident-types:
+      requestBody:
+        application/json: {"name": "<value>"}
+  getV1IncidentTypes: {}
+  deleteV1IncidentTypesId:
+    speakeasy-default-delete-v1-incident-types-id:
+      parameters:
+        path:
+          id: "<id>"
+  patchV1IncidentTypesId:
+    speakeasy-default-patch-v1-incident-types-id:
+      parameters:
+        path:
+          id: "<id>"
+      requestBody:
+        application/json: {"name": "<value>"}
+  getV1IncidentTypesId:
+    speakeasy-default-get-v1-incident-types-id:
+      parameters:
+        path:
+          id: "<id>"
+  getV1Integrations: {}
+  getV1IntegrationsIntegrationId:
+    speakeasy-default-get-v1-integrations-integration-id:
+      parameters:
+        path:
+          integration_id: "<id>"
+  patchV1IntegrationsFieldMapsFieldMapId:
+    speakeasy-default-patch-v1-integrations-field-maps-field-map-id:
+      parameters:
+        path:
+          field_map_id: "<id>"
+  getV1IntegrationsFieldMapsFieldMapIdAvailableFields:
+    speakeasy-default-get-v1-integrations-field-maps-field-map-id-available-fields:
+      parameters:
+        path:
+          field_map_id: "<id>"
+  getV1IntegrationsConnections: {}
+  postV1IntegrationsConnectionsSlug:
+    speakeasy-default-post-v1-integrations-connections-slug:
+      parameters:
+        path:
+          slug: "<value>"
+  patchV1IntegrationsConnectionsSlugConnectionIdRefresh:
+    speakeasy-default-patch-v1-integrations-connections-slug-connection-id-refresh:
+      parameters:
+        path:
+          slug: "<value>"
+          connection_id: "<id>"
+  patchV1IntegrationsConnectionsSlugConnectionId:
+    speakeasy-default-patch-v1-integrations-connections-slug-connection-id:
+      parameters:
+        path:
+          slug: "<value>"
+          connection_id: "<id>"
+  getV1IntegrationsStatusesSlug:
+    speakeasy-default-get-v1-integrations-statuses-slug:
+      parameters:
+        path:
+          slug: "<value>"
+  patchV1IntegrationsAwsConnectionsId:
+    speakeasy-default-patch-v1-integrations-aws-connections-id:
+      parameters:
+        path:
+          id: "<id>"
+  getV1IntegrationsAwsConnectionsId:
+    speakeasy-default-get-v1-integrations-aws-connections-id:
+      parameters:
+        path:
+          id: "<id>"
+  getV1IntegrationsAwsCloudtrailBatches: {}
+  patchV1IntegrationsAwsCloudtrailBatchesId:
+    speakeasy-default-patch-v1-integrations-aws-cloudtrail-batches-id:
+      parameters:
+        path:
+          id: "<id>"
+  getV1IntegrationsAwsCloudtrailBatchesId:
+    speakeasy-default-get-v1-integrations-aws-cloudtrail-batches-id:
+      parameters:
+        path:
+          id: "<id>"
+  getV1IntegrationsAwsCloudtrailBatchesIdEvents:
+    speakeasy-default-get-v1-integrations-aws-cloudtrail-batches-id-events:
+      parameters:
+        path:
+          id: "<id>"
+  getV1IntegrationsConfluenceCloudConnectionsIdSpaceSearch:
+    speakeasy-default-get-v1-integrations-confluence-cloud-connections-id-space-search:
+      parameters:
+        path:
+          id: "<id>"
+        query: {}
+  getV1IntegrationsSlackConnectionsConnectionIdWorkspaces:
+    speakeasy-default-get-v1-integrations-slack-connections-connection-id-workspaces:
+      parameters:
+        path:
+          connection_id: "<id>"
+  getV1IntegrationsSlackUsergroups: {}
+  postV1IntegrationsSlackConnectionsConnectionIdEmojiActions:
+    speakeasy-default-post-v1-integrations-slack-connections-connection-id-emoji-actions:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/x-www-form-urlencoded: {"emoji_name": "<value>"}
+  getV1IntegrationsSlackConnectionsConnectionIdEmojiActions:
+    speakeasy-default-get-v1-integrations-slack-connections-connection-id-emoji-actions:
+      parameters:
+        path:
+          connection_id: "<id>"
+        query: {}
+  deleteV1IntegrationsSlackConnectionsConnectionIdEmojiActionsEmojiActionId:
+    speakeasy-default-delete-v1-integrations-slack-connections-connection-id-emoji-actions-emoji-action-id:
+      parameters:
+        path:
+          connection_id: "<id>"
+          emoji_action_id: "<id>"
+  patchV1IntegrationsSlackConnectionsConnectionIdEmojiActionsEmojiActionId:
+    speakeasy-default-patch-v1-integrations-slack-connections-connection-id-emoji-actions-emoji-action-id:
+      parameters:
+        path:
+          connection_id: "<id>"
+          emoji_action_id: "<id>"
+  getV1IntegrationsSlackConnectionsConnectionIdEmojiActionsEmojiActionId:
+    speakeasy-default-get-v1-integrations-slack-connections-connection-id-emoji-actions-emoji-action-id:
+      parameters:
+        path:
+          connection_id: "<id>"
+          emoji_action_id: "<id>"
+  getV1IntegrationsStatuspageConnections: {}
+  deleteV1IntegrationsStatuspageConnectionsConnectionId:
+    speakeasy-default-delete-v1-integrations-statuspage-connections-connection-id:
+      parameters:
+        path:
+          connection_id: "<id>"
+  patchV1IntegrationsStatuspageConnectionsConnectionId:
+    speakeasy-default-patch-v1-integrations-statuspage-connections-connection-id:
+      parameters:
+        path:
+          connection_id: "<id>"
+  getV1IntegrationsStatuspageConnectionsConnectionId:
+    speakeasy-default-get-v1-integrations-statuspage-connections-connection-id:
+      parameters:
+        path:
+          connection_id: "<id>"
+  getV1IntegrationsStatuspageConnectionsConnectionIdPages:
+    speakeasy-default-get-v1-integrations-statuspage-connections-connection-id-pages:
+      parameters:
+        path:
+          connection_id: "<id>"
+  getV1IntegrationsAwsConnections: {}
+  getV1IntegrationsZendeskSearch:
+    speakeasy-default-get-v1-integrations-zendesk-search:
+      parameters:
+        query:
+          ticket_id: "<id>"
+  getV1Users: {}
+  getV1UsersIdServices:
+    speakeasy-default-get-v1-users-id-services:
+      parameters:
+        path:
+          id: "<id>"
+        query: {}
+      responses:
+        "200":
+          application/json: []
+  getV1CurrentUser: {}
+  getV1ReportsMeanTime: {}
+  getV1MetricsTicketFunnel: {}
+  getV1MetricsRetrospectives: {}
+  getV1MetricsMilestoneFunnel: {}
+  getV1MetricsUserInvolvements: {}
+  getV1MetricsIncidents: {}
+  getV1MetricsMttx:
+    speakeasy-default-get-v1-metrics-mttx:
+      parameters:
+        query:
+          start_date: "2024-12-27"
+          end_date: "2024-02-03"
+  getV1MetricsInfraType:
+    speakeasy-default-get-v1-metrics-infra-type:
+      parameters:
+        path:
+          infra_type: "customers"
+        query: {}
+  getV1MetricsInfraTypeInfraId:
+    speakeasy-default-get-v1-metrics-infra-type-infra-id:
+      parameters:
+        path:
+          infra_type: "services"
+          infra_id: "<id>"
+        query: {}
+  getV1RunbooksActions: {}
+  postV1RunbooksExecutions:
+    speakeasy-default-post-v1-runbooks-executions:
+      requestBody:
+        application/json: {"execute_for": "<value>", "runbook_id": "<id>"}
+  getV1RunbooksExecutions: {}
+  deleteV1RunbooksExecutionsExecutionId:
+    speakeasy-default-delete-v1-runbooks-executions-execution-id:
+      parameters:
+        path:
+          execution_id: "<id>"
+        query:
+          reason: "<value>"
+  getV1RunbooksExecutionsExecutionId:
+    speakeasy-default-get-v1-runbooks-executions-execution-id:
+      parameters:
+        path:
+          execution_id: "<id>"
+  getV1RunbooksExecutionsExecutionIdVotesStatus:
+    speakeasy-default-get-v1-runbooks-executions-execution-id-votes-status:
+      parameters:
+        path:
+          execution_id: "<id>"
+  patchV1RunbooksExecutionsExecutionIdVotes:
+    speakeasy-default-patch-v1-runbooks-executions-execution-id-votes:
+      parameters:
+        path:
+          execution_id: "<id>"
+      requestBody:
+        application/json: {"direction": "down"}
+  putV1RunbooksExecutionsExecutionIdStepsStepId:
+    speakeasy-default-put-v1-runbooks-executions-execution-id-steps-step-id:
+      parameters:
+        path:
+          execution_id: "<id>"
+          step_id: "<id>"
+      requestBody:
+        application/json: {"state": "Alaska"}
+  getV1RunbooksExecutionsExecutionIdStepsStepIdVotesStatus:
+    speakeasy-default-get-v1-runbooks-executions-execution-id-steps-step-id-votes-status:
+      parameters:
+        path:
+          execution_id: "<id>"
+          step_id: "<id>"
+  getV1RunbooksExecutionsExecutionIdStepsStepIdScript:
+    speakeasy-default-get-v1-runbooks-executions-execution-id-steps-step-id-script:
+      parameters:
+        path:
+          execution_id: "<id>"
+          step_id: "<id>"
+  putV1RunbooksExecutionsExecutionIdStepsStepIdScriptState:
+    speakeasy-default-put-v1-runbooks-executions-execution-id-steps-step-id-script-state:
+      parameters:
+        path:
+          execution_id: "<id>"
+          step_id: "<id>"
+          state: "Ohio"
+  getV1RunbooksSelectOptionsIntegrationSlugActionSlugField:
+    speakeasy-default-get-v1-runbooks-select-options-integration-slug-action-slug-field:
+      parameters:
+        path:
+          integration_slug: "<value>"
+          action_slug: "<value>"
+          field: "<value>"
+        query: {}
+  postV1Runbooks:
+    speakeasy-default-post-v1-runbooks:
+      requestBody:
+        application/json: {"name": "<value>", "type": "general"}
+  getV1Runbooks: {}
+  deleteV1RunbooksRunbookId:
+    speakeasy-default-delete-v1-runbooks-runbook-id:
+      parameters:
+        path:
+          runbook_id: "<id>"
+  putV1RunbooksRunbookId:
+    speakeasy-default-put-v1-runbooks-runbook-id:
+      parameters:
+        path:
+          runbook_id: "<id>"
+  getV1RunbooksRunbookId:
+    speakeasy-default-get-v1-runbooks-runbook-id:
+      parameters:
+        path:
+          runbook_id: "<id>"
+  patchV1RunbooksExecutionsExecutionIdStepsStepIdVotes:
+    speakeasy-default-patch-v1-runbooks-executions-execution-id-steps-step-id-votes:
+      parameters:
+        path:
+          execution_id: "<id>"
+          step_id: "<id>"
+      requestBody:
+        application/json: {"direction": "down"}
+  getV1RunbookAudits: {}
+  getV1NuncConnections: {}
+  postV1NuncConnectionsNuncConnectionIdSubscribers:
+    speakeasy-default-post-v1-nunc-connections-nunc-connection-id-subscribers:
+      parameters:
+        path:
+          nunc_connection_id: "<id>"
+      requestBody:
+        application/x-www-form-urlencoded: {"emails": "<value>"}
+  getV1NuncConnectionsNuncConnectionIdSubscribers:
+    speakeasy-default-get-v1-nunc-connections-nunc-connection-id-subscribers:
+      parameters:
+        path:
+          nunc_connection_id: "<id>"
+  deleteV1NuncConnectionsNuncConnectionId:
+    speakeasy-default-delete-v1-nunc-connections-nunc-connection-id:
+      parameters:
+        path:
+          nunc_connection_id: "<id>"
+  getV1NuncConnectionsNuncConnectionId:
+    speakeasy-default-get-v1-nunc-connections-nunc-connection-id:
+      parameters:
+        path:
+          nunc_connection_id: "<id>"
+  deleteV1NuncConnectionsNuncConnectionIdComponentGroupsGroupId:
+    speakeasy-default-delete-v1-nunc-connections-nunc-connection-id-component-groups-group-id:
+      parameters:
+        path:
+          nunc_connection_id: "<id>"
+          group_id: "<id>"
+  patchV1NuncConnectionsNuncConnectionIdComponentGroupsGroupId:
+    speakeasy-default-patch-v1-nunc-connections-nunc-connection-id-component-groups-group-id:
+      parameters:
+        path:
+          nunc_connection_id: "<id>"
+          group_id: "<id>"
+  postV1NuncConnectionsNuncConnectionIdComponentGroups:
+    speakeasy-default-post-v1-nunc-connections-nunc-connection-id-component-groups:
+      parameters:
+        path:
+          nunc_connection_id: "<id>"
+      requestBody:
+        application/x-www-form-urlencoded: {"name": "<value>"}
+  patchV1NuncConnectionsNuncConnectionIdLinksLinkId:
+    speakeasy-default-patch-v1-nunc-connections-nunc-connection-id-links-link-id:
+      parameters:
+        path:
+          nunc_connection_id: "<id>"
+          link_id: "<id>"
+  postV1NuncConnectionsNuncConnectionIdLinks:
+    speakeasy-default-post-v1-nunc-connections-nunc-connection-id-links:
+      parameters:
+        path:
+          nunc_connection_id: "<id>"
+  putV1NuncConnectionsNuncConnectionIdImagesType:
+    speakeasy-default-put-v1-nunc-connections-nunc-connection-id-images-type:
+      parameters:
+        path:
+          nunc_connection_id: "<id>"
+          type: "<value>"
+  deleteV1NuncConnectionsNuncConnectionIdSubscribers:
+    speakeasy-default-delete-v1-nunc-connections-nunc-connection-id-subscribers:
+      parameters:
+        path:
+          nunc_connection_id: "<id>"
+        query:
+          subscriber_ids: "<value>"
+  putV1NuncConnectionsNuncConnectionId:
+    speakeasy-default-put-v1-nunc-connections-nunc-connection-id:
+      parameters:
+        path:
+          nunc_connection_id: "<id>"
+  deleteV1NuncConnectionsNuncConnectionIdLinksLinkId:
+    speakeasy-default-delete-v1-nunc-connections-nunc-connection-id-links-link-id:
+      parameters:
+        path:
+          nunc_connection_id: "<id>"
+          link_id: "<id>"
+  deleteV1NuncConnectionsNuncConnectionIdImagesType:
+    speakeasy-default-delete-v1-nunc-connections-nunc-connection-id-images-type:
+      parameters:
+        path:
+          nunc_connection_id: "<id>"
+          type: "<value>"
+  deleteV1NuncSubscriptionsUnsubscribeToken:
+    speakeasy-default-delete-v1-nunc-subscriptions-unsubscribe-token:
+      parameters:
+        path:
+          unsubscribe_token: "<value>"
+  postV1NuncSubscriptions:
+    speakeasy-default-post-v1-nunc-subscriptions:
+      requestBody:
+        application/json: {"email": "Else.Grady38@gmail.com"}
+  postV1NuncConnections:
+    speakeasy-default-post-v1-nunc-connections:
+      requestBody:
+        application/x-www-form-urlencoded: {"domain": "low-packaging.info", "conditions[nunc_condition]": [], "conditions[condition_id]": [], "components[infrastructure_type]": ["<value>", "<value>", "<value>"], "components[infrastructure_id]": ["<value>", "<value>", "<value>"]}
+  deleteV1SavedSearchesResourceTypeSavedSearchId:
+    speakeasy-default-delete-v1-saved-searches-resource-type-saved-search-id:
+      parameters:
+        path:
+          resource_type: "ticket_follow_ups"
+          saved_search_id: "<id>"
+  patchV1SavedSearchesResourceTypeSavedSearchId:
+    speakeasy-default-patch-v1-saved-searches-resource-type-saved-search-id:
+      parameters:
+        path:
+          resource_type: "alerts"
+          saved_search_id: "<id>"
+  getV1SavedSearchesResourceType:
+    speakeasy-default-get-v1-saved-searches-resource-type:
+      parameters:
+        path:
+          resource_type: "impact_analytics"
+        query: {}
+  getV1SavedSearchesResourceTypeSavedSearchId:
+    speakeasy-default-get-v1-saved-searches-resource-type-saved-search-id:
+      parameters:
+        path:
+          resource_type: "impact_analytics"
+          saved_search_id: "<id>"
+  postV1SavedSearchesResourceType:
+    speakeasy-default-post-v1-saved-searches-resource-type:
+      parameters:
+        path:
+          resource_type: "analytics"
+      requestBody:
+        application/json: {"name": "<value>", "filter_values": {"key": "<value>"}}
+  postV1LifecyclesMeasurementDefinitions:
+    speakeasy-default-post-v1-lifecycles-measurement-definitions:
+      requestBody:
+        application/x-www-form-urlencoded: {"name": "<value>", "starts_at_milestone_id": "<id>", "ends_at_milestone_id": "<id>"}
+  getV1LifecyclesMeasurementDefinitions: {}
+  deleteV1LifecyclesMeasurementDefinitionsMeasurementDefinitionId:
+    speakeasy-default-delete-v1-lifecycles-measurement-definitions-measurement-definition-id:
+      parameters:
+        path:
+          measurement_definition_id: "<id>"
+  patchV1LifecyclesMeasurementDefinitionsMeasurementDefinitionId:
+    speakeasy-default-patch-v1-lifecycles-measurement-definitions-measurement-definition-id:
+      parameters:
+        path:
+          measurement_definition_id: "<id>"
+  getV1LifecyclesMeasurementDefinitionsMeasurementDefinitionId:
+    speakeasy-default-get-v1-lifecycles-measurement-definitions-measurement-definition-id:
+      parameters:
+        path:
+          measurement_definition_id: "<id>"
+  getV1LifecyclesPhases: {}
+  postV1LifecyclesMilestones:
+    speakeasy-default-post-v1-lifecycles-milestones:
+      requestBody:
+        application/x-www-form-urlencoded: {"name": "<value>", "description": "consequently scoff caring inhibit entice wherever", "phase_id": "<id>"}
+  deleteV1LifecyclesMilestonesMilestoneId:
+    speakeasy-default-delete-v1-lifecycles-milestones-milestone-id:
+      parameters:
+        path:
+          milestone_id: "<id>"
+  patchV1LifecyclesMilestonesMilestoneId:
+    speakeasy-default-patch-v1-lifecycles-milestones-milestone-id:
+      parameters:
+        path:
+          milestone_id: "<id>"
+  postV1Priorities:
+    speakeasy-default-post-v1-priorities:
+      requestBody:
+        application/json: {"slug": "<value>"}
+  getV1Priorities: {}
+  deleteV1PrioritiesPrioritySlug:
+    speakeasy-default-delete-v1-priorities-priority-slug:
+      parameters:
+        path:
+          priority_slug: "<value>"
+  patchV1PrioritiesPrioritySlug:
+    speakeasy-default-patch-v1-priorities-priority-slug:
+      parameters:
+        path:
+          priority_slug: "<value>"
+  getV1PrioritiesPrioritySlug:
+    speakeasy-default-get-v1-priorities-priority-slug:
+      parameters:
+        path:
+          priority_slug: "<value>"
+  postV1Severities:
+    speakeasy-default-post-v1-severities:
+      requestBody:
+        application/json: {"slug": "<value>"}
+  getV1Severities: {}
+  deleteV1SeveritiesSeveritySlug:
+    speakeasy-default-delete-v1-severities-severity-slug:
+      parameters:
+        path:
+          severity_slug: "<value>"
+  patchV1SeveritiesSeveritySlug:
+    speakeasy-default-patch-v1-severities-severity-slug:
+      parameters:
+        path:
+          severity_slug: "<value>"
+  getV1SeveritiesSeveritySlug:
+    speakeasy-default-get-v1-severities-severity-slug:
+      parameters:
+        path:
+          severity_slug: "<value>"
+  patchV1SeverityMatrix:
+    speakeasy-default-patch-v1-severity-matrix:
+      requestBody:
+        application/json: {"data": [{"severity": "<value>", "impact_id": "<id>", "condition_id": "<id>"}, {"severity": "<value>", "impact_id": "<id>", "condition_id": "<id>"}, {"severity": "<value>", "impact_id": "<id>", "condition_id": "<id>"}]}
+  deleteV1SeverityMatrixConditionsConditionId:
+    speakeasy-default-delete-v1-severity-matrix-conditions-condition-id:
+      parameters:
+        path:
+          condition_id: "<id>"
+  getV1SeverityMatrixConditionsConditionId:
+    speakeasy-default-get-v1-severity-matrix-conditions-condition-id:
+      parameters:
+        path:
+          condition_id: "<id>"
+  getV1SeverityMatrix: {}
+  getV1SeverityMatrixConditions: {}
+  postV1SeverityMatrixConditions:
+    speakeasy-default-post-v1-severity-matrix-conditions:
+      requestBody:
+        application/json: {"name": "<value>"}
+  patchV1SeverityMatrixConditionsConditionId:
+    speakeasy-default-patch-v1-severity-matrix-conditions-condition-id:
+      parameters:
+        path:
+          condition_id: "<id>"
+  getV1SeverityMatrixImpacts: {}
+  postV1SeverityMatrixImpacts:
+    speakeasy-default-post-v1-severity-matrix-impacts:
+      requestBody:
+        application/json: {"affects_type": "<value>", "affects_id": "<id>"}
+  deleteV1SeverityMatrixImpactsImpactId:
+    speakeasy-default-delete-v1-severity-matrix-impacts-impact-id:
+      parameters:
+        path:
+          impact_id: "<id>"
+  patchV1SeverityMatrixImpactsImpactId:
+    speakeasy-default-patch-v1-severity-matrix-impacts-impact-id:
+      parameters:
+        path:
+          impact_id: "<id>"
+  postV1ScheduledMaintenances:
+    speakeasy-default-post-v1-scheduled-maintenances:
+      requestBody:
+        application/json: {"name": "<value>", "starts_at": "2023-06-18T07:14:55.338Z", "ends_at": "2023-12-01T17:06:07.804Z"}
+  patchV1ScheduledMaintenancesScheduledMaintenanceId:
+    speakeasy-default-patch-v1-scheduled-maintenances-scheduled-maintenance-id:
+      parameters:
+        path:
+          scheduled_maintenance_id: "<id>"
+  getV1ScheduledMaintenancesScheduledMaintenanceId:
+    speakeasy-default-get-v1-scheduled-maintenances-scheduled-maintenance-id:
+      parameters:
+        path:
+          scheduled_maintenance_id: "<id>"
+  getV1ScheduledMaintenances: {}
+  deleteV1ScheduledMaintenancesScheduledMaintenanceId:
+    speakeasy-default-delete-v1-scheduled-maintenances-scheduled-maintenance-id:
+      parameters:
+        path:
+          scheduled_maintenance_id: "<id>"
+  getV1Schedules: {}
+  getV1Infrastructures: {}
+  postV1StatusUpdateTemplates:
+    speakeasy-default-post-v1-status-update-templates:
+      requestBody:
+        application/json: {"name": "<value>", "body": "<value>"}
+  deleteV1StatusUpdateTemplatesStatusUpdateTemplateId:
+    speakeasy-default-delete-v1-status-update-templates-status-update-template-id:
+      parameters:
+        path:
+          status_update_template_id: "<id>"
+  getV1StatusUpdateTemplates: {}
+  patchV1StatusUpdateTemplatesStatusUpdateTemplateId:
+    speakeasy-default-patch-v1-status-update-templates-status-update-template-id:
+      parameters:
+        path:
+          status_update_template_id: "<id>"
+  getV1StatusUpdateTemplatesStatusUpdateTemplateId:
+    speakeasy-default-get-v1-status-update-templates-status-update-template-id:
+      parameters:
+        path:
+          status_update_template_id: "<id>"
+  deleteV1CustomFieldsDefinitionsFieldId:
+    speakeasy-default-delete-v1-custom-fields-definitions-field-id:
+      parameters:
+        path:
+          field_id: "<id>"
+  patchV1CustomFieldsDefinitionsFieldId:
+    speakeasy-default-patch-v1-custom-fields-definitions-field-id:
+      parameters:
+        path:
+          field_id: "<id>"
+  postV1CustomFieldsDefinitions:
+    speakeasy-default-post-v1-custom-fields-definitions:
+      requestBody:
+        application/json: {"display_name": "Hank_Blick88", "field_type": "<value>", "required": true}
+  getV1CustomFieldsDefinitions: {}
+  getV1CustomFieldsDefinitionsFieldIdSelectOptions:
+    speakeasy-default-get-v1-custom-fields-definitions-field-id-select-options:
+      parameters:
+        path:
+          field_id: "<id>"
+        query: {}
+  postV1PostMortemsReports:
+    speakeasy-default-post-v1-post-mortems-reports:
+      requestBody:
+        application/json: {"incident_id": "<id>"}
+  getV1PostMortemsReportsReportId:
+    speakeasy-default-get-v1-post-mortems-reports-report-id:
+      parameters:
+        path:
+          report_id: "<id>"
+  postV1PostMortemsReportsReportIdReasons:
+    speakeasy-default-post-v1-post-mortems-reports-report-id-reasons:
+      parameters:
+        path:
+          report_id: "<id>"
+      requestBody:
+        application/json: {"summary": "<value>"}
+  deleteV1PostMortemsReportsReportIdReasonsReasonId:
+    speakeasy-default-delete-v1-post-mortems-reports-report-id-reasons-reason-id:
+      parameters:
+        path:
+          report_id: "<id>"
+          reason_id: "<id>"
+  putV1PostMortemsReportsReportIdReasonsOrder:
+    speakeasy-default-put-v1-post-mortems-reports-report-id-reasons-order:
+      parameters:
+        path:
+          report_id: "<id>"
+      requestBody:
+        application/json: {"old_position": 825361, "new_position": 334032}
+  patchV1PostMortemsReportsReportIdFieldsFieldId:
+    speakeasy-default-patch-v1-post-mortems-reports-report-id-fields-field-id:
+      parameters:
+        path:
+          field_id: "<id>"
+          report_id: "<id>"
+      requestBody:
+        application/json: {"value": "<value>"}
+  getV1PostMortemsReports: {}
+  patchV1PostMortemsReportsReportId:
+    speakeasy-default-patch-v1-post-mortems-reports-report-id:
+      parameters:
+        path:
+          report_id: "<id>"
+  getV1PostMortemsReportsReportIdReasons:
+    speakeasy-default-get-v1-post-mortems-reports-report-id-reasons:
+      parameters:
+        path:
+          report_id: "<id>"
+        query: {}
+  patchV1PostMortemsReportsReportIdReasonsReasonId:
+    speakeasy-default-patch-v1-post-mortems-reports-report-id-reasons-reason-id:
+      parameters:
+        path:
+          report_id: "<id>"
+          reason_id: "<id>"
+  postV1PostMortemsReportsReportIdPublish:
+    speakeasy-default-post-v1-post-mortems-reports-report-id-publish:
+      parameters:
+        path:
+          report_id: "<id>"
+  putV1PostMortemsQuestions: {}
+  getV1PostMortemsQuestions: {}
+  getV1PostMortemsQuestionsQuestionId:
+    speakeasy-default-get-v1-post-mortems-questions-question-id:
+      parameters:
+        path:
+          question_id: "<id>"
+  getV1Alerts: {}
+  getV1AlertsAlertId:
+    speakeasy-default-get-v1-alerts-alert-id:
+      parameters:
+        path:
+          alert_id: "<id>"
+  getV1ProcessingLogEntries: {}
+  postV1TicketingTickets:
+    speakeasy-default-post-v1-ticketing-tickets:
+      requestBody:
+        application/json: {"summary": "<value>"}
+  getV1TicketingTickets: {}
+  deleteV1TicketingTicketsTicketId:
+    speakeasy-default-delete-v1-ticketing-tickets-ticket-id:
+      parameters:
+        path:
+          ticket_id: "<id>"
+  patchV1TicketingTicketsTicketId:
+    speakeasy-default-patch-v1-ticketing-tickets-ticket-id:
+      parameters:
+        path:
+          ticket_id: "<id>"
+  getV1TicketingTicketsTicketId:
+    speakeasy-default-get-v1-ticketing-tickets-ticket-id:
+      parameters:
+        path:
+          ticket_id: "<id>"
+  getV1TicketingProjects: {}
+  getV1TicketingProjectsTicketingProjectId:
+    speakeasy-default-get-v1-ticketing-projects-ticketing-project-id:
+      parameters:
+        path:
+          ticketing_project_id: "<id>"
+  getV1TicketingProjectsTicketingProjectIdConfigurationOptions:
+    speakeasy-default-get-v1-ticketing-projects-ticketing-project-id-configuration-options:
+      parameters:
+        path:
+          ticketing_project_id: "<id>"
+  getV1TicketingProjectsTicketingProjectIdConfigurationOptionsOptionsForFieldId:
+    speakeasy-default-get-v1-ticketing-projects-ticketing-project-id-configuration-options-options-for-field-id:
+      parameters:
+        path:
+          field_id: "<id>"
+          ticketing_project_id: "<id>"
+  getV1TicketingProjectsTicketingProjectIdFieldMapsAvailableFields:
+    speakeasy-default-get-v1-ticketing-projects-ticketing-project-id-field-maps-available-fields:
+      parameters:
+        path:
+          ticketing_project_id: "<id>"
+  postV1TicketingProjectsTicketingProjectIdFieldMaps:
+    speakeasy-default-post-v1-ticketing-projects-ticketing-project-id-field-maps:
+      parameters:
+        path:
+          ticketing_project_id: "<id>"
+  deleteV1TicketingProjectsTicketingProjectIdFieldMapsMapId:
+    speakeasy-default-delete-v1-ticketing-projects-ticketing-project-id-field-maps-map-id:
+      parameters:
+        path:
+          map_id: "<id>"
+          ticketing_project_id: "<id>"
+  getV1TicketingProjectsTicketingProjectIdFieldMapsMapId:
+    speakeasy-default-get-v1-ticketing-projects-ticketing-project-id-field-maps-map-id:
+      parameters:
+        path:
+          map_id: "<id>"
+          ticketing_project_id: "<id>"
+  patchV1TicketingProjectsTicketingProjectIdFieldMapsMapId:
+    speakeasy-default-patch-v1-ticketing-projects-ticketing-project-id-field-maps-map-id:
+      parameters:
+        path:
+          map_id: "<id>"
+          ticketing_project_id: "<id>"
+  postV1TicketingProjectsTicketingProjectIdProviderProjectConfigurations:
+    speakeasy-default-post-v1-ticketing-projects-ticketing-project-id-provider-project-configurations:
+      parameters:
+        path:
+          ticketing_project_id: "<id>"
+  deleteV1TicketingProjectsTicketingProjectIdProviderProjectConfigurationsConfigId:
+    speakeasy-default-delete-v1-ticketing-projects-ticketing-project-id-provider-project-configurations-config-id:
+      parameters:
+        path:
+          ticketing_project_id: "<id>"
+          config_id: "<id>"
+  patchV1TicketingProjectsTicketingProjectIdProviderProjectConfigurationsConfigId:
+    speakeasy-default-patch-v1-ticketing-projects-ticketing-project-id-provider-project-configurations-config-id:
+      parameters:
+        path:
+          ticketing_project_id: "<id>"
+          config_id: "<id>"
+  getV1TicketingProjectsTicketingProjectIdProviderProjectConfigurationsConfigId:
+    speakeasy-default-get-v1-ticketing-projects-ticketing-project-id-provider-project-configurations-config-id:
+      parameters:
+        path:
+          ticketing_project_id: "<id>"
+          config_id: "<id>"
+  postV1TicketingPriorities:
+    speakeasy-default-post-v1-ticketing-priorities:
+      requestBody:
+        application/json: {"name": "<value>"}
+  getV1TicketingPriorities: {}
+  deleteV1TicketingPrioritiesId:
+    speakeasy-default-delete-v1-ticketing-priorities-id:
+      parameters:
+        path:
+          id: "<id>"
+  patchV1TicketingPrioritiesId:
+    speakeasy-default-patch-v1-ticketing-priorities-id:
+      parameters:
+        path:
+          id: "<id>"
+  getV1TicketingPrioritiesId:
+    speakeasy-default-get-v1-ticketing-priorities-id:
+      parameters:
+        path:
+          id: "<id>"
+  getV1TicketingTicketTags: {}
+  postV1TaskLists:
+    speakeasy-default-post-v1-task-lists:
+      requestBody:
+        application/json: {"name": "<value>", "task_list_items": [{"summary": "<value>"}]}
+  getV1TaskLists: {}
+  patchV1TaskListsTaskListId:
+    speakeasy-default-patch-v1-task-lists-task-list-id:
+      parameters:
+        path:
+          task_list_id: "<id>"
+  getV1TaskListsTaskListId:
+    speakeasy-default-get-v1-task-lists-task-list-id:
+      parameters:
+        path:
+          task_list_id: "<id>"
+  deleteV1TaskListsTaskListId:
+    speakeasy-default-delete-v1-task-lists-task-list-id:
+      parameters:
+        path:
+          task_list_id: "<id>"
+  getV1NoauthPing: {}
+  putV1ScimV2GroupsId:
+    speakeasy-default-put-v1-scim-v2-groups-id:
+      parameters:
+        path:
+          id: "<id>"
+      requestBody:
+        application/scim+json: {"displayName": "Ibrahim.Kuhic40", "members": [{"value": "<value>"}, {"value": "<value>"}, {"value": "<value>"}]}
+  deleteV1ScimV2GroupsId:
+    speakeasy-default-delete-v1-scim-v2-groups-id:
+      parameters:
+        path:
+          id: "<id>"
+  getV1ScimV2GroupsId:
+    speakeasy-default-get-v1-scim-v2-groups-id:
+      parameters:
+        path:
+          id: "<id>"
+  postV1ScimV2Groups:
+    speakeasy-default-post-v1-scim-v2-groups:
+      requestBody:
+        application/scim+json: {"displayName": "Germaine.Sipes31", "members": [{"value": "<value>"}, {"value": "<value>"}, {"value": "<value>"}]}
+  getV1ScimV2Groups: {}
+  deleteV1ScimV2UsersId:
+    speakeasy-default-delete-v1-scim-v2-users-id:
+      parameters:
+        path:
+          id: "<id>"
+  putV1ScimV2UsersId:
+    speakeasy-default-put-v1-scim-v2-users-id:
+      parameters:
+        path:
+          id: "<id>"
+  getV1ScimV2UsersId:
+    speakeasy-default-get-v1-scim-v2-users-id:
+      parameters:
+        path:
+          id: "<id>"
+  postV1ScimV2Users:
+    speakeasy-default-post-v1-scim-v2-users:
+      requestBody:
+        application/scim+json: {"userName": "Jimmy12", "name": {"familyName": "<value>", "givenName": "<value>"}, "emails": [{"value": "<value>", "primary": false}]}
+  getV1ScimV2Users: {}
+  getV1CatalogsCatalogIdRefresh:
+    speakeasy-default-get-v1-catalogs-catalog-id-refresh:
+      parameters:
+        path:
+          catalog_id: "<id>"
+  postV1CatalogsCatalogIdIngest:
+    speakeasy-default-post-v1-catalogs-catalog-id-ingest:
+      parameters:
+        path:
+          catalog_id: "<id>"
+      requestBody:
+        application/json: {"encoding": "application/json", "data": "<value>"}
+  postV1ChecklistTemplates:
+    speakeasy-default-post-v1-checklist-templates:
+      requestBody:
+        application/json: {"name": "<value>", "checks": [{"name": "<value>"}]}
+  deleteV1ChecklistTemplatesId:
+    speakeasy-default-delete-v1-checklist-templates-id:
+      parameters:
+        path:
+          id: "<id>"
+  getV1ChecklistTemplates: {}
+  patchV1ChecklistTemplatesId:
+    speakeasy-default-patch-v1-checklist-templates-id:
+      parameters:
+        path:
+          id: "<id>"
+  getV1ChecklistTemplatesId:
+    speakeasy-default-get-v1-checklist-templates-id:
+      parameters:
+        path:
+          id: "<id>"
+  getV1Bootstrap: {}
+  getV1FormConfigurationsSlug:
+    speakeasy-default-get-v1-form-configurations-slug:
+      parameters:
+        path:
+          slug: "<value>"
+  deleteV1ConversationsConversationIdCommentsCommentIdReactionsReactionId:
+    speakeasy-default-delete-v1-conversations-conversation-id-comments-comment-id-reactions-reaction-id:
+      parameters:
+        path:
+          reaction_id: "<id>"
+          conversation_id: "<id>"
+          comment_id: "<id>"
+  postV1ConversationsConversationIdCommentsCommentIdReactions:
+    speakeasy-default-post-v1-conversations-conversation-id-comments-comment-id-reactions:
+      parameters:
+        path:
+          conversation_id: "<id>"
+          comment_id: "<id>"
+      requestBody:
+        application/json: {"reaction": "<value>"}
+  getV1ConversationsConversationIdCommentsCommentIdReactions:
+    speakeasy-default-get-v1-conversations-conversation-id-comments-comment-id-reactions:
+      parameters:
+        path:
+          conversation_id: "<id>"
+          comment_id: "<id>"
+  deleteV1ConversationsConversationIdCommentsCommentId:
+    speakeasy-default-delete-v1-conversations-conversation-id-comments-comment-id:
+      parameters:
+        path:
+          comment_id: "<id>"
+          conversation_id: "<id>"
+  patchV1ConversationsConversationIdCommentsCommentId:
+    speakeasy-default-patch-v1-conversations-conversation-id-comments-comment-id:
+      parameters:
+        path:
+          comment_id: "<id>"
+          conversation_id: "<id>"
+  getV1ConversationsConversationIdCommentsCommentId:
+    speakeasy-default-get-v1-conversations-conversation-id-comments-comment-id:
+      parameters:
+        path:
+          comment_id: "<id>"
+          conversation_id: "<id>"
+  postV1ConversationsConversationIdComments:
+    speakeasy-default-post-v1-conversations-conversation-id-comments:
+      parameters:
+        path:
+          conversation_id: "<id>"
+      requestBody:
+        application/json: {"body": "<value>"}
+  getV1ConversationsConversationIdComments:
+    speakeasy-default-get-v1-conversations-conversation-id-comments:
+      parameters:
+        path:
+          conversation_id: "<id>"
+        query: {}
+  getV1SignalsAnalyticsTimeseries: {}
+  getV1SignalsAnalyticsGroupedMetrics: {}
+  getV1SignalsAnalyticsMttx: {}
+  getV1SignalsEventSources: {}
+  postV1SignalsEmailTargets:
+    speakeasy-default-post-v1-signals-email-targets:
+      requestBody:
+        application/json: {"name": "<value>"}
+  getV1SignalsEmailTargets: {}
+  deleteV1SignalsEmailTargetsId:
+    speakeasy-default-delete-v1-signals-email-targets-id:
+      parameters:
+        path:
+          id: "<id>"
+  patchV1SignalsEmailTargetsId:
+    speakeasy-default-patch-v1-signals-email-targets-id:
+      parameters:
+        path:
+          id: "<id>"
+  postV1SignalsWebhookTargets:
+    speakeasy-default-post-v1-signals-webhook-targets:
+      requestBody:
+        application/json: {"name": "<value>", "url": "https://critical-prohibition.biz"}
+  getV1SignalsWebhookTargets: {}
+  deleteV1SignalsWebhookTargetsId:
+    speakeasy-default-delete-v1-signals-webhook-targets-id:
+      parameters:
+        path:
+          id: "<id>"
+  patchV1SignalsWebhookTargetsId:
+    speakeasy-default-patch-v1-signals-webhook-targets-id:
+      parameters:
+        path:
+          id: "<id>"
+  getV1SignalsWebhookTargetsId:
+    speakeasy-default-get-v1-signals-webhook-targets-id:
+      parameters:
+        path:
+          id: "<id>"
+  getV1SignalsTransposers: {}
+  getV1SignalsIngestUrl: {}
+  postV1SignalsDebugger:
+    speakeasy-default-post-v1-signals-debugger:
+      requestBody:
+        application/json: {"expression": "<value>"}
+  getV1SignalsEmailTargetsId:
+    speakeasy-default-get-v1-signals-email-targets-id:
+      parameters:
+        path:
+          id: "<id>"
+  getV1SignalsOnCall: {}
+  postV1Webhooks:
+    speakeasy-default-post-v1-webhooks:
+      requestBody:
+        application/json: {"url": "https://probable-heating.com/"}
+  getV1Webhooks: {}
+  getV1WebhooksWebhookIdDeliveries:
+    speakeasy-default-get-v1-webhooks-webhook-id-deliveries:
+      parameters:
+        path:
+          webhook_id: "<id>"
+  deleteV1WebhooksWebhookId:
+    speakeasy-default-delete-v1-webhooks-webhook-id:
+      parameters:
+        path:
+          webhook_id: "<id>"
+  patchV1WebhooksWebhookId:
+    speakeasy-default-patch-v1-webhooks-webhook-id:
+      parameters:
+        path:
+          webhook_id: "<id>"
+  getV1WebhooksWebhookId:
+    speakeasy-default-get-v1-webhooks-webhook-id:
+      parameters:
+        path:
+          webhook_id: "<id>"
+  getV1AiSummarizeIncidentIncidentIdGeneratedSummaryIdVoted:
+    speakeasy-default-get-v1-ai-summarize-incident-incident-id-generated-summary-id-voted:
+      parameters:
+        path:
+          incident_id: "<id>"
+          generated_summary_id: "<id>"
+  putV1AiSummarizeIncidentIncidentIdGeneratedSummaryIdVote:
+    speakeasy-default-put-v1-ai-summarize-incident-incident-id-generated-summary-id-vote:
+      parameters:
+        path:
+          incident_id: "<id>"
+          generated_summary_id: "<id>"
+      requestBody:
+        application/x-www-form-urlencoded: {"direction": "up"}
+  patchV1AiPreferences: {}
+  getV1AiPreferences: {}

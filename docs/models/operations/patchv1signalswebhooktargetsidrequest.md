@@ -1,0 +1,9 @@
+# PatchV1SignalsWebhookTargetsIDRequest
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ID`                                                                                                   | *string*                                                                                               | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `PatchV1SignalsWebhookTargetsID`                                                                       | [components.PatchV1SignalsWebhookTargetsID](../../models/components/patchv1signalswebhooktargetsid.md) | :heavy_check_mark:                                                                                     | N/A                                                                                                    |

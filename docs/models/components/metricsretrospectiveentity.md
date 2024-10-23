@@ -1,0 +1,11 @@
+# MetricsRetrospectiveEntity
+
+Metrics_RetrospectiveEntity model
+
+
+## Fields
+
+| Field                                                                                                                     | Type                                                                                                                      | Required                                                                                                                  | Description                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| `Data`                                                                                                                    | [][components.MetricsRetrospectiveEntityDataEntity](../../models/components/metricsretrospectiveentitydataentity.md)      | :heavy_minus_sign:                                                                                                        | N/A                                                                                                                       |
+| `Summary`                                                                                                                 | [*components.MetricsRetrospectiveEntitySummaryEntity](../../models/components/metricsretrospectiveentitysummaryentity.md) | :heavy_minus_sign:                                                                                                        | N/A                                                                                                                       |

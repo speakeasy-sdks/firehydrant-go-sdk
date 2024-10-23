@@ -1,0 +1,9 @@
+# PostV1TeamsTeamIDSignalRulesRequest
+
+
+## Fields
+
+| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `TeamID`                                                                                           | *string*                                                                                           | :heavy_check_mark:                                                                                 | N/A                                                                                                |
+| `PostV1TeamsTeamIDSignalRules`                                                                     | [components.PostV1TeamsTeamIDSignalRules](../../models/components/postv1teamsteamidsignalrules.md) | :heavy_check_mark:                                                                                 | N/A                                                                                                |

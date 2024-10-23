@@ -1,0 +1,9 @@
+# GetV1IncidentsIncidentIDAlertsResponse
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                            | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                    | :heavy_check_mark:                                                                                    | N/A                                                                                                   |
+| `IncidentsAlertEntityPaginated`                                                                       | [*components.IncidentsAlertEntityPaginated](../../models/components/incidentsalertentitypaginated.md) | :heavy_minus_sign:                                                                                    | List alerts that have been attached to an incident                                                    |

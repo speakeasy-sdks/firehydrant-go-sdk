@@ -1,0 +1,9 @@
+# PatchV1IncidentsIncidentIDImpactRequest
+
+
+## Fields
+
+| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `IncidentID`                                                                                               | *string*                                                                                                   | :heavy_check_mark:                                                                                         | N/A                                                                                                        |
+| `PatchV1IncidentsIncidentIDImpact`                                                                         | [components.PatchV1IncidentsIncidentIDImpact](../../models/components/patchv1incidentsincidentidimpact.md) | :heavy_check_mark:                                                                                         | N/A                                                                                                        |

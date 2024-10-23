@@ -1,0 +1,9 @@
+# GetV1NuncConnectionsResponse
+
+
+## Fields
+
+| Field                                                                                                 | Type                                                                                                  | Required                                                                                              | Description                                                                                           |
+| ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                            | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                    | :heavy_check_mark:                                                                                    | N/A                                                                                                   |
+| `NuncConnectionEntityPaginated`                                                                       | [*components.NuncConnectionEntityPaginated](../../models/components/nuncconnectionentitypaginated.md) | :heavy_minus_sign:                                                                                    | Lists the information displayed as part of your FireHydrant hosted status pages.                      |

@@ -1,0 +1,9 @@
+# GetV1IntegrationsFieldMapsFieldMapIDAvailableFieldsResponse
+
+
+## Fields
+
+| Field                                                                                                     | Type                                                                                                      | Required                                                                                                  | Description                                                                                               |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                        | :heavy_check_mark:                                                                                        | N/A                                                                                                       |
+| `FieldMappingMappableFieldEntity`                                                                         | [*components.FieldMappingMappableFieldEntity](../../models/components/fieldmappingmappablefieldentity.md) | :heavy_minus_sign:                                                                                        | Get a description of the fields to which data can be mapped                                               |

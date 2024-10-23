@@ -1,0 +1,13 @@
+workflowVersion: 1.0.0
+sources:
+    FireHydrant-OAS:
+        inputs:
+            - location: ./Original.yaml
+        overlays:
+          - location: ./speakeasy-suggested-overlay.yaml
+        registry:
+            location: registry.speakeasyapi.dev/speakeasy-self/speakeasy-self/fire-hydrant-oas
+targets:
+    fire-hydrant:
+        target: go
+        source: FireHydrant-OAS

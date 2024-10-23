@@ -1,0 +1,9 @@
+# PatchV1IntegrationsAwsConnectionsIDRequest
+
+
+## Fields
+
+| Field                                                                                                            | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `ID`                                                                                                             | *string*                                                                                                         | :heavy_check_mark:                                                                                               | N/A                                                                                                              |
+| `PatchV1IntegrationsAwsConnectionsID`                                                                            | [components.PatchV1IntegrationsAwsConnectionsID](../../models/components/patchv1integrationsawsconnectionsid.md) | :heavy_check_mark:                                                                                               | N/A                                                                                                              |

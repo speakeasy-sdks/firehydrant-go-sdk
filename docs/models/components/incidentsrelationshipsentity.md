@@ -1,0 +1,12 @@
+# IncidentsRelationshipsEntity
+
+Incidents_RelationshipsEntity model
+
+
+## Fields
+
+| Field                                                                                                            | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `Parent`                                                                                                         | [*components.PublicAPIV1IncidentsSuccinctEntity](../../models/components/publicapiv1incidentssuccinctentity.md)  | :heavy_minus_sign:                                                                                               | N/A                                                                                                              |
+| `Children`                                                                                                       | [][components.PublicAPIV1IncidentsSuccinctEntity](../../models/components/publicapiv1incidentssuccinctentity.md) | :heavy_minus_sign:                                                                                               | The root incident's child incidents.                                                                             |
+| `Siblings`                                                                                                       | [][components.PublicAPIV1IncidentsSuccinctEntity](../../models/components/publicapiv1incidentssuccinctentity.md) | :heavy_minus_sign:                                                                                               | A list of incidents that share the root incident's parent.                                                       |

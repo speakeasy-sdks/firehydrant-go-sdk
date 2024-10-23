@@ -1,0 +1,9 @@
+# GetV1AiPreferencesResponse
+
+
+## Fields
+
+| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
+| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                        | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                | :heavy_check_mark:                                                                                | N/A                                                                                               |
+| `AIEntitiesPreferencesEntity`                                                                     | [*components.AIEntitiesPreferencesEntity](../../models/components/aientitiespreferencesentity.md) | :heavy_minus_sign:                                                                                | Retrieves the current AI preferences                                                              |

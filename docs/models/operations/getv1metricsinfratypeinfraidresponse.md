@@ -1,0 +1,9 @@
+# GetV1MetricsInfraTypeInfraIDResponse
+
+
+## Fields
+
+| Field                                                                                                           | Type                                                                                                            | Required                                                                                                        | Description                                                                                                     |
+| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                      | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                              | :heavy_check_mark:                                                                                              | N/A                                                                                                             |
+| `MetricsInfrastructureMetricsEntity`                                                                            | [*components.MetricsInfrastructureMetricsEntity](../../models/components/metricsinfrastructuremetricsentity.md) | :heavy_minus_sign:                                                                                              | Return metrics for a specific component                                                                         |

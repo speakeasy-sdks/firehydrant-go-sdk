@@ -1,0 +1,9 @@
+# GetV1AlertsResponse
+
+
+## Fields
+
+| Field                                                                                           | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                      | [components.HTTPMetadata](../../models/components/httpmetadata.md)                              | :heavy_check_mark:                                                                              | N/A                                                                                             |
+| `AlertsAlertEntityPaginated`                                                                    | [*components.AlertsAlertEntityPaginated](../../models/components/alertsalertentitypaginated.md) | :heavy_minus_sign:                                                                              | Retrieve all alerts from third parties                                                          |

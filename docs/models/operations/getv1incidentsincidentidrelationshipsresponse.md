@@ -1,0 +1,9 @@
+# GetV1IncidentsIncidentIDRelationshipsResponse
+
+
+## Fields
+
+| Field                                                                                               | Type                                                                                                | Required                                                                                            | Description                                                                                         |
+| --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                          | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                  | :heavy_check_mark:                                                                                  | N/A                                                                                                 |
+| `IncidentsRelationshipsEntity`                                                                      | [*components.IncidentsRelationshipsEntity](../../models/components/incidentsrelationshipsentity.md) | :heavy_minus_sign:                                                                                  | List any parent/child relationships for an incident                                                 |
