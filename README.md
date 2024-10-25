@@ -1,12 +1,11 @@
-# openapi
-
-Developer-friendly & type-safe Go SDK specifically catered to leverage *openapi* API.
-
-<div align="left">
-    <a href="https://www.speakeasy.com/?utm_source=openapi&utm_campaign=go"><img src="https://custom-icon-badges.demolab.com/badge/-Built%20By%20Speakeasy-212015?style=for-the-badge&logoColor=FBE331&logo=speakeasy&labelColor=545454" /></a>
-    <a href="https://opensource.org/licenses/MIT">
-        <img src="https://img.shields.io/badge/License-MIT-blue.svg" style="width: 100px; height: 28px;" />
-    </a>
+<div align="center">
+    <picture>
+        <img src="https://github.com/user-attachments/assets/708ff384-c842-4e04-a928-6a5fdce7e756" width="400">
+    </picture>
+   <p>Manage incidents from ring to retro</p>
+	<p>Developer-friendly & type-safe Go SDK specifically catered to leverage <strong>FireHydrant</strong> API.</p>
+   <a href=""><img src="https://img.shields.io/static/v1?label=Docs&message=API Ref&color=000000&style=for-the-badge" /></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" /></a>
 </div>
 
 
