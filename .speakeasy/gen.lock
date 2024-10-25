@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 39357612-0c85-4a96-a549-e2d920c4a065
 management:
-  docChecksum: b48fb796ae728f23e8ee2e371ea9ad67
+  docChecksum: eda5f5cd23a4a6ae2199bdae3abdb164
   docVersion: 0.0.1
   speakeasyVersion: 1.421.2
   generationVersion: 2.438.15
-  releaseVersion: 0.1.0
-  configChecksum: 9c2d6f89e826ea68fd4637ecbdc8ac87
+  releaseVersion: 0.2.0
+  configChecksum: 3ed6cb94dfbed3039f053ec15624056d
 features:
   go:
     additionalDependencies: 0.1.0
@@ -28,6 +28,7 @@ features:
     responseFormat: 0.1.2
     retries: 2.83.0
     sdkHooks: 0.1.0
+    tests: 0.6.0
     uploadStreams: 0.1.0
 generatedFiles:
   - .gitattributes
@@ -2147,6 +2148,64 @@ generatedFiles:
   - steps.go
   - tasklists.go
   - teams.go
+  - tests/ai_test.go
+  - tests/alerts_test.go
+  - tests/bootstrap_test.go
+  - tests/catalogs_test.go
+  - tests/changes_test.go
+  - tests/changetypes_test.go
+  - tests/checklisttemplates_test.go
+  - tests/connections_test.go
+  - tests/conversations_test.go
+  - tests/currentuser_test.go
+  - tests/customfields_test.go
+  - tests/emailtargets_test.go
+  - tests/entitlements_test.go
+  - tests/environments_test.go
+  - tests/events_test.go
+  - tests/files.go
+  - tests/firehydrantconnections_test.go
+  - tests/formconfigurations_test.go
+  - tests/functionalities_test.go
+  - tests/incidentroles_test.go
+  - tests/incidents_test.go
+  - tests/incidenttags_test.go
+  - tests/incidenttypes_test.go
+  - tests/infrastructures_test.go
+  - tests/integrations_test.go
+  - tests/lifecycles_test.go
+  - tests/links_test.go
+  - tests/metrics_test.go
+  - tests/noauth_test.go
+  - tests/nunc_test.go
+  - tests/nuncconnections_test.go
+  - tests/ping_test.go
+  - tests/postmortems_test.go
+  - tests/priorities_test.go
+  - tests/processinglogentries_test.go
+  - tests/reports_test.go
+  - tests/roleassignments_test.go
+  - tests/runbookaudits_test.go
+  - tests/runbooks_test.go
+  - tests/savedsearches_test.go
+  - tests/scheduledmaintenances_test.go
+  - tests/schedules_test.go
+  - tests/scim_test.go
+  - tests/servicedependencies_test.go
+  - tests/services_test.go
+  - tests/severities_test.go
+  - tests/severitymatrix_test.go
+  - tests/signals_test.go
+  - tests/signalsoncall_test.go
+  - tests/statusupdatetemplates_test.go
+  - tests/steps_test.go
+  - tests/tasklists_test.go
+  - tests/teams_test.go
+  - tests/ticketing_test.go
+  - tests/users_test.go
+  - tests/votes_test.go
+  - tests/webhooks_test.go
+  - tests/zendesk_test.go
   - ticketing.go
   - types/bigint.go
   - types/date.go

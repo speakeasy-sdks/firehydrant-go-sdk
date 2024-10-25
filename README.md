@@ -38,7 +38,6 @@ Developer-friendly & type-safe Go SDK specifically catered to leverage *openapi*
 ## SDK Installation
 
 To add the SDK as a dependency to your project:
-
 ```bash
 go get firehydrant
 ```
@@ -53,27 +52,27 @@ go get firehydrant
 package main
 
 import (
-    "context"
-    "firehydrant"
-    "firehydrant/models/components"
-    "log"
+	"context"
+	"firehydrant"
+	"firehydrant/models/components"
+	"log"
 )
 
 func main() {
-    s := firehydrant.New(
-        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+	s := firehydrant.New(
+		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+	)
 
-    ctx := context.Background()
-    res, err := s.Incidents.Create(ctx, components.CreateIncident{
-        Name: "<value>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.IncidentEntity != nil {
-        // handle response
-    }
+	ctx := context.Background()
+	res, err := s.Incidents.Create(ctx, components.CreateIncident{
+		Name: "<value>",
+	})
+	if err != nil {
+		log.Fatal(err)
+	}
+	if res.IncidentEntity != nil {
+		// handle response
+	}
 }
 
 ```
@@ -644,36 +643,36 @@ To change the default retry strategy for a single API call, simply provide a `re
 package main
 
 import (
-    "context"
-    "firehydrant"
-    "firehydrant/retry"
-    "log"
-    "models/operations"
+	"context"
+	"firehydrant"
+	"firehydrant/retry"
+	"log"
+	"models/operations"
 )
 
 func main() {
-    s := firehydrant.New(
-        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+	s := firehydrant.New(
+		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+	)
 
-    ctx := context.Background()
-    res, err := s.Ping.Get(ctx, operations.WithRetries(
-        retry.Config{
-            Strategy: "backoff",
-            Backoff: &retry.BackoffStrategy{
-                InitialInterval: 1,
-                MaxInterval:     50,
-                Exponent:        1.1,
-                MaxElapsedTime:  100,
-            },
-            RetryConnectionErrors: false,
-        }))
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.PongEntity != nil {
-        // handle response
-    }
+	ctx := context.Background()
+	res, err := s.Ping.Get(ctx, operations.WithRetries(
+		retry.Config{
+			Strategy: "backoff",
+			Backoff: &retry.BackoffStrategy{
+				InitialInterval: 1,
+				MaxInterval:     50,
+				Exponent:        1.1,
+				MaxElapsedTime:  100,
+			},
+			RetryConnectionErrors: false,
+		}))
+	if err != nil {
+		log.Fatal(err)
+	}
+	if res.PongEntity != nil {
+		// handle response
+	}
 }
 
 ```
@@ -683,36 +682,36 @@ If you'd like to override the default retry strategy for all operations that sup
 package main
 
 import (
-    "context"
-    "firehydrant"
-    "firehydrant/retry"
-    "log"
+	"context"
+	"firehydrant"
+	"firehydrant/retry"
+	"log"
 )
 
 func main() {
-    s := firehydrant.New(
-        firehydrant.WithRetryConfig(
-            retry.Config{
-                Strategy: "backoff",
-                Backoff: &retry.BackoffStrategy{
-                    InitialInterval: 1,
-                    MaxInterval:     50,
-                    Exponent:        1.1,
-                    MaxElapsedTime:  100,
-                },
-                RetryConnectionErrors: false,
-            }),
-        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+	s := firehydrant.New(
+		firehydrant.WithRetryConfig(
+			retry.Config{
+				Strategy: "backoff",
+				Backoff: &retry.BackoffStrategy{
+					InitialInterval: 1,
+					MaxInterval:     50,
+					Exponent:        1.1,
+					MaxElapsedTime:  100,
+				},
+				RetryConnectionErrors: false,
+			}),
+		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+	)
 
-    ctx := context.Background()
-    res, err := s.Ping.Get(ctx)
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.PongEntity != nil {
-        // handle response
-    }
+	ctx := context.Background()
+	res, err := s.Ping.Get(ctx)
+	if err != nil {
+		log.Fatal(err)
+	}
+	if res.PongEntity != nil {
+		// handle response
+	}
 }
 
 ```
@@ -738,37 +737,37 @@ For example, the `Create` function may return the following errors:
 package main
 
 import (
-    "context"
-    "errors"
-    "firehydrant"
-    "firehydrant/models/components"
-    "firehydrant/models/sdkerrors"
-    "log"
+	"context"
+	"errors"
+	"firehydrant"
+	"firehydrant/models/components"
+	"firehydrant/models/sdkerrors"
+	"log"
 )
 
 func main() {
-    s := firehydrant.New(
-        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+	s := firehydrant.New(
+		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+	)
 
-    ctx := context.Background()
-    res, err := s.Services.Create(ctx, components.PostV1Services{
-        Name: "<value>",
-    })
-    if err != nil {
+	ctx := context.Background()
+	res, err := s.Services.Create(ctx, components.PostV1Services{
+		Name: "<value>",
+	})
+	if err != nil {
 
-        var e *sdkerrors.ErrorEntity
-        if errors.As(err, &e) {
-            // handle error
-            log.Fatal(e.Error())
-        }
+		var e *sdkerrors.ErrorEntity
+		if errors.As(err, &e) {
+			// handle error
+			log.Fatal(e.Error())
+		}
 
-        var e *sdkerrors.SDKError
-        if errors.As(err, &e) {
-            // handle error
-            log.Fatal(e.Error())
-        }
-    }
+		var e *sdkerrors.SDKError
+		if errors.As(err, &e) {
+			// handle error
+			log.Fatal(e.Error())
+		}
+	}
 }
 
 ```
@@ -791,25 +790,25 @@ You can override the default server globally using the `WithServerIndex` option 
 package main
 
 import (
-    "context"
-    "firehydrant"
-    "log"
+	"context"
+	"firehydrant"
+	"log"
 )
 
 func main() {
-    s := firehydrant.New(
-        firehydrant.WithServerIndex(0),
-        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+	s := firehydrant.New(
+		firehydrant.WithServerIndex(0),
+		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+	)
 
-    ctx := context.Background()
-    res, err := s.Ping.Get(ctx)
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.PongEntity != nil {
-        // handle response
-    }
+	ctx := context.Background()
+	res, err := s.Ping.Get(ctx)
+	if err != nil {
+		log.Fatal(err)
+	}
+	if res.PongEntity != nil {
+		// handle response
+	}
 }
 
 ```
@@ -822,25 +821,25 @@ The default server can also be overridden globally using the `WithServerURL` opt
 package main
 
 import (
-    "context"
-    "firehydrant"
-    "log"
+	"context"
+	"firehydrant"
+	"log"
 )
 
 func main() {
-    s := firehydrant.New(
-        firehydrant.WithServerURL("https://api.firehydrant.io"),
-        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+	s := firehydrant.New(
+		firehydrant.WithServerURL("https://api.firehydrant.io"),
+		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+	)
 
-    ctx := context.Background()
-    res, err := s.Ping.Get(ctx)
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.PongEntity != nil {
-        // handle response
-    }
+	ctx := context.Background()
+	res, err := s.Ping.Get(ctx)
+	if err != nil {
+		log.Fatal(err)
+	}
+	if res.PongEntity != nil {
+		// handle response
+	}
 }
 
 ```
@@ -853,7 +852,7 @@ The Go SDK makes API calls that wrap an internal HTTP client. The requirements f
 
 ```go
 type HTTPClient interface {
-    Do(req *http.Request) (*http.Response, error)
+	Do(req *http.Request) (*http.Response, error)
 }
 ```
 
@@ -861,14 +860,14 @@ The built-in `net/http` client satisfies this interface and a default client bas
 
 ```go
 import (
-    "net/http"
-    "time"
-    "github.com/myorg/your-go-sdk"
+	"net/http"
+	"time"
+	"github.com/myorg/your-go-sdk"
 )
 
 var (
-    httpClient = &http.Client{Timeout: 30 * time.Second}
-    sdkClient  = sdk.New(sdk.WithClient(httpClient))
+	httpClient = &http.Client{Timeout: 30 * time.Second}
+	sdkClient  = sdk.New(sdk.WithClient(httpClient))
 )
 ```
 
@@ -891,24 +890,24 @@ You can configure it using the `WithSecurity` option when initializing the SDK c
 package main
 
 import (
-    "context"
-    "firehydrant"
-    "log"
+	"context"
+	"firehydrant"
+	"log"
 )
 
 func main() {
-    s := firehydrant.New(
-        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
+	s := firehydrant.New(
+		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+	)
 
-    ctx := context.Background()
-    res, err := s.Ping.Get(ctx)
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.PongEntity != nil {
-        // handle response
-    }
+	ctx := context.Background()
+	res, err := s.Ping.Get(ctx)
+	if err != nil {
+		log.Fatal(err)
+	}
+	if res.PongEntity != nil {
+		// handle response
+	}
 }
 
 ```
