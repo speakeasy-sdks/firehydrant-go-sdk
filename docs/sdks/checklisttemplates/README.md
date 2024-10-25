@@ -23,15 +23,15 @@ Creates a checklist template for the organization
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -81,14 +81,14 @@ Archive a checklist template
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -130,14 +130,14 @@ List all of the checklist templates that have been added to the organization
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -181,15 +181,15 @@ Update a checklist templates attributes
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -232,14 +232,14 @@ Retrieves a single checklist template by ID
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()

@@ -3,7 +3,7 @@
 package components
 
 import (
-	"openapi/internal/utils"
+	"firehydrant/internal/utils"
 	"time"
 )
 

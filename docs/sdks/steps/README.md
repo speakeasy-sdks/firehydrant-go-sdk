@@ -17,15 +17,15 @@ Allows for upvoting or downvoting an event
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()

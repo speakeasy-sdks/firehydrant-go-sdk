@@ -21,15 +21,15 @@ Create a status update template for your organization
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -74,14 +74,14 @@ Delete a single status update template
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -123,14 +123,14 @@ List all status update templates for your organization
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -173,15 +173,15 @@ Update a single status update template
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -224,14 +224,14 @@ Get a single status update template by ID
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()

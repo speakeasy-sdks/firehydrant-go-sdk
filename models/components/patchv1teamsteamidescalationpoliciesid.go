@@ -4,8 +4,8 @@ package components
 
 import (
 	"encoding/json"
+	"firehydrant/internal/utils"
 	"fmt"
-	"openapi/internal/utils"
 )
 
 // PatchV1TeamsTeamIDEscalationPoliciesIDType - The type of target that the step will notify.

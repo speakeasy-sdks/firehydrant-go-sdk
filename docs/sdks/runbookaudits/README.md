@@ -19,14 +19,14 @@ Please contact support to enable audit logging for your account.
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()

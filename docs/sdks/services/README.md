@@ -29,15 +29,15 @@ Creates a service for the organization, you may also create or attach functional
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -82,15 +82,15 @@ List all of the services that have been added to the organization.
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/operations"
+	"firehydrant/models/operations"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -132,15 +132,15 @@ Creates a service with the appropriate integration for each external service ID 
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -186,14 +186,14 @@ Deletes the service from FireHydrant.
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -237,15 +237,15 @@ Note: You may not remove or add individual label key/value pairs. You must inclu
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -288,14 +288,14 @@ Retrieves a single service by ID
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -337,14 +337,14 @@ Retrieves a service's dependencies
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -387,14 +387,14 @@ Retrieves all services that are available to be upstream dependencies
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -436,14 +436,14 @@ Retrieves all services that are available to be downstream dependencies
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -485,14 +485,14 @@ Deletes a service link from FireHydrant.
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -535,15 +535,15 @@ Creates a response for a checklist item
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()

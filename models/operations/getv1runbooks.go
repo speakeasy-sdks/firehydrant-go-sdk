@@ -4,8 +4,8 @@ package operations
 
 import (
 	"encoding/json"
+	"firehydrant/models/components"
 	"fmt"
-	"openapi/models/components"
 )
 
 // QueryParamSort - Sort runbooks by their updated date. Accepts 'asc', 'desc'

@@ -74,19 +74,19 @@ Create a new incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
-    res, err := s.Incidents.Create(ctx, components.PostV1Incidents{
+    res, err := s.Incidents.Create(ctx, components.CreateIncident{
         Name: "<value>",
     })
     if err != nil {
@@ -100,11 +100,11 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                | Type                                                                     | Required                                                                 | Description                                                              |
-| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
-| `ctx`                                                                    | [context.Context](https://pkg.go.dev/context#Context)                    | :heavy_check_mark:                                                       | The context to use for the request.                                      |
-| `request`                                                                | [components.PostV1Incidents](../../models/components/postv1incidents.md) | :heavy_check_mark:                                                       | The request object to use for the request.                               |
-| `opts`                                                                   | [][operations.Option](../../models/operations/option.md)                 | :heavy_minus_sign:                                                       | The options for this request.                                            |
+| Parameter                                                              | Type                                                                   | Required                                                               | Description                                                            |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `ctx`                                                                  | [context.Context](https://pkg.go.dev/context#Context)                  | :heavy_check_mark:                                                     | The context to use for the request.                                    |
+| `request`                                                              | [components.CreateIncident](../../models/components/createincident.md) | :heavy_check_mark:                                                     | The request object to use for the request.                             |
+| `opts`                                                                 | [][operations.Option](../../models/operations/option.md)               | :heavy_minus_sign:                                                     | The options for this request.                                          |
 
 ### Response
 
@@ -126,15 +126,15 @@ List all of the incidents in the organization
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/operations"
+	"firehydrant/models/operations"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -176,14 +176,14 @@ Gives chat channel information for the specified incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -225,14 +225,14 @@ Closes an incident and optionally close all children
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -274,14 +274,14 @@ Resolves a currently active incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -324,14 +324,14 @@ Archives an incident which will hide it from lists and metrics
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -373,15 +373,15 @@ Updates an incident with provided parameters
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -424,14 +424,14 @@ Retrieve a single incident from its ID
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -473,14 +473,14 @@ Unarchives an incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -522,14 +522,14 @@ Add an alert to an incident. FireHydrant needs to have ingested the alert from a
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -574,14 +574,14 @@ List alerts that have been attached to an incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -623,15 +623,15 @@ Setting an alert as primary will overwrite milestone times in the FireHydrant in
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -677,14 +677,14 @@ Remove an alert from an incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -733,16 +733,16 @@ not explicitly submitted or updated in this request.
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/types"
-	"openapi/models/components"
+	"firehydrant/types"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -792,14 +792,14 @@ List times and durations for each milestone on an incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -841,15 +841,15 @@ Add a related change to an incident. Changes added to an incident can be causes,
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -896,14 +896,14 @@ List related changes that have been attached to an incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -948,15 +948,15 @@ Update a change attached to an incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -1001,15 +1001,15 @@ Add a status page to an incident.
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -1055,14 +1055,14 @@ List status pages that are attached to an incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -1104,14 +1104,14 @@ Remove a status page incident attached to an incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -1154,15 +1154,15 @@ Add all tasks from list to incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -1207,15 +1207,15 @@ Create a task
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -1260,14 +1260,14 @@ Retrieve a list of all tasks for a specific incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -1311,14 +1311,14 @@ Delete a task
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -1361,15 +1361,15 @@ Update a task's attributes
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -1413,14 +1413,14 @@ Retrieve a single task for an incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -1463,15 +1463,15 @@ Convert a task to a follow-up
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -1515,15 +1515,15 @@ Allows adding adhoc links to an incident as an attachment
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -1568,14 +1568,14 @@ Deletes the external incident link
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -1618,15 +1618,15 @@ Updates the external incident link attributes
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -1670,14 +1670,14 @@ Retrieve the transcript for a specific incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -1720,14 +1720,14 @@ func main() {
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -1768,14 +1768,14 @@ func main() {
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -1817,14 +1817,14 @@ func main() {
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -1869,16 +1869,16 @@ Allows adding image attachments to an incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"os"
 	"context"
-	"openapi/models/operations"
+	"firehydrant/models/operations"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     content, fileErr := os.Open("example.file")
@@ -1931,14 +1931,14 @@ List all events for an incident. An event is a timeline entry. This can be filte
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -1983,14 +1983,14 @@ Update a single event for an incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -2033,14 +2033,14 @@ Retrieve a single event for an incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -2083,15 +2083,15 @@ Allows for upvoting or downvoting an event
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -2144,15 +2144,15 @@ impacts will be added or updated, but no impacts will be removed.
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -2202,15 +2202,15 @@ impacts will be added or updated, but no impacts will be removed.
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -2253,16 +2253,16 @@ Add impacted infrastructure to an incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/operations"
-	"openapi/models/components"
+	"firehydrant/models/operations"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -2309,15 +2309,15 @@ List impacted infrastructure on an incident by specifying type
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/operations"
+	"firehydrant/models/operations"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -2360,15 +2360,15 @@ Remove impacted infrastructure on an incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/operations"
+	"firehydrant/models/operations"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -2413,15 +2413,15 @@ Create a new note on for an incident. The visibility field on a note determines 
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -2466,15 +2466,15 @@ Updates the body of a note
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -2520,15 +2520,15 @@ Create a new generic chat message on an incident timeline. These are independent
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -2573,14 +2573,14 @@ Delete an existing generic chat message on an incident.
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -2623,15 +2623,15 @@ Update an existing generic chat message on an incident.
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -2677,14 +2677,14 @@ Retrieve a list of all of the current role assignments for the incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -2727,14 +2727,14 @@ Unassign a role from a user
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -2777,15 +2777,15 @@ Assign a team for this incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/components"
+	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -2830,14 +2830,14 @@ Unassign a team from an incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -2881,14 +2881,14 @@ Retrieve a user with current roles for an incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()
@@ -2931,14 +2931,14 @@ List any parent/child relationships for an incident
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()

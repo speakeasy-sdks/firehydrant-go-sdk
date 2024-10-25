@@ -3,8 +3,8 @@
 package components
 
 import (
-	"openapi/internal/utils"
-	"openapi/types"
+	"firehydrant/internal/utils"
+	"firehydrant/types"
 )
 
 // ReportEntity model

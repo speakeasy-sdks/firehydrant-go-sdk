@@ -4,21 +4,24 @@ package main
 
 import (
 	"context"
+	"firehydrant"
+	"firehydrant/models/components"
 	"log"
-	"openapi"
 )
 
 func main() {
-	s := openapi.New(
-		openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+	s := firehydrant.New(
+		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
 	ctx := context.Background()
-	res, err := s.Ping.Get(ctx)
+	res, err := s.Incidents.Create(ctx, components.CreateIncident{
+		Name: "<value>",
+	})
 	if err != nil {
 		log.Fatal(err)
 	}
-	if res.PongEntity != nil {
+	if res.IncidentEntity != nil {
 		// handle response
 	}
 }

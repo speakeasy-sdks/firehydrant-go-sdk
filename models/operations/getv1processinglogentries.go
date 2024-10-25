@@ -4,8 +4,8 @@ package operations
 
 import (
 	"encoding/json"
+	"firehydrant/models/components"
 	"fmt"
-	"openapi/models/components"
 )
 
 // OfLevel - Returns logs of all levels equal to or above the provided level

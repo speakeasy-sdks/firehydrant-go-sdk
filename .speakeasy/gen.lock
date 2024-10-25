@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 39357612-0c85-4a96-a549-e2d920c4a065
 management:
-  docChecksum: 7d564476c3b9e4ebf9d7dd3132a45d51
+  docChecksum: b48fb796ae728f23e8ee2e371ea9ad67
   docVersion: 0.0.1
-  speakeasyVersion: 1.419.0
-  generationVersion: 2.438.3
-  releaseVersion: 0.0.1
-  configChecksum: e78b720f8c05dc2f5dddefb31c1cb6cd
+  speakeasyVersion: 1.421.2
+  generationVersion: 2.438.15
+  releaseVersion: 0.1.0
+  configChecksum: 9c2d6f89e826ea68fd4637ecbdc8ac87
 features:
   go:
     additionalDependencies: 0.1.0
@@ -14,6 +14,7 @@ features:
     core: 3.5.13
     defaultEnabledRetries: 0.2.0
     envVarSecurityUsage: 0.3.1
+    examples: 2.81.3
     flattening: 2.81.1
     getRequestBodies: 2.81.1
     globalSecurity: 2.82.10
@@ -54,6 +55,7 @@ generatedFiles:
   - /models/components/checklisttemplateentitypaginated.go
   - /models/components/conversationsapientitieschannel.go
   - /models/components/conversationsapientitiesreference.go
+  - /models/components/createincident.go
   - /models/components/currentuserentity.go
   - /models/components/customfieldsfieldvalue.go
   - /models/components/entitlemententity.go
@@ -230,7 +232,6 @@ generatedFiles:
   - /models/components/postv1environments.go
   - /models/components/postv1functionalities.go
   - /models/components/postv1incidentroles.go
-  - /models/components/postv1incidents.go
   - /models/components/postv1incidentsincidentidgenericchatmessages.go
   - /models/components/postv1incidentsincidentidimpacttype.go
   - /models/components/postv1incidentsincidentidlinks.go
@@ -787,6 +788,8 @@ generatedFiles:
   - docs/models/components/context.md
   - docs/models/components/conversationsapientitieschannel.md
   - docs/models/components/conversationsapientitiesreference.md
+  - docs/models/components/createincident.md
+  - docs/models/components/createincidentlabels.md
   - docs/models/components/currentuserentity.md
   - docs/models/components/customfields.md
   - docs/models/components/customfieldsfieldvalue.md
@@ -1064,7 +1067,6 @@ generatedFiles:
   - docs/models/components/postv1functionalitiesowner.md
   - docs/models/components/postv1functionalitiesteams.md
   - docs/models/components/postv1incidentroles.md
-  - docs/models/components/postv1incidents.md
   - docs/models/components/postv1incidentsincidentidgenericchatmessages.md
   - docs/models/components/postv1incidentsincidentidimpacttype.md
   - docs/models/components/postv1incidentsincidentidlinks.md
@@ -1079,7 +1081,6 @@ generatedFiles:
   - docs/models/components/postv1incidentsincidentidtasks.md
   - docs/models/components/postv1incidentsincidentidtaskstaskidconvert.md
   - docs/models/components/postv1incidentsincidentidteamassignments.md
-  - docs/models/components/postv1incidentslabels.md
   - docs/models/components/postv1incidenttypes.md
   - docs/models/components/postv1incidenttypesimpacts.md
   - docs/models/components/postv1nuncsubscriptions.md
@@ -2045,6 +2046,8 @@ generatedFiles:
   - docs/sdks/entitlements/README.md
   - docs/sdks/environments/README.md
   - docs/sdks/events/README.md
+  - docs/sdks/firehydrant/README.md
+  - docs/sdks/firehydrantconnections/README.md
   - docs/sdks/formconfigurations/README.md
   - docs/sdks/functionalities/README.md
   - docs/sdks/incidentroles/README.md
@@ -2071,8 +2074,6 @@ generatedFiles:
   - docs/sdks/scheduledmaintenances/README.md
   - docs/sdks/schedules/README.md
   - docs/sdks/scim/README.md
-  - docs/sdks/sdk/README.md
-  - docs/sdks/sdkconnections/README.md
   - docs/sdks/servicedependencies/README.md
   - docs/sdks/services/README.md
   - docs/sdks/severities/README.md
@@ -2093,6 +2094,8 @@ generatedFiles:
   - entitlements.go
   - environments.go
   - events.go
+  - firehydrant.go
+  - firehydrantconnections.go
   - formconfigurations.go
   - functionalities.go
   - go.mod
@@ -2134,8 +2137,6 @@ generatedFiles:
   - scheduledmaintenances.go
   - schedules.go
   - scim.go
-  - sdk.go
-  - sdkconnections.go
   - servicedependencies.go
   - services.go
   - severities.go

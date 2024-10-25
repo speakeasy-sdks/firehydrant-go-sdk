@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"openapi/models/components"
+	"firehydrant/models/components"
 )
 
 type PatchV1PostMortemsReportsReportIDRequest struct {

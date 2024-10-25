@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"openapi/models/components"
+	"firehydrant/models/components"
 )
 
 type PutV1ScimV2GroupsIDRequest struct {

@@ -1,4 +1,4 @@
-# SDKConnections
+# FireHydrantConnections
 (*Integrations.Aws.Connections*)
 
 ## Overview
@@ -17,15 +17,15 @@ Lists the available and configured AWS integration connections for the authentic
 package main
 
 import(
-	"openapi"
+	"firehydrant"
 	"context"
-	"openapi/models/operations"
+	"firehydrant/models/operations"
 	"log"
 )
 
 func main() {
-    s := openapi.New(
-        openapi.WithSecurity("<YOUR_API_KEY_HERE>"),
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
     ctx := context.Background()

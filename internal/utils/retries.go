@@ -5,11 +5,11 @@ package utils
 import (
 	"context"
 	"errors"
+	"firehydrant/retry"
 	"fmt"
 	"github.com/cenkalti/backoff/v4"
 	"net/http"
 	"net/url"
-	"openapi/retry"
 	"strconv"
 	"strings"
 	"time"

@@ -13,7 +13,7 @@ import (
 	"time"
 	"unsafe"
 
-	"openapi/types"
+	"firehydrant/types"
 
 	"github.com/ericlagergren/decimal"
 )

@@ -4,8 +4,8 @@ package operations
 
 import (
 	"errors"
-	"openapi/internal/utils"
-	"openapi/retry"
+	"firehydrant/internal/utils"
+	"firehydrant/retry"
 	"time"
 )
 

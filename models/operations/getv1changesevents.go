@@ -3,8 +3,8 @@
 package operations
 
 import (
-	"openapi/internal/utils"
-	"openapi/models/components"
+	"firehydrant/internal/utils"
+	"firehydrant/models/components"
 	"time"
 )
 

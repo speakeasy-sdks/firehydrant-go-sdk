@@ -4,8 +4,8 @@ package operations
 
 import (
 	"encoding/json"
+	"firehydrant/models/components"
 	"fmt"
-	"openapi/models/components"
 )
 
 type DeleteV1IncidentsIncidentIDImpactTypeIDPathParamType string

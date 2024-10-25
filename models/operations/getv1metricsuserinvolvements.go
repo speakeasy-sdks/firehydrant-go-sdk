@@ -4,10 +4,10 @@ package operations
 
 import (
 	"encoding/json"
+	"firehydrant/internal/utils"
+	"firehydrant/models/components"
+	"firehydrant/types"
 	"fmt"
-	"openapi/internal/utils"
-	"openapi/models/components"
-	"openapi/types"
 )
 
 type SortField string

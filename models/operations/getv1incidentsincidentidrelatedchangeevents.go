@@ -4,8 +4,8 @@ package operations
 
 import (
 	"encoding/json"
+	"firehydrant/models/components"
 	"fmt"
-	"openapi/models/components"
 )
 
 // QueryParamType - The type of the relation to the incident

@@ -1897,6 +1897,7 @@ paths:
     post:
       summary: Create an incident
       description: Create a new incident
+      x-speakeasy-usage-example: true
       requestBody:
         content:
           application/json:
@@ -13862,6 +13863,7 @@ components:
             - enterprise
             - signals_only
     postV1Incidents:
+      x-speakeasy-name-override: CreateIncident
       type: object
       properties:
         name:

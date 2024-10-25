@@ -1,4 +1,4 @@
-# PostV1IncidentsLabels
+# CreateIncidentLabels
 
 Key:value pairs to track custom data for the incident
 

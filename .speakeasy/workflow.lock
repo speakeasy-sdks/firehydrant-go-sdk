@@ -1,17 +1,17 @@
-speakeasyVersion: 1.419.0
+speakeasyVersion: 1.421.2
 sources:
     FireHydrant-OAS:
         sourceNamespace: fire-hydrant-oas
-        sourceRevisionDigest: sha256:ef0699ae44b05110746b6aa616a0724501ab9b581cb6490c80355bbbb2b83e5e
-        sourceBlobDigest: sha256:84df2b330bff24743652909b4a5ba94e70a276fba9ba7b899252f5369f832d1d
+        sourceRevisionDigest: sha256:a57a0b9c7838d2d0de4bcebe8959254612a7bc492192443a6367da9fac36a970
+        sourceBlobDigest: sha256:fcbec2313610ce252fc40b13d17506befa4e69a2887cb6a47df50c37d65c6881
         tags:
             - latest
 targets:
     fire-hydrant:
         source: FireHydrant-OAS
         sourceNamespace: fire-hydrant-oas
-        sourceRevisionDigest: sha256:ef0699ae44b05110746b6aa616a0724501ab9b581cb6490c80355bbbb2b83e5e
-        sourceBlobDigest: sha256:84df2b330bff24743652909b4a5ba94e70a276fba9ba7b899252f5369f832d1d
+        sourceRevisionDigest: sha256:a57a0b9c7838d2d0de4bcebe8959254612a7bc492192443a6367da9fac36a970
+        sourceBlobDigest: sha256:fcbec2313610ce252fc40b13d17506befa4e69a2887cb6a47df50c37d65c6881
 workflow:
     workflowVersion: 1.0.0
     sources:

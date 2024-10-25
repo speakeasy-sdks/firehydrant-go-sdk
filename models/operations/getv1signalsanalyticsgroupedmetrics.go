@@ -4,9 +4,9 @@ package operations
 
 import (
 	"encoding/json"
+	"firehydrant/internal/utils"
+	"firehydrant/models/components"
 	"fmt"
-	"openapi/internal/utils"
-	"openapi/models/components"
 	"time"
 )
 

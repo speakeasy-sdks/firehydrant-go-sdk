@@ -1,4 +1,4 @@
-module openapi
+module firehydrant
 
 go 1.20
 

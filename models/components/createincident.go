@@ -3,12 +3,12 @@
 package components
 
 import (
-	"openapi/internal/utils"
+	"firehydrant/internal/utils"
 	"time"
 )
 
-// PostV1IncidentsLabels - Key:value pairs to track custom data for the incident
-type PostV1IncidentsLabels struct {
+// CreateIncidentLabels - Key:value pairs to track custom data for the incident
+type CreateIncidentLabels struct {
 }
 
 type Impacts struct {
@@ -103,8 +103,8 @@ func (o *CustomFields) GetValueArray() []string {
 	return o.ValueArray
 }
 
-// PostV1Incidents - Create a new incident
-type PostV1Incidents struct {
+// CreateIncident - Create a new incident
+type CreateIncident struct {
 	Name                  string  `json:"name"`
 	Summary               *string `json:"summary,omitempty"`
 	CustomerImpactSummary *string `json:"customer_impact_summary,omitempty"`
@@ -116,7 +116,7 @@ type PostV1Incidents struct {
 	// List of alert IDs that this incident should be associated to
 	AlertIds []string `json:"alert_ids,omitempty"`
 	// Key:value pairs to track custom data for the incident
-	Labels *PostV1IncidentsLabels `json:"labels,omitempty"`
+	Labels *CreateIncidentLabels `json:"labels,omitempty"`
 	// List of ids of Runbooks to attach to this incident. Foregoes any conditions these Runbooks may have guarding automatic attachment.
 	RunbookIds []string `json:"runbook_ids,omitempty"`
 	// List of tags for the incident
@@ -135,144 +135,144 @@ type PostV1Incidents struct {
 	SkipIncidentTypeValues *bool `default:"false" json:"skip_incident_type_values"`
 }
 
-func (p PostV1Incidents) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(p, "", false)
+func (c CreateIncident) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
 }
 
-func (p *PostV1Incidents) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &p, "", false, false); err != nil {
+func (c *CreateIncident) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *PostV1Incidents) GetName() string {
+func (o *CreateIncident) GetName() string {
 	if o == nil {
 		return ""
 	}
 	return o.Name
 }
 
-func (o *PostV1Incidents) GetSummary() *string {
+func (o *CreateIncident) GetSummary() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Summary
 }
 
-func (o *PostV1Incidents) GetCustomerImpactSummary() *string {
+func (o *CreateIncident) GetCustomerImpactSummary() *string {
 	if o == nil {
 		return nil
 	}
 	return o.CustomerImpactSummary
 }
 
-func (o *PostV1Incidents) GetDescription() *string {
+func (o *CreateIncident) GetDescription() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Description
 }
 
-func (o *PostV1Incidents) GetPriority() *string {
+func (o *CreateIncident) GetPriority() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Priority
 }
 
-func (o *PostV1Incidents) GetSeverity() *string {
+func (o *CreateIncident) GetSeverity() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Severity
 }
 
-func (o *PostV1Incidents) GetSeverityConditionID() *string {
+func (o *CreateIncident) GetSeverityConditionID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.SeverityConditionID
 }
 
-func (o *PostV1Incidents) GetSeverityImpactID() *string {
+func (o *CreateIncident) GetSeverityImpactID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.SeverityImpactID
 }
 
-func (o *PostV1Incidents) GetAlertIds() []string {
+func (o *CreateIncident) GetAlertIds() []string {
 	if o == nil {
 		return nil
 	}
 	return o.AlertIds
 }
 
-func (o *PostV1Incidents) GetLabels() *PostV1IncidentsLabels {
+func (o *CreateIncident) GetLabels() *CreateIncidentLabels {
 	if o == nil {
 		return nil
 	}
 	return o.Labels
 }
 
-func (o *PostV1Incidents) GetRunbookIds() []string {
+func (o *CreateIncident) GetRunbookIds() []string {
 	if o == nil {
 		return nil
 	}
 	return o.RunbookIds
 }
 
-func (o *PostV1Incidents) GetTagList() []string {
+func (o *CreateIncident) GetTagList() []string {
 	if o == nil {
 		return nil
 	}
 	return o.TagList
 }
 
-func (o *PostV1Incidents) GetImpacts() []Impacts {
+func (o *CreateIncident) GetImpacts() []Impacts {
 	if o == nil {
 		return nil
 	}
 	return o.Impacts
 }
 
-func (o *PostV1Incidents) GetMilestones() []Milestones {
+func (o *CreateIncident) GetMilestones() []Milestones {
 	if o == nil {
 		return nil
 	}
 	return o.Milestones
 }
 
-func (o *PostV1Incidents) GetRestricted() *bool {
+func (o *CreateIncident) GetRestricted() *bool {
 	if o == nil {
 		return nil
 	}
 	return o.Restricted
 }
 
-func (o *PostV1Incidents) GetTeamIds() []string {
+func (o *CreateIncident) GetTeamIds() []string {
 	if o == nil {
 		return nil
 	}
 	return o.TeamIds
 }
 
-func (o *PostV1Incidents) GetCustomFields() []CustomFields {
+func (o *CreateIncident) GetCustomFields() []CustomFields {
 	if o == nil {
 		return nil
 	}
 	return o.CustomFields
 }
 
-func (o *PostV1Incidents) GetExternalLinks() *string {
+func (o *CreateIncident) GetExternalLinks() *string {
 	if o == nil {
 		return nil
 	}
 	return o.ExternalLinks
 }
 
-func (o *PostV1Incidents) GetSkipIncidentTypeValues() *bool {
+func (o *CreateIncident) GetSkipIncidentTypeValues() *bool {
 	if o == nil {
 		return nil
 	}
