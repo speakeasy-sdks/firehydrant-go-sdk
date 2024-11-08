@@ -1,0 +1,9 @@
+# UpdatePostMortemReportRequest
+
+
+## Fields
+
+| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ReportID`                                                                                                   | *string*                                                                                                     | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
+| `PatchV1PostMortemsReportsReportID`                                                                          | [components.PatchV1PostMortemsReportsReportID](../../models/components/patchv1postmortemsreportsreportid.md) | :heavy_check_mark:                                                                                           | N/A                                                                                                          |

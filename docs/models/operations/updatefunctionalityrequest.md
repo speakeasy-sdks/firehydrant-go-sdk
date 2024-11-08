@@ -1,0 +1,9 @@
+# UpdateFunctionalityRequest
+
+
+## Fields
+
+| Field                                                                                                                | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `FunctionalityID`                                                                                                    | *string*                                                                                                             | :heavy_check_mark:                                                                                                   | N/A                                                                                                                  |
+| `PatchV1FunctionalitiesFunctionalityID`                                                                              | [components.PatchV1FunctionalitiesFunctionalityID](../../models/components/patchv1functionalitiesfunctionalityid.md) | :heavy_check_mark:                                                                                                   | N/A                                                                                                                  |

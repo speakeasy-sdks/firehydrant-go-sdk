@@ -3,11 +3,9 @@
 
 ## Overview
 
-Operations about infrastructures
-
 ### Available Operations
 
-* [List](#list) - Lists functionality, service and environment objects
+* [List](#list) - List catalog entries
 
 ## List
 
@@ -31,7 +29,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Infrastructures.List(ctx, operations.GetV1InfrastructuresRequest{})
+    res, err := s.Infrastructures.List(ctx, operations.ListInfrastructuresRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -43,15 +41,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.GetV1InfrastructuresRequest](../../models/operations/getv1infrastructuresrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../models/operations/option.md)                                         | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.ListInfrastructuresRequest](../../models/operations/listinfrastructuresrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../models/operations/option.md)                                       | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
 
 ### Response
 
-**[*operations.GetV1InfrastructuresResponse](../../models/operations/getv1infrastructuresresponse.md), error**
+**[*operations.ListInfrastructuresResponse](../../models/operations/listinfrastructuresresponse.md), error**
 
 ### Errors
 

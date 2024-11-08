@@ -1,0 +1,9 @@
+# UpdateStatusUpdateTemplateResponse
+
+
+## Fields
+
+| Field                                                                                           | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                      | [components.HTTPMetadata](../../models/components/httpmetadata.md)                              | :heavy_check_mark:                                                                              | N/A                                                                                             |
+| `StatusUpdateTemplateEntity`                                                                    | [*components.StatusUpdateTemplateEntity](../../models/components/statusupdatetemplateentity.md) | :heavy_minus_sign:                                                                              | Update a single status update template                                                          |

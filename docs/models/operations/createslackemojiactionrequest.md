@@ -1,0 +1,9 @@
+# CreateSlackEmojiActionRequest
+
+
+## Fields
+
+| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ConnectionID`                                                                                               | *string*                                                                                                     | :heavy_check_mark:                                                                                           | Slack Connection UUID                                                                                        |
+| `RequestBody`                                                                                                | [operations.CreateSlackEmojiActionRequestBody](../../models/operations/createslackemojiactionrequestbody.md) | :heavy_check_mark:                                                                                           | N/A                                                                                                          |

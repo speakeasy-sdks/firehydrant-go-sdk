@@ -3,11 +3,8 @@
 
 ## Values
 
-| Name                           | Value                          |
-| ------------------------------ | ------------------------------ |
-| `QueryParamSortFieldMttd`      | mttd                           |
-| `QueryParamSortFieldMtta`      | mtta                           |
-| `QueryParamSortFieldMttm`      | mttm                           |
-| `QueryParamSortFieldMttr`      | mttr                           |
-| `QueryParamSortFieldCount`     | count                          |
-| `QueryParamSortFieldTotalTime` | total_time                     |
+| Name                               | Value                              |
+| ---------------------------------- | ---------------------------------- |
+| `QueryParamSortFieldUserCount`     | user_count                         |
+| `QueryParamSortFieldIncidentCount` | incident_count                     |
+| `QueryParamSortFieldTimeSpent`     | time_spent                         |

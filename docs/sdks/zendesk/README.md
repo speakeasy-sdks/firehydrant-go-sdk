@@ -1,13 +1,15 @@
 # Zendesk
-(*Integrations.Zendesk*)
+(*Zendesk*)
 
 ## Overview
 
 ### Available Operations
 
-* [Search](#search)
+* [SearchTickets](#searchtickets) - Search for Zendesk tickets
 
-## Search
+## SearchTickets
+
+Search for Zendesk tickets
 
 ### Example Usage
 
@@ -26,7 +28,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Integrations.Zendesk.Search(ctx, "<id>", nil)
+    res, err := s.Zendesk.SearchTickets(ctx, "<id>", nil)
     if err != nil {
         log.Fatal(err)
     }
@@ -47,7 +49,7 @@ func main() {
 
 ### Response
 
-**[*operations.GetV1IntegrationsZendeskSearchResponse](../../models/operations/getv1integrationszendesksearchresponse.md), error**
+**[*operations.SearchZendeskTicketsResponse](../../models/operations/searchzendeskticketsresponse.md), error**
 
 ### Errors
 

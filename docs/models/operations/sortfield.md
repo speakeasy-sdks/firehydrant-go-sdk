@@ -3,8 +3,11 @@
 
 ## Values
 
-| Name                     | Value                    |
-| ------------------------ | ------------------------ |
-| `SortFieldUserCount`     | user_count               |
-| `SortFieldIncidentCount` | incident_count           |
-| `SortFieldTimeSpent`     | time_spent               |
+| Name                 | Value                |
+| -------------------- | -------------------- |
+| `SortFieldMttd`      | mttd                 |
+| `SortFieldMtta`      | mtta                 |
+| `SortFieldMttm`      | mttm                 |
+| `SortFieldMttr`      | mttr                 |
+| `SortFieldCount`     | count                |
+| `SortFieldTotalTime` | total_time           |

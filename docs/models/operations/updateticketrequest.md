@@ -1,0 +1,9 @@
+# UpdateTicketRequest
+
+
+## Fields
+
+| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `TicketID`                                                                                               | *string*                                                                                                 | :heavy_check_mark:                                                                                       | N/A                                                                                                      |
+| `PatchV1TicketingTicketsTicketID`                                                                        | [components.PatchV1TicketingTicketsTicketID](../../models/components/patchv1ticketingticketsticketid.md) | :heavy_check_mark:                                                                                       | N/A                                                                                                      |

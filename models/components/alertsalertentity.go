@@ -7,8 +7,8 @@ import (
 	"time"
 )
 
-// AlertsAlertEntityLabels - Arbitrary key:value pairs of labels.
-type AlertsAlertEntityLabels struct {
+// Labels - Arbitrary key:value pairs of labels.
+type Labels struct {
 }
 
 // AlertsAlertEntity - Alerts_AlertEntity model
@@ -26,7 +26,7 @@ type AlertsAlertEntity struct {
 	RemoteID        *string    `json:"remote_id,omitempty"`
 	RemoteURL       *string    `json:"remote_url,omitempty"`
 	// Arbitrary key:value pairs of labels.
-	Labels       *AlertsAlertEntityLabels             `json:"labels,omitempty"`
+	Labels       *Labels                              `json:"labels,omitempty"`
 	Environments []SuccinctEntity                     `json:"environments,omitempty"`
 	Services     []SuccinctEntity                     `json:"services,omitempty"`
 	Tags         []string                             `json:"tags,omitempty"`
@@ -136,7 +136,7 @@ func (o *AlertsAlertEntity) GetRemoteURL() *string {
 	return o.RemoteURL
 }
 
-func (o *AlertsAlertEntity) GetLabels() *AlertsAlertEntityLabels {
+func (o *AlertsAlertEntity) GetLabels() *Labels {
 	if o == nil {
 		return nil
 	}

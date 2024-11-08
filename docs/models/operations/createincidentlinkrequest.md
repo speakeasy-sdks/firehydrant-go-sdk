@@ -1,0 +1,9 @@
+# CreateIncidentLinkRequest
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `IncidentID`                                                                                           | *string*                                                                                               | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `PostV1IncidentsIncidentIDLinks`                                                                       | [components.PostV1IncidentsIncidentIDLinks](../../models/components/postv1incidentsincidentidlinks.md) | :heavy_check_mark:                                                                                     | N/A                                                                                                    |

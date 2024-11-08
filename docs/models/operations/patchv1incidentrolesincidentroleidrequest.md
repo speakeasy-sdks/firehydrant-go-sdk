@@ -1,9 +1,0 @@
-# PatchV1IncidentRolesIncidentRoleIDRequest
-
-
-## Fields
-
-| Field                                                                                                          | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `IncidentRoleID`                                                                                               | *string*                                                                                                       | :heavy_check_mark:                                                                                             | N/A                                                                                                            |
-| `PatchV1IncidentRolesIncidentRoleID`                                                                           | [components.PatchV1IncidentRolesIncidentRoleID](../../models/components/patchv1incidentrolesincidentroleid.md) | :heavy_check_mark:                                                                                             | N/A                                                                                                            |

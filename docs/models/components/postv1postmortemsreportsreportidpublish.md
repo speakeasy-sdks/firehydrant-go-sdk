@@ -5,8 +5,7 @@ Marks an incident retrospective as published and emails all of the participants 
 
 ## Fields
 
-| Field                                                           | Type                                                            | Required                                                        | Description                                                     |
-| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
-| `Underscore`                                                    | [*components.Underscore](../../models/components/underscore.md) | :heavy_minus_sign:                                              | N/A                                                             |
-| `UserIds`                                                       | []*string*                                                      | :heavy_minus_sign:                                              | An array of user IDs with whom to share the report              |
-| `TeamIds`                                                       | []*string*                                                      | :heavy_minus_sign:                                              | An array of team IDs with whom to share the report              |
+| Field                                              | Type                                               | Required                                           | Description                                        |
+| -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------- |
+| `UserIds`                                          | []*string*                                         | :heavy_minus_sign:                                 | An array of user IDs with whom to share the report |
+| `TeamIds`                                          | []*string*                                         | :heavy_minus_sign:                                 | An array of team IDs with whom to share the report |

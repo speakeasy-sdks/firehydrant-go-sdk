@@ -26,7 +26,7 @@ type ChangeEventSlimEntity struct {
 	Authors         []AuthorEntity           `json:"authors,omitempty"`
 	// An object of label key and values
 	Labels   *ChangeEventSlimEntityLabels `json:"labels,omitempty"`
-	Services []ServiceEntity              `json:"services,omitempty"`
+	Services []ServiceEntityLite          `json:"services,omitempty"`
 }
 
 func (c ChangeEventSlimEntity) MarshalJSON() ([]byte, error) {
@@ -131,7 +131,7 @@ func (o *ChangeEventSlimEntity) GetLabels() *ChangeEventSlimEntityLabels {
 	return o.Labels
 }
 
-func (o *ChangeEventSlimEntity) GetServices() []ServiceEntity {
+func (o *ChangeEventSlimEntity) GetServices() []ServiceEntityLite {
 	if o == nil {
 		return nil
 	}

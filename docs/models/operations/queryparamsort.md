@@ -1,6 +1,6 @@
 # QueryParamSort
 
-Sort runbooks by their updated date. Accepts 'asc', 'desc'
+The order to sort the transcript entries.
 
 
 ## Values

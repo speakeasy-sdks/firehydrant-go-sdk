@@ -1,0 +1,9 @@
+# UpdateEnvironmentRequest
+
+
+## Fields
+
+| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `EnvironmentID`                                                                                            | *string*                                                                                                   | :heavy_check_mark:                                                                                         | Environment UUID                                                                                           |
+| `PatchV1EnvironmentsEnvironmentID`                                                                         | [components.PatchV1EnvironmentsEnvironmentID](../../models/components/patchv1environmentsenvironmentid.md) | :heavy_check_mark:                                                                                         | N/A                                                                                                        |

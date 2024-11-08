@@ -1,0 +1,9 @@
+# UpdateAwsCloudTrailBatchResponse
+
+
+## Fields
+
+| Field                                                                                                               | Type                                                                                                                | Required                                                                                                            | Description                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                                          | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                                  | :heavy_check_mark:                                                                                                  | N/A                                                                                                                 |
+| `IntegrationsAwsCloudtrailBatchEntity`                                                                              | [*components.IntegrationsAwsCloudtrailBatchEntity](../../models/components/integrationsawscloudtrailbatchentity.md) | :heavy_minus_sign:                                                                                                  | Update a CloudTrail batch with new information.                                                                     |

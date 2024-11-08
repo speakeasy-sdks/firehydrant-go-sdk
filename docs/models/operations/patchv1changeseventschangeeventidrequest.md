@@ -1,9 +1,0 @@
-# PatchV1ChangesEventsChangeEventIDRequest
-
-
-## Fields
-
-| Field                                                                                                        | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ChangeEventID`                                                                                              | *string*                                                                                                     | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
-| `PatchV1ChangesEventsChangeEventID`                                                                          | [components.PatchV1ChangesEventsChangeEventID](../../models/components/patchv1changeseventschangeeventid.md) | :heavy_check_mark:                                                                                           | N/A                                                                                                          |

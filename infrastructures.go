@@ -16,7 +16,6 @@ import (
 	"net/url"
 )
 
-// Infrastructures - Operations about infrastructures
 type Infrastructures struct {
 	sdkConfiguration sdkConfiguration
 }
@@ -27,12 +26,12 @@ func newInfrastructures(sdkConfig sdkConfiguration) *Infrastructures {
 	}
 }
 
-// List - Lists functionality, service and environment objects
+// List catalog entries
 // Lists functionality, service and environment objects
-func (s *Infrastructures) List(ctx context.Context, request operations.GetV1InfrastructuresRequest, opts ...operations.Option) (*operations.GetV1InfrastructuresResponse, error) {
+func (s *Infrastructures) List(ctx context.Context, request operations.ListInfrastructuresRequest, opts ...operations.Option) (*operations.ListInfrastructuresResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "getV1Infrastructures",
+		OperationID:    "listInfrastructures",
 		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
@@ -166,7 +165,7 @@ func (s *Infrastructures) List(ctx context.Context, request operations.GetV1Infr
 		}
 	}
 
-	res := &operations.GetV1InfrastructuresResponse{
+	res := &operations.ListInfrastructuresResponse{
 		HTTPMeta: components.HTTPMetadata{
 			Request:  req,
 			Response: httpRes,

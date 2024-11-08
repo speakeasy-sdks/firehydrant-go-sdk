@@ -3,12 +3,61 @@
 
 ## Overview
 
-Operations about users
+Operations related to Users
 
 ### Available Operations
 
+* [GetCurrent](#getcurrent) - Get the currently authenticated user
 * [List](#list) - List users
-* [GetServices](#getservices) - Retrieves a list of services owned by the teams a user is on
+* [Get](#get) - Get a user
+
+## GetCurrent
+
+Retrieve the current user
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"firehydrant"
+	"context"
+	"log"
+)
+
+func main() {
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Users.GetCurrent(ctx)
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.CurrentUserEntity != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
+
+### Response
+
+**[*operations.GetCurrentUserResponse](../../models/operations/getcurrentuserresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
 ## List
 
@@ -54,7 +103,7 @@ func main() {
 
 ### Response
 
-**[*operations.GetV1UsersResponse](../../models/operations/getv1usersresponse.md), error**
+**[*operations.ListUsersResponse](../../models/operations/listusersresponse.md), error**
 
 ### Errors
 
@@ -62,9 +111,9 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetServices
+## Get
 
-Retrieves a list of services owned by the teams a user is on
+Retrieve a single user by ID
 
 ### Example Usage
 
@@ -83,11 +132,11 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Users.GetServices(ctx, "<id>", nil, nil)
+    res, err := s.Users.Get(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
-    if res.TeamEntityPaginateds != nil {
+    if res.UserEntity != nil {
         // handle response
     }
 }
@@ -99,13 +148,11 @@ func main() {
 | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
 | `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
 | `id`                                                     | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
-| `page`                                                   | **int*                                                   | :heavy_minus_sign:                                       | N/A                                                      |
-| `perPage`                                                | **int*                                                   | :heavy_minus_sign:                                       | N/A                                                      |
 | `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
 
 ### Response
 
-**[*operations.GetV1UsersIDServicesResponse](../../models/operations/getv1usersidservicesresponse.md), error**
+**[*operations.GetUserResponse](../../models/operations/getuserresponse.md), error**
 
 ### Errors
 

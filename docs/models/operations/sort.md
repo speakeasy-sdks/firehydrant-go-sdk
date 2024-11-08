@@ -1,6 +1,6 @@
 # Sort
 
-The order to sort the transcript entries.
+Allows sorting comments by the time they were posted, ascending or descending.
 
 
 ## Values

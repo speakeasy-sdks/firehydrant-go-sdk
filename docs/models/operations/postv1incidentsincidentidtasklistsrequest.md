@@ -1,9 +1,0 @@
-# PostV1IncidentsIncidentIDTaskListsRequest
-
-
-## Fields
-
-| Field                                                                                                          | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `IncidentID`                                                                                                   | *string*                                                                                                       | :heavy_check_mark:                                                                                             | N/A                                                                                                            |
-| `PostV1IncidentsIncidentIDTaskLists`                                                                           | [components.PostV1IncidentsIncidentIDTaskLists](../../models/components/postv1incidentsincidentidtasklists.md) | :heavy_check_mark:                                                                                             | N/A                                                                                                            |

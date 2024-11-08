@@ -5,7 +5,6 @@ package main
 import (
 	"context"
 	"firehydrant"
-	"firehydrant/models/components"
 	"log"
 )
 
@@ -15,13 +14,11 @@ func main() {
 	)
 
 	ctx := context.Background()
-	res, err := s.Incidents.Create(ctx, components.CreateIncident{
-		Name: "<value>",
-	})
+	res, err := s.AccountSettings.GetAiPreferences(ctx)
 	if err != nil {
 		log.Fatal(err)
 	}
-	if res.IncidentEntity != nil {
+	if res.AIEntitiesPreferencesEntity != nil {
 		// handle response
 	}
 }

@@ -7,16 +7,16 @@ import (
 	"time"
 )
 
-// AlertsSirenEventEntityData - The event's payload
-type AlertsSirenEventEntityData struct {
+// Data - The event's payload
+type Data struct {
 }
 
 type AlertsSirenEventEntity struct {
 	ID   *string `json:"id,omitempty"`
 	Type *string `json:"type,omitempty"`
 	// The event's payload
-	Data      *AlertsSirenEventEntityData `json:"data,omitempty"`
-	CreatedAt *time.Time                  `json:"created_at,omitempty"`
+	Data      *Data      `json:"data,omitempty"`
+	CreatedAt *time.Time `json:"created_at,omitempty"`
 }
 
 func (a AlertsSirenEventEntity) MarshalJSON() ([]byte, error) {
@@ -44,7 +44,7 @@ func (o *AlertsSirenEventEntity) GetType() *string {
 	return o.Type
 }
 
-func (o *AlertsSirenEventEntity) GetData() *AlertsSirenEventEntityData {
+func (o *AlertsSirenEventEntity) GetData() *Data {
 	if o == nil {
 		return nil
 	}

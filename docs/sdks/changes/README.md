@@ -3,27 +3,30 @@
 
 ## Overview
 
-Operations about changes
+Operations related to Changes
 
 ### Available Operations
 
-* [Create](#create) - Create a new change entry
-* [List](#list) - Lists all changes
-* [Delete](#delete) - Archive a change entry
-* [Update](#update) - Update a change entry
-* [CreateIdentity](#createidentity) - Create an identity for this change
-* [ListIdentities](#listidentities) - Retrieve all identities for the change
-* [DeleteIdentity](#deleteidentity) - Delete an identity
-* [UpdateIdentity](#updateidentity) - Update an identity
-* [CreateEvent](#createevent) - Create a change event
+* [ListTypes](#listtypes) - List change types
+* [List](#list) - List changes
+* [Create](#create) - Create a change
 * [ListEvents](#listevents) - List change events
+* [CreateEvent](#createevent) - Create a change event
+* [GetEvent](#getevent) - Get a change event
 * [DeleteEvent](#deleteevent) - Delete a change event
 * [UpdateEvent](#updateevent) - Update a change event
-* [GetEvent](#getevent) - Retrieve a change event
+* [Delete](#delete) - Archive a change
+* [Update](#update) - Update a change
+* [ListIdentities](#listidentities) - List identities for a change
+* [CreateIdentity](#createidentity) - Create an identity for a change
+* [DeleteIdentity](#deleteidentity) - Delete an identity from a change
+* [UpdateIdentity](#updateidentity) - Update an identity for a change
+* [Get](#get) - Get a scheduled maintenance event
+* [UpdateScheduledMaintenance](#updatescheduledmaintenance) - Update a scheduled maintenance event
 
-## Create
+## ListTypes
 
-Create a new change entry
+Lists all change types
 
 ### Example Usage
 
@@ -33,7 +36,6 @@ package main
 import(
 	"firehydrant"
 	"context"
-	"firehydrant/models/components"
 	"log"
 )
 
@@ -43,11 +45,11 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Changes.Create(ctx, components.PostV1Changes{})
+    res, err := s.Changes.ListTypes(ctx, nil, nil)
     if err != nil {
         log.Fatal(err)
     }
-    if res.ChangeEntity != nil {
+    if res.ChangeTypeEntityPaginated != nil {
         // handle response
     }
 }
@@ -55,22 +57,22 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                            | Type                                                                 | Required                                                             | Description                                                          |
-| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| `ctx`                                                                | [context.Context](https://pkg.go.dev/context#Context)                | :heavy_check_mark:                                                   | The context to use for the request.                                  |
-| `request`                                                            | [components.PostV1Changes](../../models/components/postv1changes.md) | :heavy_check_mark:                                                   | The request object to use for the request.                           |
-| `opts`                                                               | [][operations.Option](../../models/operations/option.md)             | :heavy_minus_sign:                                                   | The options for this request.                                        |
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `page`                                                   | **int*                                                   | :heavy_minus_sign:                                       | N/A                                                      |
+| `perPage`                                                | **int*                                                   | :heavy_minus_sign:                                       | N/A                                                      |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
 
 ### Response
 
-**[*operations.PostV1ChangesResponse](../../models/operations/postv1changesresponse.md), error**
+**[*operations.ListChangeTypesResponse](../../models/operations/listchangetypesresponse.md), error**
 
 ### Errors
 
-| Error Type            | Status Code           | Content Type          |
-| --------------------- | --------------------- | --------------------- |
-| sdkerrors.ErrorEntity | 400                   | application/json      |
-| sdkerrors.SDKError    | 4XX, 5XX              | \*/\*                 |
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
 ## List
 
@@ -115,7 +117,309 @@ func main() {
 
 ### Response
 
-**[*operations.GetV1ChangesResponse](../../models/operations/getv1changesresponse.md), error**
+**[*operations.ListChangesResponse](../../models/operations/listchangesresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## Create
+
+Create a new change entry
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"firehydrant"
+	"context"
+	"firehydrant/models/components"
+	"log"
+)
+
+func main() {
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Changes.Create(ctx, components.PostV1Changes{})
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ChangeEntity != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                            | Type                                                                 | Required                                                             | Description                                                          |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| `ctx`                                                                | [context.Context](https://pkg.go.dev/context#Context)                | :heavy_check_mark:                                                   | The context to use for the request.                                  |
+| `request`                                                            | [components.PostV1Changes](../../models/components/postv1changes.md) | :heavy_check_mark:                                                   | The request object to use for the request.                           |
+| `opts`                                                               | [][operations.Option](../../models/operations/option.md)             | :heavy_minus_sign:                                                   | The options for this request.                                        |
+
+### Response
+
+**[*operations.CreateChangeResponse](../../models/operations/createchangeresponse.md), error**
+
+### Errors
+
+| Error Type            | Status Code           | Content Type          |
+| --------------------- | --------------------- | --------------------- |
+| sdkerrors.ErrorEntity | 400                   | application/json      |
+| sdkerrors.SDKError    | 4XX, 5XX              | \*/\*                 |
+
+## ListEvents
+
+List change events for the organization. Note: Not all information is included on a change event like attachments and related changes. You must fetch a change event separately to retrieve all of the information about it
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"firehydrant"
+	"context"
+	"firehydrant/models/operations"
+	"log"
+)
+
+func main() {
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Changes.ListEvents(ctx, operations.ListChangeEventsRequest{})
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ChangeEventSlimEntityPaginated != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `ctx`                                                                                    | [context.Context](https://pkg.go.dev/context#Context)                                    | :heavy_check_mark:                                                                       | The context to use for the request.                                                      |
+| `request`                                                                                | [operations.ListChangeEventsRequest](../../models/operations/listchangeeventsrequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+| `opts`                                                                                   | [][operations.Option](../../models/operations/option.md)                                 | :heavy_minus_sign:                                                                       | The options for this request.                                                            |
+
+### Response
+
+**[*operations.ListChangeEventsResponse](../../models/operations/listchangeeventsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## CreateEvent
+
+Create a change event
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"firehydrant"
+	"context"
+	"firehydrant/models/components"
+	"log"
+)
+
+func main() {
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Changes.CreateEvent(ctx, components.PostV1ChangesEvents{
+        Summary: "<value>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ChangeEventEntity != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
+| `request`                                                                        | [components.PostV1ChangesEvents](../../models/components/postv1changesevents.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+| `opts`                                                                           | [][operations.Option](../../models/operations/option.md)                         | :heavy_minus_sign:                                                               | The options for this request.                                                    |
+
+### Response
+
+**[*operations.CreateChangeEventResponse](../../models/operations/createchangeeventresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## GetEvent
+
+Retrieve a change event
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"firehydrant"
+	"context"
+	"log"
+)
+
+func main() {
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Changes.GetEvent(ctx, "<id>")
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ChangeEventEntity != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `changeEventID`                                          | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
+
+### Response
+
+**[*operations.GetChangeEventResponse](../../models/operations/getchangeeventresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## DeleteEvent
+
+Delete a change event
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"firehydrant"
+	"context"
+	"log"
+)
+
+func main() {
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Changes.DeleteEvent(ctx, "<id>")
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `changeEventID`                                          | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
+
+### Response
+
+**[*operations.DeleteChangeEventResponse](../../models/operations/deletechangeeventresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateEvent
+
+Update a change event
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"firehydrant"
+	"context"
+	"firehydrant/models/components"
+	"log"
+)
+
+func main() {
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Changes.UpdateEvent(ctx, "<id>", components.PatchV1ChangesEventsChangeEventID{})
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ChangeEventEntity != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
+| `changeEventID`                                                                                              | *string*                                                                                                     | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
+| `patchV1ChangesEventsChangeEventID`                                                                          | [components.PatchV1ChangesEventsChangeEventID](../../models/components/patchv1changeseventschangeeventid.md) | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
+| `opts`                                                                                                       | [][operations.Option](../../models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
+
+### Response
+
+**[*operations.UpdateChangeEventResponse](../../models/operations/updatechangeeventresponse.md), error**
 
 ### Errors
 
@@ -164,7 +468,7 @@ func main() {
 
 ### Response
 
-**[*operations.DeleteV1ChangesChangeIDResponse](../../models/operations/deletev1changeschangeidresponse.md), error**
+**[*operations.DeleteChangeResponse](../../models/operations/deletechangeresponse.md), error**
 
 ### Errors
 
@@ -215,7 +519,58 @@ func main() {
 
 ### Response
 
-**[*operations.PatchV1ChangesChangeIDResponse](../../models/operations/patchv1changeschangeidresponse.md), error**
+**[*operations.UpdateChangeResponse](../../models/operations/updatechangeresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListIdentities
+
+Retrieve all identities for the change
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"firehydrant"
+	"context"
+	"log"
+)
+
+func main() {
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Changes.ListIdentities(ctx, "<id>", nil, nil)
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ChangeIdentityEntityPaginated != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `changeID`                                               | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `page`                                                   | **int*                                                   | :heavy_minus_sign:                                       | N/A                                                      |
+| `perPage`                                                | **int*                                                   | :heavy_minus_sign:                                       | N/A                                                      |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
+
+### Response
+
+**[*operations.ListChangeIdentitiesResponse](../../models/operations/listchangeidentitiesresponse.md), error**
 
 ### Errors
 
@@ -269,7 +624,7 @@ func main() {
 
 ### Response
 
-**[*operations.PostV1ChangesChangeIDIdentitiesResponse](../../models/operations/postv1changeschangeididentitiesresponse.md), error**
+**[*operations.CreateChangeIdentityResponse](../../models/operations/createchangeidentityresponse.md), error**
 
 ### Errors
 
@@ -277,57 +632,6 @@ func main() {
 | --------------------- | --------------------- | --------------------- |
 | sdkerrors.ErrorEntity | 400                   | application/json      |
 | sdkerrors.SDKError    | 4XX, 5XX              | \*/\*                 |
-
-## ListIdentities
-
-Retrieve all identities for the change
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"firehydrant"
-	"context"
-	"log"
-)
-
-func main() {
-    s := firehydrant.New(
-        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    ctx := context.Background()
-    res, err := s.Changes.ListIdentities(ctx, "<id>", nil, nil)
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.ChangeIdentityEntityPaginated != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
-| `changeID`                                               | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
-| `page`                                                   | **int*                                                   | :heavy_minus_sign:                                       | N/A                                                      |
-| `perPage`                                                | **int*                                                   | :heavy_minus_sign:                                       | N/A                                                      |
-| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
-
-### Response
-
-**[*operations.GetV1ChangesChangeIDIdentitiesResponse](../../models/operations/getv1changeschangeididentitiesresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
 ## DeleteIdentity
 
@@ -371,7 +675,7 @@ func main() {
 
 ### Response
 
-**[*operations.DeleteV1ChangesChangeIDIdentitiesIdentityIDResponse](../../models/operations/deletev1changeschangeididentitiesidentityidresponse.md), error**
+**[*operations.DeleteChangeIdentityResponse](../../models/operations/deletechangeidentityresponse.md), error**
 
 ### Errors
 
@@ -427,7 +731,7 @@ func main() {
 
 ### Response
 
-**[*operations.PatchV1ChangesChangeIDIdentitiesIdentityIDResponse](../../models/operations/patchv1changeschangeididentitiesidentityidresponse.md), error**
+**[*operations.UpdateChangeIdentityResponse](../../models/operations/updatechangeidentityresponse.md), error**
 
 ### Errors
 
@@ -436,9 +740,58 @@ func main() {
 | sdkerrors.ErrorEntity | 400                   | application/json      |
 | sdkerrors.SDKError    | 4XX, 5XX              | \*/\*                 |
 
-## CreateEvent
+## Get
 
-Create a change event
+Fetch the details of a scheduled maintenance event.
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"firehydrant"
+	"context"
+	"log"
+)
+
+func main() {
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Changes.Get(ctx, "<id>")
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.ScheduledMaintenanceEntity != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `scheduledMaintenanceID`                                 | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
+
+### Response
+
+**[*operations.GetScheduledMaintenanceResponse](../../models/operations/getscheduledmaintenanceresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## UpdateScheduledMaintenance
+
+Change the conditions of a scheduled maintenance event, including updating any status page announcements of changes.
 
 ### Example Usage
 
@@ -458,13 +811,11 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Changes.CreateEvent(ctx, components.PostV1ChangesEvents{
-        Summary: "<value>",
-    })
+    res, err := s.Changes.UpdateScheduledMaintenance(ctx, "<id>", components.PatchV1ScheduledMaintenancesScheduledMaintenanceID{})
     if err != nil {
         log.Fatal(err)
     }
-    if res.ChangeEventEntity != nil {
+    if res.ScheduledMaintenanceEntity != nil {
         // handle response
     }
 }
@@ -472,214 +823,16 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
-| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| `ctx`                                                                            | [context.Context](https://pkg.go.dev/context#Context)                            | :heavy_check_mark:                                                               | The context to use for the request.                                              |
-| `request`                                                                        | [components.PostV1ChangesEvents](../../models/components/postv1changesevents.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
-| `opts`                                                                           | [][operations.Option](../../models/operations/option.md)                         | :heavy_minus_sign:                                                               | The options for this request.                                                    |
+| Parameter                                                                                                                                      | Type                                                                                                                                           | Required                                                                                                                                       | Description                                                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                                                                          | :heavy_check_mark:                                                                                                                             | The context to use for the request.                                                                                                            |
+| `scheduledMaintenanceID`                                                                                                                       | *string*                                                                                                                                       | :heavy_check_mark:                                                                                                                             | N/A                                                                                                                                            |
+| `patchV1ScheduledMaintenancesScheduledMaintenanceID`                                                                                           | [components.PatchV1ScheduledMaintenancesScheduledMaintenanceID](../../models/components/patchv1scheduledmaintenancesscheduledmaintenanceid.md) | :heavy_check_mark:                                                                                                                             | N/A                                                                                                                                            |
+| `opts`                                                                                                                                         | [][operations.Option](../../models/operations/option.md)                                                                                       | :heavy_minus_sign:                                                                                                                             | The options for this request.                                                                                                                  |
 
 ### Response
 
-**[*operations.PostV1ChangesEventsResponse](../../models/operations/postv1changeseventsresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## ListEvents
-
-List change events for the organization. Note: Not all information is included on a change event like attachments and related changes. You must fetch a change event separately to retrieve all of the information about it
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"firehydrant"
-	"context"
-	"firehydrant/models/operations"
-	"log"
-)
-
-func main() {
-    s := firehydrant.New(
-        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    ctx := context.Background()
-    res, err := s.Changes.ListEvents(ctx, operations.GetV1ChangesEventsRequest{})
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.ChangeEventSlimEntityPaginated != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
-| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `ctx`                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                        | :heavy_check_mark:                                                                           | The context to use for the request.                                                          |
-| `request`                                                                                    | [operations.GetV1ChangesEventsRequest](../../models/operations/getv1changeseventsrequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
-| `opts`                                                                                       | [][operations.Option](../../models/operations/option.md)                                     | :heavy_minus_sign:                                                                           | The options for this request.                                                                |
-
-### Response
-
-**[*operations.GetV1ChangesEventsResponse](../../models/operations/getv1changeseventsresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## DeleteEvent
-
-Delete a change event
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"firehydrant"
-	"context"
-	"log"
-)
-
-func main() {
-    s := firehydrant.New(
-        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    ctx := context.Background()
-    res, err := s.Changes.DeleteEvent(ctx, "<id>")
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
-| `changeEventID`                                          | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
-| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
-
-### Response
-
-**[*operations.DeleteV1ChangesEventsChangeEventIDResponse](../../models/operations/deletev1changeseventschangeeventidresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## UpdateEvent
-
-Update a change event
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"firehydrant"
-	"context"
-	"firehydrant/models/components"
-	"log"
-)
-
-func main() {
-    s := firehydrant.New(
-        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    ctx := context.Background()
-    res, err := s.Changes.UpdateEvent(ctx, "<id>", components.PatchV1ChangesEventsChangeEventID{})
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.ChangeEventEntity != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
-| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                                        | [context.Context](https://pkg.go.dev/context#Context)                                                        | :heavy_check_mark:                                                                                           | The context to use for the request.                                                                          |
-| `changeEventID`                                                                                              | *string*                                                                                                     | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
-| `patchV1ChangesEventsChangeEventID`                                                                          | [components.PatchV1ChangesEventsChangeEventID](../../models/components/patchv1changeseventschangeeventid.md) | :heavy_check_mark:                                                                                           | N/A                                                                                                          |
-| `opts`                                                                                                       | [][operations.Option](../../models/operations/option.md)                                                     | :heavy_minus_sign:                                                                                           | The options for this request.                                                                                |
-
-### Response
-
-**[*operations.PatchV1ChangesEventsChangeEventIDResponse](../../models/operations/patchv1changeseventschangeeventidresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## GetEvent
-
-Retrieve a change event
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"firehydrant"
-	"context"
-	"log"
-)
-
-func main() {
-    s := firehydrant.New(
-        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    ctx := context.Background()
-    res, err := s.Changes.GetEvent(ctx, "<id>")
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.ChangeEventEntity != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
-| `changeEventID`                                          | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
-| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
-
-### Response
-
-**[*operations.GetV1ChangesEventsChangeEventIDResponse](../../models/operations/getv1changeseventschangeeventidresponse.md), error**
+**[*operations.UpdateScheduledMaintenanceResponse](../../models/operations/updatescheduledmaintenanceresponse.md), error**
 
 ### Errors
 

@@ -1,6 +1,6 @@
 # Data
 
-Additional error data
+The event's payload
 
 
 ## Fields

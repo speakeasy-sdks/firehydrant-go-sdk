@@ -1,9 +1,0 @@
-# PostV1TeamsTeamIDOnCallSchedulesRequest
-
-
-## Fields
-
-| Field                                                                                                      | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `TeamID`                                                                                                   | *string*                                                                                                   | :heavy_check_mark:                                                                                         | N/A                                                                                                        |
-| `PostV1TeamsTeamIDOnCallSchedules`                                                                         | [components.PostV1TeamsTeamIDOnCallSchedules](../../models/components/postv1teamsteamidoncallschedules.md) | :heavy_check_mark:                                                                                         | N/A                                                                                                        |

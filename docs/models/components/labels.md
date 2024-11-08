@@ -1,6 +1,6 @@
 # Labels
 
-An object of label key and values
+Arbitrary key:value pairs of labels.
 
 
 ## Fields

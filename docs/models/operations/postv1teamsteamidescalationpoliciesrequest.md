@@ -1,9 +1,0 @@
-# PostV1TeamsTeamIDEscalationPoliciesRequest
-
-
-## Fields
-
-| Field                                                                                                            | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
-| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `TeamID`                                                                                                         | *string*                                                                                                         | :heavy_check_mark:                                                                                               | N/A                                                                                                              |
-| `PostV1TeamsTeamIDEscalationPolicies`                                                                            | [components.PostV1TeamsTeamIDEscalationPolicies](../../models/components/postv1teamsteamidescalationpolicies.md) | :heavy_check_mark:                                                                                               | N/A                                                                                                              |

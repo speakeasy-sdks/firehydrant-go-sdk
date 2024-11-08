@@ -7,18 +7,18 @@ import (
 	"fmt"
 )
 
-type IncidentTypeEntityTemplateImpactEntityType string
+type Type string
 
 const (
-	IncidentTypeEntityTemplateImpactEntityTypeEnvironment   IncidentTypeEntityTemplateImpactEntityType = "environment"
-	IncidentTypeEntityTemplateImpactEntityTypeFunctionality IncidentTypeEntityTemplateImpactEntityType = "functionality"
-	IncidentTypeEntityTemplateImpactEntityTypeService       IncidentTypeEntityTemplateImpactEntityType = "service"
+	TypeEnvironment   Type = "environment"
+	TypeFunctionality Type = "functionality"
+	TypeService       Type = "service"
 )
 
-func (e IncidentTypeEntityTemplateImpactEntityType) ToPointer() *IncidentTypeEntityTemplateImpactEntityType {
+func (e Type) ToPointer() *Type {
 	return &e
 }
-func (e *IncidentTypeEntityTemplateImpactEntityType) UnmarshalJSON(data []byte) error {
+func (e *Type) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -29,19 +29,19 @@ func (e *IncidentTypeEntityTemplateImpactEntityType) UnmarshalJSON(data []byte) 
 	case "functionality":
 		fallthrough
 	case "service":
-		*e = IncidentTypeEntityTemplateImpactEntityType(v)
+		*e = Type(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for IncidentTypeEntityTemplateImpactEntityType: %v", v)
+		return fmt.Errorf("invalid value for Type: %v", v)
 	}
 }
 
 type IncidentTypeEntityTemplateImpactEntity struct {
-	ID            *string                                     `json:"id,omitempty"`
-	Name          *string                                     `json:"name,omitempty"`
-	ConditionID   *string                                     `json:"condition_id,omitempty"`
-	ConditionName *string                                     `json:"condition_name,omitempty"`
-	Type          *IncidentTypeEntityTemplateImpactEntityType `json:"type,omitempty"`
+	ID            *string `json:"id,omitempty"`
+	Name          *string `json:"name,omitempty"`
+	ConditionID   *string `json:"condition_id,omitempty"`
+	ConditionName *string `json:"condition_name,omitempty"`
+	Type          *Type   `json:"type,omitempty"`
 }
 
 func (o *IncidentTypeEntityTemplateImpactEntity) GetID() *string {
@@ -72,7 +72,7 @@ func (o *IncidentTypeEntityTemplateImpactEntity) GetConditionName() *string {
 	return o.ConditionName
 }
 
-func (o *IncidentTypeEntityTemplateImpactEntity) GetType() *IncidentTypeEntityTemplateImpactEntityType {
+func (o *IncidentTypeEntityTemplateImpactEntity) GetType() *Type {
 	if o == nil {
 		return nil
 	}

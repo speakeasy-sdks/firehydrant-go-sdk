@@ -25,15 +25,16 @@ func newZendesk(sdkConfig sdkConfiguration) *Zendesk {
 	}
 }
 
-func (s *Zendesk) Search(ctx context.Context, ticketID string, include *string, opts ...operations.Option) (*operations.GetV1IntegrationsZendeskSearchResponse, error) {
+// SearchTickets - Search for Zendesk tickets
+func (s *Zendesk) SearchTickets(ctx context.Context, ticketID string, include *string, opts ...operations.Option) (*operations.SearchZendeskTicketsResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "getV1IntegrationsZendeskSearch",
+		OperationID:    "searchZendeskTickets",
 		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
-	request := operations.GetV1IntegrationsZendeskSearchRequest{
+	request := operations.SearchZendeskTicketsRequest{
 		TicketID: ticketID,
 		Include:  include,
 	}
@@ -167,7 +168,7 @@ func (s *Zendesk) Search(ctx context.Context, ticketID string, include *string, 
 		}
 	}
 
-	res := &operations.GetV1IntegrationsZendeskSearchResponse{
+	res := &operations.SearchZendeskTicketsResponse{
 		HTTPMeta: components.HTTPMetadata{
 			Request:  req,
 			Response: httpRes,

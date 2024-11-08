@@ -3,67 +3,15 @@
 
 ## Overview
 
-Operations about environments
+Operations related to Environments
 
 ### Available Operations
 
+* [List](#list) - List environments
 * [Create](#create) - Create an environment
-* [List](#list) - List all environments
-* [Archive](#archive) - Archive an environment
+* [Get](#get) - Get an environment
+* [Delete](#delete) - Archive an environment
 * [Update](#update) - Update an environment
-* [Get](#get) - Retrieve a single environment
-
-## Create
-
-Creates an environment for the organization
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"firehydrant"
-	"context"
-	"firehydrant/models/components"
-	"log"
-)
-
-func main() {
-    s := firehydrant.New(
-        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    ctx := context.Background()
-    res, err := s.Environments.Create(ctx, components.PostV1Environments{
-        Name: "<value>",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.EnvironmentEntryEntity != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `ctx`                                                                          | [context.Context](https://pkg.go.dev/context#Context)                          | :heavy_check_mark:                                                             | The context to use for the request.                                            |
-| `request`                                                                      | [components.PostV1Environments](../../models/components/postv1environments.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `opts`                                                                         | [][operations.Option](../../models/operations/option.md)                       | :heavy_minus_sign:                                                             | The options for this request.                                                  |
-
-### Response
-
-**[*operations.PostV1EnvironmentsResponse](../../models/operations/postv1environmentsresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
 ## List
 
@@ -109,7 +57,7 @@ func main() {
 
 ### Response
 
-**[*operations.GetV1EnvironmentsResponse](../../models/operations/getv1environmentsresponse.md), error**
+**[*operations.ListEnvironmentsResponse](../../models/operations/listenvironmentsresponse.md), error**
 
 ### Errors
 
@@ -117,7 +65,108 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## Archive
+## Create
+
+Creates an environment for the organization
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"firehydrant"
+	"context"
+	"firehydrant/models/components"
+	"log"
+)
+
+func main() {
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Environments.Create(ctx, components.PostV1Environments{
+        Name: "<value>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.EnvironmentEntryEntity != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `ctx`                                                                          | [context.Context](https://pkg.go.dev/context#Context)                          | :heavy_check_mark:                                                             | The context to use for the request.                                            |
+| `request`                                                                      | [components.PostV1Environments](../../models/components/postv1environments.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+| `opts`                                                                         | [][operations.Option](../../models/operations/option.md)                       | :heavy_minus_sign:                                                             | The options for this request.                                                  |
+
+### Response
+
+**[*operations.CreateEnvironmentResponse](../../models/operations/createenvironmentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## Get
+
+Retrieves a single environment by ID
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"firehydrant"
+	"context"
+	"log"
+)
+
+func main() {
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Environments.Get(ctx, "<id>")
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.EnvironmentEntryEntity != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `environmentID`                                          | *string*                                                 | :heavy_check_mark:                                       | Environment UUID                                         |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
+
+### Response
+
+**[*operations.GetEnvironmentResponse](../../models/operations/getenvironmentresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## Delete
 
 Archive an environment
 
@@ -138,7 +187,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Environments.Archive(ctx, "<id>")
+    res, err := s.Environments.Delete(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -158,7 +207,7 @@ func main() {
 
 ### Response
 
-**[*operations.DeleteV1EnvironmentsEnvironmentIDResponse](../../models/operations/deletev1environmentsenvironmentidresponse.md), error**
+**[*operations.DeleteEnvironmentResponse](../../models/operations/deleteenvironmentresponse.md), error**
 
 ### Errors
 
@@ -211,56 +260,7 @@ func main() {
 
 ### Response
 
-**[*operations.PatchV1EnvironmentsEnvironmentIDResponse](../../models/operations/patchv1environmentsenvironmentidresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## Get
-
-Retrieves a single environment by ID
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"firehydrant"
-	"context"
-	"log"
-)
-
-func main() {
-    s := firehydrant.New(
-        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    ctx := context.Background()
-    res, err := s.Environments.Get(ctx, "<id>")
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.EnvironmentEntryEntity != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
-| `environmentID`                                          | *string*                                                 | :heavy_check_mark:                                       | Environment UUID                                         |
-| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
-
-### Response
-
-**[*operations.GetV1EnvironmentsEnvironmentIDResponse](../../models/operations/getv1environmentsenvironmentidresponse.md), error**
+**[*operations.UpdateEnvironmentResponse](../../models/operations/updateenvironmentresponse.md), error**
 
 ### Errors
 

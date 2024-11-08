@@ -2,7 +2,7 @@
 
 package components
 
-type PutV1PostMortemsQuestionsQuestions struct {
+type Questions struct {
 	// ID of a question
 	ID *string `json:"id,omitempty"`
 	// title of a question
@@ -11,21 +11,21 @@ type PutV1PostMortemsQuestionsQuestions struct {
 	Tooltip *string `json:"tooltip,omitempty"`
 }
 
-func (o *PutV1PostMortemsQuestionsQuestions) GetID() *string {
+func (o *Questions) GetID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.ID
 }
 
-func (o *PutV1PostMortemsQuestionsQuestions) GetTitle() *string {
+func (o *Questions) GetTitle() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Title
 }
 
-func (o *PutV1PostMortemsQuestionsQuestions) GetTooltip() *string {
+func (o *Questions) GetTooltip() *string {
 	if o == nil {
 		return nil
 	}
@@ -34,8 +34,8 @@ func (o *PutV1PostMortemsQuestionsQuestions) GetTooltip() *string {
 
 // PutV1PostMortemsQuestions - Update the questions configured to be provided and filled out on future retrospective reports.
 type PutV1PostMortemsQuestions struct {
-	MakeSwaggerWork *string                              `json:"_make_swagger_work_,omitempty"`
-	Questions       []PutV1PostMortemsQuestionsQuestions `json:"questions,omitempty"`
+	MakeSwaggerWork *string     `json:"_make_swagger_work_,omitempty"`
+	Questions       []Questions `json:"questions,omitempty"`
 }
 
 func (o *PutV1PostMortemsQuestions) GetMakeSwaggerWork() *string {
@@ -45,7 +45,7 @@ func (o *PutV1PostMortemsQuestions) GetMakeSwaggerWork() *string {
 	return o.MakeSwaggerWork
 }
 
-func (o *PutV1PostMortemsQuestions) GetQuestions() []PutV1PostMortemsQuestionsQuestions {
+func (o *PutV1PostMortemsQuestions) GetQuestions() []Questions {
 	if o == nil {
 		return nil
 	}

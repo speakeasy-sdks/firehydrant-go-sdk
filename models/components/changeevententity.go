@@ -34,7 +34,7 @@ type ChangeEventEntity struct {
 	Attachments []ChangeEventEntityAttachments `json:"attachments,omitempty"`
 	// An object of label key and values
 	Labels   *ChangeEventEntityLabels `json:"labels,omitempty"`
-	Services []ServiceEntity          `json:"services,omitempty"`
+	Services []ServiceEntityLite      `json:"services,omitempty"`
 }
 
 func (c ChangeEventEntity) MarshalJSON() ([]byte, error) {
@@ -160,7 +160,7 @@ func (o *ChangeEventEntity) GetLabels() *ChangeEventEntityLabels {
 	return o.Labels
 }
 
-func (o *ChangeEventEntity) GetServices() []ServiceEntity {
+func (o *ChangeEventEntity) GetServices() []ServiceEntityLite {
 	if o == nil {
 		return nil
 	}

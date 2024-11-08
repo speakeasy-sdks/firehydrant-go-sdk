@@ -1,0 +1,9 @@
+# ListEntitlementsResponse
+
+
+## Fields
+
+| Field                                                                                           | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                                      | [components.HTTPMetadata](../../models/components/httpmetadata.md)                              | :heavy_check_mark:                                                                              | N/A                                                                                             |
+| `EntitlementEntityPaginated`                                                                    | [*components.EntitlementEntityPaginated](../../models/components/entitlemententitypaginated.md) | :heavy_minus_sign:                                                                              | Retrieve all entitlements                                                                       |

@@ -9,19 +9,19 @@ import (
 	"time"
 )
 
-type ImportsImportEntityState string
+type State string
 
 const (
-	ImportsImportEntityStatePreprocessing  ImportsImportEntityState = "preprocessing"
-	ImportsImportEntityStateReadyForImport ImportsImportEntityState = "ready_for_import"
-	ImportsImportEntityStateImporting      ImportsImportEntityState = "importing"
-	ImportsImportEntityStateCompleted      ImportsImportEntityState = "completed"
+	StatePreprocessing  State = "preprocessing"
+	StateReadyForImport State = "ready_for_import"
+	StateImporting      State = "importing"
+	StateCompleted      State = "completed"
 )
 
-func (e ImportsImportEntityState) ToPointer() *ImportsImportEntityState {
+func (e State) ToPointer() *State {
 	return &e
 }
-func (e *ImportsImportEntityState) UnmarshalJSON(data []byte) error {
+func (e *State) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -34,17 +34,17 @@ func (e *ImportsImportEntityState) UnmarshalJSON(data []byte) error {
 	case "importing":
 		fallthrough
 	case "completed":
-		*e = ImportsImportEntityState(v)
+		*e = State(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for ImportsImportEntityState: %v", v)
+		return fmt.Errorf("invalid value for State: %v", v)
 	}
 }
 
 // ImportsImportEntity - Imports_ImportEntity model
 type ImportsImportEntity struct {
-	State     *ImportsImportEntityState `json:"state,omitempty"`
-	UpdatedAt *time.Time                `json:"updated_at,omitempty"`
+	State     *State     `json:"state,omitempty"`
+	UpdatedAt *time.Time `json:"updated_at,omitempty"`
 }
 
 func (i ImportsImportEntity) MarshalJSON() ([]byte, error) {
@@ -58,7 +58,7 @@ func (i *ImportsImportEntity) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-func (o *ImportsImportEntity) GetState() *ImportsImportEntityState {
+func (o *ImportsImportEntity) GetState() *State {
 	if o == nil {
 		return nil
 	}

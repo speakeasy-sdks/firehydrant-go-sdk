@@ -7,8 +7,8 @@ import (
 	"time"
 )
 
-// Labels - An object of label key and values
-type Labels struct {
+// ServiceEntityLabels - An object of label key and values
+type ServiceEntityLabels struct {
 }
 
 // ManagedBySettings - Indicates the settings of the catalog that manages this service
@@ -26,11 +26,11 @@ type ServiceEntity struct {
 	UpdatedAt     *time.Time `json:"updated_at,omitempty"`
 	AllowedParams []string   `json:"allowed_params,omitempty"`
 	// An object of label key and values
-	Labels *Labels `json:"labels,omitempty"`
+	Labels                *ServiceEntityLabels `json:"labels,omitempty"`
+	AlertOnAdd            *bool                `json:"alert_on_add,omitempty"`
+	AutoAddRespondingTeam *bool                `json:"auto_add_responding_team,omitempty"`
 	// List of active incident guids
-	ActiveIncidents       []string `json:"active_incidents,omitempty"`
-	AlertOnAdd            *bool    `json:"alert_on_add,omitempty"`
-	AutoAddRespondingTeam *bool    `json:"auto_add_responding_team,omitempty"`
+	ActiveIncidents []string `json:"active_incidents,omitempty"`
 	// List of checklists associated with a service
 	Checklists      []ChecklistTemplateEntity `json:"checklists,omitempty"`
 	CompletedChecks *int                      `json:"completed_checks,omitempty"`
@@ -44,13 +44,12 @@ type ServiceEntity struct {
 	// If set, this field indicates that the service is managed by an integration and thus cannot be set manually
 	ManagedBy *string `json:"managed_by,omitempty"`
 	// Indicates the settings of the catalog that manages this service
-	ManagedBySettings *ManagedBySettings `json:"managed_by_settings,omitempty"`
-	// TeamEntity model
-	Owner                     *TeamEntity `json:"owner,omitempty"`
-	ServiceChecklistUpdatedAt *time.Time  `json:"service_checklist_updated_at,omitempty"`
+	ManagedBySettings         *ManagedBySettings `json:"managed_by_settings,omitempty"`
+	Owner                     *TeamEntityLite    `json:"owner,omitempty"`
+	ServiceChecklistUpdatedAt *time.Time         `json:"service_checklist_updated_at,omitempty"`
 	// List of teams attached to the service
-	Teams     []TeamEntity  `json:"teams,omitempty"`
-	UpdatedBy *AuthorEntity `json:"updated_by,omitempty"`
+	Teams     []TeamEntityLite `json:"teams,omitempty"`
+	UpdatedBy *AuthorEntity    `json:"updated_by,omitempty"`
 }
 
 func (s ServiceEntity) MarshalJSON() ([]byte, error) {
@@ -120,18 +119,11 @@ func (o *ServiceEntity) GetAllowedParams() []string {
 	return o.AllowedParams
 }
 
-func (o *ServiceEntity) GetLabels() *Labels {
+func (o *ServiceEntity) GetLabels() *ServiceEntityLabels {
 	if o == nil {
 		return nil
 	}
 	return o.Labels
-}
-
-func (o *ServiceEntity) GetActiveIncidents() []string {
-	if o == nil {
-		return nil
-	}
-	return o.ActiveIncidents
 }
 
 func (o *ServiceEntity) GetAlertOnAdd() *bool {
@@ -146,6 +138,13 @@ func (o *ServiceEntity) GetAutoAddRespondingTeam() *bool {
 		return nil
 	}
 	return o.AutoAddRespondingTeam
+}
+
+func (o *ServiceEntity) GetActiveIncidents() []string {
+	if o == nil {
+		return nil
+	}
+	return o.ActiveIncidents
 }
 
 func (o *ServiceEntity) GetChecklists() []ChecklistTemplateEntity {
@@ -204,7 +203,7 @@ func (o *ServiceEntity) GetManagedBySettings() *ManagedBySettings {
 	return o.ManagedBySettings
 }
 
-func (o *ServiceEntity) GetOwner() *TeamEntity {
+func (o *ServiceEntity) GetOwner() *TeamEntityLite {
 	if o == nil {
 		return nil
 	}
@@ -218,7 +217,7 @@ func (o *ServiceEntity) GetServiceChecklistUpdatedAt() *time.Time {
 	return o.ServiceChecklistUpdatedAt
 }
 
-func (o *ServiceEntity) GetTeams() []TeamEntity {
+func (o *ServiceEntity) GetTeams() []TeamEntityLite {
 	if o == nil {
 		return nil
 	}

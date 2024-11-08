@@ -1,0 +1,9 @@
+# CreateIncidentNoteRequest
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `IncidentID`                                                                                           | *string*                                                                                               | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `PostV1IncidentsIncidentIDNotes`                                                                       | [components.PostV1IncidentsIncidentIDNotes](../../models/components/postv1incidentsincidentidnotes.md) | :heavy_check_mark:                                                                                     | N/A                                                                                                    |

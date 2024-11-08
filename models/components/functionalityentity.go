@@ -24,18 +24,17 @@ type FunctionalityEntity struct {
 	// List of active incident guids
 	ActiveIncidents []string `json:"active_incidents,omitempty"`
 	// List of links attached to this functionality.
-	Links []LinksEntity `json:"links,omitempty"`
-	// TeamEntity model
-	Owner                 *TeamEntity   `json:"owner,omitempty"`
-	AlertOnAdd            *bool         `json:"alert_on_add,omitempty"`
-	AutoAddRespondingTeam *bool         `json:"auto_add_responding_team,omitempty"`
-	UpdatedBy             *AuthorEntity `json:"updated_by,omitempty"`
+	Links                 []LinksEntity   `json:"links,omitempty"`
+	Owner                 *TeamEntityLite `json:"owner,omitempty"`
+	AlertOnAdd            *bool           `json:"alert_on_add,omitempty"`
+	AutoAddRespondingTeam *bool           `json:"auto_add_responding_team,omitempty"`
+	UpdatedBy             *AuthorEntity   `json:"updated_by,omitempty"`
 	// Services this functionality provides
-	Services []ServiceEntity `json:"services,omitempty"`
+	Services []ServiceEntityLite `json:"services,omitempty"`
 	// Information about known linkages to representations of services outside of FireHydrant.
 	ExternalResources []ExternalResourceEntity `json:"external_resources,omitempty"`
 	// List of teams attached to the functionality
-	Teams []TeamEntity `json:"teams,omitempty"`
+	Teams []TeamEntityLite `json:"teams,omitempty"`
 }
 
 func (f FunctionalityEntity) MarshalJSON() ([]byte, error) {
@@ -112,7 +111,7 @@ func (o *FunctionalityEntity) GetLinks() []LinksEntity {
 	return o.Links
 }
 
-func (o *FunctionalityEntity) GetOwner() *TeamEntity {
+func (o *FunctionalityEntity) GetOwner() *TeamEntityLite {
 	if o == nil {
 		return nil
 	}
@@ -140,7 +139,7 @@ func (o *FunctionalityEntity) GetUpdatedBy() *AuthorEntity {
 	return o.UpdatedBy
 }
 
-func (o *FunctionalityEntity) GetServices() []ServiceEntity {
+func (o *FunctionalityEntity) GetServices() []ServiceEntityLite {
 	if o == nil {
 		return nil
 	}
@@ -154,7 +153,7 @@ func (o *FunctionalityEntity) GetExternalResources() []ExternalResourceEntity {
 	return o.ExternalResources
 }
 
-func (o *FunctionalityEntity) GetTeams() []TeamEntity {
+func (o *FunctionalityEntity) GetTeams() []TeamEntityLite {
 	if o == nil {
 		return nil
 	}

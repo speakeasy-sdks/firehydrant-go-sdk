@@ -15,7 +15,7 @@ import (
 
 // ServerList contains the list of servers available to the SDK
 var ServerList = []string{
-	"https://api.firehydrant.io",
+	"https://api.firehydrant.io/",
 }
 
 // HTTPClient provides an interface for suplying the SDK with a custom HTTP client
@@ -68,93 +68,59 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 }
 
 type FireHydrant struct {
-	// Operations about pings
-	Ping *Ping
-	// Operations about environments
-	Environments *Environments
-	// Operations about services
-	Services *Services
-	// Operations about service_dependencies
-	ServiceDependencies *ServiceDependencies
-	// Operations about functionalities
-	Functionalities *Functionalities
-	// Operations about teams
-	Teams *Teams
-	// Operations about changes
-	Changes     *Changes
-	ChangeTypes *ChangeTypes
-	// Operations about entitlements
-	Entitlements *Entitlements
-	// Operations about incidents
+	AccountSettings *AccountSettings
+	// Operations related to Incidents
 	Incidents *Incidents
-	// Operations about incident_roles
-	IncidentRoles *IncidentRoles
-	// Operations about incident_tags
-	IncidentTags  *IncidentTags
-	IncidentTypes *IncidentTypes
-	// Operations about integrations
-	Integrations *Integrations
-	// Operations about users
-	Users       *Users
-	CurrentUser *CurrentUser
-	// Operations about reports
-	Reports *Reports
-	// Operations about metrics
-	Metrics *Metrics
-	// Operations about runbooks
-	Runbooks *Runbooks
-	// Operations about runbook_audits
-	RunbookAudits   *RunbookAudits
-	NuncConnections *NuncConnections
-	// Operations about nuncs
-	Nunc *Nunc
-	// Operations about saved_searches
-	SavedSearches *SavedSearches
-	// Operations about lifecycles
-	Lifecycles *Lifecycles
-	// Operations about priorities
-	Priorities *Priorities
-	// Operations about severities
-	Severities *Severities
-	// Operations about severity_matrices
-	SeverityMatrix        *SeverityMatrix
-	ScheduledMaintenances *ScheduledMaintenances
-	// Operations about schedules
-	Schedules *Schedules
-	// Operations about infrastructures
-	Infrastructures       *Infrastructures
-	StatusUpdateTemplates *StatusUpdateTemplates
-	CustomFields          *CustomFields
-	// Operations about post_mortems
-	PostMortems *PostMortems
-	// Operations about alerts
-	Alerts               *Alerts
-	ProcessingLogEntries *ProcessingLogEntries
-	// Operations about ticketings
-	Ticketing *Ticketing
-	TaskLists *TaskLists
-	// Operations about noauths
-	Noauth *Noauth
-	// Operations about scims
-	Scim *Scim
-	// Operations about catalogs
-	Catalogs *Catalogs
-	// Operations about checklist_templates
+	// Operations related to Alerts
+	Alerts *Alerts
+	// Operations related to Services
+	Services *Services
+	// Operations related to Changes
+	Changes *Changes
+	// Operations related to Tasks
+	Tasks              *Tasks
 	ChecklistTemplates *ChecklistTemplates
-	// Operations about bootstraps
-	Bootstrap *Bootstrap
-	// Operations about form_configurations
-	FormConfigurations *FormConfigurations
-	// Operations about conversations
+	// Operations related to Conversations
 	Conversations *Conversations
-	// Operations about signals
+	// Operations related to Users
+	Users            *Users
+	IncidentSettings *IncidentSettings
+	// Operations related to Environments
+	Environments *Environments
+	// Operations related to Functionalities
+	Functionalities *Functionalities
+	StatusPages     *StatusPages
+	Infrastructures *Infrastructures
+	// Operations related to Integrations
+	Integrations             *Integrations
+	AwsCloudtrailBatchEvents *AwsCloudtrailBatchEvents
+	AwsConnections           *AwsConnections
+	Confluence               *Confluence
+	Slack                    *Slack
+	Statuspage               *Statuspage
+	Zendesk                  *Zendesk
+	MetricsReporting         *MetricsReporting
+	Metrics                  *Metrics
+	System                   *System
+	// Operations related to Retrospectives
+	Retrospectives *Retrospectives
+	// Operations related to Runbooks
+	Runbooks     *Runbooks
+	Maintenances *Maintenances
+	Teams        *Teams
+	Scim         *Scim
+	// Operations related to Signals
 	Signals *Signals
-	// Operations about signals_on_calls
-	SignalsOnCall *SignalsOnCall
-	// Operations about webhooks
+	// Operations related to Communication
+	Communication         *Communication
+	StatusUpdateTemplates *StatusUpdateTemplates
+	OnCallSchedules       *OnCallSchedules
+	TicketingPriorities   *TicketingPriorities
+	Ticketing             *Ticketing
+	ProjectConfigurations *ProjectConfigurations
+	Tickets               *Tickets
+	// Operations related to Webhooks
 	Webhooks *Webhooks
-	// Operations about ais
-	Ai *Ai
 
 	sdkConfiguration sdkConfiguration
 }
@@ -233,9 +199,9 @@ func New(opts ...SDKOption) *FireHydrant {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "0.0.1",
-			SDKVersion:        "0.2.0",
-			GenVersion:        "2.438.15",
-			UserAgent:         "speakeasy-sdk/go 0.2.0 2.438.15 0.0.1 firehydrant",
+			SDKVersion:        "0.4.4",
+			GenVersion:        "2.455.2",
+			UserAgent:         "speakeasy-sdk/go 0.4.4 2.455.2 0.0.1 firehydrant",
 			Hooks:             hooks.New(),
 		},
 	}
@@ -255,101 +221,81 @@ func New(opts ...SDKOption) *FireHydrant {
 		sdk.sdkConfiguration.ServerURL = serverURL
 	}
 
-	sdk.Ping = newPing(sdk.sdkConfiguration)
-
-	sdk.Environments = newEnvironments(sdk.sdkConfiguration)
-
-	sdk.Services = newServices(sdk.sdkConfiguration)
-
-	sdk.ServiceDependencies = newServiceDependencies(sdk.sdkConfiguration)
-
-	sdk.Functionalities = newFunctionalities(sdk.sdkConfiguration)
-
-	sdk.Teams = newTeams(sdk.sdkConfiguration)
-
-	sdk.Changes = newChanges(sdk.sdkConfiguration)
-
-	sdk.ChangeTypes = newChangeTypes(sdk.sdkConfiguration)
-
-	sdk.Entitlements = newEntitlements(sdk.sdkConfiguration)
+	sdk.AccountSettings = newAccountSettings(sdk.sdkConfiguration)
 
 	sdk.Incidents = newIncidents(sdk.sdkConfiguration)
 
-	sdk.IncidentRoles = newIncidentRoles(sdk.sdkConfiguration)
-
-	sdk.IncidentTags = newIncidentTags(sdk.sdkConfiguration)
-
-	sdk.IncidentTypes = newIncidentTypes(sdk.sdkConfiguration)
-
-	sdk.Integrations = newIntegrations(sdk.sdkConfiguration)
-
-	sdk.Users = newUsers(sdk.sdkConfiguration)
-
-	sdk.CurrentUser = newCurrentUser(sdk.sdkConfiguration)
-
-	sdk.Reports = newReports(sdk.sdkConfiguration)
-
-	sdk.Metrics = newMetrics(sdk.sdkConfiguration)
-
-	sdk.Runbooks = newRunbooks(sdk.sdkConfiguration)
-
-	sdk.RunbookAudits = newRunbookAudits(sdk.sdkConfiguration)
-
-	sdk.NuncConnections = newNuncConnections(sdk.sdkConfiguration)
-
-	sdk.Nunc = newNunc(sdk.sdkConfiguration)
-
-	sdk.SavedSearches = newSavedSearches(sdk.sdkConfiguration)
-
-	sdk.Lifecycles = newLifecycles(sdk.sdkConfiguration)
-
-	sdk.Priorities = newPriorities(sdk.sdkConfiguration)
-
-	sdk.Severities = newSeverities(sdk.sdkConfiguration)
-
-	sdk.SeverityMatrix = newSeverityMatrix(sdk.sdkConfiguration)
-
-	sdk.ScheduledMaintenances = newScheduledMaintenances(sdk.sdkConfiguration)
-
-	sdk.Schedules = newSchedules(sdk.sdkConfiguration)
-
-	sdk.Infrastructures = newInfrastructures(sdk.sdkConfiguration)
-
-	sdk.StatusUpdateTemplates = newStatusUpdateTemplates(sdk.sdkConfiguration)
-
-	sdk.CustomFields = newCustomFields(sdk.sdkConfiguration)
-
-	sdk.PostMortems = newPostMortems(sdk.sdkConfiguration)
-
 	sdk.Alerts = newAlerts(sdk.sdkConfiguration)
 
-	sdk.ProcessingLogEntries = newProcessingLogEntries(sdk.sdkConfiguration)
+	sdk.Services = newServices(sdk.sdkConfiguration)
 
-	sdk.Ticketing = newTicketing(sdk.sdkConfiguration)
+	sdk.Changes = newChanges(sdk.sdkConfiguration)
 
-	sdk.TaskLists = newTaskLists(sdk.sdkConfiguration)
-
-	sdk.Noauth = newNoauth(sdk.sdkConfiguration)
-
-	sdk.Scim = newScim(sdk.sdkConfiguration)
-
-	sdk.Catalogs = newCatalogs(sdk.sdkConfiguration)
+	sdk.Tasks = newTasks(sdk.sdkConfiguration)
 
 	sdk.ChecklistTemplates = newChecklistTemplates(sdk.sdkConfiguration)
 
-	sdk.Bootstrap = newBootstrap(sdk.sdkConfiguration)
-
-	sdk.FormConfigurations = newFormConfigurations(sdk.sdkConfiguration)
-
 	sdk.Conversations = newConversations(sdk.sdkConfiguration)
+
+	sdk.Users = newUsers(sdk.sdkConfiguration)
+
+	sdk.IncidentSettings = newIncidentSettings(sdk.sdkConfiguration)
+
+	sdk.Environments = newEnvironments(sdk.sdkConfiguration)
+
+	sdk.Functionalities = newFunctionalities(sdk.sdkConfiguration)
+
+	sdk.StatusPages = newStatusPages(sdk.sdkConfiguration)
+
+	sdk.Infrastructures = newInfrastructures(sdk.sdkConfiguration)
+
+	sdk.Integrations = newIntegrations(sdk.sdkConfiguration)
+
+	sdk.AwsCloudtrailBatchEvents = newAwsCloudtrailBatchEvents(sdk.sdkConfiguration)
+
+	sdk.AwsConnections = newAwsConnections(sdk.sdkConfiguration)
+
+	sdk.Confluence = newConfluence(sdk.sdkConfiguration)
+
+	sdk.Slack = newSlack(sdk.sdkConfiguration)
+
+	sdk.Statuspage = newStatuspage(sdk.sdkConfiguration)
+
+	sdk.Zendesk = newZendesk(sdk.sdkConfiguration)
+
+	sdk.MetricsReporting = newMetricsReporting(sdk.sdkConfiguration)
+
+	sdk.Metrics = newMetrics(sdk.sdkConfiguration)
+
+	sdk.System = newSystem(sdk.sdkConfiguration)
+
+	sdk.Retrospectives = newRetrospectives(sdk.sdkConfiguration)
+
+	sdk.Runbooks = newRunbooks(sdk.sdkConfiguration)
+
+	sdk.Maintenances = newMaintenances(sdk.sdkConfiguration)
+
+	sdk.Teams = newTeams(sdk.sdkConfiguration)
+
+	sdk.Scim = newScim(sdk.sdkConfiguration)
 
 	sdk.Signals = newSignals(sdk.sdkConfiguration)
 
-	sdk.SignalsOnCall = newSignalsOnCall(sdk.sdkConfiguration)
+	sdk.Communication = newCommunication(sdk.sdkConfiguration)
+
+	sdk.StatusUpdateTemplates = newStatusUpdateTemplates(sdk.sdkConfiguration)
+
+	sdk.OnCallSchedules = newOnCallSchedules(sdk.sdkConfiguration)
+
+	sdk.TicketingPriorities = newTicketingPriorities(sdk.sdkConfiguration)
+
+	sdk.Ticketing = newTicketing(sdk.sdkConfiguration)
+
+	sdk.ProjectConfigurations = newProjectConfigurations(sdk.sdkConfiguration)
+
+	sdk.Tickets = newTickets(sdk.sdkConfiguration)
 
 	sdk.Webhooks = newWebhooks(sdk.sdkConfiguration)
-
-	sdk.Ai = newAi(sdk.sdkConfiguration)
 
 	return sdk
 }

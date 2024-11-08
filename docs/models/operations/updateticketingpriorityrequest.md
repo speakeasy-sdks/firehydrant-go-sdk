@@ -1,0 +1,9 @@
+# UpdateTicketingPriorityRequest
+
+
+## Fields
+
+| Field                                                                                              | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `ID`                                                                                               | *string*                                                                                           | :heavy_check_mark:                                                                                 | N/A                                                                                                |
+| `PatchV1TicketingPrioritiesID`                                                                     | [components.PatchV1TicketingPrioritiesID](../../models/components/patchv1ticketingprioritiesid.md) | :heavy_check_mark:                                                                                 | N/A                                                                                                |

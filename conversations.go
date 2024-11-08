@@ -15,7 +15,7 @@ import (
 	"time"
 )
 
-// Conversations - Operations about conversations
+// Conversations - Operations related to Conversations
 type Conversations struct {
 	sdkConfiguration sdkConfiguration
 }
@@ -26,20 +26,21 @@ func newConversations(sdkConfig sdkConfiguration) *Conversations {
 	}
 }
 
-// DeleteReaction - Archive a reaction
-// ALPHA - Archive a reaction
-func (s *Conversations) DeleteReaction(ctx context.Context, reactionID string, conversationID string, commentID string, opts ...operations.Option) (*operations.DeleteV1ConversationsConversationIDCommentsCommentIDReactionsReactionIDResponse, error) {
+// ListComments - List comments for a conversation
+// ALPHA - List all of the comments that have been added to the organization
+func (s *Conversations) ListComments(ctx context.Context, conversationID string, before *time.Time, after *time.Time, sort *operations.Sort, opts ...operations.Option) (*operations.ListConversationCommentsResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "deleteV1ConversationsConversationIdCommentsCommentIdReactionsReactionId",
+		OperationID:    "listConversationComments",
 		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
-	request := operations.DeleteV1ConversationsConversationIDCommentsCommentIDReactionsReactionIDRequest{
-		ReactionID:     reactionID,
+	request := operations.ListConversationCommentsRequest{
+		Before:         before,
+		After:          after,
+		Sort:           sort,
 		ConversationID: conversationID,
-		CommentID:      commentID,
 	}
 
 	o := operations.Options{}
@@ -55,7 +56,7 @@ func (s *Conversations) DeleteReaction(ctx context.Context, reactionID string, c
 	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/v1/conversations/{conversation_id}/comments/{comment_id}/reactions/{reaction_id}", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/v1/conversations/{conversation_id}/comments", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -71,12 +72,16 @@ func (s *Conversations) DeleteReaction(ctx context.Context, reactionID string, c
 		defer cancel()
 	}
 
-	req, err := http.NewRequestWithContext(ctx, "DELETE", opURL, nil)
+	req, err := http.NewRequestWithContext(ctx, "GET", opURL, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 	req.Header.Set("Accept", "*/*")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
+
+	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
+		return nil, fmt.Errorf("error populating query params: %w", err)
+	}
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
@@ -167,7 +172,7 @@ func (s *Conversations) DeleteReaction(ctx context.Context, reactionID string, c
 		}
 	}
 
-	res := &operations.DeleteV1ConversationsConversationIDCommentsCommentIDReactionsReactionIDResponse{
+	res := &operations.ListConversationCommentsResponse{
 		HTTPMeta: components.HTTPMetadata{
 			Request:  req,
 			Response: httpRes,
@@ -175,7 +180,7 @@ func (s *Conversations) DeleteReaction(ctx context.Context, reactionID string, c
 	}
 
 	switch {
-	case httpRes.StatusCode == 204:
+	case httpRes.StatusCode == 200:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:
@@ -196,20 +201,19 @@ func (s *Conversations) DeleteReaction(ctx context.Context, reactionID string, c
 
 }
 
-// CreateReaction - Create a reaction
-// ALPHA - Create a reaction on a comment
-func (s *Conversations) CreateReaction(ctx context.Context, conversationID string, commentID string, postV1ConversationsConversationIDCommentsCommentIDReactions components.PostV1ConversationsConversationIDCommentsCommentIDReactions, opts ...operations.Option) (*operations.PostV1ConversationsConversationIDCommentsCommentIDReactionsResponse, error) {
+// CreateComment - Create a comment for a conversation
+// ALPHA - Creates a comment for a project
+func (s *Conversations) CreateComment(ctx context.Context, conversationID string, postV1ConversationsConversationIDComments components.PostV1ConversationsConversationIDComments, opts ...operations.Option) (*operations.CreateConversationCommentResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "postV1ConversationsConversationIdCommentsCommentIdReactions",
+		OperationID:    "createConversationComment",
 		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
-	request := operations.PostV1ConversationsConversationIDCommentsCommentIDReactionsRequest{
+	request := operations.CreateConversationCommentRequest{
 		ConversationID: conversationID,
-		CommentID:      commentID,
-		PostV1ConversationsConversationIDCommentsCommentIDReactions: postV1ConversationsConversationIDCommentsCommentIDReactions,
+		PostV1ConversationsConversationIDComments: postV1ConversationsConversationIDComments,
 	}
 
 	o := operations.Options{}
@@ -225,12 +229,12 @@ func (s *Conversations) CreateReaction(ctx context.Context, conversationID strin
 	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/v1/conversations/{conversation_id}/comments/{comment_id}/reactions", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/v1/conversations/{conversation_id}/comments", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PostV1ConversationsConversationIDCommentsCommentIDReactions", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PostV1ConversationsConversationIDComments", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -343,7 +347,7 @@ func (s *Conversations) CreateReaction(ctx context.Context, conversationID strin
 		}
 	}
 
-	res := &operations.PostV1ConversationsConversationIDCommentsCommentIDReactionsResponse{
+	res := &operations.CreateConversationCommentResponse{
 		HTTPMeta: components.HTTPMetadata{
 			Request:  req,
 			Response: httpRes,
@@ -372,19 +376,19 @@ func (s *Conversations) CreateReaction(ctx context.Context, conversationID strin
 
 }
 
-// ListReactions - List all reactions for a comment
-// ALPHA - List all of the reactions that have been added to a comment
-func (s *Conversations) ListReactions(ctx context.Context, conversationID string, commentID string, opts ...operations.Option) (*operations.GetV1ConversationsConversationIDCommentsCommentIDReactionsResponse, error) {
+// GetComment - Get a conversation comment
+// ALPHA - Retrieves a single comment by ID
+func (s *Conversations) GetComment(ctx context.Context, commentID string, conversationID string, opts ...operations.Option) (*operations.GetConversationCommentResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "getV1ConversationsConversationIdCommentsCommentIdReactions",
+		OperationID:    "getConversationComment",
 		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
-	request := operations.GetV1ConversationsConversationIDCommentsCommentIDReactionsRequest{
-		ConversationID: conversationID,
+	request := operations.GetConversationCommentRequest{
 		CommentID:      commentID,
+		ConversationID: conversationID,
 	}
 
 	o := operations.Options{}
@@ -400,7 +404,7 @@ func (s *Conversations) ListReactions(ctx context.Context, conversationID string
 	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/v1/conversations/{conversation_id}/comments/{comment_id}/reactions", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/v1/conversations/{conversation_id}/comments/{comment_id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -512,7 +516,7 @@ func (s *Conversations) ListReactions(ctx context.Context, conversationID string
 		}
 	}
 
-	res := &operations.GetV1ConversationsConversationIDCommentsCommentIDReactionsResponse{
+	res := &operations.GetConversationCommentResponse{
 		HTTPMeta: components.HTTPMetadata{
 			Request:  req,
 			Response: httpRes,
@@ -541,17 +545,17 @@ func (s *Conversations) ListReactions(ctx context.Context, conversationID string
 
 }
 
-// DeleteComment - Archive a comment
+// DeleteComment - Delete a conversation comment
 // ALPHA - Archive a comment
-func (s *Conversations) DeleteComment(ctx context.Context, commentID string, conversationID string, opts ...operations.Option) (*operations.DeleteV1ConversationsConversationIDCommentsCommentIDResponse, error) {
+func (s *Conversations) DeleteComment(ctx context.Context, commentID string, conversationID string, opts ...operations.Option) (*operations.DeleteConversationCommentResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "deleteV1ConversationsConversationIdCommentsCommentId",
+		OperationID:    "deleteConversationComment",
 		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
-	request := operations.DeleteV1ConversationsConversationIDCommentsCommentIDRequest{
+	request := operations.DeleteConversationCommentRequest{
 		CommentID:      commentID,
 		ConversationID: conversationID,
 	}
@@ -681,7 +685,7 @@ func (s *Conversations) DeleteComment(ctx context.Context, commentID string, con
 		}
 	}
 
-	res := &operations.DeleteV1ConversationsConversationIDCommentsCommentIDResponse{
+	res := &operations.DeleteConversationCommentResponse{
 		HTTPMeta: components.HTTPMetadata{
 			Request:  req,
 			Response: httpRes,
@@ -710,17 +714,17 @@ func (s *Conversations) DeleteComment(ctx context.Context, commentID string, con
 
 }
 
-// UpdateComment - Update a comment
+// UpdateComment - Update a conversation comment
 // ALPHA - Update a comment's attributes
-func (s *Conversations) UpdateComment(ctx context.Context, commentID string, conversationID string, patchV1ConversationsConversationIDCommentsCommentID components.PatchV1ConversationsConversationIDCommentsCommentID, opts ...operations.Option) (*operations.PatchV1ConversationsConversationIDCommentsCommentIDResponse, error) {
+func (s *Conversations) UpdateComment(ctx context.Context, commentID string, conversationID string, patchV1ConversationsConversationIDCommentsCommentID components.PatchV1ConversationsConversationIDCommentsCommentID, opts ...operations.Option) (*operations.UpdateConversationCommentResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "patchV1ConversationsConversationIdCommentsCommentId",
+		OperationID:    "updateConversationComment",
 		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
-	request := operations.PatchV1ConversationsConversationIDCommentsCommentIDRequest{
+	request := operations.UpdateConversationCommentRequest{
 		CommentID:      commentID,
 		ConversationID: conversationID,
 		PatchV1ConversationsConversationIDCommentsCommentID: patchV1ConversationsConversationIDCommentsCommentID,
@@ -857,7 +861,7 @@ func (s *Conversations) UpdateComment(ctx context.Context, commentID string, con
 		}
 	}
 
-	res := &operations.PatchV1ConversationsConversationIDCommentsCommentIDResponse{
+	res := &operations.UpdateConversationCommentResponse{
 		HTTPMeta: components.HTTPMetadata{
 			Request:  req,
 			Response: httpRes,
@@ -886,19 +890,19 @@ func (s *Conversations) UpdateComment(ctx context.Context, commentID string, con
 
 }
 
-// GetComment - Retrieve a single comment
-// ALPHA - Retrieves a single comment by ID
-func (s *Conversations) GetComment(ctx context.Context, commentID string, conversationID string, opts ...operations.Option) (*operations.GetV1ConversationsConversationIDCommentsCommentIDResponse, error) {
+// ListCommentReactions - List reactions for a conversation comment
+// ALPHA - List all of the reactions that have been added to a comment
+func (s *Conversations) ListCommentReactions(ctx context.Context, conversationID string, commentID string, opts ...operations.Option) (*operations.ListConversationCommentReactionsResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "getV1ConversationsConversationIdCommentsCommentId",
+		OperationID:    "listConversationCommentReactions",
 		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
-	request := operations.GetV1ConversationsConversationIDCommentsCommentIDRequest{
-		CommentID:      commentID,
+	request := operations.ListConversationCommentReactionsRequest{
 		ConversationID: conversationID,
+		CommentID:      commentID,
 	}
 
 	o := operations.Options{}
@@ -914,7 +918,7 @@ func (s *Conversations) GetComment(ctx context.Context, commentID string, conver
 	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/v1/conversations/{conversation_id}/comments/{comment_id}", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/v1/conversations/{conversation_id}/comments/{comment_id}/reactions", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -1026,7 +1030,7 @@ func (s *Conversations) GetComment(ctx context.Context, commentID string, conver
 		}
 	}
 
-	res := &operations.GetV1ConversationsConversationIDCommentsCommentIDResponse{
+	res := &operations.ListConversationCommentReactionsResponse{
 		HTTPMeta: components.HTTPMetadata{
 			Request:  req,
 			Response: httpRes,
@@ -1055,19 +1059,20 @@ func (s *Conversations) GetComment(ctx context.Context, commentID string, conver
 
 }
 
-// CreateComment - Create a comment
-// ALPHA - Creates a comment for a project
-func (s *Conversations) CreateComment(ctx context.Context, conversationID string, postV1ConversationsConversationIDComments components.PostV1ConversationsConversationIDComments, opts ...operations.Option) (*operations.PostV1ConversationsConversationIDCommentsResponse, error) {
+// CreateCommentReaction - Create a reaction for a conversation comment
+// ALPHA - Create a reaction on a comment
+func (s *Conversations) CreateCommentReaction(ctx context.Context, conversationID string, commentID string, postV1ConversationsConversationIDCommentsCommentIDReactions components.PostV1ConversationsConversationIDCommentsCommentIDReactions, opts ...operations.Option) (*operations.CreateConversationCommentReactionResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "postV1ConversationsConversationIdComments",
+		OperationID:    "createConversationCommentReaction",
 		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
-	request := operations.PostV1ConversationsConversationIDCommentsRequest{
+	request := operations.CreateConversationCommentReactionRequest{
 		ConversationID: conversationID,
-		PostV1ConversationsConversationIDComments: postV1ConversationsConversationIDComments,
+		CommentID:      commentID,
+		PostV1ConversationsConversationIDCommentsCommentIDReactions: postV1ConversationsConversationIDCommentsCommentIDReactions,
 	}
 
 	o := operations.Options{}
@@ -1083,12 +1088,12 @@ func (s *Conversations) CreateComment(ctx context.Context, conversationID string
 	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/v1/conversations/{conversation_id}/comments", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/v1/conversations/{conversation_id}/comments/{comment_id}/reactions", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
 
-	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PostV1ConversationsConversationIDComments", "json", `request:"mediaType=application/json"`)
+	bodyReader, reqContentType, err := utils.SerializeRequestBody(ctx, request, false, false, "PostV1ConversationsConversationIDCommentsCommentIDReactions", "json", `request:"mediaType=application/json"`)
 	if err != nil {
 		return nil, err
 	}
@@ -1201,7 +1206,7 @@ func (s *Conversations) CreateComment(ctx context.Context, conversationID string
 		}
 	}
 
-	res := &operations.PostV1ConversationsConversationIDCommentsResponse{
+	res := &operations.CreateConversationCommentReactionResponse{
 		HTTPMeta: components.HTTPMetadata{
 			Request:  req,
 			Response: httpRes,
@@ -1230,21 +1235,20 @@ func (s *Conversations) CreateComment(ctx context.Context, conversationID string
 
 }
 
-// ListComments - List all comments
-// ALPHA - List all of the comments that have been added to the organization
-func (s *Conversations) ListComments(ctx context.Context, conversationID string, before *time.Time, after *time.Time, sort *operations.GetV1ConversationsConversationIDCommentsQueryParamSort, opts ...operations.Option) (*operations.GetV1ConversationsConversationIDCommentsResponse, error) {
+// DeleteCommentReaction - Delete a reaction from a conversation comment
+// ALPHA - Archive a reaction
+func (s *Conversations) DeleteCommentReaction(ctx context.Context, reactionID string, conversationID string, commentID string, opts ...operations.Option) (*operations.DeleteConversationCommentReactionResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
-		OperationID:    "getV1ConversationsConversationIdComments",
+		OperationID:    "deleteConversationCommentReaction",
 		OAuth2Scopes:   []string{},
 		SecuritySource: s.sdkConfiguration.Security,
 	}
 
-	request := operations.GetV1ConversationsConversationIDCommentsRequest{
-		Before:         before,
-		After:          after,
-		Sort:           sort,
+	request := operations.DeleteConversationCommentReactionRequest{
+		ReactionID:     reactionID,
 		ConversationID: conversationID,
+		CommentID:      commentID,
 	}
 
 	o := operations.Options{}
@@ -1260,7 +1264,7 @@ func (s *Conversations) ListComments(ctx context.Context, conversationID string,
 	}
 
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
-	opURL, err := utils.GenerateURL(ctx, baseURL, "/v1/conversations/{conversation_id}/comments", request, nil)
+	opURL, err := utils.GenerateURL(ctx, baseURL, "/v1/conversations/{conversation_id}/comments/{comment_id}/reactions/{reaction_id}", request, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error generating URL: %w", err)
 	}
@@ -1276,16 +1280,12 @@ func (s *Conversations) ListComments(ctx context.Context, conversationID string,
 		defer cancel()
 	}
 
-	req, err := http.NewRequestWithContext(ctx, "GET", opURL, nil)
+	req, err := http.NewRequestWithContext(ctx, "DELETE", opURL, nil)
 	if err != nil {
 		return nil, fmt.Errorf("error creating request: %w", err)
 	}
 	req.Header.Set("Accept", "*/*")
 	req.Header.Set("User-Agent", s.sdkConfiguration.UserAgent)
-
-	if err := utils.PopulateQueryParams(ctx, req, request, nil); err != nil {
-		return nil, fmt.Errorf("error populating query params: %w", err)
-	}
 
 	if err := utils.PopulateSecurity(ctx, req, s.sdkConfiguration.Security); err != nil {
 		return nil, err
@@ -1376,7 +1376,7 @@ func (s *Conversations) ListComments(ctx context.Context, conversationID string,
 		}
 	}
 
-	res := &operations.GetV1ConversationsConversationIDCommentsResponse{
+	res := &operations.DeleteConversationCommentReactionResponse{
 		HTTPMeta: components.HTTPMetadata{
 			Request:  req,
 			Response: httpRes,
@@ -1384,7 +1384,7 @@ func (s *Conversations) ListComments(ctx context.Context, conversationID string,
 	}
 
 	switch {
-	case httpRes.StatusCode == 200:
+	case httpRes.StatusCode == 204:
 	case httpRes.StatusCode >= 400 && httpRes.StatusCode < 500:
 		fallthrough
 	case httpRes.StatusCode >= 500 && httpRes.StatusCode < 600:

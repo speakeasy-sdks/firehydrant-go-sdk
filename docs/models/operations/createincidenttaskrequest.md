@@ -1,0 +1,9 @@
+# CreateIncidentTaskRequest
+
+
+## Fields
+
+| Field                                                                                                  | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `IncidentID`                                                                                           | *string*                                                                                               | :heavy_check_mark:                                                                                     | N/A                                                                                                    |
+| `PostV1IncidentsIncidentIDTasks`                                                                       | [components.PostV1IncidentsIncidentIDTasks](../../models/components/postv1incidentsincidentidtasks.md) | :heavy_check_mark:                                                                                     | N/A                                                                                                    |

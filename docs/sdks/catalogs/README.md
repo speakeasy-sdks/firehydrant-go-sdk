@@ -1,63 +1,12 @@
 # Catalogs
-(*Catalogs*)
+(*Services.Catalogs*)
 
 ## Overview
 
-Operations about catalogs
-
 ### Available Operations
 
-* [Refresh](#refresh) - Refresh a catalog.
-* [Ingest](#ingest) - Accept catalog data in the configured format.
-
-## Refresh
-
-Schedules an async task to re-import catalog info and update catalog data accordingly.
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"firehydrant"
-	"context"
-	"log"
-)
-
-func main() {
-    s := firehydrant.New(
-        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    ctx := context.Background()
-    res, err := s.Catalogs.Refresh(ctx, "<id>")
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
-| `catalogID`                                              | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
-| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
-
-### Response
-
-**[*operations.GetV1CatalogsCatalogIDRefreshResponse](../../models/operations/getv1catalogscatalogidrefreshresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+* [Ingest](#ingest) - Ingest service catalog data
+* [Refresh](#refresh) - Refresh a service catalog
 
 ## Ingest
 
@@ -81,7 +30,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Catalogs.Ingest(ctx, "<id>", components.PostV1CatalogsCatalogIDIngest{
+    res, err := s.Services.Catalogs.Ingest(ctx, "<id>", components.PostV1CatalogsCatalogIDIngest{
         Encoding: components.EncodingApplicationJSON,
         Data: "<value>",
     })
@@ -105,7 +54,56 @@ func main() {
 
 ### Response
 
-**[*operations.PostV1CatalogsCatalogIDIngestResponse](../../models/operations/postv1catalogscatalogidingestresponse.md), error**
+**[*operations.IngestCatalogDataResponse](../../models/operations/ingestcatalogdataresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## Refresh
+
+Schedules an async task to re-import catalog info and update catalog data accordingly.
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"firehydrant"
+	"context"
+	"log"
+)
+
+func main() {
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Services.Catalogs.Refresh(ctx, "<id>")
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `catalogID`                                              | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
+
+### Response
+
+**[*operations.RefreshCatalogResponse](../../models/operations/refreshcatalogresponse.md), error**
 
 ### Errors
 

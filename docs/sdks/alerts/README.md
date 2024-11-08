@@ -3,12 +3,15 @@
 
 ## Overview
 
-Operations about alerts
+Operations related to Alerts
 
 ### Available Operations
 
-* [List](#list) - Retrieve all alerts
-* [Get](#get) - Retrieve a single alert
+* [List](#list) - List alerts
+* [Get](#get) - Get an alert
+* [ListForIncident](#listforincident) - List alerts for an incident
+* [Create](#create) - Attach alerts to an incident
+* [ListProcessingLogs](#listprocessinglogs) - List alert processing log entries
 
 ## List
 
@@ -32,7 +35,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Alerts.List(ctx, operations.GetV1AlertsRequest{})
+    res, err := s.Alerts.List(ctx, operations.ListAlertsRequest{})
     if err != nil {
         log.Fatal(err)
     }
@@ -44,15 +47,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
-| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
-| `ctx`                                                                          | [context.Context](https://pkg.go.dev/context#Context)                          | :heavy_check_mark:                                                             | The context to use for the request.                                            |
-| `request`                                                                      | [operations.GetV1AlertsRequest](../../models/operations/getv1alertsrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
-| `opts`                                                                         | [][operations.Option](../../models/operations/option.md)                       | :heavy_minus_sign:                                                             | The options for this request.                                                  |
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `ctx`                                                                        | [context.Context](https://pkg.go.dev/context#Context)                        | :heavy_check_mark:                                                           | The context to use for the request.                                          |
+| `request`                                                                    | [operations.ListAlertsRequest](../../models/operations/listalertsrequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+| `opts`                                                                       | [][operations.Option](../../models/operations/option.md)                     | :heavy_minus_sign:                                                           | The options for this request.                                                |
 
 ### Response
 
-**[*operations.GetV1AlertsResponse](../../models/operations/getv1alertsresponse.md), error**
+**[*operations.ListAlertsResponse](../../models/operations/listalertsresponse.md), error**
 
 ### Errors
 
@@ -101,7 +104,158 @@ func main() {
 
 ### Response
 
-**[*operations.GetV1AlertsAlertIDResponse](../../models/operations/getv1alertsalertidresponse.md), error**
+**[*operations.GetAlertResponse](../../models/operations/getalertresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListForIncident
+
+List alerts that have been attached to an incident
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"firehydrant"
+	"context"
+	"log"
+)
+
+func main() {
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Alerts.ListForIncident(ctx, "<id>")
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.IncidentsAlertEntityPaginated != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `incidentID`                                             | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
+
+### Response
+
+**[*operations.ListIncidentAlertsResponse](../../models/operations/listincidentalertsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## Create
+
+Add an alert to an incident. FireHydrant needs to have ingested the alert from a third party system in order to attach it to the incident.
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"firehydrant"
+	"context"
+	"log"
+)
+
+func main() {
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Alerts.Create(ctx, "<id>", []string{
+        "<value>",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `incidentID`                                             | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `requestBody`                                            | []*string*                                               | :heavy_check_mark:                                       | Array of alert IDs to be assigned to the incident        |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
+
+### Response
+
+**[*operations.CreateIncidentAlertsResponse](../../models/operations/createincidentalertsresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## ListProcessingLogs
+
+Processing Log Entries for a specific alert
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"firehydrant"
+	"context"
+	"firehydrant/models/operations"
+	"log"
+)
+
+func main() {
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Alerts.ListProcessingLogs(ctx, operations.ListAlertProcessingLogsRequest{})
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.AlertsProcessingLogEntryEntityPaginated != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `ctx`                                                                                                  | [context.Context](https://pkg.go.dev/context#Context)                                                  | :heavy_check_mark:                                                                                     | The context to use for the request.                                                                    |
+| `request`                                                                                              | [operations.ListAlertProcessingLogsRequest](../../models/operations/listalertprocessinglogsrequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+| `opts`                                                                                                 | [][operations.Option](../../models/operations/option.md)                                               | :heavy_minus_sign:                                                                                     | The options for this request.                                                                          |
+
+### Response
+
+**[*operations.ListAlertProcessingLogsResponse](../../models/operations/listalertprocessinglogsresponse.md), error**
 
 ### Errors
 

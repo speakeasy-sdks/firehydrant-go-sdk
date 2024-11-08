@@ -1,0 +1,9 @@
+# UpdateSeverityMatrixImpactRequest
+
+
+## Fields
+
+| Field                                                                                                              | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `ImpactID`                                                                                                         | *string*                                                                                                           | :heavy_check_mark:                                                                                                 | N/A                                                                                                                |
+| `PatchV1SeverityMatrixImpactsImpactID`                                                                             | [components.PatchV1SeverityMatrixImpactsImpactID](../../models/components/patchv1severitymatriximpactsimpactid.md) | :heavy_check_mark:                                                                                                 | N/A                                                                                                                |

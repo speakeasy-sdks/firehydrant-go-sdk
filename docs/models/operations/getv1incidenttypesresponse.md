@@ -1,9 +1,0 @@
-# GetV1IncidentTypesResponse
-
-
-## Fields
-
-| Field                                                                                             | Type                                                                                              | Required                                                                                          | Description                                                                                       |
-| ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `HTTPMeta`                                                                                        | [components.HTTPMetadata](../../models/components/httpmetadata.md)                                | :heavy_check_mark:                                                                                | N/A                                                                                               |
-| `IncidentTypeEntityPaginated`                                                                     | [*components.IncidentTypeEntityPaginated](../../models/components/incidenttypeentitypaginated.md) | :heavy_minus_sign:                                                                                | List all of the incident types in the organization                                                |

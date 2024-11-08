@@ -1,0 +1,9 @@
+# CreateChangeIdentityRequest
+
+
+## Fields
+
+| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ChangeID`                                                                                               | *string*                                                                                                 | :heavy_check_mark:                                                                                       | N/A                                                                                                      |
+| `PostV1ChangesChangeIDIdentities`                                                                        | [components.PostV1ChangesChangeIDIdentities](../../models/components/postv1changeschangeididentities.md) | :heavy_check_mark:                                                                                       | N/A                                                                                                      |

@@ -3,68 +3,16 @@
 
 ## Overview
 
-Operations about webhooks
+Operations related to Webhooks
 
 ### Available Operations
 
-* [Create](#create) - Create webhook
-* [List](#list) - Lists webhooks
-* [GetDeliveries](#getdeliveries)
-* [Delete](#delete) - Delete a specific webhook
-* [Update](#update) - Update a specific webhook
-* [Get](#get) - Retrieve a specific webhook
-
-## Create
-
-Create a new webhook
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"firehydrant"
-	"context"
-	"firehydrant/models/components"
-	"log"
-)
-
-func main() {
-    s := firehydrant.New(
-        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    ctx := context.Background()
-    res, err := s.Webhooks.Create(ctx, components.PostV1Webhooks{
-        URL: "https://probable-heating.com/",
-    })
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.WebhooksEntitiesWebhookEntity != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                              | Type                                                                   | Required                                                               | Description                                                            |
-| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| `ctx`                                                                  | [context.Context](https://pkg.go.dev/context#Context)                  | :heavy_check_mark:                                                     | The context to use for the request.                                    |
-| `request`                                                              | [components.PostV1Webhooks](../../models/components/postv1webhooks.md) | :heavy_check_mark:                                                     | The request object to use for the request.                             |
-| `opts`                                                                 | [][operations.Option](../../models/operations/option.md)               | :heavy_minus_sign:                                                     | The options for this request.                                          |
-
-### Response
-
-**[*operations.PostV1WebhooksResponse](../../models/operations/postv1webhooksresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+* [List](#list) - List webhooks
+* [Create](#create) - Create a webhook
+* [Get](#get) - Get a webhook
+* [Delete](#delete) - Delete a webhook
+* [Update](#update) - Update a webhook
+* [ListDeliveries](#listdeliveries) - List webhook deliveries
 
 ## List
 
@@ -108,7 +56,7 @@ func main() {
 
 ### Response
 
-**[*operations.GetV1WebhooksResponse](../../models/operations/getv1webhooksresponse.md), error**
+**[*operations.ListWebhooksResponse](../../models/operations/listwebhooksresponse.md), error**
 
 ### Errors
 
@@ -116,7 +64,61 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## GetDeliveries
+## Create
+
+Create a new webhook
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"firehydrant"
+	"context"
+	"firehydrant/models/components"
+	"log"
+)
+
+func main() {
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Webhooks.Create(ctx, components.PostV1Webhooks{
+        URL: "https://woeful-yin.biz",
+    })
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.WebhooksEntitiesWebhookEntity != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                              | Type                                                                   | Required                                                               | Description                                                            |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `ctx`                                                                  | [context.Context](https://pkg.go.dev/context#Context)                  | :heavy_check_mark:                                                     | The context to use for the request.                                    |
+| `request`                                                              | [components.PostV1Webhooks](../../models/components/postv1webhooks.md) | :heavy_check_mark:                                                     | The request object to use for the request.                             |
+| `opts`                                                                 | [][operations.Option](../../models/operations/option.md)               | :heavy_minus_sign:                                                     | The options for this request.                                          |
+
+### Response
+
+**[*operations.CreateWebhookResponse](../../models/operations/createwebhookresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+
+## Get
+
+Retrieve a specific webhook
 
 ### Example Usage
 
@@ -135,11 +137,11 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Webhooks.GetDeliveries(ctx, "<id>")
+    res, err := s.Webhooks.Get(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
-    if res != nil {
+    if res.WebhooksEntitiesWebhookEntity != nil {
         // handle response
     }
 }
@@ -150,12 +152,12 @@ func main() {
 | Parameter                                                | Type                                                     | Required                                                 | Description                                              |
 | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
 | `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
-| `webhookID`                                              | *string*                                                 | :heavy_check_mark:                                       | ID of a webhook                                          |
+| `webhookID`                                              | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
 | `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
 
 ### Response
 
-**[*operations.GetV1WebhooksWebhookIDDeliveriesResponse](../../models/operations/getv1webhookswebhookiddeliveriesresponse.md), error**
+**[*operations.GetWebhookResponse](../../models/operations/getwebhookresponse.md), error**
 
 ### Errors
 
@@ -204,7 +206,7 @@ func main() {
 
 ### Response
 
-**[*operations.DeleteV1WebhooksWebhookIDResponse](../../models/operations/deletev1webhookswebhookidresponse.md), error**
+**[*operations.DeleteWebhookResponse](../../models/operations/deletewebhookresponse.md), error**
 
 ### Errors
 
@@ -255,7 +257,7 @@ func main() {
 
 ### Response
 
-**[*operations.PatchV1WebhooksWebhookIDResponse](../../models/operations/patchv1webhookswebhookidresponse.md), error**
+**[*operations.UpdateWebhookResponse](../../models/operations/updatewebhookresponse.md), error**
 
 ### Errors
 
@@ -263,9 +265,9 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## Get
+## ListDeliveries
 
-Retrieve a specific webhook
+List webhook deliveries
 
 ### Example Usage
 
@@ -284,11 +286,11 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Webhooks.Get(ctx, "<id>")
+    res, err := s.Webhooks.ListDeliveries(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
-    if res.WebhooksEntitiesWebhookEntity != nil {
+    if res != nil {
         // handle response
     }
 }
@@ -299,12 +301,12 @@ func main() {
 | Parameter                                                | Type                                                     | Required                                                 | Description                                              |
 | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
 | `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
-| `webhookID`                                              | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `webhookID`                                              | *string*                                                 | :heavy_check_mark:                                       | ID of a webhook                                          |
 | `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
 
 ### Response
 
-**[*operations.GetV1WebhooksWebhookIDResponse](../../models/operations/getv1webhookswebhookidresponse.md), error**
+**[*operations.ListWebhookDeliveriesResponse](../../models/operations/listwebhookdeliveriesresponse.md), error**
 
 ### Errors
 

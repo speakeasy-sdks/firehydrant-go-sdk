@@ -83,7 +83,7 @@ type IncidentEntity struct {
 	RetroExports      []RetroExports                         `json:"retro_exports,omitempty"`
 	CreatedBy         *AuthorEntity                          `json:"created_by,omitempty"`
 	ContextObject     *IncidentsContextObjectEntity          `json:"context_object,omitempty"`
-	TeamAssignments   []IncidentsTeamAssignmentEntity        `json:"team_assignments,omitempty"`
+	TeamAssignments   []IncidentsTeamAssignmentEntityLite    `json:"team_assignments,omitempty"`
 	Conversations     []ConversationsAPIEntitiesReference    `json:"conversations,omitempty"`
 	CustomFields      []CustomFieldsFieldValue               `json:"custom_fields,omitempty"`
 	FieldRequirements []IncidentEntityFieldRequirementEntity `json:"field_requirements,omitempty"`
@@ -464,7 +464,7 @@ func (o *IncidentEntity) GetContextObject() *IncidentsContextObjectEntity {
 	return o.ContextObject
 }
 
-func (o *IncidentEntity) GetTeamAssignments() []IncidentsTeamAssignmentEntity {
+func (o *IncidentEntity) GetTeamAssignments() []IncidentsTeamAssignmentEntityLite {
 	if o == nil {
 		return nil
 	}

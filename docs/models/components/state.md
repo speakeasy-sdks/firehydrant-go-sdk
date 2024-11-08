@@ -3,9 +3,9 @@
 
 ## Values
 
-| Name              | Value             |
-| ----------------- | ----------------- |
-| `StateOpen`       | open              |
-| `StateInProgress` | in_progress       |
-| `StateCancelled`  | cancelled         |
-| `StateDone`       | done              |
+| Name                  | Value                 |
+| --------------------- | --------------------- |
+| `StatePreprocessing`  | preprocessing         |
+| `StateReadyForImport` | ready_for_import      |
+| `StateImporting`      | importing             |
+| `StateCompleted`      | completed             |

@@ -17,16 +17,17 @@ type TeamEntity struct {
 	UpdatedAt               *time.Time                                 `json:"updated_at,omitempty"`
 	SignalsIcalURL          *string                                    `json:"signals_ical_url,omitempty"`
 	CreatedBy               *AuthorEntity                              `json:"created_by,omitempty"`
+	InSupportHours          *bool                                      `json:"in_support_hours,omitempty"`
 	SlackChannel            *IntegrationsSlackSlackChannelEntity       `json:"slack_channel,omitempty"`
 	MsTeamsChannel          *IntegrationsMicrosoftTeamsV2ChannelEntity `json:"ms_teams_channel,omitempty"`
 	Memberships             []MembershipEntity                         `json:"memberships,omitempty"`
 	OwnedChecklistTemplates []ChecklistTemplateEntity                  `json:"owned_checklist_templates,omitempty"`
-	OwnedFunctionalities    []FunctionalityEntity                      `json:"owned_functionalities,omitempty"`
-	OwnedServices           []ServiceEntity                            `json:"owned_services,omitempty"`
+	OwnedFunctionalities    []FunctionalityEntityLite                  `json:"owned_functionalities,omitempty"`
+	OwnedServices           []ServiceEntityLite                        `json:"owned_services,omitempty"`
 	OwnedRunbooks           []SlimRunbookEntity                        `json:"owned_runbooks,omitempty"`
-	RespondingServices      []ServiceEntity                            `json:"responding_services,omitempty"`
-	Services                []ServiceEntity                            `json:"services,omitempty"`
-	Functionalities         []FunctionalityEntity                      `json:"functionalities,omitempty"`
+	RespondingServices      []ServiceEntityLite                        `json:"responding_services,omitempty"`
+	Services                []ServiceEntityLite                        `json:"services,omitempty"`
+	Functionalities         []FunctionalityEntityLite                  `json:"functionalities,omitempty"`
 }
 
 func (t TeamEntity) MarshalJSON() ([]byte, error) {
@@ -96,6 +97,13 @@ func (o *TeamEntity) GetCreatedBy() *AuthorEntity {
 	return o.CreatedBy
 }
 
+func (o *TeamEntity) GetInSupportHours() *bool {
+	if o == nil {
+		return nil
+	}
+	return o.InSupportHours
+}
+
 func (o *TeamEntity) GetSlackChannel() *IntegrationsSlackSlackChannelEntity {
 	if o == nil {
 		return nil
@@ -124,14 +132,14 @@ func (o *TeamEntity) GetOwnedChecklistTemplates() []ChecklistTemplateEntity {
 	return o.OwnedChecklistTemplates
 }
 
-func (o *TeamEntity) GetOwnedFunctionalities() []FunctionalityEntity {
+func (o *TeamEntity) GetOwnedFunctionalities() []FunctionalityEntityLite {
 	if o == nil {
 		return nil
 	}
 	return o.OwnedFunctionalities
 }
 
-func (o *TeamEntity) GetOwnedServices() []ServiceEntity {
+func (o *TeamEntity) GetOwnedServices() []ServiceEntityLite {
 	if o == nil {
 		return nil
 	}
@@ -145,21 +153,21 @@ func (o *TeamEntity) GetOwnedRunbooks() []SlimRunbookEntity {
 	return o.OwnedRunbooks
 }
 
-func (o *TeamEntity) GetRespondingServices() []ServiceEntity {
+func (o *TeamEntity) GetRespondingServices() []ServiceEntityLite {
 	if o == nil {
 		return nil
 	}
 	return o.RespondingServices
 }
 
-func (o *TeamEntity) GetServices() []ServiceEntity {
+func (o *TeamEntity) GetServices() []ServiceEntityLite {
 	if o == nil {
 		return nil
 	}
 	return o.Services
 }
 
-func (o *TeamEntity) GetFunctionalities() []FunctionalityEntity {
+func (o *TeamEntity) GetFunctionalities() []FunctionalityEntityLite {
 	if o == nil {
 		return nil
 	}

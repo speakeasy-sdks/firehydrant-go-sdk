@@ -3,16 +3,66 @@
 
 ## Overview
 
-Operations about functionalities
+Operations related to Functionalities
 
 ### Available Operations
 
+* [List](#list) - List functionalities
 * [Create](#create) - Create a functionality
-* [List](#list) - List all functionalities
-* [Archive](#archive) - Archive a functionality
+* [Get](#get) - Get a functionality
+* [Delete](#delete) - Archive a functionality
 * [Update](#update) - Update a functionality
-* [Get](#get) - Retrieve a single functionality
-* [ListServices](#listservices)
+* [ListServices](#listservices) - List services for a functionality
+
+## List
+
+List all of the functionalities that have been added to the organiation
+
+### Example Usage
+
+```go
+package main
+
+import(
+	"firehydrant"
+	"context"
+	"firehydrant/models/operations"
+	"log"
+)
+
+func main() {
+    s := firehydrant.New(
+        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+    )
+
+    ctx := context.Background()
+    res, err := s.Functionalities.List(ctx, operations.ListFunctionalitiesRequest{})
+    if err != nil {
+        log.Fatal(err)
+    }
+    if res.FunctionalityEntityPaginated != nil {
+        // handle response
+    }
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `ctx`                                                                                          | [context.Context](https://pkg.go.dev/context#Context)                                          | :heavy_check_mark:                                                                             | The context to use for the request.                                                            |
+| `request`                                                                                      | [operations.ListFunctionalitiesRequest](../../models/operations/listfunctionalitiesrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+| `opts`                                                                                         | [][operations.Option](../../models/operations/option.md)                                       | :heavy_minus_sign:                                                                             | The options for this request.                                                                  |
+
+### Response
+
+**[*operations.ListFunctionalitiesResponse](../../models/operations/listfunctionalitiesresponse.md), error**
+
+### Errors
+
+| Error Type         | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
 ## Create
 
@@ -58,7 +108,7 @@ func main() {
 
 ### Response
 
-**[*operations.PostV1FunctionalitiesResponse](../../models/operations/postv1functionalitiesresponse.md), error**
+**[*operations.CreateFunctionalityResponse](../../models/operations/createfunctionalityresponse.md), error**
 
 ### Errors
 
@@ -66,9 +116,9 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## List
+## Get
 
-List all of the functionalities that have been added to the organiation
+Retrieves a single functionality by ID
 
 ### Example Usage
 
@@ -78,7 +128,6 @@ package main
 import(
 	"firehydrant"
 	"context"
-	"firehydrant/models/operations"
 	"log"
 )
 
@@ -88,11 +137,11 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Functionalities.List(ctx, operations.GetV1FunctionalitiesRequest{})
+    res, err := s.Functionalities.Get(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
-    if res.FunctionalityEntityPaginated != nil {
+    if res.FunctionalityEntity != nil {
         // handle response
     }
 }
@@ -100,15 +149,15 @@ func main() {
 
 ### Parameters
 
-| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| `ctx`                                                                                            | [context.Context](https://pkg.go.dev/context#Context)                                            | :heavy_check_mark:                                                                               | The context to use for the request.                                                              |
-| `request`                                                                                        | [operations.GetV1FunctionalitiesRequest](../../models/operations/getv1functionalitiesrequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
-| `opts`                                                                                           | [][operations.Option](../../models/operations/option.md)                                         | :heavy_minus_sign:                                                                               | The options for this request.                                                                    |
+| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
+| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
+| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
+| `functionalityID`                                        | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
+| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
 
 ### Response
 
-**[*operations.GetV1FunctionalitiesResponse](../../models/operations/getv1functionalitiesresponse.md), error**
+**[*operations.GetFunctionalityResponse](../../models/operations/getfunctionalityresponse.md), error**
 
 ### Errors
 
@@ -116,7 +165,7 @@ func main() {
 | ------------------ | ------------------ | ------------------ |
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
-## Archive
+## Delete
 
 Archive a functionality
 
@@ -137,7 +186,7 @@ func main() {
     )
 
     ctx := context.Background()
-    res, err := s.Functionalities.Archive(ctx, "<id>")
+    res, err := s.Functionalities.Delete(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
     }
@@ -157,7 +206,7 @@ func main() {
 
 ### Response
 
-**[*operations.DeleteV1FunctionalitiesFunctionalityIDResponse](../../models/operations/deletev1functionalitiesfunctionalityidresponse.md), error**
+**[*operations.DeleteFunctionalityResponse](../../models/operations/deletefunctionalityresponse.md), error**
 
 ### Errors
 
@@ -208,56 +257,7 @@ func main() {
 
 ### Response
 
-**[*operations.PatchV1FunctionalitiesFunctionalityIDResponse](../../models/operations/patchv1functionalitiesfunctionalityidresponse.md), error**
-
-### Errors
-
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
-
-## Get
-
-Retrieves a single functionality by ID
-
-### Example Usage
-
-```go
-package main
-
-import(
-	"firehydrant"
-	"context"
-	"log"
-)
-
-func main() {
-    s := firehydrant.New(
-        firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
-    )
-
-    ctx := context.Background()
-    res, err := s.Functionalities.Get(ctx, "<id>")
-    if err != nil {
-        log.Fatal(err)
-    }
-    if res.FunctionalityEntity != nil {
-        // handle response
-    }
-}
-```
-
-### Parameters
-
-| Parameter                                                | Type                                                     | Required                                                 | Description                                              |
-| -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
-| `ctx`                                                    | [context.Context](https://pkg.go.dev/context#Context)    | :heavy_check_mark:                                       | The context to use for the request.                      |
-| `functionalityID`                                        | *string*                                                 | :heavy_check_mark:                                       | N/A                                                      |
-| `opts`                                                   | [][operations.Option](../../models/operations/option.md) | :heavy_minus_sign:                                       | The options for this request.                            |
-
-### Response
-
-**[*operations.GetV1FunctionalitiesFunctionalityIDResponse](../../models/operations/getv1functionalitiesfunctionalityidresponse.md), error**
+**[*operations.UpdateFunctionalityResponse](../../models/operations/updatefunctionalityresponse.md), error**
 
 ### Errors
 
@@ -266,6 +266,8 @@ func main() {
 | sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
 
 ## ListServices
+
+List services for a functionality
 
 ### Example Usage
 
@@ -304,7 +306,7 @@ func main() {
 
 ### Response
 
-**[*operations.GetV1FunctionalitiesFunctionalityIDServicesResponse](../../models/operations/getv1functionalitiesfunctionalityidservicesresponse.md), error**
+**[*operations.GetFunctionalityServicesResponse](../../models/operations/getfunctionalityservicesresponse.md), error**
 
 ### Errors
 

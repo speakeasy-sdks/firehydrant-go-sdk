@@ -97,25 +97,25 @@ func (e *SortBy) UnmarshalJSON(data []byte) error {
 	}
 }
 
-type GroupBy string
+type GetV1MetricsMttxGroupBy string
 
 const (
-	GroupByServices        GroupBy = "services"
-	GroupByEnvironments    GroupBy = "environments"
-	GroupByFunctionalities GroupBy = "functionalities"
-	GroupByTeams           GroupBy = "teams"
-	GroupBySeverities      GroupBy = "severities"
-	GroupByUsers           GroupBy = "users"
-	GroupByStartedDay      GroupBy = "started_day"
-	GroupByStartedWeek     GroupBy = "started_week"
-	GroupByStartedMonth    GroupBy = "started_month"
-	GroupByCustomFields    GroupBy = "custom_fields"
+	GetV1MetricsMttxGroupByServices        GetV1MetricsMttxGroupBy = "services"
+	GetV1MetricsMttxGroupByEnvironments    GetV1MetricsMttxGroupBy = "environments"
+	GetV1MetricsMttxGroupByFunctionalities GetV1MetricsMttxGroupBy = "functionalities"
+	GetV1MetricsMttxGroupByTeams           GetV1MetricsMttxGroupBy = "teams"
+	GetV1MetricsMttxGroupBySeverities      GetV1MetricsMttxGroupBy = "severities"
+	GetV1MetricsMttxGroupByUsers           GetV1MetricsMttxGroupBy = "users"
+	GetV1MetricsMttxGroupByStartedDay      GetV1MetricsMttxGroupBy = "started_day"
+	GetV1MetricsMttxGroupByStartedWeek     GetV1MetricsMttxGroupBy = "started_week"
+	GetV1MetricsMttxGroupByStartedMonth    GetV1MetricsMttxGroupBy = "started_month"
+	GetV1MetricsMttxGroupByCustomFields    GetV1MetricsMttxGroupBy = "custom_fields"
 )
 
-func (e GroupBy) ToPointer() *GroupBy {
+func (e GetV1MetricsMttxGroupBy) ToPointer() *GetV1MetricsMttxGroupBy {
 	return &e
 }
-func (e *GroupBy) UnmarshalJSON(data []byte) error {
+func (e *GetV1MetricsMttxGroupBy) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
@@ -140,18 +140,18 @@ func (e *GroupBy) UnmarshalJSON(data []byte) error {
 	case "started_month":
 		fallthrough
 	case "custom_fields":
-		*e = GroupBy(v)
+		*e = GetV1MetricsMttxGroupBy(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for GroupBy: %v", v)
+		return fmt.Errorf("invalid value for GetV1MetricsMttxGroupBy: %v", v)
 	}
 }
 
 type GetV1MetricsMttxRequestBody struct {
-	GroupBy []GroupBy `form:"name=group_by"`
+	GroupBy []GetV1MetricsMttxGroupBy `multipartForm:"name=group_by"`
 }
 
-func (o *GetV1MetricsMttxRequestBody) GetGroupBy() []GroupBy {
+func (o *GetV1MetricsMttxRequestBody) GetGroupBy() []GetV1MetricsMttxGroupBy {
 	if o == nil {
 		return nil
 	}
@@ -221,7 +221,7 @@ type GetV1MetricsMttxRequest struct {
 	SortBy         *SortBy `queryParam:"style=form,explode=true,name=sort_by"`
 	// Comma-separated list of measurements to include in the response
 	Measurements *string                      `queryParam:"style=form,explode=true,name=measurements"`
-	RequestBody  *GetV1MetricsMttxRequestBody `request:"mediaType=application/x-www-form-urlencoded"`
+	RequestBody  *GetV1MetricsMttxRequestBody `request:"mediaType=multipart/form-data"`
 }
 
 func (g GetV1MetricsMttxRequest) MarshalJSON() ([]byte, error) {

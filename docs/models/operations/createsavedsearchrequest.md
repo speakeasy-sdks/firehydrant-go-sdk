@@ -1,0 +1,9 @@
+# CreateSavedSearchRequest
+
+
+## Fields
+
+| Field                                                                                                    | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `ResourceType`                                                                                           | [operations.PathParamResourceType](../../models/operations/pathparamresourcetype.md)                     | :heavy_check_mark:                                                                                       | N/A                                                                                                      |
+| `PostV1SavedSearchesResourceType`                                                                        | [components.PostV1SavedSearchesResourceType](../../models/components/postv1savedsearchesresourcetype.md) | :heavy_check_mark:                                                                                       | N/A                                                                                                      |

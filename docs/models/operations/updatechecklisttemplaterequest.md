@@ -1,0 +1,9 @@
+# UpdateChecklistTemplateRequest
+
+
+## Fields
+
+| Field                                                                                            | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `ID`                                                                                             | *string*                                                                                         | :heavy_check_mark:                                                                               | N/A                                                                                              |
+| `PatchV1ChecklistTemplatesID`                                                                    | [components.PatchV1ChecklistTemplatesID](../../models/components/patchv1checklisttemplatesid.md) | :heavy_check_mark:                                                                               | N/A                                                                                              |

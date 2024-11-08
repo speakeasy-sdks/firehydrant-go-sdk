@@ -1,0 +1,9 @@
+# UpdateSeverityRequest
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `SeveritySlug`                                                                                       | *string*                                                                                             | :heavy_check_mark:                                                                                   | N/A                                                                                                  |
+| `PatchV1SeveritiesSeveritySlug`                                                                      | [components.PatchV1SeveritiesSeveritySlug](../../models/components/patchv1severitiesseverityslug.md) | :heavy_check_mark:                                                                                   | N/A                                                                                                  |

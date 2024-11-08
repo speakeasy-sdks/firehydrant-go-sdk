@@ -1,0 +1,9 @@
+# UpdatePriorityRequest
+
+
+## Fields
+
+| Field                                                                                                | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `PrioritySlug`                                                                                       | *string*                                                                                             | :heavy_check_mark:                                                                                   | N/A                                                                                                  |
+| `PatchV1PrioritiesPrioritySlug`                                                                      | [components.PatchV1PrioritiesPrioritySlug](../../models/components/patchv1prioritiespriorityslug.md) | :heavy_check_mark:                                                                                   | N/A                                                                                                  |

@@ -1,5 +1,7 @@
 # UserEntity
 
+UserEntity model
+
 
 ## Fields
 
