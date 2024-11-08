@@ -42,6 +42,45 @@ go get firehydrant
 ```
 <!-- End SDK Installation [installation] -->
 
+<!-- Start Authentication [security] -->
+## Authentication
+
+### Per-Client Security Schemes
+
+This SDK supports the following security scheme globally:
+
+| Name     | Type   | Scheme  |
+| -------- | ------ | ------- |
+| `APIKey` | apiKey | API key |
+
+You can configure it using the `WithSecurity` option when initializing the SDK client instance. For example:
+```go
+package main
+
+import (
+	"context"
+	"firehydrant"
+	"log"
+)
+
+func main() {
+	s := firehydrant.New(
+		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
+	)
+
+	ctx := context.Background()
+	res, err := s.AccountSettings.GetAiPreferences(ctx)
+	if err != nil {
+		log.Fatal(err)
+	}
+	if res.AIEntitiesPreferencesEntity != nil {
+		// handle response
+	}
+}
+
+```
+<!-- End Authentication [security] -->
+
 <!-- Start SDK Example Usage [usage] -->
 ## SDK Example Usage
 
@@ -829,45 +868,6 @@ var (
 
 This can be a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration.
 <!-- End Custom HTTP Client [http-client] -->
-
-<!-- Start Authentication [security] -->
-## Authentication
-
-### Per-Client Security Schemes
-
-This SDK supports the following security scheme globally:
-
-| Name     | Type   | Scheme  |
-| -------- | ------ | ------- |
-| `APIKey` | apiKey | API key |
-
-You can configure it using the `WithSecurity` option when initializing the SDK client instance. For example:
-```go
-package main
-
-import (
-	"context"
-	"firehydrant"
-	"log"
-)
-
-func main() {
-	s := firehydrant.New(
-		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
-	)
-
-	ctx := context.Background()
-	res, err := s.AccountSettings.GetAiPreferences(ctx)
-	if err != nil {
-		log.Fatal(err)
-	}
-	if res.AIEntitiesPreferencesEntity != nil {
-		// handle response
-	}
-}
-
-```
-<!-- End Authentication [security] -->
 
 <!-- Start Special Types [types] -->
 ## Special Types
