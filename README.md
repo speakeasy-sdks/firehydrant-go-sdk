@@ -686,12 +686,17 @@ Handling errors in this SDK should largely match your expectations. All operatio
 
 By Default, an API error will return `sdkerrors.SDKError`. When custom error responses are specified for an operation, the SDK may also return their associated error. You can refer to respective *Errors* tables in SDK docs for more details on possible error types for each operation.
 
-For example, the `CreateImpact` function may return the following errors:
+For example, the `GetAiPreferences` function may return the following errors:
 
-| Error Type           | Status Code | Content Type     |
-| -------------------- | ----------- | ---------------- |
-| sdkerrors.BadRequest | 400         | application/json |
-| sdkerrors.SDKError   | 4XX, 5XX    | \*/\*            |
+| Error Type                    | Status Code                       | Content Type     |
+| ----------------------------- | --------------------------------- | ---------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431, 510 | application/json |
+| sdkerrors.Unauthorized        | 401, 403, 407, 511                | application/json |
+| sdkerrors.NotFound            | 404, 501, 505                     | application/json |
+| sdkerrors.Timeout             | 408, 504                          | application/json |
+| sdkerrors.RateLimited         | 429                               | application/json |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508      | application/json |
+| sdkerrors.SDKError            | 4XX, 5XX                          | \*/\*            |
 
 ### Example
 
@@ -702,8 +707,6 @@ import (
 	"context"
 	"errors"
 	"firehydrant"
-	"firehydrant/models/components"
-	"firehydrant/models/operations"
 	"firehydrant/models/sdkerrors"
 	"log"
 )
@@ -714,12 +717,40 @@ func main() {
 	)
 
 	ctx := context.Background()
-	res, err := s.Incidents.CreateImpact(ctx, "<id>", operations.CreateIncidentImpactPathParamTypeServices, components.PostV1IncidentsIncidentIDImpactType{
-		ID: "<id>",
-	})
+	res, err := s.AccountSettings.GetAiPreferences(ctx)
 	if err != nil {
 
 		var e *sdkerrors.BadRequest
+		if errors.As(err, &e) {
+			// handle error
+			log.Fatal(e.Error())
+		}
+
+		var e *sdkerrors.Unauthorized
+		if errors.As(err, &e) {
+			// handle error
+			log.Fatal(e.Error())
+		}
+
+		var e *sdkerrors.NotFound
+		if errors.As(err, &e) {
+			// handle error
+			log.Fatal(e.Error())
+		}
+
+		var e *sdkerrors.Timeout
+		if errors.As(err, &e) {
+			// handle error
+			log.Fatal(e.Error())
+		}
+
+		var e *sdkerrors.RateLimited
+		if errors.As(err, &e) {
+			// handle error
+			log.Fatal(e.Error())
+		}
+
+		var e *sdkerrors.InternalServerError
 		if errors.As(err, &e) {
 			// handle error
 			log.Fatal(e.Error())

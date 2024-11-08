@@ -6,6 +6,7 @@ sources:
             - location: ./openapi.yaml
         overlays:
             - location: .speakeasy/speakeasy-modifications-overlay.yaml
+            - location: errors-overlay.yaml
         registry:
             location: registry.speakeasyapi.dev/firehydrant/firehydrant/firehydrant-oas
 targets:

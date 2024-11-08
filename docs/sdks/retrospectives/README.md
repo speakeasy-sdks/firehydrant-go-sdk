@@ -68,9 +68,15 @@ func main() {
 
 ### Errors
 
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+| Error Type                        | Status Code                       | Content Type                      |
+| --------------------------------- | --------------------------------- | --------------------------------- |
+| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
+| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
+| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
+| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
+| sdkerrors.RateLimited             | 429                               | application/json                  |
+| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
+| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
 
 ## UpdateQuestions
 
@@ -118,9 +124,15 @@ func main() {
 
 ### Errors
 
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+| Error Type                        | Status Code                       | Content Type                      |
+| --------------------------------- | --------------------------------- | --------------------------------- |
+| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
+| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
+| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
+| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
+| sdkerrors.RateLimited             | 429                               | application/json                  |
+| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
+| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
 
 ## GetQuestion
 
@@ -167,9 +179,15 @@ func main() {
 
 ### Errors
 
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+| Error Type                        | Status Code                       | Content Type                      |
+| --------------------------------- | --------------------------------- | --------------------------------- |
+| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
+| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
+| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
+| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
+| sdkerrors.RateLimited             | 429                               | application/json                  |
+| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
+| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
 
 ## ListReports
 
@@ -219,9 +237,15 @@ func main() {
 
 ### Errors
 
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+| Error Type                        | Status Code                       | Content Type                      |
+| --------------------------------- | --------------------------------- | --------------------------------- |
+| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
+| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
+| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
+| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
+| sdkerrors.RateLimited             | 429                               | application/json                  |
+| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
+| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
 
 ## CreateReport
 
@@ -271,9 +295,15 @@ func main() {
 
 ### Errors
 
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+| Error Type                        | Status Code                       | Content Type                      |
+| --------------------------------- | --------------------------------- | --------------------------------- |
+| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
+| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
+| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
+| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
+| sdkerrors.RateLimited             | 429                               | application/json                  |
+| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
+| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
 
 ## GetReport
 
@@ -320,9 +350,15 @@ func main() {
 
 ### Errors
 
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+| Error Type                        | Status Code                       | Content Type                      |
+| --------------------------------- | --------------------------------- | --------------------------------- |
+| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
+| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
+| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
+| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
+| sdkerrors.RateLimited             | 429                               | application/json                  |
+| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
+| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
 
 ## UpdateReport
 
@@ -371,9 +407,15 @@ func main() {
 
 ### Errors
 
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+| Error Type                        | Status Code                       | Content Type                      |
+| --------------------------------- | --------------------------------- | --------------------------------- |
+| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
+| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
+| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
+| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
+| sdkerrors.RateLimited             | 429                               | application/json                  |
+| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
+| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
 
 ## UpdateField
 
@@ -425,9 +467,15 @@ func main() {
 
 ### Errors
 
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+| Error Type                        | Status Code                       | Content Type                      |
+| --------------------------------- | --------------------------------- | --------------------------------- |
+| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
+| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
+| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
+| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
+| sdkerrors.RateLimited             | 429                               | application/json                  |
+| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
+| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
 
 ## PublishReport
 
@@ -476,10 +524,16 @@ func main() {
 
 ### Errors
 
-| Error Type           | Status Code          | Content Type         |
-| -------------------- | -------------------- | -------------------- |
-| sdkerrors.BadRequest | 400                  | application/json     |
-| sdkerrors.SDKError   | 4XX, 5XX             | \*/\*                |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.ErrorEntity         | 400                           | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407, 511            | application/json              |
+| sdkerrors.NotFound            | 404, 501, 505                 | application/json              |
+| sdkerrors.Timeout             | 408, 504                      | application/json              |
+| sdkerrors.BadRequest          | 413, 414, 415, 422, 431, 510  | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## ListReportReasons
 
@@ -528,9 +582,15 @@ func main() {
 
 ### Errors
 
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+| Error Type                        | Status Code                       | Content Type                      |
+| --------------------------------- | --------------------------------- | --------------------------------- |
+| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
+| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
+| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
+| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
+| sdkerrors.RateLimited             | 429                               | application/json                  |
+| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
+| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
 
 ## CreateReason
 
@@ -581,9 +641,15 @@ func main() {
 
 ### Errors
 
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+| Error Type                        | Status Code                       | Content Type                      |
+| --------------------------------- | --------------------------------- | --------------------------------- |
+| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
+| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
+| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
+| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
+| sdkerrors.RateLimited             | 429                               | application/json                  |
+| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
+| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
 
 ## UpdateReportReasonOrder
 
@@ -635,9 +701,15 @@ func main() {
 
 ### Errors
 
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+| Error Type                        | Status Code                       | Content Type                      |
+| --------------------------------- | --------------------------------- | --------------------------------- |
+| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
+| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
+| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
+| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
+| sdkerrors.RateLimited             | 429                               | application/json                  |
+| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
+| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
 
 ## DeleteReason
 
@@ -685,9 +757,15 @@ func main() {
 
 ### Errors
 
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+| Error Type                        | Status Code                       | Content Type                      |
+| --------------------------------- | --------------------------------- | --------------------------------- |
+| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
+| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
+| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
+| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
+| sdkerrors.RateLimited             | 429                               | application/json                  |
+| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
+| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
 
 ## UpdateReason
 
@@ -737,6 +815,12 @@ func main() {
 
 ### Errors
 
-| Error Type         | Status Code        | Content Type       |
-| ------------------ | ------------------ | ------------------ |
-| sdkerrors.SDKError | 4XX, 5XX           | \*/\*              |
+| Error Type                        | Status Code                       | Content Type                      |
+| --------------------------------- | --------------------------------- | --------------------------------- |
+| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
+| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
+| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
+| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
+| sdkerrors.RateLimited             | 429                               | application/json                  |
+| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
+| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |

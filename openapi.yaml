@@ -10585,7 +10585,6 @@ paths:
 components:
     schemas:
         ErrorEntity:
-            x-speakeasy-name-override: BadRequest
             type: object
             properties:
                 detail:

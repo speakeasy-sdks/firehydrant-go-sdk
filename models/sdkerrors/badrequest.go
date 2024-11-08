@@ -6,18 +6,10 @@ import (
 	"encoding/json"
 )
 
-// Meta - An object with additional error metadata
-type Meta struct {
-}
-
-// BadRequest - ErrorEntity model
+// BadRequest - A collection of codes that generally means the end user got something wrong in making the request
 type BadRequest struct {
-	Detail   *string  `json:"detail,omitempty"`
-	Messages []string `json:"messages,omitempty"`
-	// An object with additional error metadata
-	Meta *Meta `json:"meta,omitempty"`
-	// A stable code on which to match errors
-	Code *string `json:"code,omitempty"`
+	Message              *string        `json:"message,omitempty"`
+	AdditionalProperties map[string]any `additionalProperties:"true" json:"-"`
 }
 
 var _ error = &BadRequest{}
