@@ -1358,10 +1358,10 @@ func main() {
 
 ### Errors
 
-| Error Type            | Status Code           | Content Type          |
-| --------------------- | --------------------- | --------------------- |
-| sdkerrors.ErrorEntity | 400                   | application/json      |
-| sdkerrors.SDKError    | 4XX, 5XX              | \*/\*                 |
+| Error Type           | Status Code          | Content Type         |
+| -------------------- | -------------------- | -------------------- |
+| sdkerrors.BadRequest | 400                  | application/json     |
+| sdkerrors.SDKError   | 4XX, 5XX             | \*/\*                |
 
 ## DeleteImpact
 
@@ -1411,10 +1411,10 @@ func main() {
 
 ### Errors
 
-| Error Type            | Status Code           | Content Type          |
-| --------------------- | --------------------- | --------------------- |
-| sdkerrors.ErrorEntity | 400                   | application/json      |
-| sdkerrors.SDKError    | 4XX, 5XX              | \*/\*                 |
+| Error Type           | Status Code          | Content Type         |
+| -------------------- | -------------------- | -------------------- |
+| sdkerrors.BadRequest | 400                  | application/json     |
+| sdkerrors.SDKError   | 4XX, 5XX             | \*/\*                |
 
 ## ListLinks
 
@@ -1945,10 +1945,10 @@ func main() {
 
 ### Errors
 
-| Error Type            | Status Code           | Content Type          |
-| --------------------- | --------------------- | --------------------- |
-| sdkerrors.ErrorEntity | 400, 409              | application/json      |
-| sdkerrors.SDKError    | 4XX, 5XX              | \*/\*                 |
+| Error Type           | Status Code          | Content Type         |
+| -------------------- | -------------------- | -------------------- |
+| sdkerrors.BadRequest | 400, 409             | application/json     |
+| sdkerrors.SDKError   | 4XX, 5XX             | \*/\*                |
 
 ## UpdateRelatedChangeEvent
 
@@ -1998,10 +1998,10 @@ func main() {
 
 ### Errors
 
-| Error Type            | Status Code           | Content Type          |
-| --------------------- | --------------------- | --------------------- |
-| sdkerrors.ErrorEntity | 400, 409              | application/json      |
-| sdkerrors.SDKError    | 4XX, 5XX              | \*/\*                 |
+| Error Type           | Status Code          | Content Type         |
+| -------------------- | -------------------- | -------------------- |
+| sdkerrors.BadRequest | 400, 409             | application/json     |
+| sdkerrors.SDKError   | 4XX, 5XX             | \*/\*                |
 
 ## GetRelationships
 

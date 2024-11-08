@@ -688,10 +688,10 @@ By Default, an API error will return `sdkerrors.SDKError`. When custom error res
 
 For example, the `CreateImpact` function may return the following errors:
 
-| Error Type            | Status Code | Content Type     |
-| --------------------- | ----------- | ---------------- |
-| sdkerrors.ErrorEntity | 400         | application/json |
-| sdkerrors.SDKError    | 4XX, 5XX    | \*/\*            |
+| Error Type           | Status Code | Content Type     |
+| -------------------- | ----------- | ---------------- |
+| sdkerrors.BadRequest | 400         | application/json |
+| sdkerrors.SDKError   | 4XX, 5XX    | \*/\*            |
 
 ### Example
 
@@ -719,7 +719,7 @@ func main() {
 	})
 	if err != nil {
 
-		var e *sdkerrors.ErrorEntity
+		var e *sdkerrors.BadRequest
 		if errors.As(err, &e) {
 			// handle error
 			log.Fatal(e.Error())

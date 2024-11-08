@@ -1,4 +1,4 @@
-# ErrorEntity
+# BadRequest
 
 ErrorEntity model
 

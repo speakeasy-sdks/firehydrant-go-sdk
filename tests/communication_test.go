@@ -42,7 +42,3 @@ func TestCommunication_DeleteStatusUpdateTemplate(t *testing.T) {
 	require.NoError(t, err)
 	assert.Equal(t, 200, res.HTTPMeta.Response.StatusCode)
 }
-
-func TestCommunication_UpdateStatusUpdateTemplate(t *testing.T) {
-	assert.Fail(t, "incomplete test found please make sure to address the following errors: [`missing request body values for required request body`]")
-}

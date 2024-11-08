@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: 39357612-0c85-4a96-a549-e2d920c4a065
 management:
-  docChecksum: 2f5b077e5da4af2655ecf2d508cc78c5
+  docChecksum: 24bc8a036f0f15b2f1fb45ad17016e10
   docVersion: 0.0.1
   speakeasyVersion: 1.435.1
   generationVersion: 2.455.2
-  releaseVersion: 0.4.5
-  configChecksum: 6a9f0c212bcc2f1f6006699cf3bc47bc
+  releaseVersion: 0.4.10
+  configChecksum: 1d3f4118287fd7d344b214f90f237f58
 features:
   go:
     additionalDependencies: 0.1.0
@@ -733,7 +733,7 @@ generatedFiles:
   - /models/operations/updatewebhook.go
   - /models/operations/validateincidenttags.go
   - /models/operations/voteonincidentsummary.go
-  - /models/sdkerrors/errorentity.go
+  - /models/sdkerrors/badrequest.go
   - CONTRIBUTING.md
   - USAGE.md
   - accountsettings.go
@@ -2040,7 +2040,7 @@ generatedFiles:
   - docs/models/operations/voteonincidentsummaryrequest.md
   - docs/models/operations/voteonincidentsummaryrequestbody.md
   - docs/models/operations/voteonincidentsummaryresponse.md
-  - docs/models/sdkerrors/errorentity.md
+  - docs/models/sdkerrors/badrequest.md
   - docs/models/sdkerrors/meta.md
   - docs/sdks/accountsettings/README.md
   - docs/sdks/alerts/README.md
@@ -2170,7 +2170,6 @@ generatedFiles:
   - tests/services_test.go
   - tests/signals_test.go
   - tests/slack_test.go
-  - tests/statuspage_test.go
   - tests/statuspages_test.go
   - tests/statusupdatetemplates_test.go
   - tests/system_test.go

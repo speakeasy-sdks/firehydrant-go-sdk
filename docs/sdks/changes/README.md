@@ -171,10 +171,10 @@ func main() {
 
 ### Errors
 
-| Error Type            | Status Code           | Content Type          |
-| --------------------- | --------------------- | --------------------- |
-| sdkerrors.ErrorEntity | 400                   | application/json      |
-| sdkerrors.SDKError    | 4XX, 5XX              | \*/\*                 |
+| Error Type           | Status Code          | Content Type         |
+| -------------------- | -------------------- | -------------------- |
+| sdkerrors.BadRequest | 400                  | application/json     |
+| sdkerrors.SDKError   | 4XX, 5XX             | \*/\*                |
 
 ## ListEvents
 
@@ -628,10 +628,10 @@ func main() {
 
 ### Errors
 
-| Error Type            | Status Code           | Content Type          |
-| --------------------- | --------------------- | --------------------- |
-| sdkerrors.ErrorEntity | 400                   | application/json      |
-| sdkerrors.SDKError    | 4XX, 5XX              | \*/\*                 |
+| Error Type           | Status Code          | Content Type         |
+| -------------------- | -------------------- | -------------------- |
+| sdkerrors.BadRequest | 400                  | application/json     |
+| sdkerrors.SDKError   | 4XX, 5XX             | \*/\*                |
 
 ## DeleteIdentity
 
@@ -679,10 +679,10 @@ func main() {
 
 ### Errors
 
-| Error Type            | Status Code           | Content Type          |
-| --------------------- | --------------------- | --------------------- |
-| sdkerrors.ErrorEntity | 400                   | application/json      |
-| sdkerrors.SDKError    | 4XX, 5XX              | \*/\*                 |
+| Error Type           | Status Code          | Content Type         |
+| -------------------- | -------------------- | -------------------- |
+| sdkerrors.BadRequest | 400                  | application/json     |
+| sdkerrors.SDKError   | 4XX, 5XX             | \*/\*                |
 
 ## UpdateIdentity
 
@@ -735,10 +735,10 @@ func main() {
 
 ### Errors
 
-| Error Type            | Status Code           | Content Type          |
-| --------------------- | --------------------- | --------------------- |
-| sdkerrors.ErrorEntity | 400                   | application/json      |
-| sdkerrors.SDKError    | 4XX, 5XX              | \*/\*                 |
+| Error Type           | Status Code          | Content Type         |
+| -------------------- | -------------------- | -------------------- |
+| sdkerrors.BadRequest | 400                  | application/json     |
+| sdkerrors.SDKError   | 4XX, 5XX             | \*/\*                |
 
 ## Get
 

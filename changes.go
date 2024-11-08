@@ -572,7 +572,7 @@ func (s *Changes) Create(ctx context.Context, request components.PostV1Changes, 
 				return nil, err
 			}
 
-			var out sdkerrors.ErrorEntity
+			var out sdkerrors.BadRequest
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2274,7 +2274,7 @@ func (s *Changes) CreateIdentity(ctx context.Context, changeID string, postV1Cha
 				return nil, err
 			}
 
-			var out sdkerrors.ErrorEntity
+			var out sdkerrors.BadRequest
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2464,7 +2464,7 @@ func (s *Changes) DeleteIdentity(ctx context.Context, identityID string, changeI
 				return nil, err
 			}
 
-			var out sdkerrors.ErrorEntity
+			var out sdkerrors.BadRequest
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -2681,7 +2681,7 @@ func (s *Changes) UpdateIdentity(ctx context.Context, identityID string, changeI
 				return nil, err
 			}
 
-			var out sdkerrors.ErrorEntity
+			var out sdkerrors.BadRequest
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

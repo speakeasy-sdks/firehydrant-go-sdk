@@ -1157,7 +1157,7 @@ func (s *Services) Create(ctx context.Context, request components.PostV1Services
 				return nil, err
 			}
 
-			var out sdkerrors.ErrorEntity
+			var out sdkerrors.BadRequest
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

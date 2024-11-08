@@ -10,8 +10,8 @@ import (
 type Meta struct {
 }
 
-// ErrorEntity model
-type ErrorEntity struct {
+// BadRequest - ErrorEntity model
+type BadRequest struct {
 	Detail   *string  `json:"detail,omitempty"`
 	Messages []string `json:"messages,omitempty"`
 	// An object with additional error metadata
@@ -20,9 +20,9 @@ type ErrorEntity struct {
 	Code *string `json:"code,omitempty"`
 }
 
-var _ error = &ErrorEntity{}
+var _ error = &BadRequest{}
 
-func (e *ErrorEntity) Error() string {
+func (e *BadRequest) Error() string {
 	data, _ := json.Marshal(e)
 	return string(data)
 }

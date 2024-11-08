@@ -4756,7 +4756,7 @@ func (s *Incidents) CreateImpact(ctx context.Context, incidentID string, type_ o
 				return nil, err
 			}
 
-			var out sdkerrors.ErrorEntity
+			var out sdkerrors.BadRequest
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -4947,7 +4947,7 @@ func (s *Incidents) DeleteImpact(ctx context.Context, incidentID string, type_ o
 				return nil, err
 			}
 
-			var out sdkerrors.ErrorEntity
+			var out sdkerrors.BadRequest
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -6873,7 +6873,7 @@ func (s *Incidents) CreateRelatedChange(ctx context.Context, incidentID string, 
 				return nil, err
 			}
 
-			var out sdkerrors.ErrorEntity
+			var out sdkerrors.BadRequest
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}
@@ -7092,7 +7092,7 @@ func (s *Incidents) UpdateRelatedChangeEvent(ctx context.Context, relatedChangeE
 				return nil, err
 			}
 
-			var out sdkerrors.ErrorEntity
+			var out sdkerrors.BadRequest
 			if err := utils.UnmarshalJsonFromResponseBody(bytes.NewBuffer(rawBody), &out, ""); err != nil {
 				return nil, err
 			}

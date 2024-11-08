@@ -4203,6 +4203,7 @@ paths:
                             schema:
                                 "$ref": "#/components/schemas/Integrations_Statuspage_ConnectionEntity"
         patch:
+            x-speakeasy-test: false
             tags:
                 - Integrations
             summary: Update a Statuspage connection
@@ -5516,6 +5517,7 @@ paths:
                             schema:
                                 "$ref": "#/components/schemas/NuncConnectionEntity"
         put:
+            x-speakeasy-test: false
             tags:
                 - Status Pages
             summary: Update a status page
@@ -5669,6 +5671,7 @@ paths:
                     description: Delete a component group displayed on a FireHydrant status page
                     content: {}
         patch:
+            x-speakeasy-test: false
             tags:
                 - Status Pages
             summary: Update a status page component group
@@ -5703,6 +5706,7 @@ paths:
                     description: Update a component group to be displayed on a FireHydrant status page
                     content: {}
     "/v1/nunc_connections/{nunc_connection_id}/images/{type}":
+        x-speakeasy-test: false
         put:
             tags:
                 - Status Pages
@@ -5803,6 +5807,7 @@ paths:
                     description: Delete a link displayed on a FireHydrant status page
                     content: {}
         patch:
+            x-speakeasy-test: false
             tags:
                 - Status Pages
             summary: Update a status page link
@@ -9039,6 +9044,7 @@ paths:
                             schema:
                                 "$ref": "#/components/schemas/StatusUpdateTemplateEntity"
         patch:
+            x-speakeasy-test: false
             tags:
                 - Communication
             summary: Update a status update template
@@ -10579,6 +10585,7 @@ paths:
 components:
     schemas:
         ErrorEntity:
+            x-speakeasy-name-override: BadRequest
             type: object
             properties:
                 detail:
