@@ -28,36 +28,36 @@ func (o *ChangeIdentities) GetValue() string {
 	return o.Value
 }
 
-type PostV1ChangesEventsType string
+type ChangesEventsType string
 
 const (
-	PostV1ChangesEventsTypeLink PostV1ChangesEventsType = "link"
+	ChangesEventsTypeLink ChangesEventsType = "link"
 )
 
-func (e PostV1ChangesEventsType) ToPointer() *PostV1ChangesEventsType {
+func (e ChangesEventsType) ToPointer() *ChangesEventsType {
 	return &e
 }
-func (e *PostV1ChangesEventsType) UnmarshalJSON(data []byte) error {
+func (e *ChangesEventsType) UnmarshalJSON(data []byte) error {
 	var v string
 	if err := json.Unmarshal(data, &v); err != nil {
 		return err
 	}
 	switch v {
 	case "link":
-		*e = PostV1ChangesEventsType(v)
+		*e = ChangesEventsType(v)
 		return nil
 	default:
-		return fmt.Errorf("invalid value for PostV1ChangesEventsType: %v", v)
+		return fmt.Errorf("invalid value for ChangesEventsType: %v", v)
 	}
 }
 
 type Attachments struct {
-	Type PostV1ChangesEventsType `json:"type"`
+	Type ChangesEventsType `json:"type"`
 }
 
-func (o *Attachments) GetType() PostV1ChangesEventsType {
+func (o *Attachments) GetType() ChangesEventsType {
 	if o == nil {
-		return PostV1ChangesEventsType("")
+		return ChangesEventsType("")
 	}
 	return o.Type
 }
@@ -89,8 +89,8 @@ func (o *Authors) GetName() string {
 	return o.Name
 }
 
-// PostV1ChangesEvents - Create a change event
-type PostV1ChangesEvents struct {
+// ChangesEvents - Create a change event
+type ChangesEvents struct {
 	Summary     string            `json:"summary"`
 	Description *string           `json:"description,omitempty"`
 	Labels      map[string]string `json:"labels,omitempty"`
@@ -112,95 +112,95 @@ type PostV1ChangesEvents struct {
 	Authors []Authors `json:"authors,omitempty"`
 }
 
-func (p PostV1ChangesEvents) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(p, "", false)
+func (c ChangesEvents) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(c, "", false)
 }
 
-func (p *PostV1ChangesEvents) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &p, "", false, false); err != nil {
+func (c *ChangesEvents) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &c, "", false, false); err != nil {
 		return err
 	}
 	return nil
 }
 
-func (o *PostV1ChangesEvents) GetSummary() string {
+func (o *ChangesEvents) GetSummary() string {
 	if o == nil {
 		return ""
 	}
 	return o.Summary
 }
 
-func (o *PostV1ChangesEvents) GetDescription() *string {
+func (o *ChangesEvents) GetDescription() *string {
 	if o == nil {
 		return nil
 	}
 	return o.Description
 }
 
-func (o *PostV1ChangesEvents) GetLabels() map[string]string {
+func (o *ChangesEvents) GetLabels() map[string]string {
 	if o == nil {
 		return nil
 	}
 	return o.Labels
 }
 
-func (o *PostV1ChangesEvents) GetStartsAt() *time.Time {
+func (o *ChangesEvents) GetStartsAt() *time.Time {
 	if o == nil {
 		return nil
 	}
 	return o.StartsAt
 }
 
-func (o *PostV1ChangesEvents) GetEndsAt() *time.Time {
+func (o *ChangesEvents) GetEndsAt() *time.Time {
 	if o == nil {
 		return nil
 	}
 	return o.EndsAt
 }
 
-func (o *PostV1ChangesEvents) GetEnvironments() []string {
+func (o *ChangesEvents) GetEnvironments() []string {
 	if o == nil {
 		return nil
 	}
 	return o.Environments
 }
 
-func (o *PostV1ChangesEvents) GetServices() []string {
+func (o *ChangesEvents) GetServices() []string {
 	if o == nil {
 		return nil
 	}
 	return o.Services
 }
 
-func (o *PostV1ChangesEvents) GetChanges() []string {
+func (o *ChangesEvents) GetChanges() []string {
 	if o == nil {
 		return nil
 	}
 	return o.Changes
 }
 
-func (o *PostV1ChangesEvents) GetExternalID() *string {
+func (o *ChangesEvents) GetExternalID() *string {
 	if o == nil {
 		return nil
 	}
 	return o.ExternalID
 }
 
-func (o *PostV1ChangesEvents) GetChangeIdentities() []ChangeIdentities {
+func (o *ChangesEvents) GetChangeIdentities() []ChangeIdentities {
 	if o == nil {
 		return nil
 	}
 	return o.ChangeIdentities
 }
 
-func (o *PostV1ChangesEvents) GetAttachments() []Attachments {
+func (o *ChangesEvents) GetAttachments() []Attachments {
 	if o == nil {
 		return nil
 	}
 	return o.Attachments
 }
 
-func (o *PostV1ChangesEvents) GetAuthors() []Authors {
+func (o *ChangesEvents) GetAuthors() []Authors {
 	if o == nil {
 		return nil
 	}

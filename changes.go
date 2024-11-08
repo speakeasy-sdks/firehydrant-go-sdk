@@ -795,7 +795,7 @@ func (s *Changes) ListEvents(ctx context.Context, request operations.ListChangeE
 
 // CreateEvent - Create a change event
 // Create a change event
-func (s *Changes) CreateEvent(ctx context.Context, request components.PostV1ChangesEvents, opts ...operations.Option) (*operations.CreateChangeEventResponse, error) {
+func (s *Changes) CreateEvent(ctx context.Context, request components.ChangesEvents, opts ...operations.Option) (*operations.CreateChangeEventResponse, error) {
 	hookCtx := hooks.HookContext{
 		Context:        ctx,
 		OperationID:    "createChangeEvent",

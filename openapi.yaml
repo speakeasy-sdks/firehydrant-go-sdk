@@ -1,4 +1,5 @@
 openapi: 3.0.1
+x-speakeasy-test: true
 info:
     title: FireHydrant API
     version: 0.0.1
@@ -465,7 +466,7 @@ paths:
                 content:
                     application/json:
                         schema:
-                            "$ref": "#/components/schemas/postV1ChangesEvents"
+                            "$ref": "#/components/schemas/ChangesEvents"
                 required: true
             responses:
                 '201':
@@ -13135,7 +13136,7 @@ components:
                 value:
                     type: string
             description: Update an identity
-        postV1ChangesEvents:
+        ChangesEvents:
             required:
                 - summary
             type: object
