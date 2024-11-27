@@ -3,16 +3,18 @@ id: 39357612-0c85-4a96-a549-e2d920c4a065
 management:
   docChecksum: 2fb06b765049a3c17f320d8d880e596a
   docVersion: 0.0.1
-  speakeasyVersion: 1.435.1
-  generationVersion: 2.455.2
-  releaseVersion: 0.5.0
-  configChecksum: 089ce76064b366a11939b99d598a6999
+  speakeasyVersion: 1.448.0
+  generationVersion: 2.466.0
+  releaseVersion: 0.6.0
+  configChecksum: 85ce98fe4bdb93f6fbc05a4f6e67ad37
+  repoURL: https://github.com/speakeasy-sdks/firehydrant-go-sdk.git
+  installationURL: https://github.com/speakeasy-sdks/firehydrant-go-sdk
 features:
   go:
     additionalDependencies: 0.1.0
     additionalProperties: 0.1.2
     constsAndDefaults: 0.1.6
-    core: 3.5.15
+    core: 3.5.17
     defaultEnabledRetries: 0.2.0
     envVarSecurityUsage: 0.3.2
     flattening: 2.81.1
@@ -26,9 +28,8 @@ features:
     nameOverrides: 2.81.2
     nullables: 0.1.0
     responseFormat: 0.1.2
-    retries: 2.83.0
+    retries: 2.83.1
     sdkHooks: 0.1.0
-    tests: 0.6.0
     uploadStreams: 0.1.0
 generatedFiles:
   - .gitattributes
@@ -2118,6 +2119,7 @@ generatedFiles:
   - integrations.go
   - internal/hooks/hooks.go
   - internal/utils/contenttype.go
+  - internal/utils/env.go
   - internal/utils/form.go
   - internal/utils/headers.go
   - internal/utils/json.go
@@ -2148,52 +2150,6 @@ generatedFiles:
   - system.go
   - tasks.go
   - teams.go
-  - tests/accountsettings_test.go
-  - tests/alerts_test.go
-  - tests/aws_test.go
-  - tests/awscloudtrailbatchevents_test.go
-  - tests/awsconnections_test.go
-  - tests/catalogs_test.go
-  - tests/changes_test.go
-  - tests/checklisttemplates_test.go
-  - tests/communication_test.go
-  - tests/confluence_test.go
-  - tests/conversations_test.go
-  - tests/environments_test.go
-  - tests/executions_test.go
-  - tests/files.go
-  - tests/firehydrantsignalsteams_test.go
-  - tests/firehydrantslack_test.go
-  - tests/firehydrantstatuspage_test.go
-  - tests/firehydrantticketing_test.go
-  - tests/functionalities_test.go
-  - tests/incidents_test.go
-  - tests/incidentsettings_test.go
-  - tests/infrastructures_test.go
-  - tests/integrations_test.go
-  - tests/list_test.go
-  - tests/maintenances_test.go
-  - tests/metrics_test.go
-  - tests/metricsreporting_test.go
-  - tests/oncallschedules_test.go
-  - tests/projectconfigurations_test.go
-  - tests/retrospectives_test.go
-  - tests/runbooks_test.go
-  - tests/scim_test.go
-  - tests/services_test.go
-  - tests/signals_test.go
-  - tests/slack_test.go
-  - tests/statuspages_test.go
-  - tests/statusupdatetemplates_test.go
-  - tests/system_test.go
-  - tests/tasks_test.go
-  - tests/teams_test.go
-  - tests/ticketing_test.go
-  - tests/ticketingpriorities_test.go
-  - tests/tickets_test.go
-  - tests/users_test.go
-  - tests/webhooks_test.go
-  - tests/zendesk_test.go
   - ticketing.go
   - ticketingpriorities.go
   - tickets.go
@@ -3112,6 +3068,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   getV1MetricsInfraType:
     speakeasy-default-get-v1-metrics-infra-type:
       parameters:
@@ -3957,7 +3914,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404": {}
         "408":
           application/json: {"key": "<value>"}
@@ -3965,6 +3923,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   updateAiPreferences:
     speakeasy-default-update-ai-preferences:
       responses:
@@ -3978,6 +3937,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
+        "400": {}
   voteOnIncidentSummary:
     speakeasy-default-vote-on-incident-summary:
       parameters:
@@ -3991,7 +3952,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
         "429":
@@ -4003,7 +3965,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
@@ -4022,9 +3985,11 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   apiPingNoAuth:
     speakeasy-default-api-ping-no-auth:
       responses:
@@ -4036,8 +4001,11 @@ examples:
           application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "429": {}
-        "500": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>"}
+        "200": {}
   apiPing:
     speakeasy-default-api-ping:
       responses:
@@ -4049,8 +4017,11 @@ examples:
           application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "429": {}
-        "500": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>"}
+        "200": {}
   getSavedSearch:
     speakeasy-default-get-saved-search:
       parameters:
@@ -4070,6 +4041,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   deleteSavedSearch:
     speakeasy-default-delete-saved-search:
       parameters:
@@ -4098,7 +4070,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
@@ -4106,6 +4079,7 @@ examples:
         "429":
           application/json: {"key": "<value>"}
         "500": {}
+        "200": {}
   getIncidentAiSummaryVoteStatus:
     speakeasy-default-get-incident-ai-summary-vote-status:
       parameters:
@@ -4119,9 +4093,11 @@ examples:
           application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "400": {}
   listIncidents:
     speakeasy-default-list-incidents:
       responses:
@@ -4131,9 +4107,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   createIncident:
     speakeasy-default-create-incident:
       requestBody:
@@ -4145,10 +4125,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   getIncident:
     speakeasy-default-get-incident:
       parameters:
@@ -4167,6 +4150,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   archiveIncident:
     speakeasy-default-archive-incident:
       parameters:
@@ -4181,9 +4165,11 @@ examples:
           application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   updateIncident:
     speakeasy-default-update-incident:
       parameters:
@@ -4202,6 +4188,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   deleteIncidentAlert:
     speakeasy-default-delete-incident-alert:
       parameters:
@@ -4213,7 +4200,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "401":
           application/json: {"key": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
@@ -4235,9 +4223,12 @@ examples:
           application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
   listIncidentAttachments:
     speakeasy-default-list-incident-attachments:
       parameters:
@@ -4247,13 +4238,15 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
         "408": {}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
   createIncidentAttachment:
     speakeasy-default-create-incident-attachment:
       parameters:
@@ -4274,6 +4267,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   getIncidentChannel:
     speakeasy-default-get-incident-channel:
       parameters:
@@ -4288,9 +4282,11 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   closeIncident:
     speakeasy-default-close-incident:
       parameters:
@@ -4309,6 +4305,7 @@ examples:
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   listIncidentEvents:
     speakeasy-default-list-incident-events:
       parameters:
@@ -4328,6 +4325,7 @@ examples:
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   getIncidentEvent:
     speakeasy-default-get-incident-event:
       parameters:
@@ -4343,8 +4341,11 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "429": {}
-        "500": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>"}
+        "200": {}
   deleteIncidentEvent:
     speakeasy-default-delete-incident-event:
       parameters:
@@ -4362,6 +4363,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
+        "400": {}
   updateIncidentEvent:
     speakeasy-default-update-incident-event:
       parameters:
@@ -4373,9 +4376,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500": {}
+        "200": {}
+        "400": {}
   updateIncidentEventVotes:
     speakeasy-default-update-incident-event-votes:
       parameters:
@@ -4389,12 +4396,15 @@ examples:
           application/json: {"key": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "404": {}
-        "408": {}
+        "404":
+          application/json: {"key": "<value>"}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   getIncidentEventVoteStatus:
     speakeasy-default-get-incident-event-vote-status:
       parameters:
@@ -4406,11 +4416,14 @@ examples:
           application/json: {"key": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
-        "408": {}
+        "404":
+          application/json: {"key": "<value>"}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429": {}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   createIncidentGenericChatMessage:
     speakeasy-default-create-incident-generic-chat-message:
       parameters:
@@ -4423,13 +4436,15 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "201": {}
   deleteIncidentChatMessage:
     speakeasy-default-delete-incident-chat-message:
       parameters:
@@ -4439,7 +4454,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
         "408":
@@ -4447,6 +4463,7 @@ examples:
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500": {}
+        "200": {}
   updateIncidentChatMessage:
     speakeasy-default-update-incident-chat-message:
       parameters:
@@ -4458,11 +4475,15 @@ examples:
       responses:
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
+        "400": {}
+        "401": {}
   updateIncidentImpacts:
     speakeasy-default-update-incident-impacts:
       parameters:
@@ -4473,10 +4494,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "401":
           application/json: {"key": "<value>"}
-        "404": {}
-        "408": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "408":
+          application/json: {"key": "<value>"}
         "429": {}
         "500": {}
+        "200": {}
   partialUpdateIncidentImpacts:
     speakeasy-default-partial-update-incident-impacts:
       parameters:
@@ -4493,6 +4517,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
   listIncidentImpact:
     speakeasy-default-list-incident-impact:
       parameters:
@@ -4510,6 +4536,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
+        "400": {}
   createIncidentImpact:
     speakeasy-default-create-incident-impact:
       parameters:
@@ -4523,12 +4551,16 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "413":
           application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>"}
+        "201": {}
+        "400": {}
   deleteIncidentImpact:
     speakeasy-default-delete-incident-impact:
       parameters:
@@ -4541,9 +4573,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "413":
           application/json: {"key": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "400": {}
+        "401": {}
+        "404": {}
   listIncidentLinks:
     speakeasy-default-list-incident-links:
       parameters:
@@ -4555,12 +4591,15 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   createIncidentLink:
     speakeasy-default-create-incident-link:
       parameters:
@@ -4573,13 +4612,15 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "201": {}
   updateIncidentLink:
     speakeasy-default-update-incident-link:
       parameters:
@@ -4591,8 +4632,10 @@ examples:
           application/json: {"key": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
-        "408": {}
+        "404":
+          application/json: {"key": "<value>"}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
@@ -4608,7 +4651,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>"}
         "429":
@@ -4627,11 +4671,13 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   updateIncidentMilestonesBulk:
     speakeasy-default-update-incident-milestones-bulk:
       parameters:
@@ -4642,7 +4688,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
@@ -4651,6 +4698,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   createIncidentNote:
     speakeasy-default-create-incident-note:
       parameters:
@@ -4671,6 +4719,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   updateIncidentNote:
     speakeasy-default-update-incident-note:
       parameters:
@@ -4682,7 +4731,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
@@ -4691,6 +4741,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   listIncidentRelatedChanges:
     speakeasy-default-list-incident-related-changes:
       parameters:
@@ -4700,13 +4751,16 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
         "429": {}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   createIncidentRelatedChange:
     speakeasy-default-create-incident-related-change:
       parameters:
@@ -4717,7 +4771,8 @@ examples:
       responses:
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
         "413":
@@ -4726,6 +4781,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "201": {}
+        "400": {}
   updateIncidentRelatedChangeEvent:
     speakeasy-default-update-incident-related-change-event:
       parameters:
@@ -4745,6 +4802,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
+        "400": {}
   getIncidentRelationships:
     speakeasy-default-get-incident-relationships:
       parameters:
@@ -4761,7 +4820,9 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   resolveIncident:
     speakeasy-default-resolve-incident:
       parameters:
@@ -4774,11 +4835,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   listIncidentRoleAssignments:
     speakeasy-default-list-incident-role-assignments:
       parameters:
@@ -4788,7 +4851,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408": {}
@@ -4796,6 +4860,7 @@ examples:
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   createIncidentRoleAssignment:
     speakeasy-default-create-incident-role-assignment:
       parameters:
@@ -4808,10 +4873,14 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
+        "400": {}
   deleteIncidentRoleAssignment:
     speakeasy-default-delete-incident-role-assignment:
       parameters:
@@ -4829,7 +4898,9 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>"}
+        "200": {}
   getSimilarIncidents:
     speakeasy-default-get-similar-incidents:
       parameters:
@@ -4857,13 +4928,16 @@ examples:
       responses:
         "401":
           application/json: {"key": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
   createIncidentStatusPage:
     speakeasy-default-create-incident-status-page:
       parameters:
@@ -4876,11 +4950,14 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "401":
           application/json: {"key": "<value>"}
-        "404": {}
-        "408": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "408":
+          application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500": {}
+        "201": {}
   createIncidentTaskList:
     speakeasy-default-create-incident-task-list:
       parameters:
@@ -4901,6 +4978,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "201": {}
   createIncidentTeamAssignment:
     speakeasy-default-create-incident-team-assignment:
       parameters:
@@ -4915,10 +4993,12 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>"}
   deleteIncidentTeamAssignment:
     speakeasy-default-delete-incident-team-assignment:
       parameters:
@@ -4953,9 +5033,11 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   deleteIncidentTranscript:
     speakeasy-default-delete-incident-transcript:
       parameters:
@@ -4967,10 +5049,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "400": {}
   unarchiveIncident:
     speakeasy-default-unarchive-incident:
       parameters:
@@ -4981,10 +5066,14 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>"}
+        "201": {}
+        "400": {}
   getIncidentUserRole:
     speakeasy-default-get-incident-user-role:
       parameters:
@@ -4994,13 +5083,15 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404": {}
         "408": {}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   listScheduledMaintenances:
     speakeasy-default-list-scheduled-maintenances:
       responses:
@@ -5010,9 +5101,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   createScheduledMaintenance:
     speakeasy-default-create-scheduled-maintenance:
       requestBody:
@@ -5024,10 +5119,14 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>"}
-        "413": {}
-        "429": {}
+        "413":
+          application/json: {"key": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
+        "400": {}
   listAlerts:
     speakeasy-default-list-alerts:
       responses:
@@ -5037,9 +5136,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   getAlert:
     speakeasy-default-get-alert:
       parameters:
@@ -5058,6 +5161,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   listIncidentAlerts:
     speakeasy-default-list-incident-alerts:
       parameters:
@@ -5066,11 +5170,15 @@ examples:
       responses:
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
+        "401": {}
   createIncidentAlerts:
     speakeasy-default-create-incident-alerts:
       parameters:
@@ -5085,8 +5193,10 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
   listAlertProcessingLogs:
@@ -5094,7 +5204,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>"}
         "408":
@@ -5103,6 +5214,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   ingestCatalogData:
     speakeasy-default-ingest-catalog-data:
       parameters:
@@ -5117,9 +5229,13 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "429":
+          application/json: {"key": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "201": {}
   refreshCatalog:
     speakeasy-default-refresh-catalog:
       parameters:
@@ -5136,7 +5252,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
   listInfrastructures:
     speakeasy-default-list-infrastructures:
       responses:
@@ -5146,9 +5263,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   createServiceDependency:
     speakeasy-default-create-service-dependency:
       requestBody:
@@ -5166,6 +5287,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "201": {}
   getServiceDependency:
     speakeasy-default-get-service-dependency:
       parameters:
@@ -5176,13 +5298,15 @@ examples:
           application/json: {"key": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   deleteServiceDependency:
     speakeasy-default-delete-service-dependency:
       parameters:
@@ -5199,7 +5323,9 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>"}
+        "200": {}
   updateServiceDependency:
     speakeasy-default-update-service-dependency:
       parameters:
@@ -5218,6 +5344,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   listServices:
     speakeasy-default-list-services:
       responses:
@@ -5227,9 +5354,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   createService:
     speakeasy-default-create-service:
       requestBody:
@@ -5241,10 +5372,14 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>"}
-        "413": {}
-        "429": {}
+        "413":
+          application/json: {"key": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
+        "400": {}
   createServiceLinks:
     speakeasy-default-create-service-links:
       requestBody:
@@ -5256,11 +5391,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   getService:
     speakeasy-default-get-service:
       parameters:
@@ -5279,6 +5416,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   deleteService:
     speakeasy-default-delete-service:
       parameters:
@@ -5297,6 +5435,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   updateService:
     speakeasy-default-update-service:
       parameters:
@@ -5315,6 +5454,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   listServiceAvailableDownstreamDependencies:
     speakeasy-default-list-service-available-downstream-dependencies:
       parameters:
@@ -5323,7 +5463,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
@@ -5332,6 +5473,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   listServiceAvailableUpstreamDependencies:
     speakeasy-default-list-service-available-upstream-dependencies:
       parameters:
@@ -5344,10 +5486,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   createServiceChecklistResponse:
     speakeasy-default-create-service-checklist-response:
       parameters:
@@ -5388,6 +5533,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   deleteServiceLink:
     speakeasy-default-delete-service-link:
       parameters:
@@ -5399,7 +5545,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>"}
         "429":
@@ -5415,19 +5562,23 @@ examples:
       responses:
         "401":
           application/json: {"key": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
   listChangeTypes:
     speakeasy-default-list-change-types:
       responses:
         "400":
           application/json: {"key": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
@@ -5435,6 +5586,7 @@ examples:
         "429":
           application/json: {"key": "<value>"}
         "500": {}
+        "200": {}
   listChanges:
     speakeasy-default-list-changes:
       responses:
@@ -5444,9 +5596,12 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
   createChange:
     speakeasy-default-create-change:
       responses:
@@ -5456,10 +5611,14 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>"}
-        "413": {}
-        "429": {}
+        "413":
+          application/json: {"key": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
+        "400": {}
   listChangeEvents:
     speakeasy-default-list-change-events:
       responses:
@@ -5475,6 +5634,7 @@ examples:
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   createChangeEvent:
     speakeasy-default-create-change-event:
       requestBody:
@@ -5486,10 +5646,13 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>"}
+        "429":
+          application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   getChangeEvent:
     speakeasy-default-get-change-event:
       parameters:
@@ -5504,8 +5667,11 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "429": {}
-        "500": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>"}
+        "200": {}
   deleteChangeEvent:
     speakeasy-default-delete-change-event:
       parameters:
@@ -5522,6 +5688,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "400": {}
   updateChangeEvent:
     speakeasy-default-update-change-event:
       parameters:
@@ -5532,9 +5699,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500": {}
+        "200": {}
+        "400": {}
   deleteChange:
     speakeasy-default-delete-change:
       parameters:
@@ -5571,6 +5742,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   listChangeIdentities:
     speakeasy-default-list-change-identities:
       parameters:
@@ -5588,7 +5760,9 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>"}
+        "200": {}
   createChangeIdentity:
     speakeasy-default-create-change-identity:
       parameters:
@@ -5603,11 +5777,14 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "413": {}
+        "413":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
+        "400": {}
   deleteChangeIdentity:
     speakeasy-default-delete-change-identity:
       parameters:
@@ -5619,12 +5796,15 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "408": {}
-        "413": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "413":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "400": {}
   updateChangeIdentity:
     speakeasy-default-update-change-identity:
       parameters:
@@ -5638,13 +5818,16 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "413":
           application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
+        "400": {}
   getScheduledMaintenance:
     speakeasy-default-get-scheduled-maintenance:
       parameters:
@@ -5663,6 +5846,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   deleteScheduledMaintenance:
     speakeasy-default-delete-scheduled-maintenance:
       parameters:
@@ -5689,7 +5873,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>"}
         "408": {}
@@ -5697,6 +5882,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   listChecklistTemplates:
     speakeasy-default-list-checklist-templates:
       responses:
@@ -5710,7 +5896,9 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   createChecklistTemplate:
     speakeasy-default-create-checklist-template:
       requestBody:
@@ -5720,7 +5908,13 @@ examples:
           application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>"}
+        "201": {}
+        "400": {}
+        "401": {}
+        "404": {}
+        "408": {}
   getChecklistTemplate:
     speakeasy-default-get-checklist-template:
       parameters:
@@ -5739,6 +5933,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   deleteChecklistTemplate:
     speakeasy-default-delete-checklist-template:
       parameters:
@@ -5753,6 +5948,9 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
+        "401": {}
   updateChecklistTemplate:
     speakeasy-default-update-checklist-template:
       parameters:
@@ -5765,11 +5963,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   listIncidentTasks:
     speakeasy-default-list-incident-tasks:
       parameters:
@@ -5779,11 +5979,15 @@ examples:
       responses:
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
+        "401": {}
   createIncidentTask:
     speakeasy-default-create-incident-task:
       parameters:
@@ -5798,10 +6002,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   getIncidentTask:
     speakeasy-default-get-incident-task:
       parameters:
@@ -5813,10 +6020,12 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
   deleteIncidentTask:
@@ -5851,11 +6060,13 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   convertIncidentTaskToFollowup:
     speakeasy-default-convert-incident-task-to-followup:
       parameters:
@@ -5875,18 +6086,22 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   listTaskLists:
     speakeasy-default-list-task-lists:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
         "408": {}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   createTaskList:
     speakeasy-default-create-task-list:
       requestBody:
@@ -5902,7 +6117,9 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "201": {}
   getTaskList:
     speakeasy-default-get-task-list:
       parameters:
@@ -5921,6 +6138,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   deleteTaskList:
     speakeasy-default-delete-task-list:
       parameters:
@@ -5939,6 +6157,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   updateTaskList:
     speakeasy-default-update-task-list:
       parameters:
@@ -5957,6 +6176,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   listTickets:
     speakeasy-default-list-tickets:
       responses:
@@ -5966,9 +6186,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   createTicket:
     speakeasy-default-create-ticket:
       requestBody:
@@ -5980,10 +6204,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   listConversationComments:
     speakeasy-default-list-conversation-comments:
       parameters:
@@ -5993,13 +6220,15 @@ examples:
       responses:
         "401":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "400": {}
   createConversationComment:
     speakeasy-default-create-conversation-comment:
       parameters:
@@ -6012,8 +6241,10 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "404": {}
-        "408": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500": {}
@@ -6026,7 +6257,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
@@ -6048,7 +6280,8 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
@@ -6064,11 +6297,13 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "400": {}
   listConversationCommentReactions:
     speakeasy-default-list-conversation-comment-reactions:
       parameters:
@@ -6080,11 +6315,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "400": {}
   createConversationCommentReaction:
     speakeasy-default-create-conversation-comment-reaction:
       parameters:
@@ -6096,7 +6333,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>"}
         "408":
@@ -6137,6 +6375,8 @@ examples:
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
   listUsers:
     speakeasy-default-list-users:
       responses:
@@ -6146,9 +6386,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   getUser:
     speakeasy-default-get-user:
       parameters:
@@ -6167,17 +6411,21 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   listCustomFieldDefinitions:
     speakeasy-default-list-custom-field-definitions:
       responses:
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408": {}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
   createCustomFieldDefinition:
     speakeasy-default-create-custom-field-definition:
       requestBody:
@@ -6193,7 +6441,9 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "201": {}
   deleteCustomFieldDefinition:
     speakeasy-default-delete-custom-field-definition:
       parameters:
@@ -6202,12 +6452,15 @@ examples:
       responses:
         "401":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500": {}
+        "200": {}
+        "400": {}
   updateCustomFieldDefinition:
     speakeasy-default-update-custom-field-definition:
       parameters:
@@ -6220,11 +6473,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   getCustomFieldSelectOptions:
     speakeasy-default-get-custom-field-select-options:
       parameters:
@@ -6236,12 +6491,15 @@ examples:
           application/json: {"key": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   getFormConfiguration:
     speakeasy-default-get-form-configuration:
       parameters:
@@ -6252,11 +6510,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "400": {}
   listIncidentRoles:
     speakeasy-default-list-incident-roles:
       responses:
@@ -6264,13 +6524,15 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   createIncidentRole:
     speakeasy-default-create-incident-role:
       requestBody:
@@ -6282,11 +6544,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "201": {}
   getIncidentRole:
     speakeasy-default-get-incident-role:
       parameters:
@@ -6295,7 +6559,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404": {}
         "408":
           application/json: {"key": "<value>"}
@@ -6303,6 +6568,7 @@ examples:
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   deleteIncidentRole:
     speakeasy-default-delete-incident-role:
       parameters:
@@ -6317,6 +6583,9 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
+        "400": {}
+        "401": {}
   updateIncidentRole:
     speakeasy-default-update-incident-role:
       parameters:
@@ -6333,13 +6602,16 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   listIncidentTags:
     speakeasy-default-list-incident-tags:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
@@ -6347,6 +6619,7 @@ examples:
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500": {}
+        "200": {}
   validateIncidentTags:
     speakeasy-default-validate-incident-tags:
       requestBody:
@@ -6354,7 +6627,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404": {}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
@@ -6362,12 +6636,14 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "201": {}
   listIncidentTypes:
     speakeasy-default-list-incident-types:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
@@ -6375,6 +6651,7 @@ examples:
         "429": {}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   createIncidentType:
     speakeasy-default-create-incident-type:
       requestBody:
@@ -6392,6 +6669,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   getIncidentType:
     speakeasy-default-get-incident-type:
       parameters:
@@ -6406,9 +6684,11 @@ examples:
           application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   archiveIncidentType:
     speakeasy-default-archive-incident-type:
       parameters:
@@ -6425,7 +6705,9 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   updateIncidentType:
     speakeasy-default-update-incident-type:
       parameters:
@@ -6436,13 +6718,16 @@ examples:
       responses:
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
+        "400": {}
   createLifecycleMilestone:
     speakeasy-default-create-lifecycle-milestone:
       requestBody:
@@ -6456,8 +6741,11 @@ examples:
           application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "429": {}
-        "500": {}
+        "429":
+          application/json: {"key": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   deleteLifecycleMilestone:
     speakeasy-default-delete-lifecycle-milestone:
       parameters:
@@ -6466,7 +6754,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404": {}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
@@ -6474,6 +6763,7 @@ examples:
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   updateLifecycleMilestone:
     speakeasy-default-update-lifecycle-milestone:
       parameters:
@@ -6486,30 +6776,41 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   listLifecyclePhases:
     speakeasy-default-list-lifecycle-phases:
       responses:
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
+        "401": {}
   listPriorities:
     speakeasy-default-list-priorities:
       responses:
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
+        "400": {}
+        "401": {}
   createPriority:
     speakeasy-default-create-priority:
       requestBody:
@@ -6521,6 +6822,10 @@ examples:
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
+        "400": {}
+        "401": {}
+        "404": {}
   getPriority:
     speakeasy-default-get-priority:
       parameters:
@@ -6533,9 +6838,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   deletePriority:
     speakeasy-default-delete-priority:
       parameters:
@@ -6544,7 +6853,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
@@ -6553,6 +6863,7 @@ examples:
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   updatePriority:
     speakeasy-default-update-priority:
       parameters:
@@ -6561,12 +6872,15 @@ examples:
       responses:
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408": {}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
+        "400": {}
   listSeverities:
     speakeasy-default-list-severities:
       responses:
@@ -6576,11 +6890,13 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   createSeverity:
     speakeasy-default-create-severity:
       requestBody:
@@ -6588,12 +6904,15 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404": {}
         "408":
           application/json: {"key": "<value>"}
         "429": {}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>"}
+        "201": {}
   getSeverity:
     speakeasy-default-get-severity:
       parameters:
@@ -6610,7 +6929,9 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   deleteSeverity:
     speakeasy-default-delete-severity:
       parameters:
@@ -6627,7 +6948,9 @@ examples:
           application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>"}
+        "200": {}
   updateSeverity:
     speakeasy-default-update-severity:
       parameters:
@@ -6646,6 +6969,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   getSeverityMatrix:
     speakeasy-default-get-severity-matrix:
       responses:
@@ -6655,10 +6979,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   updateSeverityMatrix:
     speakeasy-default-update-severity-matrix:
       requestBody:
@@ -6674,6 +7001,8 @@ examples:
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
   listSeverityMatrixConditions:
     speakeasy-default-list-severity-matrix-conditions:
       responses:
@@ -6685,7 +7014,10 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
+        "400": {}
   createSeverityMatrixCondition:
     speakeasy-default-create-severity-matrix-condition:
       requestBody:
@@ -6695,11 +7027,14 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "201": {}
+        "400": {}
   getSeverityMatrixCondition:
     speakeasy-default-get-severity-matrix-condition:
       parameters:
@@ -6730,9 +7065,12 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
+        "400": {}
   updateSeverityMatrixCondition:
     speakeasy-default-update-severity-matrix-condition:
       parameters:
@@ -6751,6 +7089,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   listSeverityMatrixImpacts:
     speakeasy-default-list-severity-matrix-impacts:
       responses:
@@ -6758,12 +7097,15 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   createSeverityMatrixImpact:
     speakeasy-default-create-severity-matrix-impact:
       requestBody:
@@ -6773,12 +7115,15 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "401":
           application/json: {"key": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>"}
+        "201": {}
   deleteSeverityMatrixImpact:
     speakeasy-default-delete-severity-matrix-impact:
       parameters:
@@ -6791,9 +7136,12 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
+        "400": {}
   updateSeverityMatrixImpact:
     speakeasy-default-update-severity-matrix-impact:
       parameters:
@@ -6812,18 +7160,21 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   listTicketingPriorities:
     speakeasy-default-list-ticketing-priorities:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404": {}
         "408":
           application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500": {}
+        "200": {}
   createTicketingPriority:
     speakeasy-default-create-ticketing-priority:
       requestBody:
@@ -6841,6 +7192,7 @@ examples:
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "201": {}
   listEnvironments:
     speakeasy-default-list-environments:
       responses:
@@ -6850,9 +7202,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   createEnvironment:
     speakeasy-default-create-environment:
       requestBody:
@@ -6864,10 +7220,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   getEnvironment:
     speakeasy-default-get-environment:
       parameters:
@@ -6886,6 +7245,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   deleteEnvironment:
     speakeasy-default-delete-environment:
       parameters:
@@ -6904,6 +7264,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   updateEnvironment:
     speakeasy-default-update-environment:
       parameters:
@@ -6924,6 +7285,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   listFunctionalities:
     speakeasy-default-list-functionalities:
       responses:
@@ -6933,9 +7295,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   createFunctionality:
     speakeasy-default-create-functionality:
       requestBody:
@@ -6947,10 +7313,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   getFunctionality:
     speakeasy-default-get-functionality:
       parameters:
@@ -6969,6 +7338,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   deleteFunctionality:
     speakeasy-default-delete-functionality:
       parameters:
@@ -6987,6 +7357,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   updateFunctionality:
     speakeasy-default-update-functionality:
       parameters:
@@ -7005,6 +7376,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   getFunctionalityServices:
     speakeasy-default-get-functionality-services:
       parameters:
@@ -7036,7 +7408,8 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
@@ -7052,6 +7425,10 @@ examples:
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "201": {}
+        "400": {}
+        "401": {}
+        "404": {}
   deleteNuncSubscription:
     speakeasy-default-delete-nunc-subscription:
       parameters:
@@ -7064,9 +7441,12 @@ examples:
           application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
   listStatusPages:
     speakeasy-default-list-status-pages:
       responses:
@@ -7076,9 +7456,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   createStatusPage:
     speakeasy-default-create-status-page:
       requestBody:
@@ -7090,10 +7474,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   getStatusPage:
     speakeasy-default-get-status-page:
       parameters:
@@ -7112,6 +7499,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   updateStatusPage:
     speakeasy-default-update-status-page:
       parameters:
@@ -7132,6 +7520,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   deleteStatusPage:
     speakeasy-default-delete-status-page:
       parameters:
@@ -7150,6 +7539,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   createStatusPageComponentGroup:
     speakeasy-default-create-status-page-component-group:
       parameters:
@@ -7164,9 +7554,12 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
+        "400": {}
   deleteStatusPageComponentGroup:
     speakeasy-default-delete-status-page-component-group:
       parameters:
@@ -7180,9 +7573,11 @@ examples:
           application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "400": {}
   updateStatusPageComponentGroup:
     speakeasy-default-update-status-page-component-group:
       parameters:
@@ -7198,7 +7593,9 @@ examples:
           application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "400": {}
   updateStatusPageImage:
     speakeasy-default-update-status-page-image:
       parameters:
@@ -7212,11 +7609,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   deleteStatusPageImage:
     speakeasy-default-delete-status-page-image:
       parameters:
@@ -7236,6 +7635,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   createStatusPageLink:
     speakeasy-default-create-status-page-link:
       parameters:
@@ -7246,13 +7646,15 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "201": {}
   deleteStatusPageLink:
     speakeasy-default-delete-status-page-link:
       parameters:
@@ -7264,7 +7666,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>"}
         "429":
@@ -7282,8 +7685,10 @@ examples:
           application/json: {"key": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
-        "408": {}
+        "404":
+          application/json: {"key": "<value>"}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
@@ -7296,7 +7701,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
         "408": {}
@@ -7304,6 +7710,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   createStatusPageSubscribers:
     speakeasy-default-create-status-page-subscribers:
       parameters:
@@ -7318,11 +7725,13 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   deleteStatusPageSubscribers:
     speakeasy-default-delete-status-page-subscribers:
       parameters:
@@ -7337,11 +7746,13 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   listIntegrations:
     speakeasy-default-list-integrations:
       responses:
@@ -7351,9 +7762,12 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
   listAwsCloudtrailBatches:
     speakeasy-default-list-aws-cloudtrail-batches:
       responses:
@@ -7367,6 +7781,8 @@ examples:
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
+        "400": {}
   getAwsCloudTrailBatch:
     speakeasy-default-get-aws-cloud-trail-batch:
       parameters:
@@ -7377,11 +7793,14 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
   updateAwsCloudTrailBatch:
     speakeasy-default-update-aws-cloud-trail-batch:
       parameters:
@@ -7390,7 +7809,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
         "408": {}
@@ -7398,6 +7818,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   getAwsCloudtrailBatchEvents:
     speakeasy-default-get-aws-cloudtrail-batch-events:
       parameters:
@@ -7410,9 +7831,12 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
   listAwsConnections:
     speakeasy-default-list-aws-connections:
       responses:
@@ -7422,9 +7846,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   getAwsConnection:
     speakeasy-default-get-aws-connection:
       parameters:
@@ -7443,6 +7871,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   updateAwsConnection:
     speakeasy-default-update-aws-connection:
       parameters:
@@ -7451,9 +7880,14 @@ examples:
       responses:
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
+        "401": {}
+        "404": {}
   listConfluenceSpaces:
     speakeasy-default-list-confluence-spaces:
       parameters:
@@ -7463,7 +7897,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
@@ -7471,6 +7906,7 @@ examples:
         "429": {}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   listIntegrationConnections:
     speakeasy-default-list-integration-connections:
       responses:
@@ -7482,7 +7918,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
   createIntegrationConnection:
@@ -7497,9 +7934,12 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
   updateIntegrationConnection:
     speakeasy-default-update-integration-connection:
       parameters:
@@ -7509,9 +7949,13 @@ examples:
       responses:
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "400": {}
+        "401": {}
+        "404": {}
   refreshIntegrationConnection:
     speakeasy-default-refresh-integration-connection:
       parameters:
@@ -7521,7 +7965,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>"}
         "408":
@@ -7542,11 +7987,13 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   getIntegrationFieldMapAvailableFields:
     speakeasy-default-get-integration-field-map-available-fields:
       parameters:
@@ -7563,7 +8010,9 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   listSlackEmojiActions:
     speakeasy-default-list-slack-emoji-actions:
       parameters:
@@ -7581,6 +8030,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "400": {}
   createSlackEmojiAction:
     speakeasy-default-create-slack-emoji-action:
       parameters:
@@ -7618,6 +8068,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "400": {}
   deleteSlackEmojiAction:
     speakeasy-default-delete-slack-emoji-action:
       parameters:
@@ -7635,7 +8086,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
   updateSlackEmojiAction:
     speakeasy-default-update-slack-emoji-action:
       parameters:
@@ -7651,7 +8103,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
   getSlackWorkspaces:
@@ -7668,8 +8121,10 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "429": {}
-        "500": {}
+        "429":
+          application/json: {"key": "<value>"}
+        "500":
+          application/json: {"key": "<value>"}
   listSlackUsergroups:
     speakeasy-default-list-slack-usergroups:
       responses:
@@ -7683,7 +8138,8 @@ examples:
           application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
   getIntegrationStatus:
     speakeasy-default-get-integration-status:
       parameters:
@@ -7694,7 +8150,8 @@ examples:
           application/json: {"key": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
@@ -7712,9 +8169,11 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   getStatuspageConnection:
     speakeasy-default-get-statuspage-connection:
       parameters:
@@ -7723,13 +8182,15 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404": {}
         "408": {}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   deleteStatuspageConnection:
     speakeasy-default-delete-statuspage-connection:
       parameters:
@@ -7738,13 +8199,16 @@ examples:
       responses:
         "401":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
   updateStatuspageConnection:
     speakeasy-default-update-statuspage-connection:
       parameters:
@@ -7753,9 +8217,14 @@ examples:
       responses:
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
+        "401": {}
+        "404": {}
   listStatuspagePages:
     speakeasy-default-list-statuspage-pages:
       parameters:
@@ -7790,6 +8259,7 @@ examples:
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "400": {}
   getIntegration:
     speakeasy-default-get-integration:
       parameters:
@@ -7808,6 +8278,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   getTicketingPriority:
     speakeasy-default-get-ticketing-priority:
       parameters:
@@ -7826,6 +8297,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   deleteTicketingPriority:
     speakeasy-default-delete-ticketing-priority:
       parameters:
@@ -7834,7 +8306,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
@@ -7843,6 +8316,7 @@ examples:
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   updateTicketingPriority:
     speakeasy-default-update-ticketing-priority:
       parameters:
@@ -7851,24 +8325,29 @@ examples:
       responses:
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408": {}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
+        "400": {}
   listTicketingProjects:
     speakeasy-default-list-ticketing-projects:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404": {}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500": {}
+        "200": {}
   getTicketingProject:
     speakeasy-default-get-ticketing-project:
       parameters:
@@ -7887,6 +8366,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   getTicketingProjectConfigurationOptions:
     speakeasy-default-get-ticketing-project-configuration-options:
       parameters:
@@ -7899,9 +8379,11 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "400": {}
   getTicketingProjectFieldOptions:
     speakeasy-default-get-ticketing-project-field-options:
       parameters:
@@ -7929,11 +8411,15 @@ examples:
       responses:
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
+        "400": {}
+        "401": {}
   getTicketingProjectAvailableFields:
     speakeasy-default-get-ticketing-project-available-fields:
       parameters:
@@ -7952,6 +8438,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   getTicketingProjectFieldMap:
     speakeasy-default-get-ticketing-project-field-map:
       parameters:
@@ -7967,9 +8454,11 @@ examples:
           application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   deleteTicketingProjectFieldMap:
     speakeasy-default-delete-ticketing-project-field-map:
       parameters:
@@ -7983,7 +8472,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
@@ -7997,7 +8487,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
@@ -8006,6 +8497,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   createTicketingProjectConfiguration:
     speakeasy-default-create-ticketing-project-configuration:
       parameters:
@@ -8018,10 +8510,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   getTicketingProjectConfig:
     speakeasy-default-get-ticketing-project-config:
       parameters:
@@ -8041,6 +8536,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   deleteTicketingProjectConfig:
     speakeasy-default-delete-ticketing-project-config:
       parameters:
@@ -8052,13 +8548,15 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   updateTicketingProjectConfig:
     speakeasy-default-update-ticketing-project-config:
       parameters:
@@ -8072,11 +8570,13 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   listTicketTags:
     speakeasy-default-list-ticket-tags:
       responses:
@@ -8088,9 +8588,11 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   getTicket:
     speakeasy-default-get-ticket:
       parameters:
@@ -8103,11 +8605,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   deleteTicket:
     speakeasy-default-delete-ticket:
       parameters:
@@ -8144,6 +8648,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   listMeasurementDefinitions:
     speakeasy-default-list-measurement-definitions:
       responses:
@@ -8151,10 +8656,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "400": {}
   createMeasurementDefinition:
     speakeasy-default-create-measurement-definition:
       requestBody:
@@ -8184,8 +8692,11 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>"}
-        "429": {}
-        "500": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "400": {}
   deleteMeasurementDefinition:
     speakeasy-default-delete-measurement-definition:
       parameters:
@@ -8198,10 +8709,12 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>"}
   updateMeasurementDefinition:
     speakeasy-default-update-measurement-definition:
       parameters:
@@ -8210,7 +8723,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404": {}
         "408": {}
         "429":
@@ -8224,13 +8738,15 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "401":
           application/json: {"key": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   getMilestoneFunnelMetrics:
     speakeasy-default-get-milestone-funnel-metrics:
       responses:
@@ -8240,16 +8756,20 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   listRetrospectiveMetrics:
     speakeasy-default-list-retrospective-metrics:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
@@ -8258,6 +8778,7 @@ examples:
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   getTicketFunnelMetrics:
     speakeasy-default-get-ticket-funnel-metrics:
       responses:
@@ -8267,11 +8788,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   listUserInvolvementMetrics:
     speakeasy-default-list-user-involvement-metrics:
       responses:
@@ -8281,8 +8804,12 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>"}
-        "429": {}
-        "500": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
+        "400": {}
   listInfrastructureMetrics:
     speakeasy-default-list-infrastructure-metrics:
       parameters:
@@ -8292,7 +8819,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
@@ -8301,6 +8829,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   getInfrastructureMetrics:
     speakeasy-default-get-infrastructure-metrics:
       parameters:
@@ -8313,18 +8842,26 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
+        "400": {}
   getMeanTimeReport:
     speakeasy-default-get-mean-time-report:
       responses:
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500": {}
+        "200": {}
+        "400": {}
+        "401": {}
+        "404": {}
   listSavedSearches:
     speakeasy-default-list-saved-searches:
       parameters:
@@ -8336,13 +8873,15 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   createSavedSearch:
     speakeasy-default-create-saved-search:
       parameters:
@@ -8359,18 +8898,24 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "201": {}
+        "400": {}
   listRetrospectiveQuestions:
     speakeasy-default-list-retrospective-questions:
       responses:
         "401":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "408": {}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
   updateRetrospectiveQuestions:
     speakeasy-default-update-retrospective-questions:
       responses:
@@ -8386,6 +8931,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   getRetrospectiveQuestion:
     speakeasy-default-get-retrospective-question:
       parameters:
@@ -8394,19 +8940,22 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429": {}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
   listRetrospectiveReports:
     speakeasy-default-list-retrospective-reports:
       responses:
         "400":
           application/json: {"key": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
@@ -8414,6 +8963,7 @@ examples:
         "429": {}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   createRetrospectiveReport:
     speakeasy-default-create-retrospective-report:
       requestBody:
@@ -8423,12 +8973,15 @@ examples:
           application/json: {"key": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
-        "408": {}
+        "404":
+          application/json: {"key": "<value>"}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   getPostMortemReport:
     speakeasy-default-get-post-mortem-report:
       parameters:
@@ -8441,9 +8994,12 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
   updatePostMortemReport:
     speakeasy-default-update-post-mortem-report:
       parameters:
@@ -8452,7 +9008,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
@@ -8461,6 +9018,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   updateRetrospectiveField:
     speakeasy-default-update-retrospective-field:
       parameters:
@@ -8480,7 +9038,9 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   publishRetrospectiveReport:
     speakeasy-default-publish-retrospective-report:
       parameters:
@@ -8499,6 +9059,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "201": {}
+        "400": {}
   listRetrospectiveReportReasons:
     speakeasy-default-list-retrospective-report-reasons:
       parameters:
@@ -8512,10 +9074,13 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>"}
+        "200": {}
   createRetrospectiveReportReason:
     speakeasy-default-create-retrospective-report-reason:
       parameters:
@@ -8536,6 +9101,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   updateRetrospectiveReportReasonOrder:
     speakeasy-default-update-retrospective-report-reason-order:
       parameters:
@@ -8548,13 +9114,15 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   deleteRetrospectiveReason:
     speakeasy-default-delete-retrospective-reason:
       parameters:
@@ -8566,9 +9134,13 @@ examples:
           application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
+        "401": {}
   updateRetrospectiveReason:
     speakeasy-default-update-retrospective-reason:
       parameters:
@@ -8582,21 +9154,26 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   listRunbookAudits:
     speakeasy-default-list-runbook-audits:
       responses:
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500": {}
+        "400": {}
   listRunbooks:
     speakeasy-default-list-runbooks:
       responses:
@@ -8606,9 +9183,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   createRunbook:
     speakeasy-default-create-runbook:
       requestBody:
@@ -8620,10 +9201,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   listRunbookActions:
     speakeasy-default-list-runbook-actions:
       responses:
@@ -8631,9 +9215,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
+        "401": {}
   listRunbookExecutions:
     speakeasy-default-list-runbook-executions:
       responses:
@@ -8645,7 +9233,10 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
+        "400": {}
   createRunbookExecution:
     speakeasy-default-create-runbook-execution:
       requestBody:
@@ -8653,13 +9244,16 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>"}
         "408": {}
         "429":
           application/json: {"key": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>"}
+        "201": {}
   getRunbookExecution:
     speakeasy-default-get-runbook-execution:
       parameters:
@@ -8668,13 +9262,16 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>"}
         "429": {}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   deleteRunbookExecution:
     speakeasy-default-delete-runbook-execution:
       parameters:
@@ -8708,10 +9305,14 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
+        "400": {}
   getRunbookExecutionStepScript:
     speakeasy-default-get-runbook-execution-step-script:
       parameters:
@@ -8723,13 +9324,15 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   updateRunbookExecutionStepScriptState:
     speakeasy-default-update-runbook-execution-step-script-state:
       parameters:
@@ -8740,7 +9343,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
@@ -8749,6 +9353,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   updateRunbookExecutionStepVotes:
     speakeasy-default-update-runbook-execution-step-votes:
       parameters:
@@ -8764,6 +9369,10 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
+        "400": {}
+        "401": {}
+        "404": {}
   getRunbookStepVoteStatus:
     speakeasy-default-get-runbook-step-vote-status:
       parameters:
@@ -8773,7 +9382,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
         "408":
@@ -8782,6 +9392,7 @@ examples:
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   updateRunbookExecutionVotes:
     speakeasy-default-update-runbook-execution-votes:
       parameters:
@@ -8802,6 +9413,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   getRunbookExecutionVoteStatus:
     speakeasy-default-get-runbook-execution-vote-status:
       parameters:
@@ -8816,9 +9428,11 @@ examples:
           application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   getRunbookSelectOptions:
     speakeasy-default-get-runbook-select-options:
       parameters:
@@ -8832,10 +9446,12 @@ examples:
           application/json: {"key": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
   getRunbook:
@@ -8856,6 +9472,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   updateRunbook:
     speakeasy-default-update-runbook:
       parameters:
@@ -8874,6 +9491,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   deleteRunbook:
     speakeasy-default-delete-runbook:
       parameters:
@@ -8892,6 +9510,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   listSchedules:
     speakeasy-default-list-schedules:
       responses:
@@ -8901,11 +9520,13 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   listTeams:
     speakeasy-default-list-teams:
       responses:
@@ -8915,9 +9536,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   createTeam:
     speakeasy-default-create-team:
       requestBody:
@@ -8929,10 +9554,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   getTeam:
     speakeasy-default-get-team:
       parameters:
@@ -8952,6 +9580,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   archiveTeam:
     speakeasy-default-archive-team:
       parameters:
@@ -8966,9 +9595,11 @@ examples:
           application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   updateTeam:
     speakeasy-default-update-team:
       parameters:
@@ -8987,6 +9618,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   listTeamOnCallSchedules:
     speakeasy-default-list-team-on-call-schedules:
       parameters:
@@ -8998,7 +9630,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
@@ -9015,7 +9648,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>"}
         "404": {}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
@@ -9060,7 +9694,8 @@ examples:
           application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
   updateTeamScheduleShift:
     speakeasy-default-update-team-schedule-shift:
       parameters:
@@ -9071,24 +9706,28 @@ examples:
       responses:
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>"}
         "429": {}
         "500":
           application/json: {"key": "<value>"}
+        "400": {}
   getScimGroups:
     speakeasy-default-get-scim-groups:
       responses:
         "400":
           application/json: {"key": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>"}
         "429": {}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>"}
   createScimGroup:
     speakeasy-default-create-scim-group:
       requestBody:
@@ -9100,8 +9739,10 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
   getScimGroup:
@@ -9116,7 +9757,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
@@ -9135,10 +9777,12 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
   deleteScimGroup:
     speakeasy-default-delete-scim-group:
       parameters:
@@ -9147,16 +9791,20 @@ examples:
       responses:
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500": {}
+        "400": {}
+        "401": {}
   getScimUsers:
     speakeasy-default-get-scim-users:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
@@ -9172,7 +9820,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404": {}
         "408":
           application/json: {"key": "<value>"}
@@ -9187,7 +9836,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
@@ -9206,7 +9856,8 @@ examples:
           application/json: {"key": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>"}
         "429":
@@ -9227,7 +9878,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
   updateScimUser:
@@ -9248,6 +9900,7 @@ examples:
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "400": {}
   getSignalGroupedMetrics:
     speakeasy-default-get-signal-grouped-metrics:
       responses:
@@ -9255,7 +9908,8 @@ examples:
           application/json: {"key": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>"}
         "429":
@@ -9269,11 +9923,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "400": {}
   getSignalsAnalyticsTimeseries:
     speakeasy-default-get-signals-analytics-timeseries:
       responses:
@@ -9285,7 +9941,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
   debugSignal:
@@ -9295,13 +9952,15 @@ examples:
       responses:
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "400": {}
   listSignalEmailTargets:
     speakeasy-default-list-signal-email-targets:
       responses:
@@ -9311,7 +9970,8 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
@@ -9323,7 +9983,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>"}
         "408":
@@ -9345,7 +10006,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
   deleteSignalEmailTarget:
@@ -9358,7 +10020,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
@@ -9375,11 +10038,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429":
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "400": {}
   listSignalEventSources:
     speakeasy-default-list-signal-event-sources:
       responses:
@@ -9389,9 +10054,11 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "400": {}
   getSignalIngestUrl:
     speakeasy-default-get-signal-ingest-url:
       responses:
@@ -9403,9 +10070,11 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>"}
-        "429": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   listSignalTransposers:
     speakeasy-default-list-signal-transposers:
       responses:
@@ -9417,12 +10086,15 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "400": {}
+        "401": {}
   listSignalWebhookTargets:
     speakeasy-default-list-signal-webhook-targets:
       responses:
         "400":
           application/json: {"key": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>"}
         "404": {}
         "408":
           application/json: {"key": "<value>"}
@@ -9436,7 +10108,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
         "408": {}
@@ -9452,7 +10125,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>"}
         "408":
@@ -9468,11 +10142,14 @@ examples:
       responses:
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "400": {}
+        "401": {}
   updateSignalsWebhookTarget:
     speakeasy-default-update-signals-webhook-target:
       parameters:
@@ -9500,8 +10177,11 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>"}
-        "429": {}
-        "500": {}
+        "429":
+          application/json: {"key": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "400": {}
   listTeamEscalationPolicies:
     speakeasy-default-list-team-escalation-policies:
       parameters:
@@ -9550,7 +10230,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>"}
         "404": {}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
@@ -9566,13 +10247,15 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>"}
         "408": {}
         "429":
           application/json: {"key": "<value>"}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>"}
   updateTeamEscalationPolicy:
     speakeasy-default-update-team-escalation-policy:
       parameters:
@@ -9586,8 +10269,10 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
   getTeamOnCallSchedule:
@@ -9599,7 +10284,8 @@ examples:
       responses:
         "400":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
@@ -9638,11 +10324,13 @@ examples:
           application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "400": {}
   createTeamOnCallScheduleShift:
     speakeasy-default-create-team-on-call-schedule-shift:
       parameters:
@@ -9673,13 +10361,15 @@ examples:
       responses:
         "401":
           application/json: {"key": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "400": {}
   createTeamSignalRule:
     speakeasy-default-create-team-signal-rule:
       parameters:
@@ -9692,8 +10382,10 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "404": {}
-        "408": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "429": {}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
@@ -9729,7 +10421,8 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
@@ -9749,14 +10442,17 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
-        "429": {}
-        "500": {}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
   listStatusUpdateTemplates:
     speakeasy-default-list-status-update-templates:
       responses:
         "400":
           application/json: {"key": "<value>"}
-        "401": {}
+        "401":
+          application/json: {"key": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
         "408":
@@ -9765,6 +10461,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
   createStatusUpdateTemplate:
     speakeasy-default-create-status-update-template:
       requestBody:
@@ -9776,10 +10473,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   getStatusUpdateTemplate:
     speakeasy-default-get-status-update-template:
       parameters:
@@ -9794,6 +10494,9 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "200": {}
+        "400": {}
+        "401": {}
   deleteStatusUpdateTemplate:
     speakeasy-default-delete-status-update-template:
       parameters:
@@ -9802,11 +10505,15 @@ examples:
       responses:
         "401":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "408":
           application/json: {"key": "<value>"}
         "429": {}
-        "500": {}
+        "500":
+          application/json: {"key": "<value>"}
+        "200": {}
+        "400": {}
   updateStatusUpdateTemplate:
     speakeasy-default-update-status-update-template:
       parameters:
@@ -9823,6 +10530,8 @@ examples:
           application/json: {"key": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
+        "400": {}
   listWebhooks:
     speakeasy-default-list-webhooks:
       responses:
@@ -9832,9 +10541,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "408": {}
-        "429": {}
-        "500": {}
+        "408":
+          application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "500":
+          application/json: {"key": "<value>", "key1": "<value>"}
+        "200": {}
   createWebhook:
     speakeasy-default-create-webhook:
       requestBody:
@@ -9846,10 +10559,13 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "404":
           application/json: {"key": "<value>"}
-        "408": {}
-        "429": {}
+        "408":
+          application/json: {"key": "<value>"}
+        "429":
+          application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
+        "201": {}
   getWebhook:
     speakeasy-default-get-webhook:
       parameters:
@@ -9868,6 +10584,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>", "key2": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   deleteWebhook:
     speakeasy-default-delete-webhook:
       parameters:
@@ -9904,6 +10621,7 @@ examples:
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>"}
+        "200": {}
   listWebhookDeliveries:
     speakeasy-default-list-webhook-deliveries:
       parameters:
@@ -9914,10 +10632,12 @@ examples:
           application/json: {"key": "<value>"}
         "401":
           application/json: {"key": "<value>", "key1": "<value>"}
-        "404": {}
+        "404":
+          application/json: {"key": "<value>"}
         "408":
           application/json: {"key": "<value>", "key1": "<value>"}
         "429":
           application/json: {"key": "<value>", "key1": "<value>"}
         "500":
           application/json: {"key": "<value>", "key1": "<value>"}
+generatedTests: {}
