@@ -10,8 +10,8 @@ import (
 	"firehydrant/models/components"
 	"firehydrant/models/operations"
 	"firehydrant/models/sdkerrors"
+	"firehydrant/retry"
 	"fmt"
-	"github.com/cenkalti/backoff/v4"
 	"net/http"
 	"net/url"
 )
@@ -112,7 +112,11 @@ func (s *StatusUpdateTemplates) Create(ctx context.Context, request components.P
 
 			req, err = s.sdkConfiguration.Hooks.BeforeRequest(hooks.BeforeRequestContext{HookContext: hookCtx}, req)
 			if err != nil {
-				return nil, backoff.Permanent(err)
+				if retry.IsPermanentError(err) || retry.IsTemporaryError(err) {
+					return nil, err
+				}
+
+				return nil, retry.Permanent(err)
 			}
 
 			httpRes, err := s.sdkConfiguration.Client.Do(req)
