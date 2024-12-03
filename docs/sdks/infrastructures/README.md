@@ -18,8 +18,8 @@ package main
 
 import(
 	"firehydrant"
-	"context"
 	"firehydrant/models/operations"
+	"context"
 	"log"
 )
 
