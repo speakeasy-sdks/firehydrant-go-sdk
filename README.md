@@ -16,23 +16,26 @@
 
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
+<!-- $toc-max-depth=2 -->
+  * [SDK Installation](#sdk-installation)
+  * [Authentication](#authentication)
+  * [SDK Example Usage](#sdk-example-usage)
+  * [Available Resources and Operations](#available-resources-and-operations)
+  * [Retries](#retries)
+  * [Error Handling](#error-handling)
+  * [Server Selection](#server-selection)
+  * [Custom HTTP Client](#custom-http-client)
+  * [Special Types](#special-types)
+* [Development](#development)
+  * [Maturity](#maturity)
+  * [Contributions](#contributions)
 
-* [SDK Installation](#sdk-installation)
-* [SDK Example Usage](#sdk-example-usage)
-* [Available Resources and Operations](#available-resources-and-operations)
-* [Retries](#retries)
-* [Error Handling](#error-handling)
-* [Server Selection](#server-selection)
-* [Custom HTTP Client](#custom-http-client)
-* [Authentication](#authentication)
-* [Special Types](#special-types)
 <!-- End Table of Contents [toc] -->
 
 <!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
 To add the SDK as a dependency to your project:
-
 ```bash
 go get github.com/speakeasy-sdks/firehydrant-go-sdk
 ```
@@ -60,11 +63,12 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := firehydrant.New(
 		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.AccountSettings.GetAiPreferences(ctx)
 	if err != nil {
 		log.Fatal(err)
@@ -92,11 +96,12 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := firehydrant.New(
 		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.AccountSettings.GetAiPreferences(ctx)
 	if err != nil {
 		log.Fatal(err)
@@ -648,11 +653,12 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := firehydrant.New(
 		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.AccountSettings.GetAiPreferences(ctx, operations.WithRetries(
 		retry.Config{
 			Strategy: "backoff",
@@ -686,6 +692,8 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := firehydrant.New(
 		firehydrant.WithRetryConfig(
 			retry.Config{
@@ -701,7 +709,6 @@ func main() {
 		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.AccountSettings.GetAiPreferences(ctx)
 	if err != nil {
 		log.Fatal(err)
@@ -747,11 +754,12 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := firehydrant.New(
 		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.AccountSettings.GetAiPreferences(ctx)
 	if err != nil {
 
@@ -818,12 +826,13 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := firehydrant.New(
 		firehydrant.WithServerURL("https://api.firehydrant.io/"),
 		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.AccountSettings.GetAiPreferences(ctx)
 	if err != nil {
 		log.Fatal(err)
