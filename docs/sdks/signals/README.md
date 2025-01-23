@@ -45,18 +45,19 @@ Generate a report of grouped metrics for Signals alerts
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"firehydrant/models/operations"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.ListGroupedMetrics(ctx, operations.GetSignalGroupedMetricsRequest{})
     if err != nil {
         log.Fatal(err)
@@ -81,15 +82,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## GetMttxAnalytics
 
@@ -101,18 +106,19 @@ Get mean-time-to-acknowledged (MTTA) and mean-time-to-resolved (MTTR) metrics fo
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"firehydrant/models/operations"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.GetMttxAnalytics(ctx, operations.GetSignalsMttxAnalyticsRequest{})
     if err != nil {
         log.Fatal(err)
@@ -137,15 +143,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## GetAnalyticsTimeseries
 
@@ -157,18 +167,19 @@ Generate a timeseries-based report of metrics for Signals alerts
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"firehydrant/models/operations"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.GetAnalyticsTimeseries(ctx, operations.GetSignalsAnalyticsTimeseriesRequest{})
     if err != nil {
         log.Fatal(err)
@@ -193,15 +204,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## Debug
 
@@ -213,22 +228,23 @@ Debug a signal
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.Debug(ctx, components.PostV1SignalsDebugger{
         Expression: "<value>",
         Signals: []components.Signals{
-            components.Signals{},
+
         },
     })
     if err != nil {
@@ -254,15 +270,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## ListEmailTargets
 
@@ -274,17 +294,18 @@ List all Signals email targets for a team.
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.ListEmailTargets(ctx, nil)
     if err != nil {
         log.Fatal(err)
@@ -309,15 +330,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## CreateEmailTarget
 
@@ -329,18 +354,19 @@ Create a Signals email target for a team.
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.CreateEmailTarget(ctx, components.PostV1SignalsEmailTargets{
         Name: "<value>",
     })
@@ -367,15 +393,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## GetEmailTarget
 
@@ -387,17 +417,18 @@ Get a Signals email target by ID
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.GetEmailTarget(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
@@ -422,15 +453,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## DeleteEmailTarget
 
@@ -442,17 +477,18 @@ Delete a Signals email target by ID
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.DeleteEmailTarget(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
@@ -477,15 +513,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## UpdateEmailTarget
 
@@ -497,18 +537,19 @@ Update a Signals email target by ID
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.UpdateEmailTarget(ctx, "<id>", components.PatchV1SignalsEmailTargetsID{})
     if err != nil {
         log.Fatal(err)
@@ -534,15 +575,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## ListEventSources
 
@@ -554,17 +599,18 @@ List event sources for signals
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.ListEventSources(ctx, nil, nil, nil, nil)
     if err != nil {
         log.Fatal(err)
@@ -592,15 +638,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## GetIngestURL
 
@@ -612,17 +662,18 @@ Retrieve the url for ingesting signals for your organization
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.GetIngestURL(ctx, nil, nil, nil, nil)
     if err != nil {
         log.Fatal(err)
@@ -650,15 +701,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## ListTransposers
 
@@ -670,17 +725,18 @@ List signal transposers
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.ListTransposers(ctx)
     if err != nil {
         log.Fatal(err)
@@ -704,15 +760,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## ListWebhookTargets
 
@@ -724,17 +784,18 @@ List all Signals webhook targets.
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.ListWebhookTargets(ctx, nil, nil, nil)
     if err != nil {
         log.Fatal(err)
@@ -761,15 +822,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## CreateWebhookTarget
 
@@ -781,21 +846,22 @@ Create a Signals webhook target.
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.CreateWebhookTarget(ctx, components.PostV1SignalsWebhookTargets{
         Name: "<value>",
-        URL: "https://tasty-silk.info",
+        URL: "https://critical-prohibition.biz",
     })
     if err != nil {
         log.Fatal(err)
@@ -820,15 +886,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## GetWebhookTarget
 
@@ -840,17 +910,18 @@ Get a Signals webhook target by ID
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.GetWebhookTarget(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
@@ -875,15 +946,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## DeleteWebhookTarget
 
@@ -895,17 +970,18 @@ Delete a Signals webhook target by ID
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.DeleteWebhookTarget(ctx, "<id>")
     if err != nil {
         log.Fatal(err)
@@ -930,15 +1006,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## UpdateWebhookTarget
 
@@ -950,18 +1030,19 @@ Update a Signals webhook target by ID
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.UpdateWebhookTarget(ctx, "<id>", components.PatchV1SignalsWebhookTargetsID{})
     if err != nil {
         log.Fatal(err)
@@ -987,15 +1068,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## ListOnCall
 
@@ -1007,17 +1092,18 @@ List all Signals on-call schedules for the entire organization.
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.ListOnCall(ctx, nil)
     if err != nil {
         log.Fatal(err)
@@ -1042,15 +1128,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## ListEscalationPolicies
 
@@ -1062,17 +1152,18 @@ List all Signals escalation policies for a team.
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.ListEscalationPolicies(ctx, "<id>", nil, nil, nil)
     if err != nil {
         log.Fatal(err)
@@ -1100,15 +1191,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## DeleteEscalationPolicy
 
@@ -1120,17 +1215,18 @@ Delete a Signals escalation policy by ID
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.DeleteEscalationPolicy(ctx, "<id>", "<id>")
     if err != nil {
         log.Fatal(err)
@@ -1156,15 +1252,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## GetOnCallSchedule
 
@@ -1176,17 +1276,18 @@ Get a Signals on-call schedule by ID
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.GetOnCallSchedule(ctx, "<id>", "<id>")
     if err != nil {
         log.Fatal(err)
@@ -1212,15 +1313,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## UpdateOnCallSchedule
 
@@ -1232,18 +1337,19 @@ Update a Signals on-call schedule by ID
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.UpdateOnCallSchedule(ctx, "<id>", "<id>", components.PatchV1TeamsTeamIDOnCallSchedulesScheduleID{})
     if err != nil {
         log.Fatal(err)
@@ -1270,15 +1376,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## ListRules
 
@@ -1290,17 +1400,18 @@ List all Signals rules for a team.
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.ListRules(ctx, "<id>", nil, nil, nil)
     if err != nil {
         log.Fatal(err)
@@ -1328,15 +1439,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## CreateRule
 
@@ -1348,22 +1463,23 @@ Create a Signals rule for a team.
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.CreateRule(ctx, "<id>", components.PostV1TeamsTeamIDSignalRules{
         Name: "<value>",
         Expression: "<value>",
-        TargetType: components.TargetTypeWebhook,
+        TargetType: components.TargetTypeUser,
         TargetID: "<id>",
     })
     if err != nil {
@@ -1390,15 +1506,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## GetRule
 
@@ -1410,17 +1530,18 @@ Get a Signals rule by ID.
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.GetRule(ctx, "<id>", "<id>")
     if err != nil {
         log.Fatal(err)
@@ -1446,15 +1567,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## DeleteRule
 
@@ -1466,17 +1591,18 @@ Delete a Signals rule by ID
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.DeleteRule(ctx, "<id>", "<id>")
     if err != nil {
         log.Fatal(err)
@@ -1502,15 +1628,19 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
 
 ## UpdateRule
 
@@ -1522,18 +1652,19 @@ Update a Signals rule by ID
 package main
 
 import(
-	"firehydrant"
 	"context"
+	"firehydrant"
 	"firehydrant/models/components"
 	"log"
 )
 
 func main() {
+    ctx := context.Background()
+    
     s := firehydrant.New(
         firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
     )
 
-    ctx := context.Background()
     res, err := s.Signals.UpdateRule(ctx, "<id>", "<id>", components.PatchV1TeamsTeamIDSignalRulesID{})
     if err != nil {
         log.Fatal(err)
@@ -1560,12 +1691,16 @@ func main() {
 
 ### Errors
 
-| Error Type                        | Status Code                       | Content Type                      |
-| --------------------------------- | --------------------------------- | --------------------------------- |
-| sdkerrors.BadRequest              | 400, 413, 414, 415, 422, 431, 510 | application/json                  |
-| sdkerrors.Unauthorized            | 401, 403, 407, 511                | application/json                  |
-| sdkerrors.NotFound                | 404, 501, 505                     | application/json                  |
-| sdkerrors.Timeout                 | 408, 504                          | application/json                  |
-| sdkerrors.RateLimited             | 429                               | application/json                  |
-| sdkerrors.InternalServerError     | 500, 502, 503, 506, 507, 508      | application/json                  |
-| sdkerrors.SDKError                | 4XX, 5XX                          | \*/\*                             |
+| Error Type                    | Status Code                   | Content Type                  |
+| ----------------------------- | ----------------------------- | ----------------------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431  | application/json              |
+| sdkerrors.Unauthorized        | 401, 403, 407                 | application/json              |
+| sdkerrors.NotFound            | 404                           | application/json              |
+| sdkerrors.Timeout             | 408                           | application/json              |
+| sdkerrors.RateLimited         | 429                           | application/json              |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508  | application/json              |
+| sdkerrors.NotFound            | 501, 505                      | application/json              |
+| sdkerrors.Timeout             | 504                           | application/json              |
+| sdkerrors.BadRequest          | 510                           | application/json              |
+| sdkerrors.Unauthorized        | 511                           | application/json              |
+| sdkerrors.SDKError            | 4XX, 5XX                      | \*/\*                         |
