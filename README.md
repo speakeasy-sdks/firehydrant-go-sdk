@@ -16,23 +16,26 @@
 
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
+<!-- $toc-max-depth=2 -->
+  * [SDK Installation](#sdk-installation)
+  * [Authentication](#authentication)
+  * [SDK Example Usage](#sdk-example-usage)
+  * [Available Resources and Operations](#available-resources-and-operations)
+  * [Retries](#retries)
+  * [Error Handling](#error-handling)
+  * [Server Selection](#server-selection)
+  * [Custom HTTP Client](#custom-http-client)
+  * [Special Types](#special-types)
+* [Development](#development)
+  * [Maturity](#maturity)
+  * [Contributions](#contributions)
 
-* [SDK Installation](#sdk-installation)
-* [SDK Example Usage](#sdk-example-usage)
-* [Available Resources and Operations](#available-resources-and-operations)
-* [Retries](#retries)
-* [Error Handling](#error-handling)
-* [Server Selection](#server-selection)
-* [Custom HTTP Client](#custom-http-client)
-* [Authentication](#authentication)
-* [Special Types](#special-types)
 <!-- End Table of Contents [toc] -->
 
 <!-- Start SDK Installation [installation] -->
 ## SDK Installation
 
 To add the SDK as a dependency to your project:
-
 ```bash
 go get github.com/speakeasy-sdks/firehydrant-go-sdk
 ```
@@ -60,11 +63,12 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := firehydrant.New(
 		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.AccountSettings.GetAiPreferences(ctx)
 	if err != nil {
 		log.Fatal(err)
@@ -92,11 +96,12 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := firehydrant.New(
 		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.AccountSettings.GetAiPreferences(ctx)
 	if err != nil {
 		log.Fatal(err)
@@ -648,11 +653,12 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := firehydrant.New(
 		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.AccountSettings.GetAiPreferences(ctx, operations.WithRetries(
 		retry.Config{
 			Strategy: "backoff",
@@ -686,6 +692,8 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := firehydrant.New(
 		firehydrant.WithRetryConfig(
 			retry.Config{
@@ -701,7 +709,6 @@ func main() {
 		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.AccountSettings.GetAiPreferences(ctx)
 	if err != nil {
 		log.Fatal(err)
@@ -723,15 +730,19 @@ By Default, an API error will return `sdkerrors.SDKError`. When custom error res
 
 For example, the `GetAiPreferences` function may return the following errors:
 
-| Error Type                    | Status Code                       | Content Type     |
-| ----------------------------- | --------------------------------- | ---------------- |
-| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431, 510 | application/json |
-| sdkerrors.Unauthorized        | 401, 403, 407, 511                | application/json |
-| sdkerrors.NotFound            | 404, 501, 505                     | application/json |
-| sdkerrors.Timeout             | 408, 504                          | application/json |
-| sdkerrors.RateLimited         | 429                               | application/json |
-| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508      | application/json |
-| sdkerrors.SDKError            | 4XX, 5XX                          | \*/\*            |
+| Error Type                    | Status Code                  | Content Type     |
+| ----------------------------- | ---------------------------- | ---------------- |
+| sdkerrors.BadRequest          | 400, 413, 414, 415, 422, 431 | application/json |
+| sdkerrors.Unauthorized        | 401, 403, 407                | application/json |
+| sdkerrors.NotFound            | 404                          | application/json |
+| sdkerrors.Timeout             | 408                          | application/json |
+| sdkerrors.RateLimited         | 429                          | application/json |
+| sdkerrors.InternalServerError | 500, 502, 503, 506, 507, 508 | application/json |
+| sdkerrors.NotFound            | 501, 505                     | application/json |
+| sdkerrors.Timeout             | 504                          | application/json |
+| sdkerrors.BadRequest          | 510                          | application/json |
+| sdkerrors.Unauthorized        | 511                          | application/json |
+| sdkerrors.SDKError            | 4XX, 5XX                     | \*/\*            |
 
 ### Example
 
@@ -747,11 +758,12 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := firehydrant.New(
 		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.AccountSettings.GetAiPreferences(ctx)
 	if err != nil {
 
@@ -791,6 +803,30 @@ func main() {
 			log.Fatal(e.Error())
 		}
 
+		var e *sdkerrors.NotFound
+		if errors.As(err, &e) {
+			// handle error
+			log.Fatal(e.Error())
+		}
+
+		var e *sdkerrors.Timeout
+		if errors.As(err, &e) {
+			// handle error
+			log.Fatal(e.Error())
+		}
+
+		var e *sdkerrors.BadRequest
+		if errors.As(err, &e) {
+			// handle error
+			log.Fatal(e.Error())
+		}
+
+		var e *sdkerrors.Unauthorized
+		if errors.As(err, &e) {
+			// handle error
+			log.Fatal(e.Error())
+		}
+
 		var e *sdkerrors.SDKError
 		if errors.As(err, &e) {
 			// handle error
@@ -818,12 +854,13 @@ import (
 )
 
 func main() {
+	ctx := context.Background()
+
 	s := firehydrant.New(
 		firehydrant.WithServerURL("https://api.firehydrant.io/"),
 		firehydrant.WithSecurity("<YOUR_API_KEY_HERE>"),
 	)
 
-	ctx := context.Background()
 	res, err := s.AccountSettings.GetAiPreferences(ctx)
 	if err != nil {
 		log.Fatal(err)
